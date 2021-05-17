@@ -1,0 +1,37 @@
+{
+  "organization": "ballerinax",
+  "name": "twilio",
+  "version": "0.99.8",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "authors": [
+    "Ballerina"
+  ],
+  "source_repository": "https://github.com/ballerina-platform/module-ballerinax-twilio",
+  "keywords": [
+    "twilio",
+    "sms",
+    "call",
+    "otp",
+    "whatsapp",
+    "webhook"
+  ],
+  "export": [
+    "twilio",
+    "twilio.listener"
+  ],
+  "ballerina_version": "slalpha5",
+  "implementation_vendor": "WSO2",
+  "language_spec_version": "v2020-12-17",
+  "platform": "java11",
+  "platformDependencies": [
+    {
+      "path": "platform/java11/java-wrapper-0.0.1-SNAPSHOT.jar",
+      "artifactId": "java-wrapper",
+      "groupId": "io.ballerinax.webhook",
+      "version": "0.0.1-SNAPSHOT"
+    }
+  ],
+  "template": false
+}

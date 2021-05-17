@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:CreatePullRequestInput":{"baseRefName":"string","clientMutationId":"string","draft":"boolean","repositoryId":"string","maintainerCanModify":"boolean","title":"string","body":"string","headRefName":"string"}}

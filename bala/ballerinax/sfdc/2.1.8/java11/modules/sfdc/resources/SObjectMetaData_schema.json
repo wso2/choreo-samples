@@ -1,0 +1,1 @@
+{"ballerinax/sfdc:2.1.8:SObjectMetaData":{"updateable":"boolean","queryable":"boolean","urls":"map<string>","createable":"boolean","name":"string","deletable":"boolean","label":"string"}}

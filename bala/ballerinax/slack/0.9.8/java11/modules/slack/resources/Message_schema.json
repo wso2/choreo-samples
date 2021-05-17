@@ -1,0 +1,1 @@
+{"ballerinax/slack:0.9.8:Message":{"unfurlMedia":"boolean","attachments":"json[]","unfurlLinks":"boolean","replyBroadcast":"boolean","blocks":"json[]","parse":"none|full","mrkdwn":"boolean","iconImoji":"string","linkNames":"boolean","channelName":"string","text":"string","iconUrl":"string","threadTs":"string","username":"string"}}

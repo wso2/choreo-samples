@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:UpdateProjectInput":{"public":"boolean","updateClientMutationId":"string","name":"string","state":"ballerinax/github:0.99.14:ProjectState","body":"string","projectId":"string"}}

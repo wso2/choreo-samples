@@ -1,0 +1,18 @@
+{
+    "TRIGGER_TYPE": "webhook",
+    "EP_URL": "SalesforceAccountDomainURL",
+    "SFDC_CLIENT_ID": "SalesforceClientId",
+    "SFDC_CLIENT_SECRET": "SalesforceClientSecret",
+    "SFDC_REFRESH_TOKEN": "SalesforceRefreshToken",
+    "SFDC_REFRESH_URL": "SalesforceRefreshURL",
+    "SFDC_USERNAME": "SalesforceUsernmae",
+    "SFDC_PASSWORD": "SalesforcePassword",
+    "SFDC_PUSH_TOPIC": "SalesforcePushTopic",
+    "SFDC_OBJECT": "SalesforceObject",
+    "SHEETS_CLIENT_ID": "GoogleSheetClientId",
+    "SHEETS_CLIENT_SECRET": "GoogleSheetClientSecret",
+    "SHEETS_REFRESH_TOKEN": "GoogleSheetRefreshToken",
+    "SHEETS_REFRESH_URL": "GoogleSheetRefreshURL",
+    "SHEETS_SPREADSHEET_ID": "GoogleSheetSpreadsheetID",
+    "SHEETS_WORKSHEET_NAME": "GoogleSheetWorksheetName"
+}

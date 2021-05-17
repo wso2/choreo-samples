@@ -1,0 +1,15 @@
+{
+    "TRIGGER_TYPE": "webhook",
+    "ACCESS_TOKEN": "GoogleCalendarAccessToken",
+    "CLIENT_ID": "GoogleCalendarClientId",
+    "CLIENT_SECRET": "GoogleCalendarClientSecret",
+    "REFRESH_URL": "GoogleCalendarRefreshUrl",
+    "REFRESH_TOKEN": "GoogleCalendarRefreshToken",
+    "PORT": 8090,
+    "CALENDAR_ID": "GCalendarID",
+    "ACCOUNT_SID": "TwilioAccoundSID",
+    "AUTH_TOKEN": "TwilioAuthToken",
+    "AUTH_API_KEY": "",
+    "SAMPLE_FROM_MOBILE": "FromMobile",
+    "SAMPLE_TO_MOBILE": "ToMobileNo"
+}

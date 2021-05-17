@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:CreateProjectInput":{"template":"ballerinax/github:0.99.14:ProjectTemplate","repositoryIds":"string[]","clientMutationId":"string","name":"string","ownerId":"string","body":"string"}}
