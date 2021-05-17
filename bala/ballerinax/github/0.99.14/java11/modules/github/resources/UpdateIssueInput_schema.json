@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:UpdateIssueInput":{"labelIds":"string[]","clientMutationId":"string","milestoneId":"string","id":"string","state":"ballerinax/github:0.99.14:IssueState","projectIds":"string[]","title":"string","body":"string","assigneeIds":"string[]"}}

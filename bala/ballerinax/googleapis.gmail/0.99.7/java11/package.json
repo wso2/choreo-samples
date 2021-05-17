@@ -1,0 +1,35 @@
+{
+  "organization": "ballerinax",
+  "name": "googleapis.gmail",
+  "version": "0.99.7",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "authors": [
+    "Ballerina"
+  ],
+  "source_repository": "https://github.com/ballerina-platform/module-ballerinax-googleapis.gmail",
+  "keywords": [
+    "gmail",
+    "email",
+    "google",
+    "mail"
+  ],
+  "export": [
+    "googleapis.gmail",
+    "googleapis.gmail.listener"
+  ],
+  "ballerina_version": "slalpha5",
+  "implementation_vendor": "WSO2",
+  "language_spec_version": "v2020-12-17",
+  "platform": "java11",
+  "platformDependencies": [
+    {
+      "path": "platform/java11/java-wrapper-0.99.7.jar",
+      "artifactId": "java-wrapper",
+      "groupId": "org.ballerinalang.googleapis.gmail",
+      "version": "0.99.7"
+    }
+  ],
+  "template": false
+}

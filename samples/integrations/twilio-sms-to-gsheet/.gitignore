@@ -40,3 +40,9 @@ dist
 
 # Temp files
 *~
+
+#Configuration toml
+Config.toml
+
+#Target Directory
+target

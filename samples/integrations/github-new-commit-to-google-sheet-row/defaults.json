@@ -1,0 +1,13 @@
+{
+    "TRIGGER_TYPE": "webhook",
+    "PORT": 8090,
+    "SHEETS_REFRESH_TOKEN": "GoogleSheetRefreshToken",
+    "SHEETS_CLIENT_ID": "GoogleSheetClientId",
+    "SHEETS_CLIENT_SECRET": "GoogleSheetClientSecret",
+    "SHEETS_SPREADSHEET_ID": "GoogleSheetSpreadsheetID",
+    "SHEETS_WORKSHEET_NAME": "GoogleSheetWorksheetName",
+    "GITHUB_ACCESS_TOKEN": "GithubAccessToken",
+    "GITHUB_TOPIC": "GithubTopic",
+    "GITHUB_SECRET": "GithubSecret",
+    "GITHUB_CALLBACK": "GithubCallback"
+}

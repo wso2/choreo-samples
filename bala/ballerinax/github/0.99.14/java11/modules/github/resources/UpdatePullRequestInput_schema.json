@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:UpdatePullRequestInput":{"baseRefName":"string","labelId":"string","clientMutationId":"string","milestoneId":"string","maintainerCanModify":"boolean","state":"ballerinax/github:0.99.14:PullRequestState","projectIds":"string[]","pullRequestId":"string","title":"string","body":"string","assigneeIds":"string[]"}}

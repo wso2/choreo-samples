@@ -1,0 +1,9 @@
+{
+    "TRIGGER_TYPE": "webhook",
+    "EP_URL": "SalesforceAccountDomainURL",
+    "SFDC_USERNAME": "SalesforceUsernmae",
+    "SFDC_PASSWORD": "SalesforcePassword",
+    "SFDC_PUSH_TOPIC": "SalesforcePushTopicForOpportunityUpdate",
+    "SLACK_CHANNEL_NAME": "SlackChannelName",
+    "SLACK_TOKEN": "SlackUserToken"
+}

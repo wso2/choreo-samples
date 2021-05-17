@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:Project":{"createdAt":"string","number":"int","creator":"ballerinax/github:0.99.14:Actor?","name":"string","closed":"boolean","id":"string","state":"ballerinax/github:0.99.14:ProjectState","body":"string?","closedAt":"string?","databaseId":"int?","url":"string","updatedAt":"string"}}

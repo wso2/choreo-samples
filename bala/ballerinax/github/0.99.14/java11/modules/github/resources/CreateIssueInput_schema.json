@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:CreateIssueInput":{"labelIds":"string[]","clientMutationId":"string","repositoryId":"string","milestoneId":"string","projectIds":"string[]","title":"string","body":"string","assigneeIds":"string[]","issueTemplate":"string"}}

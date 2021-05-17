@@ -1,0 +1,1 @@
+{"ballerinax/github:0.99.14:UpdateRepositoryInput":{"hasIssuesEnabled":"boolean","hasProjectsEnabled":"boolean","template":"boolean","hasWikiEnabled":"boolean","clientMutationId":"string","name":"string","repositoryId":"string","description":"string","homePageUrl":"string"}}

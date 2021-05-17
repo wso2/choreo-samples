@@ -1,0 +1,34 @@
+{
+  "name": "@ballerina/syntax-tree-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/generate.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean",
+    "clean": "rimraf lib && rimraf coverage && rimraf build",
+    "build": "tsc --pretty",
+    "watch": "tsc --pretty --watch",
+    "gen-st": "npm run build && node lib/generate"
+  },
+  "dependencies": {
+    "@ballerina/lang-service": "file:../lang-service",
+    "dts-generator": "^3.0.0",
+    "handlebars": "^4.7.6",
+    "lodash": "^4.17.11",
+    "prettier": "^1.5.2",
+    "prettier-tslint": "^0.4.0",
+    "vscode-uri": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/handlebars": "^4.1.0",
+    "@types/lodash": "^4.14.117",
+    "copyfiles": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.5"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}

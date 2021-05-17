@@ -1,0 +1,10 @@
+{
+    "TRIGGER_TYPE": "webhook",
+    "TW_ACCOUNT_SID": "TwilioAccountSid",
+    "TW_AUTH_TOKEN": "TwilioAuthToken",
+    "TW_FROM_MOBILE": "TwilioFromMobile",
+    "TW_TO_MOBILE": "TwilioToMobile",
+    "SF_USERNAME": "SalesforceUsername",
+    "SF_PASSWORD": "SalesforcePassword",
+    "SF_PUSH_TOPIC": "SalesforcePushTopic"
+}

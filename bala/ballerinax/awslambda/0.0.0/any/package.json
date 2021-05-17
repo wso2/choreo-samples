@@ -1,0 +1,13 @@
+{
+  "organization": "ballerinax",
+  "name": "awslambda",
+  "version": "0.0.0",
+  "export": [
+    "awslambda"
+  ],
+  "ballerina_version": "slalpha5",
+  "implementation_vendor": "WSO2",
+  "language_spec_version": "v2020-12-17",
+  "platform": "any",
+  "template": false
+}

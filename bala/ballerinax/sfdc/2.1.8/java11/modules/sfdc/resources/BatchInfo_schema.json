@@ -1,0 +1,1 @@
+{"ballerinax/sfdc:2.1.8:BatchInfo":{"jobId":"string","apexProcessingTime":"int","createdDate":"string","numberRecordsFailed":"int","numberRecordsProcessed":"int","systemModstamp":"string","id":"string","state":"string","totalProcessingTime":"int","apiActiveProcessingTime":"int"}}
