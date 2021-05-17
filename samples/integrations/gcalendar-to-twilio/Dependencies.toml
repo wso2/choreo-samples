@@ -1,0 +1,16 @@
+[[dependency]]
+org = "ballerinax"
+name = "googleapis.calendar"
+version = "0.1.5"
+
+[[dependency]]
+org = "ballerinax"
+name = "twilio"
+version = "0.99.8"
+
+[[dependency]]
+org = "ballerina"
+name = "http"
+version = "1.1.0-alpha8"
+
+
