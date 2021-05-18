@@ -57,5 +57,3 @@ version = "2.1.8"
 org = "ballerinax"
 name = "twilio"
 version = "0.99.8"
-
-

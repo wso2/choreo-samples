@@ -22,5 +22,3 @@ version = "0.9.8"
 org = "ballerinax"
 name = "sfdc"
 version = "2.1.8"
-
-
