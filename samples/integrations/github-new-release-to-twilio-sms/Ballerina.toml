@@ -1,0 +1,17 @@
+[package]
+org = "ballerinax"
+name = "github_new_release_to_twilio_sms"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "github"
+version = "0.99.14"
+
+[[dependency]]
+org = "ballerinax"
+name = "twilio"
+version = "0.99.8"

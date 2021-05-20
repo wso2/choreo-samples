@@ -1,0 +1,17 @@
+[package]
+org = "ballerinax"
+name = "sfdc_opportunity_update_to_twilio_sms"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "sfdc"
+version = "2.1.8"
+
+[[dependency]]
+org = "ballerinax"
+name = "twilio"
+version = "0.99.8"

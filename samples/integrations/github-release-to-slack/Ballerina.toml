@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "github_release_to_slack"
+version= "0.1.0"
+
+[build-options]
+observabilityIncluded = true
