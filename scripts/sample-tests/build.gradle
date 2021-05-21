@@ -19,7 +19,67 @@ dependencies {
 repositories {
         maven {
             name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-twilio")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.sheets")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.gmail")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-slack")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-netsuite")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-azure.eventhub")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-aws.s3")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-aws.sqs")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
         }
 }
 
