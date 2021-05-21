@@ -11,7 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Fetch connector depdencies
-      working-directory: ./scripts/sample-tests
+      working-directory: ./scripts/dependency-fetcher
       env:
         packageUser: ${{ github.actor }}
         packagePAT: ${{ secrets.GITHUB_TOKEN }}

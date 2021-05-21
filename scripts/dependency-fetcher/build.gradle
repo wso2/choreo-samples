@@ -83,6 +83,7 @@ repositories {
         }
 }
 
+// Fetched dependencies will be unziped into .ballerina directory
 def unzippedDir = new File(System.getProperty("user.home"), "/.ballerina/repositories/central.ballerina.io/")
 
 task unzip(type: Copy) {
