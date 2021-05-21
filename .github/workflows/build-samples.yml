@@ -7,8 +7,6 @@ jobs:
   build_samples:
     name: Build Samples
     runs-on: ubuntu-latest
-    strategy:
-      matrix: { dir: ['samples/integrations/gcalendar-to-twilio', 'twilio-sms-to-gsheet'] }
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -20,9 +18,7 @@ jobs:
       run: ./gradlew build
     - name: Build samples
       uses: ballerina-platform/ballerina-action@nightly
-      working-directory: ${{ matrix.dir }}
-      run: pwd
       with:
         args:
-          build
+          build ./samples/integrations/gcalendar-to-twilio
       
