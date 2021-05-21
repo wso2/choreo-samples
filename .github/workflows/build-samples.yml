@@ -12,5 +12,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch connector depdencies
       working-directory: ./scripts/sample-tests
+      env:
+        packageUser: ${{ github.actor }}
+        packagePAT: ${{ secrets.GITHUB_TOKEN }}
       run: ./gradlew build
       
