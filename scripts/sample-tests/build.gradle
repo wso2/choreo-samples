@@ -5,15 +5,15 @@ configurations {
 }
 
 dependencies {
-    ziparchive 'io.ballerinax.webhook:module-ballerinax-twilio:0.99.9-SNAPSHOT'
-    ziparchive 'org.ballerinalang.googleapis.sheets:module-ballerinax-googleapis.sheets:0.99.9-SNAPSHOT'
-    ziparchive 'org.ballerinalang.googleapis.gmail:module-ballerinax-googleapis.gmail:0.99.8-SNAPSHOT'
-    ziparchive 'io.ballerinax.slack:module-ballerinax-slack:0.9.9-SNAPSHOT'
-    ziparchive 'org.ballerinalang.googleapis.calendar:module-ballerinax-googleapis.calendar:0.1.6-SNAPSHOT'
-    ziparchive 'org.ballerinalang.netsuite:module-ballerinax-netsuite:0.9.6-SNAPSHOT'
-    ziparchive 'org.ballerinalang.azure.eventhub:module-ballerinax-azure.eventhub:0.1.4-SNAPSHOT'
-    ziparchive 'org.ballerinalang.aws.s3:module-ballerinax-aws.s3:0.99.5-SNAPSHOT'
-    ziparchive 'org.ballerinalang.aws.sqs:module-ballerinax-aws.sqs:0.99.4-SNAPSHOT'
+    ziparchive "io.ballerinax.webhook:module-ballerinax-twilio:${project.twilioversion}"
+    ziparchive "org.ballerinalang.googleapis.sheets:module-ballerinax-googleapis.sheets:${project.googleapisSheetsVersion}"
+    ziparchive "org.ballerinalang.googleapis.gmail:module-ballerinax-googleapis.gmail:${project.googleapisGmailVersion}"
+    ziparchive "io.ballerinax.slack:module-ballerinax-slack:${project.slackVersion}"
+    ziparchive "org.ballerinalang.googleapis.calendar:module-ballerinax-googleapis.calendar:${project.googleapisCalendarVersion}"
+    ziparchive "org.ballerinalang.netsuite:module-ballerinax-netsuite:${project.netsuiteVersion}"
+    ziparchive "org.ballerinalang.azure.eventhub:module-ballerinax-azure.eventhub:${project.azureEventhubVersion}"
+    ziparchive "org.ballerinalang.aws.s3:module-ballerinax-aws.s3:${project.awsS3Version}"
+    ziparchive "org.ballerinalang.aws.sqs:module-ballerinax-aws.sqs:${project.awsSqsVersion}"
 }
 
 repositories {
