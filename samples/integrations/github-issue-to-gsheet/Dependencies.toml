@@ -11,7 +11,7 @@ version = "1.2.0-alpha8"
 [[dependency]]
 org = "ballerinax"
 name = "googleapis.sheets"
-version = "0.99.8"
+version = "0.99.9-SNAPSHOT"
 
 [[dependency]]
 org = "ballerinax"
