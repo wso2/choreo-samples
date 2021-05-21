@@ -1,0 +1,16 @@
+name: Build samples
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_samples:
+    name: Build Samples
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Fetch connector depdencies
+      working-directory: ./scripts/sample-tests
+      run: ./gradlew build
+      
