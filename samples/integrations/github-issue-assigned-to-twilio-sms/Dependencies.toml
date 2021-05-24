@@ -51,4 +51,4 @@ version = "0.99.14"
 [[dependency]]
 org = "ballerinax"
 name = "twilio"
-version = "0.99.8"
+version = "0.99.9-SNAPSHOT"

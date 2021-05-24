@@ -1,0 +1,130 @@
+name: Build samples
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_samples:
+    name: Build Samples
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Fetch connector depdencies
+      working-directory: ./scripts/dependency-fetcher
+      env:
+        packageUser: ${{ github.actor }}
+        packagePAT: ${{ secrets.GITHUB_TOKEN }}
+      run: ./gradlew build
+    # Integration Samples
+    - name: Google calendar to twilio
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/gcalendar-to-twilio
+    - name: GitHub issue assigned to twilio sms
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/github-issue-assigned-to-twilio-sms
+    - name: GitHub issue to Google sheet
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/github-issue-to-gsheet
+    - name: GitHub new commit to Google sheet
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/github-new-commit-to-google-sheet-row
+    - name: GitHub new release to Twilio sms
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/github-new-release-to-twilio-sms
+    - name: GitHub new release to Slack
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/github-release-to-slack
+    - name: SDFC new lead to Twilio sms
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/sfdc-new-lead-to-twilio-sms
+    - name: SDFC opportunity close down to slack
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/sfdc-opportunity-closedwon-to-slack
+    - name: SDFC opportunity update to Twilio SMS
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/sfdc-opportunity-update-to-twilio-sms
+    - name: SDFC record to Google Sheet
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/sfdc-record-to-gsheet
+    - name: Twilio SMS to Google Sheet
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/integrations/twilio-sms-to-gsheet
+    # Services Samples
+    - name: Content based routing
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/content-based-routing
+    - name: Echo service
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/echo-service
+    - name: Header based routing
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/header-based-routing
+    - name: Hello World
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/hello-world
+    - name: JSON to JSON transformation
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/json-to-json-transformation
+    - name: JSON to XML conversion
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/json-to-xml-conversion
+    - name: Periodical scheduled task
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/periodical-scheduled-task
+    - name: Scatter gather
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/scatter-gather
+    - name: Service Chaining
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/service-chaining
+    - name: Simple passthrough
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/simple-passthrough
+    - name: XML to JSON conversion
+      uses: ballerina-platform/ballerina-action@nightly
+      with:
+        args:
+          build ./samples/services/xml-to-json-conversion

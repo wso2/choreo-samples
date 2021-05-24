@@ -1,12 +1,12 @@
 [[dependency]]
-org = "ballerinax"
+org = "ballerina"
 name = "googleapis.calendar"
-version = "0.1.5"
+version = "0.1.6-SNAPSHOT"
 
 [[dependency]]
-org = "ballerinax"
+org = "ballerina"
 name = "twilio"
-version = "0.99.8"
+version = "0.99.9-SNAPSHOT"
 
 [[dependency]]
 org = "ballerina"
