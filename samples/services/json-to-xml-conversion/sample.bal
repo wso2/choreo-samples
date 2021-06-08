@@ -1,7 +1,7 @@
 import ballerina/http;
 import ballerina/xmldata;
 
-service http:Service on new http:Listener(8090) {
+service http:Service / on new http:Listener(8090) {
     resource function post convert(http:Caller outboundEP, http:Request req) 
         returns xml | xmldata:Error? | http:ClientError? {
         var jsonMsg = req.getJsonPayload();

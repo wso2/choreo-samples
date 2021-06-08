@@ -1,6 +1,6 @@
 import ballerina/http;
 
-service on new http:Listener(8090) {
+service / on new http:Listener(8090) {
     resource function post .(http:Caller caller, http:Request req) returns json | http:Response | error {
         json message = check req.getJsonPayload();
         if ( message.name.firstName is json && message.name.lastName is json 

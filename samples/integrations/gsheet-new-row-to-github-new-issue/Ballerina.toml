@@ -1,0 +1,8 @@
+[package]
+org = "ballerinax"
+name = "gsheet_new_row_to_github_new_issue"
+version = "0.2.0"
+
+[build-options]
+observabilityIncluded = true
+

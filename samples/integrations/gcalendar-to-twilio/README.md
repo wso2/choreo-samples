@@ -75,6 +75,10 @@ access token and refresh token).
        - Account SId
        - Auth Token
 
+**Note** : There might be message delivery issues when trying to use this integration with Twilio trial accounts where users may see a message status of *Delivered*, even when the message did not successfully reach the destination mobile device.
+
+Follow [Twilio Documentation](https://support.twilio.com/hc/en-us/articles/360038982313-SMS-messages-show-the-status-Delivered-but-aren-t-showing-up) for more information.
+
 ## Template Configuration
 
 1. Once you obtained all configurations, Create `Config.toml` in root directory.

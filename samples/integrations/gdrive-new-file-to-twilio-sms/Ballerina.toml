@@ -1,0 +1,8 @@
+[package]
+org = "ballerinax"
+name = "gdrive_new_file_to_twilio_sms"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+

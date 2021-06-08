@@ -82,24 +82,8 @@ Using this template user can get newly added records into a selected Google Shee
 5.  Salesforce username, password and the security token that will be needed for initializing the listener. 
     For more information on the secret token, please visit [Reset Your Security Token](https://help.salesforce.com/articleView?id=user_security_token.htm&type=5).
     
-Once you obtained all configurations, Replace "" in the `Conf.toml` file with your data. For the `sfdcPassword` insert the combination of your Salesforce account password with the security token received 
-
-### Create Push Topic in Salesforce developer console
-
-The Salesforce trigger requires topics to be created for each event. We need to configure topic to listen on record creation of particular SObject. 
-
-1. From the Salesforce UI, select developer console. Go to debug > Open Execute Anonymous Window. 
-2. Following apex code is an example for creating a pushtopic to trigger record creation of `Account` SObject. You can change the `pushTopic.Name` to match with the SObject you wish to get triggered  and `pushTopic.Query` by adding the fields you want to receive when the event triggered.
-```apex
-PushTopic pushTopic = new PushTopic();
-pushTopic.Name = 'NewAccount';
-pushTopic.Query = 'select Id, Name , BillingCity, Company, Phone, Industry  from Account';
-pushTopic.ApiVersion = 48.0;
-pushTopic.NotifyForOperationCreate = true;
-pushTopic.NotifyForFields = 'Referenced';
-insert pushTopic;
-```
-3. Once the creation is done, specify the SObject name and topic name in your `Config.toml` file as `sfdcObject` and `sfdcPushTopic`.
+    Once you obtained all configurations, Replace "" in the `Config.toml` file with your data. For the `sfdcPassword` insert the combination of your Salesforce account password with the security token received 
+6. [Select Objects](https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_select_objects.htm) for Change Notifications in the User Interface of Salesforce account.
 
 ### Setup Google Sheets Configurations
 Create a Google account and create a connected app by visiting [Google cloud platform APIs and Services](https://console.cloud.google.com/apis/dashboard). 
@@ -134,19 +118,12 @@ Create a Google account and create a connected app by visiting [Google cloud pla
 #### ballerinax/sfdc related configurations 
 
 ```
-[ballerinax.sfdc_new_record_to_google_sheet_row]
-epURL = "<SALESFORCE_ACCOUNT_DOMAIN_URL>"
-sfdcUsername = "<SALESFORCE_USERNAME>"
-sfdcPassword = "<SALESFORCE_PASSWORD>"
-sfdcPushTopic = "<SALESFORCE_PUSH_TOPIC>"
+[<ORG_NAME>.sfdc_new_record_to_google_sheet_row]
+sfdcClientId = "<SALESFORCE_CLIENT_ID>"
+sfdcClientSecret = "<SALESFORCE_CLIENT_SECRET>"
+sfdcRefreshToken = "<SALESFORCE_REFRESH_TOKEN>"
+sfdcBaseUrl = "<SALESFORCE_BASE_URL>"
 sfdcObject = "<SALESFORCE_OBJECT_NAME>"
-
-[ballerinax.sfdc_new_record_to_google_sheet_row.sfdcOAuthConfig]
-clientId = "<SALESFORCE_CLIENT_ID>"
-clientSecret = "<SALESFORCE_CLIENT_SECRET>"
-refreshUrl = "<SALESFORCE_REFRESH_URL>"
-refreshToken = "<SALESFORCE_REFRESH_TOKEN>"
-
 ```
 
 #### ballerinax/googleapis_sheet related configurations  
@@ -156,7 +133,7 @@ refreshToken = "<SALESFORCE_REFRESH_TOKEN>"
 spreadsheetId = "<GSHEET_SPREADSHEET_ID>"
 worksheetName = "<GSHEET_WORKSHEET_NAME>"
 
-[<ORG_NAME>.sfdc_new_record_to_google_sheet_row.sheetsOAuthConfig]
+[<ORG_NAME>.sfdc_new_record_to_google_sheet_row.sheetOAuthConfig]
 clientId = "<GSHEET_CLIENT_ID>"
 clientSecret = "<GSHEET_CLIENT_SECRET>"
 refreshUrl = "<GSHEET_REFRESH_URL>"

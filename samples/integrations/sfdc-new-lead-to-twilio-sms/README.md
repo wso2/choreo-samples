@@ -1,6 +1,6 @@
-# Template: Salesforece new lead to Twilio SMS
+# Template: Salesforece New Lead to Twilio SMS
 
-When a new lead is created in Salesforce, send Twilio sms to a specific number.
+When a new lead is created in Salesforce, send Twilio sms.
 
 A customer can use Twilio to send internal notifications to a specific person of interest, based on the new lead information in Salesforce. 
 It is important to follow up with leads as soon as they are added in Salesforce. There maybe a specific person who wanted to be on 
@@ -11,7 +11,7 @@ This template can be used to send a Twilio SMS message containing all
 the defined fields in lead SObject to a given mobile number when a new lead is created in Salesforce.
 
 ## Use this template to
-- Send a Twilio SMS message to a specific number when a new lead is created in Salesforce.
+- Send a Twilio SMS message when a new lead is created in Salesforce.
 
 ## What you need
 - A Twilio Account
@@ -74,24 +74,12 @@ the defined fields in lead SObject to a given mobile number when a new lead is c
 
 ### Configuration steps for Salesforce account
 1. Create a Salesforce account and create a connected app by visiting [Salesforce](https://www.salesforce.com). 
-2. Salesforce username, password will be needed for initializing the listener. 
-3. Once you obtained all configurations, Replace "" in the `Conf.toml` file with your data.
-4.  Create push topic in Salesforce developer console
+2. This sample demonstrates on capturing events using the Event Listener of Ballerina Salesforce Connector. As mentioned below to listen to a certain event users need to select Objects for Change Notifications in the user interface in his/her Salesforce instance.
+https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_select_objects.htm
+3. Salesforce username, password will be needed for initializing the listener. 
+4. Once you obtained all configurations, Replace "" in the `Config.toml` file with your data.
+5. [Select Objects](https://developer.salesforce.com/docs/atlas.en-us.change_data_capture.meta/change_data_capture/cdc_select_objects.htm) for Change Notifications in the User Interface of Salesforce account.
 
-    The Salesforce trigger requires topics to be created for each event. We need to configure topic to listen on Custom Object entity.
-
-    * From the Salesforce UI, select developer console. Go to debug > Open Execute Anonymous Window. 
-    * Paste following apex code to create topic with <NewLead> and execute. You can change the `pushTopic.Query` adding the fields you want to receive when the event triggered.
-    ```apex
-    PushTopic pushTopic = new PushTopic();
-    pushTopic.Name = 'NewLead';
-    pushTopic.Query = 'SELECT Id, FirstName, LastName, Company, Phone, Email, Industry, LeadSource from Lead';
-    pushTopic.ApiVersion = 48.0;
-    pushTopic.NotifyForOperationCreate = true;
-    pushTopic.NotifyForFields = 'Referenced';
-    insert pushTopic;
-    ```
-    * Once the creation is done, specify the topic name in your `Config.toml` file as `sfPushTopic`.
 
 ### Configuration steps for Twilio account
 
@@ -114,13 +102,12 @@ the defined fields in lead SObject to a given mobile number when a new lead is c
 
 ```
 [<ORG_NAME>.sfdc_new_lead_to_twilio_sms]
-username = "<SALESFORCE_USERNAME>"
-password = "<SALESFORCE_PASSWORD>"
-sfPushTopic = "<SALESFORCE_PUSH_TOPIC>"
-accountSId = "<TWILIO_ACCOUNT_SID>"
-authToken = "<TWILIO_AUTH_TOKEN>"
-twFromMobile = "<TWILIO_FROM_MOBILE>"
-twToMobile = "<TWILIO_TO_MOBILE>" 
+sfdcUsername = "<SALESFORCE_USERNAME>"
+sfdcPassword = "<SALESFORCE_PASSWORD>"
+twilioAccountSid = "<TWILIO_ACCOUNT_SID>"
+twilioAuthToken = "<TWILIO_AUTH_TOKEN>"
+fromNumber = "<TWILIO_FROM_MOBILE>"
+toNumber = "<TWILIO_TO_MOBILE>" 
 ```
 
 ## Running the template

@@ -1,14 +1,14 @@
-# Template: GitHub new commit to Google Sheet row
-When a new commit is made and pushed in Github, add a new rows to a Google Sheet.
+# Template: GitHub new commit to Google Sheets row
+When new commits are made and pushed in Github, append new rows to a Google Sheet.
 
 We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. By 
 using this integration, we can organize and automatically set up a Google Sheet which will contain information about 
 commits made in a specific GitHub repository. 
 
-This template can be used to create new rows in a Google Sheet when new commits are made and pushed to a specific GitHub repository.
+This template can be used to create new rows in a Google Sheet when new commits are made and pushed.
 
 ## Use this template to
-- Add new rows to a Google Sheet containing information in the new commits made and pushed to a GitHub repository.
+- Append new rows to a Google Sheet containing information about the new commits made and pushed to a GitHub repository.
 - Get away from manually summarizing all the commits made for a particular GitHub repository of your choice.
 
 ## What you need

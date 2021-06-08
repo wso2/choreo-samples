@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "twilio_new_sms_to_gmail_inbox"
+version = "0.2.0"
+
+[build-options]
+observabilityIncluded = true

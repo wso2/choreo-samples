@@ -4,7 +4,7 @@ import ballerina/log;
 
 public function main() returns error? {
     http:Client healthCheckAPI = check new ("https://samples.choreoapps.dev");
-    var healthCheckResponse = healthCheckAPI->get("/company/hr/employee/1");
+    http:Response|error healthCheckResponse = healthCheckAPI->get("/company/hr/employee/1");
     if (healthCheckResponse is http:Response) {
         log:printInfo("API Status : Healthy");
     } else {

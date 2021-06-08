@@ -16,10 +16,6 @@
 *.iws
 *.ipr
 
-# built files
-sample.json
-sample_temp.bal
-
 # Package Files #
 *.war
 *.nar

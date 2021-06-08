@@ -1,13 +1,12 @@
-# Template: GitHub new release to Twilio SMS
-When a new release is made in Github, send a Twilio sms to a specific number.
+# Template: GitHub New Release to Twilio SMS
+When a new release is made in Github, send a Twilio sms.
 
-It is important to be updated with a particular software development tool that you or your team are using in the day-to-day development process and get notified immediately on a new release of it. It is important to follow up with Github repositories as soon as they are released. There maybe a specific person who wanted to be on alert of new releases of a certain Github repository. Any time a new release is made or updated in Github, a SMS message will automatically send to the specific person of interest via Twilio. 
+It is important to be updated with a particular software development tool that you or your team are using in the day-to-day development process and get notified immediately on a new release of it. It is important to follow up with Github repositories as soon as they are released. There maybe a specific person who wanted to be on alert of new releases of a certain Github repository. Any time a new release is made in Github, a SMS message will automatically send to the specific person of interest via Twilio. 
 
-This template can be used to send a Twilio SMS message to a given mobile number when a new release is made or updated in a specific GitHub repository.
+This template can be used to send a Twilio SMS message to a given mobile number when a new release is made in a specific GitHub repository.
 
 ## Use this template to
 - Send a Twilio SMS message to a specific number when a release is made in a GitHub repository.
-- Send a Twilio SMS message to a specific number when a release is updated in a GitHub repository.
 
 ## What you need
 - A GitHub Account
@@ -104,7 +103,7 @@ and obtain a public URL which expose your local service to the internet.
 [<ORG_NAME>.github_new_release_to_twilio_sms]
 githubRepoURL = "<GITHUB_REPO_URL>"
 gitHubCallbackUrl = "<GITHUB_CALLBACK_URL>"
-accountSId = "<TWILIO_ACCOUNT_SID>"
+accountSid = "<TWILIO_ACCOUNT_SID>"
 authToken = "<TWILIO_AUTH_TOKEN>"
 fromMobile = "<TWILIO_FROM_MOBILE>"
 toMobile = "<TWILIO_TO_MOBILE>"

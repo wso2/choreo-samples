@@ -1,62 +1,59 @@
-import ballerina/io;
+import ballerina/http;
+import ballerina/log;
 import ballerinax/sfdc;
 import ballerinax/twilio;
 
-// Constants
-const string TOPIC_PREFIX = "/topic/";
-const string TYPE_UPDATED = "updated";
-
 // Salesforce configuration parameters
-@display { label: "SalesForce User name" }
-configurable string & readonly username = ?;
-@display { label: "SalesForce Password" }
-configurable string & readonly password = ?;
-@display { label: "SalesForce Push Topic" }
-configurable string & readonly sfPushTopic = ?;
+@display {label: "Salesforce Username"}
+configurable string & readonly sfdcUsername = ?;
 
-sfdc:ListenerConfiguration listenerConfig = {
-    username: username,
-    password: password
-};
+@display {
+    kind: "password",
+    label: "Salesforce Password"
+}
+configurable string & readonly sfdcPassword = ?;
 
 // Twilio configuration parameters
-@display { label: "Twilio Account SID" }
-configurable string & readonly accountSId = ?;
-@display { label: "Twilio Auth Token" }
-configurable string & readonly authToken = ?;
-@display { label: "SMS From mobile no." }
-configurable string & readonly twFromMobile = ?;
-@display { label: "SMS To mobile no." }
-configurable string & readonly twToMobile = ?;
+@display {label: "Twilio Account SID"}
+configurable string & readonly twilioAccountSid = ?;
 
-// Initialize the Salesforce Listener
-listener sfdc:Listener sfdcEventListener = new (listenerConfig);
+@display {label: "Twilio Auth Token"}
+configurable string & readonly twilioAuthToken = ?;
 
-@sfdc:ServiceConfig {
-    topic: TOPIC_PREFIX + sfPushTopic
-}
+@display {label: "SMS Sender's Phone Number"}
+configurable string & readonly fromNumber = ?;
+
+@display {label: "SMS Recipient's Phone Number"}
+configurable string & readonly toNumber = ?;
+
+// Salesforce channel name
+const string CHANNEL_NAME = "/data/OpportunityChangeEvent";
+
+listener sfdc:Listener sfdcEventListener = new ({
+    username: sfdcUsername,
+    password: sfdcPassword
+});
+
+@sfdc:ServiceConfig {channelName: CHANNEL_NAME}
 service on sfdcEventListener {
-    remote function onEvent(json opportunity) returns error? {
-        io:StringReader sr = new (opportunity.toJsonString());
-        json opportunityInfo = check sr.readJson();  
-        json eventType = check opportunityInfo.event.'type;                
-        if (TYPE_UPDATED.equalsIgnoreCaseAscii(eventType.toString())) {
-            json opportunityId = check opportunityInfo.sobject.Id;            
-            json opportunityObject = check opportunityInfo.sobject; 
-            string message = "Salesforce opportunity updated successfully! \n";
-            map<json> opportunityMap = <map<json>> opportunityObject;
+    remote function onUpdate(sfdc:EventData opportunity) returns error? {
+        string message = "Salesforce opportunity updated successfully! \n";
+        map<json> opportunityMap = opportunity.changedData;
+        foreach var entry in opportunityMap.entries() {
+            if (entry[1] != ()) {
+                message += entry[0] + " : " + entry[1].toString() + "\n";
+            }
+        }
 
-            foreach var entry in opportunityMap.entries() {
-                if(entry[1] != ()) {
-                    message = message + entry[0] + " : " + entry[1].toString() + "\n";
-                }
-            }   
-            // Initialize the Twilio Client
-            twilio:Client twilioClient = new ({
-                accountSId: accountSId,
-                authToken: authToken
-            });
-            twilio:SmsResponse result = check twilioClient->sendSms(twFromMobile, twToMobile, message); 
-        }        
+        twilio:Client twilioClient = check new ({
+            accountSId: twilioAccountSid,
+            authToken: twilioAuthToken
+        });
+        twilio:SmsResponse sendSmsResponse = check twilioClient->sendSms(fromNumber, toNumber, message);
+        log:printInfo("SMS for opportunity update sent successfully!");
     }
+}
+
+service on new http:Listener(8090) {
+    isolated resource function get .() returns http:Ok => {};
 }

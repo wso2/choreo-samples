@@ -5,21 +5,38 @@ configurations {
 }
 
 dependencies {
-    ziparchive "io.ballerinax.webhook:module-ballerinax-twilio:${project.twilioversion}"
     ziparchive "org.ballerinalang.googleapis.sheets:module-ballerinax-googleapis.sheets:${project.googleapisSheetsVersion}"
-    ziparchive "org.ballerinalang.googleapis.gmail:module-ballerinax-googleapis.gmail:${project.googleapisGmailVersion}"
-    ziparchive "io.ballerinax.slack:module-ballerinax-slack:${project.slackVersion}"
+    ziparchive "org.ballerinalang.googleapis.drive:module-ballerinax-googleapis.drive:${project.gdriveVersion}"
+    ziparchive "org.ballerinalang.twilio:module-ballerinax-twilio:${project.twilioVersion}"
     ziparchive "org.ballerinalang.googleapis.calendar:module-ballerinax-googleapis.calendar:${project.googleapisCalendarVersion}"
     ziparchive "org.ballerinalang.netsuite:module-ballerinax-netsuite:${project.netsuiteVersion}"
-    ziparchive "org.ballerinalang.azure.eventhub:module-ballerinax-azure.eventhub:${project.azureEventhubVersion}"
-    ziparchive "org.ballerinalang.aws.s3:module-ballerinax-aws.s3:${project.awsS3Version}"
-    ziparchive "org.ballerinalang.aws.sqs:module-ballerinax-aws.sqs:${project.awsSqsVersion}"
+    ziparchive "org.ballerinalang.googleapis.gmail:module-ballerinax-googleapis.gmail:${project.googleapisGmailVersion}"
+    ziparchive "io.ballerinax.slack:module-ballerinax-slack:${project.slackVersion}"
+    ziparchive "io.ballerinax.webhook:module-ballerinax-github:${project.githubVersion}"
+    ziparchive "org.ballerinalang.sf:module-ballerinax-sfdc:${project.sfdcVersion}"
+    ziparchive "org.ballerinalang.azure_storage_service:module-ballerinax-azure-storage-service:${project.azureStorageVersion}"
 }
 
 repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-twilio")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.calendar")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.drive")
             credentials {
                 username System.getenv("packageUser")
                 password System.getenv("packagePAT")
@@ -35,7 +52,7 @@ repositories {
         }
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.gmail")
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-slack")
             credentials {
                 username System.getenv("packageUser")
                 password System.getenv("packagePAT")
@@ -43,7 +60,23 @@ repositories {
         }
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-slack")
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-sfdc")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-github")
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-googleapis.gmail")
             credentials {
                 username System.getenv("packageUser")
                 password System.getenv("packagePAT")
@@ -59,23 +92,7 @@ repositories {
         }
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-azure.eventhub")
-            credentials {
-                username System.getenv("packageUser")
-                password System.getenv("packagePAT")
-            }
-        }
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-aws.s3")
-            credentials {
-                username System.getenv("packageUser")
-                password System.getenv("packagePAT")
-            }
-        }
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-aws.sqs")
+            url = uri("https://maven.pkg.github.com/ballerina-platform/module-ballerinax-azure-storage-service")
             credentials {
                 username System.getenv("packageUser")
                 password System.getenv("packagePAT")
@@ -91,6 +108,7 @@ task unzip(type: Copy) {
         from(zipTree(it))
     }
     into unzippedDir
+    //into file ("${project.projectDir}/laki/bala")
 }
 
 build.dependsOn unzip
