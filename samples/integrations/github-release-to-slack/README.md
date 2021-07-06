@@ -106,13 +106,14 @@ config(Config.toml) file.
 ## Config.toml 
 
 ```
-[<ORG_NAME>.github_release_to_slack_channel]
-github_access_token = "<PAT_OR_OAUTH_TOKEN>"  
-github_secret = "<GITHUB_SECRET>"  
-github_topic = "<GITHUB_TOPIC>"  
-github_callback_url = "<CALLBACK_URL>"  
-slack_token = "<SLACK_TOKEN>"  
-slack_channel_name = "<SLACK_CHANNEL>" 
+[<ORG_NAME>.github_release_to_slack]
+slackChannelName=""
+slackAuthToken=""
+gitHubCallbackUrl=""
+githubRepoURL="
+
+[<ORG_NAME>.github_release_to_slack.gitHubTokenConfig]
+token=""
 ```
 
 ## Running the Template

@@ -1,6 +1,6 @@
 import ballerina/http;
 
-service on new http:Listener(8090) {
+service / on new http:Listener(8090) {
     resource function post employees(http:Caller caller, http:Request req) returns json | error {
         http:Client locationEP = check new ("https://samples.choreoapps.dev");
         json jsonMsg = <json>check req.getJsonPayload();

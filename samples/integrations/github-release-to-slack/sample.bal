@@ -1,55 +1,71 @@
 import ballerina/http;
+import ballerina/log;
 import ballerina/websub;
 import ballerinax/github.webhook;
 import ballerinax/slack;
 
-@display { kind: "OAuthConfig", provider: "GitHub", label: "Set up GitHub connection" }
+const string RELEASE_TAG_NAME = "tag_name";
+const string TARGET_COMMITTISH = "target_commitish";
+const string VERSION_NUMBER = "Version Number";
+const string TARGET_BRANCH = "Target branch";
+
+@display {
+    kind: "OAuthConfig",
+    provider: "GitHub",
+    label: "Set Up GitHub connection"
+}
 configurable http:BearerTokenConfig & readonly gitHubTokenConfig = ?;
-@display { kind: "WebhookURL", label: "Set up callback URL for GitHub webhook"}
+
+@display {
+    kind: "WebhookURL",
+    label: "Set Up Callback URL for GitHub Webhook"
+}
 configurable string & readonly gitHubCallbackUrl = ?;
-@display { kind: "ConnectionField", connectionRef: "gitHubTokenConfig", provider: "GitHub", operationName: "getUserRepositoryList", label: "GitHub Repository URL"}
+
+@display {
+    kind: "ConnectionField",
+    connectionRef: "gitHubTokenConfig",
+    provider: "GitHub",
+    operationName: "getUserRepositoryList",
+    label: "GitHub Repository URL"
+}
 configurable string & readonly githubRepoURL = ?;
 
-@display { label: "Slack Channel Name" }
-configurable string & readonly slackChannelName = ?;
-@display { label: "Slack Auth Token" }
+@display {label: "Slack Auth Token"}
 configurable string & readonly slackAuthToken = ?;
 
-const RELEASE_URL = "html_url"; 
-const RELEASE_TAG_NAME = "tag_name";
-const TARGET_COMMITTISH = "target_commitish";
-const VERSION_NUMBER = "Version Number";
-const TARGET_BRANCH = "Target branch";
-const SEMICOLON = " : ";
+@display {label: "Slack Channel Name"}
+configurable string & readonly slackChannelName = ?;
 
 listener webhook:Listener githubListener = new (8090);
 
 @websub:SubscriberServiceConfig {
     target: [webhook:HUB, githubRepoURL + "/events/*.json"],
-    callback: gitHubCallbackUrl,
-    httpConfig: {
-        auth: gitHubTokenConfig
-    }
+    callback: gitHubCallbackUrl + "/subscriber",
+    httpConfig: {auth: gitHubTokenConfig}
 }
 service /subscriber on githubListener {
     remote function onReleased(webhook:ReleaseEvent event) returns error? {
-        webhook:Release releaseInfo = event.release; 
-        string message = "There is a new release in GitHub ! \n";
-        [string,string][] releaseTuples = [[VERSION_NUMBER, RELEASE_TAG_NAME], [TARGET_BRANCH, TARGET_COMMITTISH]];
-        message += "<" + releaseInfo.get(RELEASE_URL).toString() + ">\n";
-        foreach var releaseTuple in releaseTuples {
-            if (releaseInfo.hasKey(releaseTuple[1])) {
-                message += releaseTuple[0] + SEMICOLON + releaseInfo.get(releaseTuple[1]).toString() + "\n";
+        webhook:Release releaseInfo = event.release;
+        record {| string 'key; string value; |}[] requiredFields = [{
+            'key: VERSION_NUMBER,
+            value: RELEASE_TAG_NAME
+        }, {
+            'key: TARGET_BRANCH,
+            value: TARGET_COMMITTISH
+        }];
+        string message = "There is a new release in GitHub ! \n <" + releaseInfo.html_url + ">\n";
+        foreach var 'field in requiredFields {
+            if (releaseInfo.hasKey('field.value)) {
+                message += string `${'field.'key} : ${releaseInfo.get('field.value).toString()}` + "\n";
             }
         }
-        slack:Client slackClient = check new ({
-            bearerTokenConfig: {
-                token: slackAuthToken
-            }
-        });
-        var result = check slackClient->postMessage({
+
+        slack:Client slackClient = check new ({bearerTokenConfig: {token: slackAuthToken}});
+        string response = check slackClient->postMessage({
             channelName: slackChannelName,
             text: message
         });
+        log:printInfo("Message sent successfully");
     }
 }

@@ -1,4 +1,4 @@
-# Template: Twilio data to a Google Sheet
+# Template: Twilio Data to a Google Sheet
 When new SMS is received to a Twilio account, update a cell in a Google Sheet.
 
 There are day-to-day scenarios where we come across surveys or competitions which are initiated with the use of SMS voting. This integration template allows you to start such kind of scenario instantly and obtain the voting results with the use of a Google Sheet. It listens to the incoming Twilio SMS (with a predefined template) and increments a count in a Google Sheet. This can be used to update specific data in the Google Sheet.<br>
@@ -114,9 +114,9 @@ populated with basic data and ready for receiving user votes.
 ### Config.toml 
 ```
 [<ORG_NAME>.twilio_sms_to_gsheet]
-callbackUrl = "<CALLBACK_URL>"
 twilioAuthToken = "<TWILIO_AUTH_TOKEN>"  
-sheetId = "<SPREADSHEET_ID>"  
+callbackUrl = "<CALLBACK_URL>"
+spreadsheetId = "<SPREADSHEET_ID>"  
 workSheetName ="<WORKSHEET_NAME>" 
 
 [<ORG_NAME>.twilio_sms_to_gsheet.sheetOauthConfig]

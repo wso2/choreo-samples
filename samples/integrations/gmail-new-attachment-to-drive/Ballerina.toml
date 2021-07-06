@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "gmail_new_attachment_to_drive"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true

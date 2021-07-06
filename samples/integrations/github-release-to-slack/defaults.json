@@ -1,9 +1,0 @@
-{
-    "TRIGGER_TYPE": "webhook",
-    "PORT": 8090,
-    "GH_REPO_URL": "GithubRepoURL",
-    "GH_ACCESS_TOKEN": "GithubAccessToken",
-    "CHOREO_APP_INVOCATION_URL": "callbackUrl",
-    "SLACK_TOKEN": "slackToken",
-    "SLACK_CHANNEL_NAME": "slackChannelName"
-}

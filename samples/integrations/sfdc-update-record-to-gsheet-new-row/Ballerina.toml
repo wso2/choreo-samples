@@ -1,0 +1,8 @@
+[package]
+org = "ballerinax"
+name = "sfdc_update_record_to_gsheet_new_row"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+

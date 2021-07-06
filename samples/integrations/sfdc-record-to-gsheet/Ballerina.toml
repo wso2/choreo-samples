@@ -1,17 +1,8 @@
 [package]
 org = "ballerinax"
 name = "sfdc_new_record_to_google_sheet_row"
-version = "0.1.0"
+version = "0.2.0"
 
 [build-options]
 observabilityIncluded = true
 
-[[dependency]]
-org = "ballerinax"
-name = "sfdc"
-version = "2.1.8"
-
-[[dependency]]
-org = "ballerinax"
-name = "googleapis.sheets"
-version = "0.99.8"

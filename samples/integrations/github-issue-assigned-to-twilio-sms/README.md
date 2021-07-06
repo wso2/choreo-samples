@@ -1,4 +1,4 @@
-# Template: GitHub new issue assigned to Twilio SMS
+# Template: GitHub New Issue Assigned to Twilio SMS
 When a new issue is assigned in Github, send a Twilio sms to the issue assignee.
 
 It is important to be updated with a particular software development tool that you or your team are using in the day-to-day development process and get notified immediately when a new issue is assigned. It is important to follow up with Github repositories as soon as an issue is assigned. There maybe a specific person who wanted to be on alert of new issues assigned of a certain Github repository. Any time a new issue is assigned in Github, a SMS message will automatically send to the specific person of interest via Twilio. 
@@ -6,7 +6,7 @@ It is important to be updated with a particular software development tool that y
 This template can be used to send a Twilio SMS message to a given mobile number when a new issue is assigned in a specific GitHub repository.
 
 ## Use this template to
-- Send a Twilio SMS message to a specific number when a new issue is assigned in a GitHub repository.
+- Send a Twilio SMS to the issue assignee when a new Github issue is assigned.
 
 ## What you need
 - A GitHub Account
@@ -74,7 +74,7 @@ This template can be used to send a Twilio SMS message to a given mobile number 
 4. Then you can optionally add a github secret for signature validation.
 5. To setup a github callback URL, you can install [ngrok](https://ngrok.com/download) and [expose a local web server to 
 the internet](https://ngrok.com/docs).
-6. Then start the ngork with webhook:Listener service port (8080 in this example) by using the command ./ngrok http 8080 
+6. Then start the ngork with webhook:Listener service port (8090 in this example) by using the command ./ngrok http 8090 
 and obtain a public URL which expose your local service to the internet.
 7. Set the github callback URL which is in the format 
     ```
@@ -101,12 +101,12 @@ and obtain a public URL which expose your local service to the internet.
 ## Config.toml 
 ```
 [<ORG_NAME>.github_issue_assigned_to_twilio_sms]
-githubRepoURL = "<GITHUB_REPO_URL>"
-gitHubCallbackUrl = "<GITHUB_CALLBACK_URL>"
-accountSId = "<TWILIO_ACCOUNT_SID>"
-authToken = "<TWILIO_AUTH_TOKEN>"
-fromMobile = "<TWILIO_FROM_MOBILE>"
-toMobile = "<TWILIO_TO_MOBILE>"
+githubRepoUrl = "<GITHUB_REPO_URL>"
+githubCallbackUrl = "<GITHUB_CALLBACK_URL>"
+twilioAccountSid = "<TWILIO_ACCOUNT_SID>"
+twilioAuthToken = "<TWILIO_AUTH_TOKEN>"
+fromNumber = "<TWILIO_FROM_MOBILE>"
+toNumber = "<TWILIO_TO_MOBILE>"
 
 [<ORG_NAME>.github_issue_assigned_to_twilio_sms.gitHubTokenConfig]
 token = "<GITHUB_PAT_OR_OAUTH_TOKEN>"

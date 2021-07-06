@@ -1,0 +1,24 @@
+[[dependency]]
+org = "ballerinax"
+name = "googleapis.sheets"
+version = "0.99.9-SNAPSHOT"
+
+[[dependency]]
+org = "ballerinax"
+name = "sfdc"
+version = "2.1.9-SNAPSHOT"
+
+[[dependency]]
+org = "ballerina"
+name = "io"
+version = "0.6.0-beta.2"
+
+[[dependency]]
+org = "ballerina"
+name = "log"
+version = "1.1.0-beta.2"
+
+[[dependency]]
+org = "ballerinax"
+name = "http"
+version = "1.1.0-beta.2"

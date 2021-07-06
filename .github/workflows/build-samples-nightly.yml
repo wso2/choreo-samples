@@ -1,0 +1,129 @@
+name: Build Samples Nightly
+
+on: 
+  workflow_dispatch:
+      inputs:
+        artifact:
+          description: 'Artifact ID'     
+          required: true
+
+jobs:
+  build_samples:
+    name: Build Samples
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    # Fetch connector dependencies
+    - name: Fetch connector depdencies
+      working-directory: ./scripts/dependency-fetcher
+      env:
+        packageUser: ${{ github.actor }}
+        packagePAT: ${{ secrets.GITHUB_TOKEN }}
+      run: ./gradlew build
+
+    # Download and unzip ballerina distribution zip
+    - name: Download Ballerina ZIP
+      run: |
+        wget --header="Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"  https://api.github.com/repos/ballerina-platform/ballerina-distribution/actions/artifacts/${{ github.event.inputs.artifact }}/zip  -O "ballerina.zip"
+        unzip ballerina.zip
+        unzip ballerina-swan-lake-beta2-SNAPSHOT.zip
+
+    # Integration Samples
+    - name: export-email-from-sfdc-contacts 
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/export-email-from-sfdc-contacts
+
+    - name: gdrive-new-file-to-gsheet-rows 
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gdrive-new-file-to-gsheet-rows
+
+    - name: gcalendar-to-twilio
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gcalendar-to-twilio
+
+    - name: gdrive-new-file-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gdrive-new-file-to-twilio-sms
+
+    - name: github-issue-assigned-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/github-issue-assigned-to-twilio-sms
+
+    - name: github-issue-to-gsheet
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/github-issue-to-gsheet
+
+    - name: github-new-commit-to-google-sheet-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/github-new-commit-to-google-sheet-row
+
+    - name: github-new-release-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/github-new-release-to-twilio-sms
+
+    - name: github-release-to-slack
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/github-release-to-slack
+    
+    - name: gsheet-new-row-to-github-new-issue
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gsheet-new-row-to-github-new-issue
+
+    - name: gmail-new-attachment-to-drive
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gmail-new-attachment-to-drive
+
+    - name: gsheet-new-row-to-sfdc-new-lead
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gsheet-new-row-to-sfdc-new-lead
+
+    - name: gsheet-new-row-to-sfdc-new-record
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gsheet-new-row-to-sfdc-new-record
+
+    - name: gsheet-row-update-to-gmail
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gsheet-row-update-to-gmail
+
+    - name: gsheet-update-row-to-sfdc-update-record
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/gsheet-update-row-to-sfdc-update-record
+    
+    - name: sfdc-hot-lead-to-slack
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-hot-lead-to-slack
+
+    - name: sfdc-new-case-to-gsheet
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-case-to-gsheet
+
+    - name: sfdc-new-case-to-gsheet-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-case-to-gsheet-row
+
+    - name: sfdc-new-contact-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-contact-to-twilio-sms
+
+    - name: sfdc-new-lead-to-gsheet-new-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-lead-to-gsheet-new-row
+
+    - name: sfdc-new-contact-to-netsuite
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-contact-to-netsuite
+
+    - name: sfdc-new-lead-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-new-lead-to-twilio-sms
+
+    - name: sfdc-opportunity-closedwon-to-slack
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-opportunity-closedwon-to-slack
+
+    - name: sfdc-opportunity-update-to-slack
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-opportunity-update-to-slack
+
+    - name: sfdc-opportunity-update-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-opportunity-update-to-twilio-sms
+
+    - name: sfdc-outbound-message-to-gsheet-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-outbound-message-to-gsheet-row
+
+    - name: sfdc-record-to-gsheet
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-record-to-gsheet
+
+    - name: twilio-sms-to-gsheet
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/twilio-sms-to-gsheet
+
+    - name: sfdc-record-update-to-gsheet-update-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-record-update-to-gsheet-update-row
+
+    - name: sfdc-update-record-to-gsheet-new-row
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/sfdc-update-record-to-gsheet-new-row
+    
+    - name: slack-new-message-to-twilio-sms
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/slack-new-message-to-twilio-sms
+
+    - name: twilio-new-sms-to-gmail-inbox
+      run: /home/runner/work/choreo-samples/choreo-samples/ballerina-swan-lake-beta2-SNAPSHOT/bin/bal build samples/integrations/twilio-new-sms-to-gmail-inbox
+    

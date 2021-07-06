@@ -1,0 +1,11 @@
+# Configuration file
+Config.toml
+
+# Module files
+modules
+
+# log files
+*.log
+
+# Target folder
+/target

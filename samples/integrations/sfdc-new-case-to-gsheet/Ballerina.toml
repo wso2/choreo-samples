@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "sfdc_new_case_to_gsheet"
+version= "0.1.0"
+
+[build-options]
+observabilityIncluded = true

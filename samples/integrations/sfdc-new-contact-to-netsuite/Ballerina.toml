@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "sfdc_new_contact_to_netsuite_contact"
+version= "0.1.0"
+
+[build-options]
+observabilityIncluded = true

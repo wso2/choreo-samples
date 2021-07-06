@@ -1,0 +1,7 @@
+[package]
+org = "ballerinax"
+name = "slack_new_message_to_twilio_sms"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true

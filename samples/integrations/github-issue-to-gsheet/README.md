@@ -1,5 +1,5 @@
-# Template: GitHub new issue to Google Sheet row
-When a new Issue is opened in Github, add a new row to a Google Sheet.
+# Template: GitHub New Issue to Google Sheets Row
+When a new issue is opened in Github, add a new row to a Google Sheet.
 
 We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. By 
 using this integration, we can organize and automatically set up a Google Sheet which will contain information about 
@@ -8,7 +8,7 @@ issues created in a specific GitHub repository.
 This template can be used to create a new row in a Google Sheet when a new Issue is opened on a specific GitHub repository.
 
 ## Use this template to
-- Add a new row to a Google Sheet containing information in the new issue created in a GitHub repository.
+- Add a new row to a Google Sheet containing information about the new issue created in a GitHub repository.
 - Get away from manually summarizing all the issues created for a particular GitHub repository of your choice.
 
 ## What you need
