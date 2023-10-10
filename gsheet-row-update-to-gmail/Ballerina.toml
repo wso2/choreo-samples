@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Sheets Row Update to Gmail Message"
+name = "gsheet_row_update_to_gmail"
+icon = "icon.png"
+description = "Sends an email to a recipient through Gmail when a row is updated in a specific spreadsheet"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

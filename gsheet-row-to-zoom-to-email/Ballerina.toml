@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "GSheet Row to Zoom Meeting"
+name = "gsheet_row_to_zoom_to_email"
+icon = "icon.png"
+description = "Schedule a zoom meeting with live stream details and send invitations to the participants using the information entered in a Google Sheet"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Calendar New Event to Asana Task"
+name = "gcalendar_new_event_to_asana_new_task"
+icon = "icon.png"
+description = "Creates a new task in Asana when a new event is created in a Google Calendar"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

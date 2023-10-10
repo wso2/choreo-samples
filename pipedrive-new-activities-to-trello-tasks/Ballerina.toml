@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "Pipedrive New Activities to Trello Tasks"
+name = "pipedrive_new_activities_to_trello_tasks"
+icon = "icon.png"
+description = "Creates new tasks in Trello for new Pipedrive activities."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

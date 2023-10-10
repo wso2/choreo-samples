@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "JSON to XML Conversion"
+name = "json_to_xml_conversion"
+icon = "icon.png"
+description = "Converts a JSON request to XML and responds"
+distribution = "2201.3.1"
+version = "3.1.1"
+[build-options]
+observabilityIncluded = true

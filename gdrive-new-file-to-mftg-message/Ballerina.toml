@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Drive New File to MFTG Send Message"
+name = "gdrive_new_file_to_mftg_message"
+icon = "icon.png"
+description = "Sends an AS2 message for new file created in Google Drive."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ScheduledTask", "Category/Integration"]
+org = "choreo"
+displayName = "Send Welcome Email using MS Outlook to New Shopify Customers"
+name = "shopify_new_customers_to_outlook_mail"
+icon = "icon.png"
+description = "Sends an email using Microsoft Outlook for new Shopify customers created within last five minutes"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

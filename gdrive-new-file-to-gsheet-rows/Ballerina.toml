@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Drive New File to Google Sheets Row"
+name = "gdrive_new_file_to_gsheet_rows"
+icon = "icon.png"
+description = "Adds details to a spreadsheet row when a new file is created in a specific Google Drive"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

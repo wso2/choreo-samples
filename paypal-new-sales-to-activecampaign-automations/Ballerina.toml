@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ScheduledTask", "Category/Integration"]
+org = "choreo"
+displayName = "Add Customers to ActiveCampaign Automations for New PayPal Successful Sales"
+name = "paypal_new_sales_to_activecampaign_automations"
+icon = "icon.png"
+description = "Add customer details of a successful sale in Paypal to an ActiveCampaign automation."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

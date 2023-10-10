@@ -1,0 +1,15 @@
+[build-options]
+    observabilityIncluded = true
+
+[package]
+    template = true
+    keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+    org = "choreo"
+    displayName = "GraphQL Service"
+    name = "graphql_service"
+    icon = "icon.png"
+    description = "Responds with a greetings message for a GraphQL query with input name received via an HTTP POST"
+    distribution = "2201.3.1"
+    version = "3.1.2"
+
+include = [".choreo/endpoints.yaml"]

@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "JSON Transformation"
+name = "json_to_json_transformation"
+icon = "icon.png"
+description = "Transforms the structure of the JSON request and responds"
+distribution = "2201.3.1"
+version = "3.1.1"
+[build-options]
+observabilityIncluded = true

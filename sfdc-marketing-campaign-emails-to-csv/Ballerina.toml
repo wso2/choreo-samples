@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
+org = "choreo"
+displayName = "Salesforce Campaign Emails to Azure Blob Storage"
+name = "sfdc_marketing_campaign_emails_to_csv"
+icon = "icon.png"
+description = "Exports email addresses of Salesforce campaign members to a CSV file and stores in Azure Blob Storage"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

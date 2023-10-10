@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Salesforce New Campaign to Twitter Post"
+name = "sfdc_new_campaign_to_twitter_post"
+icon = "icon.png"
+description = "Post a tweet when a new campaign is created in a specific Salesforce account."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

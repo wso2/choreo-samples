@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "Hubspot contacts to Google contacts"
+name = "hubspot_contacts_to_google_contacts"
+icon = "icon.png"
+description = "Sync Hubspot contacts with Google Contacts"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

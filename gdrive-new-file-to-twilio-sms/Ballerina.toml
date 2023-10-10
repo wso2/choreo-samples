@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Drive New File to Twilio SMS"
+name = "gdrive_new_file_to_twilio_sms"
+icon = "icon.png"
+description = "Sends a Twilio SMS to a phone number when a new file is created in a specific Google Drive"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

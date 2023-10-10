@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "Github Issue Summary to Email"
+name = "github_issue_summary_to_email"
+icon = "icon.png"
+description = "Schedules a task to generate a report out of issues at a GitHub repository & send an email"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

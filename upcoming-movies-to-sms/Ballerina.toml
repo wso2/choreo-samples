@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "Today's Movies to SMS Notification"
+name = "upcoming_movies_to_sms"
+icon = "icon.png"
+description = "Send an SMS with the movies that are released on the day."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

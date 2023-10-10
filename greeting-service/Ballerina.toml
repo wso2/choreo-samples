@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "Greeting Service"
+name = "greeting_service"
+icon = "icon.png"
+description = "Responds with a record including the message received via an HTTP GET"
+distribution = "2201.3.1"
+version = "3.1.1"
+[build-options]
+observabilityIncluded = true

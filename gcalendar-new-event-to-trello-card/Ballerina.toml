@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Calendar Event to Trello Card"
+name = "gcalendar_new_event_to_trello_card"
+icon = "icon.png"
+description = "Create a new card in trello when a new event is created in a specific Google Calendar"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

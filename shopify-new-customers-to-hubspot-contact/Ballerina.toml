@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ScheduledTask", "Category/Integration"]
+org = "choreo"
+displayName = "Shopify New Customers to HubSpot Create/Update Contact"
+name = "shopify_new_customers_to_hubspot_contact"
+icon = "icon.png"
+description = "Adds new or updates existing contacts in HubSpot account on new Shopify customers"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

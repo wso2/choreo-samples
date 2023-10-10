@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Twilio New SMS to Gmail Message"
+name = "twilio_new_sms_to_gmail_inbox"
+icon = "icon.png"
+description = "Sends an email to a recipient through Gmail when a new SMS is received on Twilio"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

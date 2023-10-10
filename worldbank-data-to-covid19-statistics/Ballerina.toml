@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "COVID-19 Statistics"
+name = "worldbank_data_to_covid19_statistics"
+icon = "icon.png"
+description = "Provides the COVID-19 cases per million people in a specific country"
+distribution = "2201.4.1"
+version = "3.2.0"
+[build-options]
+observabilityIncluded = true

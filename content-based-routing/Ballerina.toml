@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "Content Based Routing"
+name = "content_based_routing"
+icon = "icon.png"
+description = "Routes requests depending on the content"
+distribution = "2201.3.1"
+version = "3.1.1"
+[build-options]
+observabilityIncluded = true

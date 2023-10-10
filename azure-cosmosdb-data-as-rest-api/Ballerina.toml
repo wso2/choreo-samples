@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
+org = "choreo"
+displayName = "Expose Azure CosmosDB data as Rest API"
+name = "azure_cosmosdb_data_as_rest_api"
+icon = "icon.png"
+description = "Expose Azure CosmosDB data as Rest API"
+distribution = "2201.4.1"
+version = "3.2.0"
+[build-options]
+observabilityIncluded = true

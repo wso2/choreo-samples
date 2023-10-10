@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
+org = "choreo"
+displayName = "CapsuleCRM Opportunities Won to Gmail Email"
+name = "capsulecrm_opportunities_won_to_gmail_email"
+icon = "icon.png"
+description = "Sends an email to a recipient through Gmail for new CapsuleCRM opportunities won."
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

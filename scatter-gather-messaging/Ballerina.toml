@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Service", "Category/Services", "Category/Integration"]
+org = "choreo"
+displayName = "Scatter Gather Messaging"
+icon = "icon.png"
+name = "scatter_gather_messaging"
+description = "Send a message to multiple recipients and re-aggregates the responses back into a single message"
+distribution = "2201.3.1"
+version = "3.1.1"
+[build-options]
+observabilityIncluded = true

@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/ScheduledTask", "Category/Integration"]
+org = "choreo"
+displayName = "Send a Slack message with specified currency conversion rate periodically"
+name = "interzoid_currency_conversion_rate_to_slack_message"
+icon = "icon.png"
+description = "Send a Slack message with requested currency conversion rate. This can be scheduled to run periodically"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true

@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
+org = "choreo"
+displayName = "Google Calendar Event to Twilio SMS"
+name = "gcalendar_to_twilio"
+icon = "icon.png"
+description = "Sends a Twilio SMS to a phone number when a new event is created in a specific Google Calendar"
+version = "3.1.0"
+distribution = "2201.3.1"
+[build-options]
+observabilityIncluded = true

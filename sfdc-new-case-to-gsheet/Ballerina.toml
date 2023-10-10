@@ -1,0 +1,12 @@
+[package]
+template = true
+keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
+org = "choreo"
+displayName = "Salesforce New Case to Google Sheets New Spreadsheet"
+name = "sfdc_new_case_to_gsheet"
+icon = "icon.png"
+description = "Adds details to a new spreadsheet when a new case is created in a specific Salesforce account"
+distribution = "2201.3.1"
+version = "3.1.0"
+[build-options]
+observabilityIncluded = true
