@@ -1,7 +1,0 @@
-[package]
-org = "ballerinax"
-name = "github_new_commit_to_google_sheet_row"
-version = "0.2.0"
-
-[build-options]
-observabilityIncluded = true

@@ -1,8 +1,0 @@
-[package]
-org = "ballerinax"
-name = "sfdc_new_lead_to_twilio_sms"
-version = "0.2.0"
-
-[build-options]
-observabilityIncluded = true
-

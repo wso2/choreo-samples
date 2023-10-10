@@ -1,2 +1,2 @@
 # choreo-samples
-This will contain integration and service samples displayed in choreo.
+This contains integration and service samples displayed in choreo.

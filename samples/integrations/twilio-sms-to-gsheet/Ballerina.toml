@@ -1,7 +1,0 @@
-[package]
-org = "ballerinax"
-name = "twilio_sms_to_gsheet"
-version= "0.2.0"
-
-[build-options]
-observabilityIncluded = true
