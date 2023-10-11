@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /custom-data-types
+componentType: service
+description: Creates a custom data type and populates it with data received from a
+  POST request
+displayName: Custom Data Types
+documentationPath: /custom-data-types/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Service
+- Category/Service
+- Internal/http
+thumbnailPath: /custom-data-types/icon.png

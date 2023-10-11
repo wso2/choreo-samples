@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /shopify-new-customers-to-hubspot-contact
+componentType: service
+description: Adds new or updates existing contacts in HubSpot account on new Shopify
+  customers
+displayName: Shopify New Customers to HubSpot Create/Update Contact
+documentationPath: /shopify-new-customers-to-hubspot-contact/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ScheduledTask
+- Category/Integration
+thumbnailPath: /shopify-new-customers-to-hubspot-contact/icon.png

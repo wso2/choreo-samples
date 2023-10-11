@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /github-issue-to-servicenow
+componentType: service
+description: Insert details to a new record in Incident table of ServiceNow when a
+  new issue is created in a specific GitHub repository
+displayName: GitHub New Issue to ServiceNow Record
+documentationPath: /github-issue-to-servicenow/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /github-issue-to-servicenow/icon.png

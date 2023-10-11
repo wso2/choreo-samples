@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /slack-new-message-to-servicenow-case
+componentType: service
+description: Creates a ServiceNow case when a new message is posted to a specific
+  Slack channel
+displayName: Slack Channel New Message to ServiceNow Case
+documentationPath: /slack-new-message-to-servicenow-case/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /slack-new-message-to-servicenow-case/icon.png

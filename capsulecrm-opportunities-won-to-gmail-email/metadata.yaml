@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /capsulecrm-opportunities-won-to-gmail-email
+componentType: service
+description: Sends an email to a recipient through Gmail for new CapsuleCRM opportunities
+  won.
+displayName: CapsuleCRM Opportunities Won to Gmail Email
+documentationPath: /capsulecrm-opportunities-won-to-gmail-email/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /capsulecrm-opportunities-won-to-gmail-email/icon.png

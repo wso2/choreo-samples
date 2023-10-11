@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /gdrive-files-to-microsoft-onedrive-files
+componentType: service
+description: Sync Google Drive files to Microsoft OneDrive
+displayName: Google Drive files to Microsoft OneDrive files
+documentationPath: /gdrive-files-to-microsoft-onedrive-files/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /gdrive-files-to-microsoft-onedrive-files/icon.png

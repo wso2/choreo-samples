@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /github-issue-summary-to-email
+componentType: service
+description: Schedules a task to generate a report out of issues at a GitHub repository
+  & send an email
+displayName: Github Issue Summary to Email
+documentationPath: /github-issue-summary-to-email/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /github-issue-summary-to-email/icon.png

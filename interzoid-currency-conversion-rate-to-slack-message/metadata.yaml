@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /interzoid-currency-conversion-rate-to-slack-message
+componentType: service
+description: Send a Slack message with requested currency conversion rate. This can
+  be scheduled to run periodically
+displayName: Send a Slack message with specified currency conversion rate periodically
+documentationPath: /interzoid-currency-conversion-rate-to-slack-message/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ScheduledTask
+- Category/Integration
+thumbnailPath: /interzoid-currency-conversion-rate-to-slack-message/icon.png

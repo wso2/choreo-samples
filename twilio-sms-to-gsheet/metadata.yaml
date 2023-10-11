@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /twilio-sms-to-gsheet
+componentType: service
+description: A survey to find out the best language for building microservices out
+  of a set of given languages
+displayName: SMS Voting Survey to Google Sheets Summary
+documentationPath: /twilio-sms-to-gsheet/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /twilio-sms-to-gsheet/icon.png

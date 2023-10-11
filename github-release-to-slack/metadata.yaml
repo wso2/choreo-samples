@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /github-release-to-slack
+componentType: service
+description: Posts a message to a Slack channel when a release is made in a specific
+  GitHub repository
+displayName: GitHub New Release to Slack Channel Message
+documentationPath: /github-release-to-slack/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /github-release-to-slack/icon.png

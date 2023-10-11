@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /gdrive-new-file-to-twilio-sms
+componentType: service
+description: Sends a Twilio SMS to a phone number when a new file is created in a
+  specific Google Drive
+displayName: Google Drive New File to Twilio SMS
+documentationPath: /gdrive-new-file-to-twilio-sms/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /gdrive-new-file-to-twilio-sms/icon.png

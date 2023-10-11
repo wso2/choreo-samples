@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /sfdc-new-campaign-to-twitter-post
+componentType: service
+description: Post a tweet when a new campaign is created in a specific Salesforce
+  account.
+displayName: Salesforce New Campaign to Twitter Post
+documentationPath: /sfdc-new-campaign-to-twitter-post/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /sfdc-new-campaign-to-twitter-post/icon.png

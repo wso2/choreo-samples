@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /pipedrive-new-activities-to-trello-tasks
+componentType: service
+description: Creates new tasks in Trello for new Pipedrive activities.
+displayName: Pipedrive New Activities to Trello Tasks
+documentationPath: /pipedrive-new-activities-to-trello-tasks/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /pipedrive-new-activities-to-trello-tasks/icon.png

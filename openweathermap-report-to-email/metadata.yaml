@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /openweathermap-report-to-email
+componentType: service
+description: Schedules a task to generate a weather report & send an email.
+displayName: OpenWeatherMap Report to Email
+documentationPath: /openweathermap-report-to-email/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /openweathermap-report-to-email/icon.png

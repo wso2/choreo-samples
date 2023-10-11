@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /gcalendar-new-event-to-asana-new-task
+componentType: service
+description: Creates a new task in Asana when a new event is created in a Google Calendar
+displayName: Google Calendar New Event to Asana Task
+documentationPath: /gcalendar-new-event-to-asana-new-task/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /gcalendar-new-event-to-asana-new-task/icon.png

@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /marketing-email-to-sfdc-new-lead
+componentType: service
+description: Send a marketing email via Gmail to new Salesforce lead when it is created
+  in a specific Salesforce account
+displayName: Send Marketing Email to Salesforce New Lead
+documentationPath: /marketing-email-to-sfdc-new-lead/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+thumbnailPath: /marketing-email-to-sfdc-new-lead/icon.png

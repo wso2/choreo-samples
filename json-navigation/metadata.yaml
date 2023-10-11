@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /json-navigation
+componentType: service
+description: Navigates through the fields of a JSON object and extracts the data
+displayName: JSON Navigation
+documentationPath: /json-navigation/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Service
+- Category/Service
+- Internal/http
+thumbnailPath: /json-navigation/icon.png

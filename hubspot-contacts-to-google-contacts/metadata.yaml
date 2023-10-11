@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /hubspot-contacts-to-google-contacts
+componentType: service
+description: Sync Hubspot contacts with Google Contacts
+displayName: Hubspot contacts to Google contacts
+documentationPath: /hubspot-contacts-to-google-contacts/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /hubspot-contacts-to-google-contacts/icon.png

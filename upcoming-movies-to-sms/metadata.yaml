@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /upcoming-movies-to-sms
+componentType: service
+description: Send an SMS with the movies that are released on the day.
+displayName: Today's Movies to SMS Notification
+documentationPath: /upcoming-movies-to-sms/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ManualTrigger
+- Category/Integration
+thumbnailPath: /upcoming-movies-to-sms/icon.png

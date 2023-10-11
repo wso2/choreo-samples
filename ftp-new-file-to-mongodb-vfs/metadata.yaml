@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /ftp-new-file-to-mongodb-vfs
+componentType: service
+description: A VFS sample to process files in specified source directory and move
+  them to specified location
+displayName: VFS with file processing and transfer
+documentationPath: /ftp-new-file-to-mongodb-vfs/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/ftp
+thumbnailPath: /ftp-new-file-to-mongodb-vfs/icon.png

@@ -1,0 +1,13 @@
+buildPreset: ballerin
+componentPath: /sfdc-new-case-to-gsheet-row
+componentType: service
+description: Adds details to a spreadsheet row when a new case is created in a specific
+  Salesforce account
+displayName: Salesforce New Case to Google Sheets Row
+documentationPath: /sfdc-new-case-to-gsheet-row/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+thumbnailPath: /sfdc-new-case-to-gsheet-row/icon.png

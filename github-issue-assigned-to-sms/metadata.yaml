@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /github-issue-assigned-to-sms
+componentType: service
+description: Sends an SMS notification to a specific user when a GitHub issue is assigned
+  to the user
+displayName: GitHub Issue Assigned to SMS Notification
+documentationPath: /github-issue-assigned-to-sms/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /github-issue-assigned-to-sms/icon.png

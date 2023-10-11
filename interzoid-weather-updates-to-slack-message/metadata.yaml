@@ -1,0 +1,12 @@
+buildPreset: ballerin
+componentPath: /interzoid-weather-updates-to-slack-message
+componentType: service
+description: Send a Slack message with detailed weather report periodically
+displayName: Send a Slack message with weather updates to a particular city periodically
+documentationPath: /interzoid-weather-updates-to-slack-message/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/ScheduledTask
+- Category/Integration
+thumbnailPath: /interzoid-weather-updates-to-slack-message/icon.png

@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /github-issue-to-gsheet
+componentType: service
+description: Adds details to a spreadsheet row when a new issue is created in a specific
+  GitHub repository
+displayName: GitHub New Issue to Google Sheets Row
+documentationPath: /github-issue-to-gsheet/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /github-issue-to-gsheet/icon.png

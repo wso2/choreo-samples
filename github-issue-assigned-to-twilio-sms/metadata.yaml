@@ -1,0 +1,14 @@
+buildPreset: ballerin
+componentPath: /github-issue-assigned-to-twilio-sms
+componentType: service
+description: Sends a Twilio SMS to a phone number when a GitHub issue is assigned
+  to a particular user
+displayName: GitHub Issue Assigned to Twilio SMS
+documentationPath: /github-issue-assigned-to-twilio-sms/readme.md
+repositoryUrl: https://github.com/wso2/choreo-samples/
+tags:
+- Kind/Sample
+- Type/Webhook
+- Category/Integration
+- Internal/http
+thumbnailPath: /github-issue-assigned-to-twilio-sms/icon.png
