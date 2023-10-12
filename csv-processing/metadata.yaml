@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /csv-processing
-componentType: service
-description: Counts data items from a CSV file stored in an Amazon S3 bucket
 displayName: CSV Processing
-documentationPath: /csv-processing/readme.md
+description: Counts data items from a CSV file stored in an Amazon S3 bucket
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /csv-processing
+thumbnailPath: /csv-processing/icon.png
+documentationPath: /csv-processing/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /csv-processing/icon.png

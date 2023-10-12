@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /xml-to-json-conversion
-componentType: service
-description: Converts an XML request to JSON and responds
 displayName: XML to JSON Conversion
-documentationPath: /xml-to-json-conversion/readme.md
+description: Converts an XML request to JSON and responds
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /xml-to-json-conversion
+thumbnailPath: /xml-to-json-conversion/icon.png
+documentationPath: /xml-to-json-conversion/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /xml-to-json-conversion/icon.png

@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /shopify-new-customers-to-outlook-mail
-componentType: scheduled-task
+displayName: Send Welcome Email using MS Outlook to New Shopify Customers
 description: Sends an email using Microsoft Outlook for new Shopify customers created
   within last five minutes
-displayName: Send Welcome Email using MS Outlook to New Shopify Customers
-documentationPath: /shopify-new-customers-to-outlook-mail/readme.md
+componentType: scheduled-task
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /shopify-new-customers-to-outlook-mail
+thumbnailPath: /shopify-new-customers-to-outlook-mail/icon.png
+documentationPath: /shopify-new-customers-to-outlook-mail/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /shopify-new-customers-to-outlook-mail/icon.png

@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /sfdc-opportunity-update-to-twilio-sms
-componentType: webhook
+displayName: Salesforce Opportunity Update to Twilio SMS
 description: Sends a Twilio SMS to a phone number when an opportunity is updated in
   a specific Salesforce account
-displayName: Salesforce Opportunity Update to Twilio SMS
-documentationPath: /sfdc-opportunity-update-to-twilio-sms/readme.md
+componentType: webhook
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-opportunity-update-to-twilio-sms
+thumbnailPath: /sfdc-opportunity-update-to-twilio-sms/icon.png
+documentationPath: /sfdc-opportunity-update-to-twilio-sms/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /sfdc-opportunity-update-to-twilio-sms/icon.png

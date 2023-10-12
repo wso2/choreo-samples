@@ -1,12 +1,12 @@
-buildPreset: ballerina
-componentPath: /gsheet-row-update-to-gmail
-componentType: webhook
+displayName: Google Sheets Row Update to Gmail Message
 description: Sends an email to a recipient through Gmail when a row is updated in
   a specific spreadsheet
-displayName: Google Sheets Row Update to Gmail Message
-documentationPath: /gsheet-row-update-to-gmail/readme.md
+componentType: webhook
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gsheet-row-update-to-gmail
+thumbnailPath: /gsheet-row-update-to-gmail/icon.png
+documentationPath: /gsheet-row-update-to-gmail/readme.md
 tags:
 - Category/Integration
 - Internal/http
-thumbnailPath: /gsheet-row-update-to-gmail/icon.png

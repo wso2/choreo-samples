@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /service-chaining
-componentType: service
-description: Links two endpoints to get the details of an employee profile
 displayName: Service Chaining
-documentationPath: /service-chaining/readme.md
+description: Links two endpoints to get the details of an employee profile
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /service-chaining
+thumbnailPath: /service-chaining/icon.png
+documentationPath: /service-chaining/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /service-chaining/icon.png

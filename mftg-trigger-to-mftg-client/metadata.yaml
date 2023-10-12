@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /mftg-trigger-to-mftg-client
-componentType: webhook
-description: Mark each successfully received message as unread
 displayName: MFTG trigger to MFTG client
-documentationPath: /mftg-trigger-to-mftg-client/readme.md
+description: Mark each successfully received message as unread
+componentType: webhook
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mftg-trigger-to-mftg-client
+thumbnailPath: /mftg-trigger-to-mftg-client/icon.png
+documentationPath: /mftg-trigger-to-mftg-client/readme.md
 tags:
 - Category/Integration
 - Internal/http
-thumbnailPath: /mftg-trigger-to-mftg-client/icon.png

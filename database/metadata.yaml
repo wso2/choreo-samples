@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /database
-componentType: service
-description: Reads data from a MySQL database and returns a JSON response
 displayName: Database Connection
-documentationPath: /database/readme.md
+description: Reads data from a MySQL database and returns a JSON response
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /database
+thumbnailPath: /database/icon.png
+documentationPath: /database/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /database/icon.png

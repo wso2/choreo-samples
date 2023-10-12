@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /sfdc-new-campaign-to-aws-ses-email
-componentType: webhook
+displayName: Salesforce New Campaign to AWS SES Email
 description: Send an AWS SES email when a new campaign is created in a specific Salesforce
   account.
-displayName: Salesforce New Campaign to AWS SES Email
-documentationPath: /sfdc-new-campaign-to-aws-ses-email/readme.md
+componentType: webhook
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-new-campaign-to-aws-ses-email
+thumbnailPath: /sfdc-new-campaign-to-aws-ses-email/icon.png
+documentationPath: /sfdc-new-campaign-to-aws-ses-email/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /sfdc-new-campaign-to-aws-ses-email/icon.png

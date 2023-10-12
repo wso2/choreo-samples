@@ -1,10 +1,10 @@
-buildPreset: ballerina
-componentPath: /ronin_invoices_to_quickbooks_online_invoices
-componentType: manual-task
-description: Creates new Quickbooks online invoices from Ronin invoices.
 displayName: Ronin Invoices to Quickbooks Online Invoices
-documentationPath: /ronin_invoices_to_quickbooks_online_invoices/readme.md
+description: Creates new Quickbooks online invoices from Ronin invoices.
+componentType: manual-task
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /ronin_invoices_to_quickbooks_online_invoices
+thumbnailPath: /ronin_invoices_to_quickbooks_online_invoices/icon.png
+documentationPath: /ronin_invoices_to_quickbooks_online_invoices/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /ronin_invoices_to_quickbooks_online_invoices/icon.png

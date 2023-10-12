@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /eventbrite-attendees-to-mailchimp-subscribers
-componentType: manual-task
+displayName: Evenbrite Event Attendees to Mailchimp Subscribers
 description: Adds new Eventbrite event attendees to a Mailchimp audience(subscriber
   list) for an Eventbrite event.
-displayName: Evenbrite Event Attendees to Mailchimp Subscribers
-documentationPath: /eventbrite-attendees-to-mailchimp-subscribers/readme.md
+componentType: manual-task
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /eventbrite-attendees-to-mailchimp-subscribers
+thumbnailPath: /eventbrite-attendees-to-mailchimp-subscribers/icon.png
+documentationPath: /eventbrite-attendees-to-mailchimp-subscribers/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /eventbrite-attendees-to-mailchimp-subscribers/icon.png

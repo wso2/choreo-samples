@@ -1,12 +1,12 @@
-buildPreset: ballerina
-componentPath: /graphql-service
-componentType: service
+displayName: GraphQL Service
 description: Responds with a greetings message for a GraphQL query with input name
   received via an HTTP POST
-displayName: GraphQL Service
-documentationPath: /graphql-service/readme.md
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /graphql-service
+thumbnailPath: /graphql-service/icon.png
+documentationPath: /graphql-service/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /graphql-service/icon.png

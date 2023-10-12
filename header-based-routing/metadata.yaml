@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /header-based-routing
-componentType: service
-description: Routes requests depending on the HTTP header value
 displayName: Header Based Routing
-documentationPath: /header-based-routing/readme.md
+description: Routes requests depending on the HTTP header value
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /header-based-routing
+thumbnailPath: /header-based-routing/icon.png
+documentationPath: /header-based-routing/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /header-based-routing/icon.png

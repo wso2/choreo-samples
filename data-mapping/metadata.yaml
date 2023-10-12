@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /data-mapping
-componentType: service
-description: Maps data fields from one data structure to another
 displayName: Data Mapping
-documentationPath: /data-mapping/readme.md
+description: Maps data fields from one data structure to another
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /data-mapping
+thumbnailPath: /data-mapping/icon.png
+documentationPath: /data-mapping/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /data-mapping/icon.png

@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /greeting-service
-componentType: service
-description: Responds with a record including the message received via an HTTP GET
 displayName: Greeting Service
-documentationPath: /greeting-service/readme.md
+description: Responds with a record including the message received via an HTTP GET
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /greeting-service
+thumbnailPath: /greeting-service/icon.png
+documentationPath: /greeting-service/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /greeting-service/icon.png

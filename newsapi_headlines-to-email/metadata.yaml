@@ -1,10 +1,10 @@
-buildPreset: ballerina
-componentPath: /newsapi_headlines-to-email
-componentType: manual-task
-description: Send an email with list of top headlines by News API.
 displayName: News API Headlines to Email
-documentationPath: /newsapi_headlines-to-email/readme.md
+description: Send an email with list of top headlines by News API.
+componentType: manual-task
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /newsapi_headlines-to-email
+thumbnailPath: /newsapi_headlines-to-email/icon.png
+documentationPath: /newsapi_headlines-to-email/readme.md
 tags:
 - Category/Integration
-thumbnailPath: /newsapi_headlines-to-email/icon.png

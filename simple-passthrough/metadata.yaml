@@ -1,12 +1,12 @@
-buildPreset: ballerina
-componentPath: /simple-passthrough
-componentType: service
+displayName: Passthrough Service
 description: Forwards a received request to an endpoint via an HTTP POST and responds
   with the reponse received from the endpoint
-displayName: Passthrough Service
-documentationPath: /simple-passthrough/readme.md
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /simple-passthrough
+thumbnailPath: /simple-passthrough/icon.png
+documentationPath: /simple-passthrough/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /simple-passthrough/icon.png

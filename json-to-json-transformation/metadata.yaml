@@ -1,11 +1,11 @@
-buildPreset: ballerina
-componentPath: /json-to-json-transformation
-componentType: service
-description: Transforms the structure of the JSON request and responds
 displayName: JSON Transformation
-documentationPath: /json-to-json-transformation/readme.md
+description: Transforms the structure of the JSON request and responds
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /json-to-json-transformation
+thumbnailPath: /json-to-json-transformation/icon.png
+documentationPath: /json-to-json-transformation/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /json-to-json-transformation/icon.png

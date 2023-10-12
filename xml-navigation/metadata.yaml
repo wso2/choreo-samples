@@ -1,12 +1,12 @@
-buildPreset: ballerina
-componentPath: /xml-navigation
-componentType: service
+displayName: XML Navigation
 description: Navigates through the elements of an XML structure and extracts their
   data
-displayName: XML Navigation
-documentationPath: /xml-navigation/readme.md
+componentType: service
+buildPreset: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /xml-navigation
+thumbnailPath: /xml-navigation/icon.png
+documentationPath: /xml-navigation/readme.md
 tags:
 - Category/Service
 - Internal/http
-thumbnailPath: /xml-navigation/icon.png
