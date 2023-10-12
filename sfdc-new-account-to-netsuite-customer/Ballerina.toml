@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
 org = "choreo"
-displayName = "Salesforce New Account to NetSuite New Customer"
 name = "sfdc_new_account_to_netsuite_customer"
-icon = "icon.png"
-description = "Adds a new customer in NetSuite when a new accout is created in Salesforce"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

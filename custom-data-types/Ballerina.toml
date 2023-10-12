@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "Custom Data Types"
 name = "custom_data_types"
-icon = "icon.png"
-description = "Creates a custom data type and populates it with data received from a POST request"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

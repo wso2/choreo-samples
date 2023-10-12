@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "CapsuleCRM Opportunities Lost to Slack Channel Message"
 name = "capsulecrm_opportunities_lost_to_slack_channel_message"
-icon = "icon.png"
-description = "Sends a message to a slack channel for new CapsuleCRM opportunities lost."
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "MFTG trigger to MFTG client"
 name = "mftg_trigger_to_mftg_client"
-icon = "icon.png"
-description = "Mark each successfully received message as unread"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

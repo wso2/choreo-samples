@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "Passthrough Service"
 name = "simple_passthrough"
-icon = "icon.png"
-description = "Forwards a received request to an endpoint via an HTTP POST and responds with the reponse received from the endpoint"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

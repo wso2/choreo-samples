@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "GitHub New Issue to ServiceNow Record"
 name = "github_issue_to_servicenow"
-icon = "icon.png"
-description = "Insert details to a new record in Incident table of ServiceNow when a new issue is created in a specific GitHub repository"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

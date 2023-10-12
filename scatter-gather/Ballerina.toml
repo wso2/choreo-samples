@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "Message Aggregator"
 name = "scatter_gather"
-icon = "icon.png"
-description = "Sends multiple requests to the backend, collects responses, and distills them into a single response"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "Spotify New Release to SMS"
 name = "spotify_new_release_to_sms"
-icon = "icon.png"
-description = "Sends SMS notifications on new Spotify releases by your favorite artist"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

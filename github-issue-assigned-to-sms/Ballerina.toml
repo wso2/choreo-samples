@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "GitHub Issue Assigned to SMS Notification"
 name = "github_issue_assigned_to_sms"
-icon = "icon.png"
-description = "Sends an SMS notification to a specific user when a GitHub issue is assigned to the user"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

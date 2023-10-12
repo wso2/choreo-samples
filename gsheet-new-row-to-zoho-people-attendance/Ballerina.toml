@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "Google Sheets New Row to Zoho People Attendance"
 name = "gsheet_new_row_to_zoho_people_attendance"
-icon = "icon.png"
-description = "Add the attendance entry in Zoho People when a new row added to Google Sheets"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "OpenWeatherMap Report to Email"
 name = "openweathermap_report_to_email"
-icon = "icon.png"
-description = "Schedules a task to generate a weather report & send an email."
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

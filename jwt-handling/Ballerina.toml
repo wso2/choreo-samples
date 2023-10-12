@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "JWT Handling"
 name = "jwt_handling"
-icon = "icon.png"
-description = "Reads fields from a JWT and processes them"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

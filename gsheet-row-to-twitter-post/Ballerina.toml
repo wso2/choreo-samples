@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "Google Sheets Row to Twitter Post"
 name = "gsheet_row_to_twitter_post"
-icon = "icon.png"
-description = "Post a tweet with content in the Google sheet for the records which matches with the current date."
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

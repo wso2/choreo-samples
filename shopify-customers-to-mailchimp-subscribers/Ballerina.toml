@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "Add Shopify New Customers to Mailchimp Subscribers"
 name = "shopify_customers_to_mailchimp_subscribers"
-icon = "icon.png"
-description = "Adds new contacts(members) to a Mailchimp audience(subscriber list) for new Shopify customers."
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

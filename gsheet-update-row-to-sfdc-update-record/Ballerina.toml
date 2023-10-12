@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "Google Sheets Row Update to Salesforce Record Update"
 name = "gsheet_update_row_to_sfdc_update_record"
-icon = "icon.png"
-description = "Updates the corresponding record in Salesforce when record details are updated in a spreadsheet row"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

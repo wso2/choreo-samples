@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "Header Based Routing"
 name = "header_based_routing"
-icon = "icon.png"
-description = "Routes requests depending on the HTTP header value"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

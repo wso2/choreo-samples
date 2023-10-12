@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/http"]
 org = "choreo"
-displayName = "GitHub New Commit to Google Sheets Row"
 name = "github_new_commit_to_google_sheet_row"
-icon = "icon.png"
-description = "Adds details to a spreadsheet row when a new commit is made in a specific GitHub repository"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

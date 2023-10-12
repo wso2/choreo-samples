@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "Data Encoding and Decoding"
 name = "encode_decode"
-icon = "icon.png"
-description = "Encodes and decodes data using base64 or URL encoding schemes"
 distribution = "2201.3.1"
 version = "3.1.1"
+
 [build-options]
 observabilityIncluded = true

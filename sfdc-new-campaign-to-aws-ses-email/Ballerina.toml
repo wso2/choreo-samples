@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
 org = "choreo"
-displayName = "Salesforce New Campaign to AWS SES Email"
 name = "sfdc_new_campaign_to_aws_ses_email"
-icon = "icon.png"
-description = "Send an AWS SES email when a new campaign is created in a specific Salesforce account."
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

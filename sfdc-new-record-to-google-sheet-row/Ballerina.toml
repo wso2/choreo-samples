@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
 org = "choreo"
-displayName = "Salesforce New Record to Google Sheets Row"
 name = "sfdc_new_record_to_google_sheet_row"
-icon = "icon.png"
-description = "Adds details to a spreadsheet row when a new record is created in a specific Salesforce account"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

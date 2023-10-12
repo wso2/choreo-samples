@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration"]
 org = "choreo"
-displayName = "Salesforce New Contact to NetSuite New Contact"
 name = "sfdc_new_contact_to_netsuite_contact"
-icon = "icon.png"
-description = "Adds a new contact in NetSuite when a new contact is created in Salesforce"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

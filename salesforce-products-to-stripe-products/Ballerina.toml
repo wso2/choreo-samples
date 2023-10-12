@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/ManualTrigger", "Category/Integration"]
 org = "choreo"
-displayName = "Saleforce Products to Stripe Products"
 name = "salesforce_products_to_stripe_products"
-icon = "icon.png"
-description = "Migrate products in Salesforce account to Stripe"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

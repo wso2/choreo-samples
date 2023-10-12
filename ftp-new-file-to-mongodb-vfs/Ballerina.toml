@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Webhook", "Category/Integration", "Internal/ftp"]
 org = "choreo"
-displayName = "VFS with file processing and transfer"
 name = "ftp_new_file_to_mongodb_vfs"
-icon = "icon.png"
-description = "A VFS sample to process files in specified source directory and move them to specified location"
 distribution = "2201.3.1"
 version = "3.1.0"
+
 [build-options]
 observabilityIncluded = true

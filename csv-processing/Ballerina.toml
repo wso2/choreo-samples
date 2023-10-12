@@ -1,12 +1,8 @@
 [package]
-template = true
-keywords = ["Kind/Sample", "Type/Service", "Category/Service", "Internal/http"]
 org = "choreo"
-displayName = "CSV Processing"
 name = "csv_processing"
-icon = "icon.png"
-description = "Counts data items from a CSV file stored in an Amazon S3 bucket"
 distribution = "2201.3.1"
 version = "3.1.2"
+
 [build-options]
 observabilityIncluded = true
