@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "sfdc_opportunity_closedwon_to_slack"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

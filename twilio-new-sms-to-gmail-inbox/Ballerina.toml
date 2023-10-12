@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "twilio_new_sms_to_gmail_inbox"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

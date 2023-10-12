@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "sfdc_record_update_to_gsheet_update_row"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

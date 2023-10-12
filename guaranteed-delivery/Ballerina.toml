@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "guaranteed_delivery"
+distribution = "2201.3.1"
+version = "3.1.1"
+
+[build-options]
+observabilityIncluded = true

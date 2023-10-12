@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "csv_processing"
+distribution = "2201.3.1"
+version = "3.1.2"
+
+[build-options]
+observabilityIncluded = true

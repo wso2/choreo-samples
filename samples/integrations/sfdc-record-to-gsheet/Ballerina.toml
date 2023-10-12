@@ -1,8 +1,0 @@
-[package]
-org = "ballerinax"
-name = "sfdc_new_record_to_google_sheet_row"
-version = "0.2.0"
-
-[build-options]
-observabilityIncluded = true
-

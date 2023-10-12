@@ -1,8 +1,0 @@
-[package]
-org = "ballerinax"
-name = "sfdc_opportunity_update_to_twilio_sms"
-version = "0.2.0"
-
-[build-options]
-observabilityIncluded = true
-

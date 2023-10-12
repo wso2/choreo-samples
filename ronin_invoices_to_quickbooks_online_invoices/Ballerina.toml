@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "ronin_invoices_to_quickbooks_online_invoices"
+distribution = "2201.4.1"
+version = "3.2.0"
+
+[build-options]
+observabilityIncluded = true

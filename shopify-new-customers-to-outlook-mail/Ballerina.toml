@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "shopify_new_customers_to_outlook_mail"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

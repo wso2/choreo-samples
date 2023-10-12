@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "sfdc_new_record_to_google_sheet_row"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

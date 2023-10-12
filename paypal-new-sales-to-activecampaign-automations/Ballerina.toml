@@ -1,0 +1,8 @@
+[package]
+org = "choreo"
+name = "paypal_new_sales_to_activecampaign_automations"
+distribution = "2201.3.1"
+version = "3.1.0"
+
+[build-options]
+observabilityIncluded = true

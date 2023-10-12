@@ -1,0 +1,11 @@
+displayName: JWT Handling
+description: Reads fields from a JWT and processes them
+componentType: service
+buildPreset: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /jwt-handling
+thumbnailPath: /jwt-handling/icon.png
+documentationPath: /jwt-handling/readme.md
+tags:
+- Category/Service
+- Internal/http

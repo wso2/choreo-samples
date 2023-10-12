@@ -1,0 +1,9 @@
+[build-options]
+observabilityIncluded = true
+
+[package]
+org = "choreo"
+name = "graphql_service"
+distribution = "2201.3.1"
+version = "3.1.2"
+include = [ ".choreo/endpoints.yaml",]
