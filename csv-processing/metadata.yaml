@@ -6,7 +6,6 @@ displayName: CSV Processing
 documentationPath: /csv-processing/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /csv-processing/icon.png

@@ -7,7 +7,6 @@ displayName: Usage of Redis Cache to cache responses
 documentationPath: /redis-caching/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /redis-caching/icon.png

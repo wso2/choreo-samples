@@ -6,7 +6,6 @@ displayName: XML to JSON Conversion
 documentationPath: /xml-to-json-conversion/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /xml-to-json-conversion/icon.png

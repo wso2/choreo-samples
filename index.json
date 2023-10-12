@@ -51,7 +51,6 @@
       "thumbnailPath": "/database/icon.png",
       "documentationPath": "/database/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -93,7 +92,6 @@
       "thumbnailPath": "/error-handling/icon.png",
       "documentationPath": "/error-handling/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -189,7 +187,6 @@
       "thumbnailPath": "/graphql-service/icon.png",
       "documentationPath": "/graphql-service/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -245,7 +242,6 @@
       "thumbnailPath": "/guaranteed-delivery/icon.png",
       "documentationPath": "/guaranteed-delivery/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -299,7 +295,6 @@
       "thumbnailPath": "/content-based-routing/icon.png",
       "documentationPath": "/content-based-routing/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -342,7 +337,6 @@
       "thumbnailPath": "/scim_user_details_to_google_sheet_row/icon.png",
       "documentationPath": "/scim_user_details_to_google_sheet_row/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Integration",
         "Internal/http"
       ]
@@ -396,7 +390,6 @@
       "thumbnailPath": "/circuit-breaker/icon.png",
       "documentationPath": "/circuit-breaker/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -439,7 +432,6 @@
       "thumbnailPath": "/header-based-routing/icon.png",
       "documentationPath": "/header-based-routing/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -521,7 +513,6 @@
       "thumbnailPath": "/scatter-gather/icon.png",
       "documentationPath": "/scatter-gather/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -549,7 +540,6 @@
       "thumbnailPath": "/data-mapping/icon.png",
       "documentationPath": "/data-mapping/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -577,7 +567,6 @@
       "thumbnailPath": "/scatter-gather-messaging/icon.png",
       "documentationPath": "/scatter-gather-messaging/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Services",
         "Category/Integration"
       ]
@@ -605,7 +594,6 @@
       "thumbnailPath": "/csv-processing/icon.png",
       "documentationPath": "/csv-processing/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -620,7 +608,6 @@
       "thumbnailPath": "/hello-world/icon.png",
       "documentationPath": "/hello-world/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -703,7 +690,6 @@
       "thumbnailPath": "/redis-caching/icon.png",
       "documentationPath": "/redis-caching/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -784,7 +770,6 @@
       "thumbnailPath": "/encode-decode/icon.png",
       "documentationPath": "/encode-decode/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -799,7 +784,6 @@
       "thumbnailPath": "/json-navigation/icon.png",
       "documentationPath": "/json-navigation/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -814,7 +798,6 @@
       "thumbnailPath": "/azure-cosmosdb-data-as-rest-api/icon.png",
       "documentationPath": "/azure-cosmosdb-data-as-rest-api/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -868,7 +851,6 @@
       "thumbnailPath": "/echo-service/icon.png",
       "documentationPath": "/echo-service/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -896,7 +878,6 @@
       "thumbnailPath": "/xml-navigation/icon.png",
       "documentationPath": "/xml-navigation/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -952,7 +933,6 @@
       "thumbnailPath": "/json-to-json-transformation/icon.png",
       "documentationPath": "/json-to-json-transformation/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -981,7 +961,6 @@
       "thumbnailPath": "/custom-data-types/icon.png",
       "documentationPath": "/custom-data-types/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -996,7 +975,6 @@
       "thumbnailPath": "/service-chaining/icon.png",
       "documentationPath": "/service-chaining/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1039,7 +1017,6 @@
       "thumbnailPath": "/simple-passthrough/icon.png",
       "documentationPath": "/simple-passthrough/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1093,7 +1070,6 @@
       "thumbnailPath": "/json-to-xml-conversion/icon.png",
       "documentationPath": "/json-to-xml-conversion/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1188,7 +1164,6 @@
       "thumbnailPath": "/worldbank-data-to-covid19-statistics/icon.png",
       "documentationPath": "/worldbank-data-to-covid19-statistics/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1244,7 +1219,6 @@
       "thumbnailPath": "/xml-to-json-conversion/icon.png",
       "documentationPath": "/xml-to-json-conversion/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1285,7 +1259,6 @@
       "thumbnailPath": "/rdbms-data-as-rest-api/icon.png",
       "documentationPath": "/rdbms-data-as-rest-api/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1300,7 +1273,6 @@
       "thumbnailPath": "/jwt-handling/icon.png",
       "documentationPath": "/jwt-handling/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1329,7 +1301,6 @@
       "thumbnailPath": "/greeting-service/icon.png",
       "documentationPath": "/greeting-service/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]
@@ -1384,7 +1355,6 @@
       "thumbnailPath": "/header-manipulation/icon.png",
       "documentationPath": "/header-manipulation/readme.md",
       "tags": [
-        "Type/Service",
         "Category/Service",
         "Internal/http"
       ]

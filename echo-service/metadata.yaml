@@ -6,7 +6,6 @@ displayName: Echo Service
 documentationPath: /echo-service/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /echo-service/icon.png

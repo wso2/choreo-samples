@@ -6,7 +6,6 @@ displayName: Data Encoding and Decoding
 documentationPath: /encode-decode/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /encode-decode/icon.png

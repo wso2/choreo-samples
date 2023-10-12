@@ -7,7 +7,6 @@ displayName: Passthrough Service
 documentationPath: /simple-passthrough/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /simple-passthrough/icon.png

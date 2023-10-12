@@ -6,7 +6,6 @@ displayName: Circuit Breaker
 documentationPath: /circuit-breaker/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /circuit-breaker/icon.png

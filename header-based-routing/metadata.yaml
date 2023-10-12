@@ -6,7 +6,6 @@ displayName: Header Based Routing
 documentationPath: /header-based-routing/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /header-based-routing/icon.png

@@ -6,7 +6,6 @@ displayName: Expose Azure CosmosDB data as Rest API
 documentationPath: /azure-cosmosdb-data-as-rest-api/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /azure-cosmosdb-data-as-rest-api/icon.png

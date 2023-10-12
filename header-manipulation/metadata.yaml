@@ -6,7 +6,6 @@ displayName: HTTP Header Manipulation
 documentationPath: /header-manipulation/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /header-manipulation/icon.png

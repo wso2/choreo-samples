@@ -6,7 +6,6 @@ displayName: Expose RDBMS data as Rest API
 documentationPath: /rdbms-data-as-rest-api/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /rdbms-data-as-rest-api/icon.png

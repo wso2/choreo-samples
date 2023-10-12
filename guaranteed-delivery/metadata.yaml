@@ -6,7 +6,6 @@ displayName: Guaranteed Delivery using Azure Service Bus
 documentationPath: /guaranteed-delivery/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /guaranteed-delivery/icon.png

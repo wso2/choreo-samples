@@ -7,7 +7,6 @@ displayName: SCIM User Details To Google Sheets Row
 documentationPath: /scim_user_details_to_google_sheet_row/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Integration
 - Internal/http
 thumbnailPath: /scim_user_details_to_google_sheet_row/icon.png

@@ -6,7 +6,6 @@ displayName: JSON Transformation
 documentationPath: /json-to-json-transformation/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Type/Service
 - Category/Service
 - Internal/http
 thumbnailPath: /json-to-json-transformation/icon.png
