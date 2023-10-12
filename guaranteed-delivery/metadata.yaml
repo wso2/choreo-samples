@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /guaranteed-delivery
 componentType: service
 description: Provides guaranteed delivery for messages in ASB queue
@@ -6,7 +6,6 @@ displayName: Guaranteed Delivery using Azure Service Bus
 documentationPath: /guaranteed-delivery/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

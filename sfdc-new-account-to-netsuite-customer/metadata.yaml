@@ -1,12 +1,10 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /sfdc-new-account-to-netsuite-customer
-componentType: service
+componentType: webhook
 description: Adds a new customer in NetSuite when a new accout is created in Salesforce
 displayName: Salesforce New Account to NetSuite New Customer
 documentationPath: /sfdc-new-account-to-netsuite-customer/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 thumbnailPath: /sfdc-new-account-to-netsuite-customer/icon.png

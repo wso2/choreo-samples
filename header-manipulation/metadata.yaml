@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /header-manipulation
 componentType: service
 description: Manipulates HTTP headers to implement HTTP basic authentication scenarios
@@ -6,7 +6,6 @@ displayName: HTTP Header Manipulation
 documentationPath: /header-manipulation/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

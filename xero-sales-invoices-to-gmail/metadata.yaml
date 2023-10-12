@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /xero-sales-invoices-to-gmail
-componentType: service
+componentType: manual-task
 description: Send a summary of new Xero invoices created in the past week as an email
   via Gmail
 displayName: Xero Sales Invoices to Gmail
 documentationPath: /xero-sales-invoices-to-gmail/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/ManualTrigger
 - Category/Integration
 thumbnailPath: /xero-sales-invoices-to-gmail/icon.png

@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /sfdc-hot-lead-to-slack
-componentType: service
+componentType: webhook
 description: Posts a message to a Slack channel when a new hot lead is created in
   a specific Salesforce account
 displayName: Salesforce New Hot Lead to Slack Channel Message
 documentationPath: /sfdc-hot-lead-to-slack/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 thumbnailPath: /sfdc-hot-lead-to-slack/icon.png

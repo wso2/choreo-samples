@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /sfdc-new-record-to-google-sheet-row
-componentType: service
+componentType: webhook
 description: Adds details to a spreadsheet row when a new record is created in a specific
   Salesforce account
 displayName: Salesforce New Record to Google Sheets Row
 documentationPath: /sfdc-new-record-to-google-sheet-row/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 thumbnailPath: /sfdc-new-record-to-google-sheet-row/icon.png

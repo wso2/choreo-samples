@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /error-handling
 componentType: service
 description: Handle errors at different levels of granularities
@@ -6,7 +6,6 @@ displayName: Error Handling
 documentationPath: /error-handling/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

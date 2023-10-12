@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /gsheet-new-row-to-zoho-people-attendance
-componentType: service
+componentType: webhook
 description: Add the attendance entry in Zoho People when a new row added to Google
   Sheets
 displayName: Google Sheets New Row to Zoho People Attendance
 documentationPath: /gsheet-new-row-to-zoho-people-attendance/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /gsheet-new-row-to-zoho-people-attendance/icon.png

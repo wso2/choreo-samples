@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /gcalendar-new-event-to-trello-card
-componentType: service
+componentType: webhook
 description: Create a new card in trello when a new event is created in a specific
   Google Calendar
 displayName: Google Calendar Event to Trello Card
 documentationPath: /gcalendar-new-event-to-trello-card/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /gcalendar-new-event-to-trello-card/icon.png

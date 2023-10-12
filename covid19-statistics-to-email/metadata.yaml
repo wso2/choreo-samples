@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /covid19-statistics-to-email
-componentType: service
+componentType: manual-task
 description: Calculates COVID-19 cases per million in a specific country and send
   an email
 displayName: COVID-19 Statistics to Email
 documentationPath: /covid19-statistics-to-email/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/ManualTrigger
 - Category/Integration
 thumbnailPath: /covid19-statistics-to-email/icon.png

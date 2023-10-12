@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /encode-decode
 componentType: service
 description: Encodes and decodes data using base64 or URL encoding schemes
@@ -6,7 +6,6 @@ displayName: Data Encoding and Decoding
 documentationPath: /encode-decode/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

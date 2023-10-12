@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /github-new-release-to-twitter-post
-componentType: service
+componentType: webhook
 description: Post a tweet when a new release is made in a specific GitHub repository
 displayName: GitHub New Release to Twitter Post
 documentationPath: /github-new-release-to-twitter-post/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /github-new-release-to-twitter-post/icon.png

@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /gsheet-update-row-to-sfdc-update-record
-componentType: service
+componentType: webhook
 description: Updates the corresponding record in Salesforce when record details are
   updated in a spreadsheet row
 displayName: Google Sheets Row Update to Salesforce Record Update
 documentationPath: /gsheet-update-row-to-sfdc-update-record/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /gsheet-update-row-to-sfdc-update-record/icon.png

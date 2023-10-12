@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /shopify-customers-to-mailchimp-subscribers
-componentType: service
+componentType: manual-task
 description: Adds new contacts(members) to a Mailchimp audience(subscriber list) for
   new Shopify customers.
 displayName: Add Shopify New Customers to Mailchimp Subscribers
 documentationPath: /shopify-customers-to-mailchimp-subscribers/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/ManualTrigger
 - Category/Integration
 thumbnailPath: /shopify-customers-to-mailchimp-subscribers/icon.png

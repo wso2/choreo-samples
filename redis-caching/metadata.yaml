@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /redis-caching
 componentType: service
 description: Fetch data from Redis cache instead of invoking API endpoints again and
@@ -7,7 +7,6 @@ displayName: Usage of Redis Cache to cache responses
 documentationPath: /redis-caching/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

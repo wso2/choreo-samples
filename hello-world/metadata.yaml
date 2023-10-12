@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /hello-world
 componentType: service
 description: Responds with the Hello World message
@@ -6,7 +6,6 @@ displayName: Hello World
 documentationPath: /hello-world/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

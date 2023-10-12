@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /circuit-breaker
 componentType: service
 description: Handles outages and service slowness gracefully to avoid cascading failures
@@ -6,7 +6,6 @@ displayName: Circuit Breaker
 documentationPath: /circuit-breaker/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

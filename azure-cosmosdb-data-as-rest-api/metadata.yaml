@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /azure-cosmosdb-data-as-rest-api
 componentType: service
 description: Expose Azure CosmosDB data as Rest API
@@ -6,7 +6,6 @@ displayName: Expose Azure CosmosDB data as Rest API
 documentationPath: /azure-cosmosdb-data-as-rest-api/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

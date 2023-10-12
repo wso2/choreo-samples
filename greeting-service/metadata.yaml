@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /greeting-service
 componentType: service
 description: Responds with a record including the message received via an HTTP GET
@@ -6,7 +6,6 @@ displayName: Greeting Service
 documentationPath: /greeting-service/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

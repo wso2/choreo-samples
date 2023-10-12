@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /sfdc-marketing-campaign-emails-to-csv
-componentType: service
+componentType: webhook
 description: Exports email addresses of Salesforce campaign members to a CSV file
   and stores in Azure Blob Storage
 displayName: Salesforce Campaign Emails to Azure Blob Storage
 documentationPath: /sfdc-marketing-campaign-emails-to-csv/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 thumbnailPath: /sfdc-marketing-campaign-emails-to-csv/icon.png

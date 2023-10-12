@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /github-new-commit-to-google-sheet-row
-componentType: service
+componentType: webhook
 description: Adds details to a spreadsheet row when a new commit is made in a specific
   GitHub repository
 displayName: GitHub New Commit to Google Sheets Row
 documentationPath: /github-new-commit-to-google-sheet-row/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /github-new-commit-to-google-sheet-row/icon.png

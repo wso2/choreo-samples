@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /github-new-release-to-twilio-sms
-componentType: service
+componentType: webhook
 description: Sends a Twilio SMS to a phone number when a new release is made in a
   specific GitHub repository
 displayName: GitHub New Release to Twilio SMS
 documentationPath: /github-new-release-to-twilio-sms/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /github-new-release-to-twilio-sms/icon.png

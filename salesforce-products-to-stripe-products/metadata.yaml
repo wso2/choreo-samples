@@ -1,12 +1,10 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /salesforce-products-to-stripe-products
-componentType: service
+componentType: manual-task
 description: Migrate products in Salesforce account to Stripe
 displayName: Saleforce Products to Stripe Products
 documentationPath: /salesforce-products-to-stripe-products/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/ManualTrigger
 - Category/Integration
 thumbnailPath: /salesforce-products-to-stripe-products/icon.png

@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /scatter-gather
 componentType: service
 description: Sends multiple requests to the backend, collects responses, and distills
@@ -7,7 +7,6 @@ displayName: Message Aggregator
 documentationPath: /scatter-gather/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /graphql-service
 componentType: service
 description: Responds with a greetings message for a GraphQL query with input name
@@ -7,7 +7,6 @@ displayName: GraphQL Service
 documentationPath: /graphql-service/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

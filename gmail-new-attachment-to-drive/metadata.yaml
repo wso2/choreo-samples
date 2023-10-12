@@ -1,13 +1,11 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /gmail-new-attachment-to-drive
-componentType: service
+componentType: webhook
 description: Upload attachments to Google drive when a new Gmail comes with attachments
 displayName: Gmail New Attachment to Google Drive
 documentationPath: /gmail-new-attachment-to-drive/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /gmail-new-attachment-to-drive/icon.png

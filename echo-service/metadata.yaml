@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /echo-service
 componentType: service
 description: Responds with the same message received via an HTTP POST
@@ -6,7 +6,6 @@ displayName: Echo Service
 documentationPath: /echo-service/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

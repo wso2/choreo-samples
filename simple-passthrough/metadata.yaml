@@ -1,4 +1,4 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /simple-passthrough
 componentType: service
 description: Forwards a received request to an endpoint via an HTTP POST and responds
@@ -7,7 +7,6 @@ displayName: Passthrough Service
 documentationPath: /simple-passthrough/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
 - Type/Service
 - Category/Service
 - Internal/http

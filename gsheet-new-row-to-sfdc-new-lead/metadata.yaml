@@ -1,14 +1,12 @@
-buildPreset: ballerin
+buildPreset: ballerina
 componentPath: /gsheet-new-row-to-sfdc-new-lead
-componentType: service
+componentType: webhook
 description: Adds a lead in Salesforce when new lead details are added to a spreadsheet
   row
 displayName: Google Sheets New Row to Salesforce New Lead
 documentationPath: /gsheet-new-row-to-sfdc-new-lead/readme.md
 repositoryUrl: https://github.com/wso2/choreo-samples/
 tags:
-- Kind/Sample
-- Type/Webhook
 - Category/Integration
 - Internal/http
 thumbnailPath: /gsheet-new-row-to-sfdc-new-lead/icon.png
