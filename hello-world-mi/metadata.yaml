@@ -1,7 +1,7 @@
 displayName: Hello World in MI
-description: Hellow World project created using WSO2 Micro Integrator
+description: A Hello World project created using the WSO2 Integration Studio
 componentType: service
-buildPreset: mi
+buildPreset: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /hello-world-mi
 thumbnailPath: /hello-world-mi/icon.png
