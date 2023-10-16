@@ -7,7 +7,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/shopify-new-customers-to-outlook-mail",
-      "thumbnailPath": "/shopify-new-customers-to-outlook-mail/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/shopify-new-customers-to-outlook-mail/icon.png",
       "documentationPath": "/shopify-new-customers-to-outlook-mail/readme.md",
       "tags": [
         "Category/Integration"
@@ -20,7 +20,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gmail-new-attachment-to-drive",
-      "thumbnailPath": "/gmail-new-attachment-to-drive/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gmail-new-attachment-to-drive/icon.png",
       "documentationPath": "/gmail-new-attachment-to-drive/readme.md",
       "tags": [
         "Category/Integration",
@@ -34,7 +34,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-new-release-to-twitter-post",
-      "thumbnailPath": "/github-new-release-to-twitter-post/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-new-release-to-twitter-post/icon.png",
       "documentationPath": "/github-new-release-to-twitter-post/readme.md",
       "tags": [
         "Category/Integration",
@@ -48,7 +48,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/database",
-      "thumbnailPath": "/database/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/database/icon.png",
       "documentationPath": "/database/readme.md",
       "tags": [
         "Category/Service",
@@ -62,7 +62,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/eventbrite-attendees-to-mailchimp-subscribers",
-      "thumbnailPath": "/eventbrite-attendees-to-mailchimp-subscribers/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/eventbrite-attendees-to-mailchimp-subscribers/icon.png",
       "documentationPath": "/eventbrite-attendees-to-mailchimp-subscribers/readme.md",
       "tags": [
         "Category/Integration"
@@ -75,7 +75,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gdrive-new-file-to-mftg-message",
-      "thumbnailPath": "/gdrive-new-file-to-mftg-message/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gdrive-new-file-to-mftg-message/icon.png",
       "documentationPath": "/gdrive-new-file-to-mftg-message/readme.md",
       "tags": [
         "Category/Integration",
@@ -89,7 +89,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/error-handling",
-      "thumbnailPath": "/error-handling/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/error-handling/icon.png",
       "documentationPath": "/error-handling/readme.md",
       "tags": [
         "Category/Service",
@@ -103,7 +103,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-contact-to-twilio-sms",
-      "thumbnailPath": "/sfdc-new-contact-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-contact-to-twilio-sms/icon.png",
       "documentationPath": "/sfdc-new-contact-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration"
@@ -116,7 +116,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gdrive-new-file-to-gsheet-rows",
-      "thumbnailPath": "/gdrive-new-file-to-gsheet-rows/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gdrive-new-file-to-gsheet-rows/icon.png",
       "documentationPath": "/gdrive-new-file-to-gsheet-rows/readme.md",
       "tags": [
         "Category/Integration",
@@ -130,7 +130,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-row-update-to-gmail",
-      "thumbnailPath": "/gsheet-row-update-to-gmail/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-row-update-to-gmail/icon.png",
       "documentationPath": "/gsheet-row-update-to-gmail/readme.md",
       "tags": [
         "Category/Integration",
@@ -144,7 +144,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gcalendar-new-event-to-msteams-message",
-      "thumbnailPath": "/gcalendar-new-event-to-msteams-message/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gcalendar-new-event-to-msteams-message/icon.png",
       "documentationPath": "/gcalendar-new-event-to-msteams-message/readme.md",
       "tags": [
         "Category/Integration",
@@ -158,7 +158,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-update-record-to-gsheet-new-row",
-      "thumbnailPath": "/sfdc-update-record-to-gsheet-new-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-update-record-to-gsheet-new-row/icon.png",
       "documentationPath": "/sfdc-update-record-to-gsheet-new-row/readme.md",
       "tags": [
         "Category/Integration"
@@ -171,7 +171,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-record-update-to-gsheet-update-row",
-      "thumbnailPath": "/sfdc-record-update-to-gsheet-update-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-record-update-to-gsheet-update-row/icon.png",
       "documentationPath": "/sfdc-record-update-to-gsheet-update-row/readme.md",
       "tags": [
         "Category/Integration"
@@ -184,7 +184,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/graphql-service",
-      "thumbnailPath": "/graphql-service/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/graphql-service/icon.png",
       "documentationPath": "/graphql-service/readme.md",
       "tags": [
         "Category/Service",
@@ -198,7 +198,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gcalendar-to-twilio",
-      "thumbnailPath": "/gcalendar-to-twilio/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gcalendar-to-twilio/icon.png",
       "documentationPath": "/gcalendar-to-twilio/readme.md",
       "tags": [
         "Category/Integration",
@@ -212,7 +212,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-row-to-zoom-to-email",
-      "thumbnailPath": "/gsheet-row-to-zoom-to-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-row-to-zoom-to-email/icon.png",
       "documentationPath": "/gsheet-row-to-zoom-to-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -225,7 +225,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-issue-assigned-to-twilio-sms",
-      "thumbnailPath": "/github-issue-assigned-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-issue-assigned-to-twilio-sms/icon.png",
       "documentationPath": "/github-issue-assigned-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration",
@@ -239,7 +239,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/guaranteed-delivery",
-      "thumbnailPath": "/guaranteed-delivery/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/guaranteed-delivery/icon.png",
       "documentationPath": "/guaranteed-delivery/readme.md",
       "tags": [
         "Category/Service",
@@ -253,7 +253,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/paypal-new-sales-to-activecampaign-automations",
-      "thumbnailPath": "/paypal-new-sales-to-activecampaign-automations/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/paypal-new-sales-to-activecampaign-automations/icon.png",
       "documentationPath": "/paypal-new-sales-to-activecampaign-automations/readme.md",
       "tags": [
         "Category/Integration"
@@ -266,7 +266,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-record-to-google-sheet-row",
-      "thumbnailPath": "/sfdc-new-record-to-google-sheet-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-record-to-google-sheet-row/icon.png",
       "documentationPath": "/sfdc-new-record-to-google-sheet-row/readme.md",
       "tags": [
         "Category/Integration"
@@ -279,7 +279,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/covid19-statistics-to-email",
-      "thumbnailPath": "/covid19-statistics-to-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/covid19-statistics-to-email/icon.png",
       "documentationPath": "/covid19-statistics-to-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -292,7 +292,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/content-based-routing",
-      "thumbnailPath": "/content-based-routing/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/content-based-routing/icon.png",
       "documentationPath": "/content-based-routing/readme.md",
       "tags": [
         "Category/Service",
@@ -306,7 +306,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/slack-new-message-to-servicenow-case",
-      "thumbnailPath": "/slack-new-message-to-servicenow-case/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/slack-new-message-to-servicenow-case/icon.png",
       "documentationPath": "/slack-new-message-to-servicenow-case/readme.md",
       "tags": [
         "Category/Integration",
@@ -320,7 +320,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gmail-new-attachment-to-amazon-s3",
-      "thumbnailPath": "/gmail-new-attachment-to-amazon-s3/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gmail-new-attachment-to-amazon-s3/icon.png",
       "documentationPath": "/gmail-new-attachment-to-amazon-s3/readme.md",
       "tags": [
         "Category/Integration",
@@ -334,7 +334,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/scim_user_details_to_google_sheet_row",
-      "thumbnailPath": "/scim_user_details_to_google_sheet_row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/scim_user_details_to_google_sheet_row/icon.png",
       "documentationPath": "/scim_user_details_to_google_sheet_row/readme.md",
       "tags": [
         "Category/Integration",
@@ -348,7 +348,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-opportunity-closedwon-to-slack",
-      "thumbnailPath": "/sfdc-opportunity-closedwon-to-slack/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-opportunity-closedwon-to-slack/icon.png",
       "documentationPath": "/sfdc-opportunity-closedwon-to-slack/readme.md",
       "tags": [
         "Category/Integration"
@@ -361,7 +361,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-issue-summary-to-email",
-      "thumbnailPath": "/github-issue-summary-to-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-issue-summary-to-email/icon.png",
       "documentationPath": "/github-issue-summary-to-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -374,7 +374,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-opportunity-update-to-twilio-sms",
-      "thumbnailPath": "/sfdc-opportunity-update-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-opportunity-update-to-twilio-sms/icon.png",
       "documentationPath": "/sfdc-opportunity-update-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration"
@@ -387,7 +387,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/circuit-breaker",
-      "thumbnailPath": "/circuit-breaker/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/circuit-breaker/icon.png",
       "documentationPath": "/circuit-breaker/readme.md",
       "tags": [
         "Category/Service",
@@ -401,7 +401,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gcalendar-new-event-to-asana-new-task",
-      "thumbnailPath": "/gcalendar-new-event-to-asana-new-task/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gcalendar-new-event-to-asana-new-task/icon.png",
       "documentationPath": "/gcalendar-new-event-to-asana-new-task/readme.md",
       "tags": [
         "Category/Integration",
@@ -415,7 +415,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/twilio-sms-to-gsheet",
-      "thumbnailPath": "/twilio-sms-to-gsheet/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/twilio-sms-to-gsheet/icon.png",
       "documentationPath": "/twilio-sms-to-gsheet/readme.md",
       "tags": [
         "Category/Integration",
@@ -429,7 +429,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/header-based-routing",
-      "thumbnailPath": "/header-based-routing/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/header-based-routing/icon.png",
       "documentationPath": "/header-based-routing/readme.md",
       "tags": [
         "Category/Service",
@@ -443,7 +443,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/newsapi_headlines-to-email",
-      "thumbnailPath": "/newsapi_headlines-to-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/newsapi_headlines-to-email/icon.png",
       "documentationPath": "/newsapi_headlines-to-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -456,7 +456,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/microsoft-excel-to-salesforce-convertlead",
-      "thumbnailPath": "/microsoft-excel-to-salesforce-convertlead/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/microsoft-excel-to-salesforce-convertlead/icon.png",
       "documentationPath": "/microsoft-excel-to-salesforce-convertlead/readme.md",
       "tags": [
         "Category/Integration"
@@ -469,7 +469,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-issue-assigned-to-sms",
-      "thumbnailPath": "/github-issue-assigned-to-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-issue-assigned-to-sms/icon.png",
       "documentationPath": "/github-issue-assigned-to-sms/readme.md",
       "tags": [
         "Category/Integration",
@@ -483,7 +483,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/openweathermap-report-to-email",
-      "thumbnailPath": "/openweathermap-report-to-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/openweathermap-report-to-email/icon.png",
       "documentationPath": "/openweathermap-report-to-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -496,7 +496,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-new-row-to-sfdc-new-record",
-      "thumbnailPath": "/gsheet-new-row-to-sfdc-new-record/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-new-row-to-sfdc-new-record/icon.png",
       "documentationPath": "/gsheet-new-row-to-sfdc-new-record/readme.md",
       "tags": [
         "Category/Integration",
@@ -510,7 +510,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/scatter-gather",
-      "thumbnailPath": "/scatter-gather/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/scatter-gather/icon.png",
       "documentationPath": "/scatter-gather/readme.md",
       "tags": [
         "Category/Service",
@@ -524,7 +524,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-contact-to-netsuite-contact",
-      "thumbnailPath": "/sfdc-new-contact-to-netsuite-contact/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-contact-to-netsuite-contact/icon.png",
       "documentationPath": "/sfdc-new-contact-to-netsuite-contact/readme.md",
       "tags": [
         "Category/Integration"
@@ -537,7 +537,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/data-mapping",
-      "thumbnailPath": "/data-mapping/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/data-mapping/icon.png",
       "documentationPath": "/data-mapping/readme.md",
       "tags": [
         "Category/Service",
@@ -551,7 +551,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/interzoid-currency-conversion-rate-to-slack-message",
-      "thumbnailPath": "/interzoid-currency-conversion-rate-to-slack-message/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/interzoid-currency-conversion-rate-to-slack-message/icon.png",
       "documentationPath": "/interzoid-currency-conversion-rate-to-slack-message/readme.md",
       "tags": [
         "Category/Integration"
@@ -564,7 +564,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/scatter-gather-messaging",
-      "thumbnailPath": "/scatter-gather-messaging/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/scatter-gather-messaging/icon.png",
       "documentationPath": "/scatter-gather-messaging/readme.md",
       "tags": [
         "Category/Services",
@@ -578,7 +578,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-outbound-msg-to-gsheet",
-      "thumbnailPath": "/sfdc-outbound-msg-to-gsheet/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-outbound-msg-to-gsheet/icon.png",
       "documentationPath": "/sfdc-outbound-msg-to-gsheet/readme.md",
       "tags": [
         "Category/Integration"
@@ -591,7 +591,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/csv-processing",
-      "thumbnailPath": "/csv-processing/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/csv-processing/icon.png",
       "documentationPath": "/csv-processing/readme.md",
       "tags": [
         "Category/Service",
@@ -605,7 +605,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/hello-world",
-      "thumbnailPath": "/hello-world/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/hello-world/icon.png",
       "documentationPath": "/hello-world/readme.md",
       "tags": [
         "Category/Service",
@@ -619,7 +619,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/mftg-trigger-to-mftg-client",
-      "thumbnailPath": "/mftg-trigger-to-mftg-client/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/mftg-trigger-to-mftg-client/icon.png",
       "documentationPath": "/mftg-trigger-to-mftg-client/readme.md",
       "tags": [
         "Category/Integration",
@@ -633,7 +633,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/twilio-new-sms-to-gmail-inbox",
-      "thumbnailPath": "/twilio-new-sms-to-gmail-inbox/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/twilio-new-sms-to-gmail-inbox/icon.png",
       "documentationPath": "/twilio-new-sms-to-gmail-inbox/readme.md",
       "tags": [
         "Category/Integration",
@@ -647,7 +647,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/xero-sales-invoices-to-gmail",
-      "thumbnailPath": "/xero-sales-invoices-to-gmail/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/xero-sales-invoices-to-gmail/icon.png",
       "documentationPath": "/xero-sales-invoices-to-gmail/readme.md",
       "tags": [
         "Category/Integration"
@@ -660,7 +660,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-new-release-to-twilio-sms",
-      "thumbnailPath": "/github-new-release-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-new-release-to-twilio-sms/icon.png",
       "documentationPath": "/github-new-release-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration",
@@ -674,7 +674,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-marketing-campaign-emails-to-csv",
-      "thumbnailPath": "/sfdc-marketing-campaign-emails-to-csv/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-marketing-campaign-emails-to-csv/icon.png",
       "documentationPath": "/sfdc-marketing-campaign-emails-to-csv/readme.md",
       "tags": [
         "Category/Integration"
@@ -687,7 +687,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/redis-caching",
-      "thumbnailPath": "/redis-caching/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/redis-caching/icon.png",
       "documentationPath": "/redis-caching/readme.md",
       "tags": [
         "Category/Service",
@@ -701,7 +701,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/shopify-customers-to-mailchimp-subscribers",
-      "thumbnailPath": "/shopify-customers-to-mailchimp-subscribers/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/shopify-customers-to-mailchimp-subscribers/icon.png",
       "documentationPath": "/shopify-customers-to-mailchimp-subscribers/readme.md",
       "tags": [
         "Category/Integration"
@@ -714,7 +714,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-lead-to-twilio-sms",
-      "thumbnailPath": "/sfdc-new-lead-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-lead-to-twilio-sms/icon.png",
       "documentationPath": "/sfdc-new-lead-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration"
@@ -727,7 +727,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/capsulecrm-opportunities-won-to-gmail-email",
-      "thumbnailPath": "/capsulecrm-opportunities-won-to-gmail-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/capsulecrm-opportunities-won-to-gmail-email/icon.png",
       "documentationPath": "/capsulecrm-opportunities-won-to-gmail-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -740,7 +740,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-new-commit-to-google-sheet-row",
-      "thumbnailPath": "/github-new-commit-to-google-sheet-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-new-commit-to-google-sheet-row/icon.png",
       "documentationPath": "/github-new-commit-to-google-sheet-row/readme.md",
       "tags": [
         "Category/Integration",
@@ -754,7 +754,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-lead-to-mailchimp-subscribers",
-      "thumbnailPath": "/sfdc-new-lead-to-mailchimp-subscribers/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-lead-to-mailchimp-subscribers/icon.png",
       "documentationPath": "/sfdc-new-lead-to-mailchimp-subscribers/readme.md",
       "tags": [
         "Category/Integration"
@@ -767,7 +767,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/encode-decode",
-      "thumbnailPath": "/encode-decode/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/encode-decode/icon.png",
       "documentationPath": "/encode-decode/readme.md",
       "tags": [
         "Category/Service",
@@ -781,7 +781,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/json-navigation",
-      "thumbnailPath": "/json-navigation/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/json-navigation/icon.png",
       "documentationPath": "/json-navigation/readme.md",
       "tags": [
         "Category/Service",
@@ -795,7 +795,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/azure-cosmosdb-data-as-rest-api",
-      "thumbnailPath": "/azure-cosmosdb-data-as-rest-api/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/azure-cosmosdb-data-as-rest-api/icon.png",
       "documentationPath": "/azure-cosmosdb-data-as-rest-api/readme.md",
       "tags": [
         "Category/Service",
@@ -809,7 +809,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-case-to-gsheet",
-      "thumbnailPath": "/sfdc-new-case-to-gsheet/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-case-to-gsheet/icon.png",
       "documentationPath": "/sfdc-new-case-to-gsheet/readme.md",
       "tags": [
         "Category/Integration"
@@ -822,7 +822,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-row-to-twitter-post",
-      "thumbnailPath": "/gsheet-row-to-twitter-post/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-row-to-twitter-post/icon.png",
       "documentationPath": "/gsheet-row-to-twitter-post/readme.md",
       "tags": [
         "Category/Integration"
@@ -835,7 +835,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/pipedrive-new-activities-to-trello-tasks",
-      "thumbnailPath": "/pipedrive-new-activities-to-trello-tasks/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/pipedrive-new-activities-to-trello-tasks/icon.png",
       "documentationPath": "/pipedrive-new-activities-to-trello-tasks/readme.md",
       "tags": [
         "Category/Integration"
@@ -848,7 +848,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/echo-service",
-      "thumbnailPath": "/echo-service/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/echo-service/icon.png",
       "documentationPath": "/echo-service/readme.md",
       "tags": [
         "Category/Service",
@@ -862,7 +862,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/shopify-new-customers-to-hubspot-contact",
-      "thumbnailPath": "/shopify-new-customers-to-hubspot-contact/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/shopify-new-customers-to-hubspot-contact/icon.png",
       "documentationPath": "/shopify-new-customers-to-hubspot-contact/readme.md",
       "tags": [
         "Category/Integration"
@@ -875,7 +875,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/xml-navigation",
-      "thumbnailPath": "/xml-navigation/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/xml-navigation/icon.png",
       "documentationPath": "/xml-navigation/readme.md",
       "tags": [
         "Category/Service",
@@ -889,7 +889,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gcalendar-new-event-to-trello-card",
-      "thumbnailPath": "/gcalendar-new-event-to-trello-card/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gcalendar-new-event-to-trello-card/icon.png",
       "documentationPath": "/gcalendar-new-event-to-trello-card/readme.md",
       "tags": [
         "Category/Integration",
@@ -903,7 +903,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gdrive-files-to-microsoft-onedrive-files",
-      "thumbnailPath": "/gdrive-files-to-microsoft-onedrive-files/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gdrive-files-to-microsoft-onedrive-files/icon.png",
       "documentationPath": "/gdrive-files-to-microsoft-onedrive-files/readme.md",
       "tags": [
         "Category/Integration"
@@ -916,7 +916,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-new-row-to-github-new-issue",
-      "thumbnailPath": "/gsheet-new-row-to-github-new-issue/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-new-row-to-github-new-issue/icon.png",
       "documentationPath": "/gsheet-new-row-to-github-new-issue/readme.md",
       "tags": [
         "Category/Integration",
@@ -930,7 +930,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/json-to-json-transformation",
-      "thumbnailPath": "/json-to-json-transformation/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/json-to-json-transformation/icon.png",
       "documentationPath": "/json-to-json-transformation/readme.md",
       "tags": [
         "Category/Service",
@@ -944,7 +944,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-release-to-slack",
-      "thumbnailPath": "/github-release-to-slack/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-release-to-slack/icon.png",
       "documentationPath": "/github-release-to-slack/readme.md",
       "tags": [
         "Category/Integration",
@@ -958,7 +958,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/custom-data-types",
-      "thumbnailPath": "/custom-data-types/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/custom-data-types/icon.png",
       "documentationPath": "/custom-data-types/readme.md",
       "tags": [
         "Category/Service",
@@ -972,7 +972,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/service-chaining",
-      "thumbnailPath": "/service-chaining/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/service-chaining/icon.png",
       "documentationPath": "/service-chaining/readme.md",
       "tags": [
         "Category/Service",
@@ -986,7 +986,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-issue-to-servicenow",
-      "thumbnailPath": "/github-issue-to-servicenow/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-issue-to-servicenow/icon.png",
       "documentationPath": "/github-issue-to-servicenow/readme.md",
       "tags": [
         "Category/Integration",
@@ -1000,7 +1000,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-update-row-to-sfdc-update-record",
-      "thumbnailPath": "/gsheet-update-row-to-sfdc-update-record/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-update-row-to-sfdc-update-record/icon.png",
       "documentationPath": "/gsheet-update-row-to-sfdc-update-record/readme.md",
       "tags": [
         "Category/Integration",
@@ -1014,7 +1014,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/simple-passthrough",
-      "thumbnailPath": "/simple-passthrough/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/simple-passthrough/icon.png",
       "documentationPath": "/simple-passthrough/readme.md",
       "tags": [
         "Category/Service",
@@ -1028,7 +1028,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/marketing-email-to-sfdc-new-lead",
-      "thumbnailPath": "/marketing-email-to-sfdc-new-lead/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/marketing-email-to-sfdc-new-lead/icon.png",
       "documentationPath": "/marketing-email-to-sfdc-new-lead/readme.md",
       "tags": [
         "Category/Integration"
@@ -1041,7 +1041,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/capsulecrm-opportunities-lost-to-slack-channel-message",
-      "thumbnailPath": "/capsulecrm-opportunities-lost-to-slack-channel-message/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/capsulecrm-opportunities-lost-to-slack-channel-message/icon.png",
       "documentationPath": "/capsulecrm-opportunities-lost-to-slack-channel-message/readme.md",
       "tags": [
         "Category/Integration"
@@ -1054,7 +1054,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-hot-lead-to-slack",
-      "thumbnailPath": "/sfdc-hot-lead-to-slack/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-hot-lead-to-slack/icon.png",
       "documentationPath": "/sfdc-hot-lead-to-slack/readme.md",
       "tags": [
         "Category/Integration"
@@ -1067,7 +1067,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/json-to-xml-conversion",
-      "thumbnailPath": "/json-to-xml-conversion/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/json-to-xml-conversion/icon.png",
       "documentationPath": "/json-to-xml-conversion/readme.md",
       "tags": [
         "Category/Service",
@@ -1081,7 +1081,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-new-row-to-sfdc-new-lead",
-      "thumbnailPath": "/gsheet-new-row-to-sfdc-new-lead/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-new-row-to-sfdc-new-lead/icon.png",
       "documentationPath": "/gsheet-new-row-to-sfdc-new-lead/readme.md",
       "tags": [
         "Category/Integration",
@@ -1095,7 +1095,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-campaign-to-aws-ses-email",
-      "thumbnailPath": "/sfdc-new-campaign-to-aws-ses-email/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-campaign-to-aws-ses-email/icon.png",
       "documentationPath": "/sfdc-new-campaign-to-aws-ses-email/readme.md",
       "tags": [
         "Category/Integration"
@@ -1108,7 +1108,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-account-to-netsuite-customer",
-      "thumbnailPath": "/sfdc-new-account-to-netsuite-customer/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-account-to-netsuite-customer/icon.png",
       "documentationPath": "/sfdc-new-account-to-netsuite-customer/readme.md",
       "tags": [
         "Category/Integration"
@@ -1121,7 +1121,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-case-to-gsheet-row",
-      "thumbnailPath": "/sfdc-new-case-to-gsheet-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-case-to-gsheet-row/icon.png",
       "documentationPath": "/sfdc-new-case-to-gsheet-row/readme.md",
       "tags": [
         "Category/Integration"
@@ -1134,7 +1134,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gdrive-new-file-to-twilio-sms",
-      "thumbnailPath": "/gdrive-new-file-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gdrive-new-file-to-twilio-sms/icon.png",
       "documentationPath": "/gdrive-new-file-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration",
@@ -1148,7 +1148,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/hubspot-contacts-to-google-contacts",
-      "thumbnailPath": "/hubspot-contacts-to-google-contacts/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/hubspot-contacts-to-google-contacts/icon.png",
       "documentationPath": "/hubspot-contacts-to-google-contacts/readme.md",
       "tags": [
         "Category/Integration"
@@ -1161,7 +1161,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/worldbank-data-to-covid19-statistics",
-      "thumbnailPath": "/worldbank-data-to-covid19-statistics/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/worldbank-data-to-covid19-statistics/icon.png",
       "documentationPath": "/worldbank-data-to-covid19-statistics/readme.md",
       "tags": [
         "Category/Service",
@@ -1175,7 +1175,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/ftp-new-file-to-mongodb-vfs",
-      "thumbnailPath": "/ftp-new-file-to-mongodb-vfs/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/ftp-new-file-to-mongodb-vfs/icon.png",
       "documentationPath": "/ftp-new-file-to-mongodb-vfs/readme.md",
       "tags": [
         "Category/Integration",
@@ -1189,7 +1189,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/salesforce-products-to-stripe-products",
-      "thumbnailPath": "/salesforce-products-to-stripe-products/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/salesforce-products-to-stripe-products/icon.png",
       "documentationPath": "/salesforce-products-to-stripe-products/readme.md",
       "tags": [
         "Category/Integration"
@@ -1202,7 +1202,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/gsheet-new-row-to-zoho-people-attendance",
-      "thumbnailPath": "/gsheet-new-row-to-zoho-people-attendance/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/gsheet-new-row-to-zoho-people-attendance/icon.png",
       "documentationPath": "/gsheet-new-row-to-zoho-people-attendance/readme.md",
       "tags": [
         "Category/Integration",
@@ -1216,7 +1216,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/xml-to-json-conversion",
-      "thumbnailPath": "/xml-to-json-conversion/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/xml-to-json-conversion/icon.png",
       "documentationPath": "/xml-to-json-conversion/readme.md",
       "tags": [
         "Category/Service",
@@ -1230,7 +1230,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-opportunity-update-to-slack",
-      "thumbnailPath": "/sfdc-opportunity-update-to-slack/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-opportunity-update-to-slack/icon.png",
       "documentationPath": "/sfdc-opportunity-update-to-slack/readme.md",
       "tags": [
         "Category/Integration"
@@ -1243,7 +1243,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/spotify_new_release_to_sms",
-      "thumbnailPath": "/spotify_new_release_to_sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/spotify_new_release_to_sms/icon.png",
       "documentationPath": "/spotify_new_release_to_sms/readme.md",
       "tags": [
         "Category/Integration"
@@ -1256,7 +1256,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/rdbms-data-as-rest-api",
-      "thumbnailPath": "/rdbms-data-as-rest-api/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/rdbms-data-as-rest-api/icon.png",
       "documentationPath": "/rdbms-data-as-rest-api/readme.md",
       "tags": [
         "Category/Service",
@@ -1270,7 +1270,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/jwt-handling",
-      "thumbnailPath": "/jwt-handling/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/jwt-handling/icon.png",
       "documentationPath": "/jwt-handling/readme.md",
       "tags": [
         "Category/Service",
@@ -1284,7 +1284,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/github-issue-to-gsheet",
-      "thumbnailPath": "/github-issue-to-gsheet/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/github-issue-to-gsheet/icon.png",
       "documentationPath": "/github-issue-to-gsheet/readme.md",
       "tags": [
         "Category/Integration",
@@ -1298,7 +1298,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/greeting-service",
-      "thumbnailPath": "/greeting-service/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/greeting-service/icon.png",
       "documentationPath": "/greeting-service/readme.md",
       "tags": [
         "Category/Service",
@@ -1312,7 +1312,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/interzoid-weather-updates-to-slack-message",
-      "thumbnailPath": "/interzoid-weather-updates-to-slack-message/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/interzoid-weather-updates-to-slack-message/icon.png",
       "documentationPath": "/interzoid-weather-updates-to-slack-message/readme.md",
       "tags": [
         "Category/Integration"
@@ -1325,7 +1325,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-lead-to-gsheet-row",
-      "thumbnailPath": "/sfdc-lead-to-gsheet-row/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-lead-to-gsheet-row/icon.png",
       "documentationPath": "/sfdc-lead-to-gsheet-row/readme.md",
       "tags": [
         "Category/Integration"
@@ -1338,7 +1338,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/sfdc-new-campaign-to-twitter-post",
-      "thumbnailPath": "/sfdc-new-campaign-to-twitter-post/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/sfdc-new-campaign-to-twitter-post/icon.png",
       "documentationPath": "/sfdc-new-campaign-to-twitter-post/readme.md",
       "tags": [
         "Category/Integration",
@@ -1352,7 +1352,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/header-manipulation",
-      "thumbnailPath": "/header-manipulation/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/header-manipulation/icon.png",
       "documentationPath": "/header-manipulation/readme.md",
       "tags": [
         "Category/Service",
@@ -1366,7 +1366,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/slack-new-message-to-twilio-sms",
-      "thumbnailPath": "/slack-new-message-to-twilio-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/slack-new-message-to-twilio-sms/icon.png",
       "documentationPath": "/slack-new-message-to-twilio-sms/readme.md",
       "tags": [
         "Category/Integration",
@@ -1380,7 +1380,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/ronin_invoices_to_quickbooks_online_invoices",
-      "thumbnailPath": "/ronin_invoices_to_quickbooks_online_invoices/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/ronin_invoices_to_quickbooks_online_invoices/icon.png",
       "documentationPath": "/ronin_invoices_to_quickbooks_online_invoices/readme.md",
       "tags": [
         "Category/Integration"
@@ -1393,7 +1393,7 @@
       "buildPreset": "ballerina",
       "repositoryUrl": "https://github.com/wso2/choreo-samples/",
       "componentPath": "/upcoming-movies-to-sms",
-      "thumbnailPath": "/upcoming-movies-to-sms/icon.png",
+      "thumbnailPath": "https://choreo-shared-choreo-samples-cdne.azureedge.net/upcoming-movies-to-sms/icon.png",
       "documentationPath": "/upcoming-movies-to-sms/readme.md",
       "tags": [
         "Category/Integration"
