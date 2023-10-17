@@ -4,7 +4,7 @@ import json
 import shutil
 
 REPO_BASE_DIR = '..' 
-BUILD_STAGING_DIRECTORY = os.environ['Build.StagingDirectory']  # Azure DevOps pipeline environment variable
+BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']  # Azure DevOps pipeline environment variable
 
 def collect_metadata_and_thumbnails():
     collected_data = []
