@@ -3,7 +3,7 @@ import yaml
 import json
 import shutil
 
-REPO_BASE_DIR = '..'  # One level up from the .azure directory to get to the repo root
+REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 
 def collect_metadata_and_thumbnails():
