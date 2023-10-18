@@ -46,7 +46,7 @@ def generate_index_json(data):
     }
 
     with open(os.path.join(BUILD_STAGING_DIRECTORY, 'index.json'), 'w') as f:
-        json.dump(index_data, f, indent=2)
+        json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
     print("Generated index.json")
 
 def main():
