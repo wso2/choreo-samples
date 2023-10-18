@@ -5,6 +5,7 @@ import shutil
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
+BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
 
 def collect_metadata_and_thumbnails():
     collected_data = []
@@ -21,6 +22,8 @@ def collect_metadata_and_thumbnails():
             print(f"Found metadata.yaml in directory: {directory}")
             with open(metadata_file, 'r') as f:
                 data = yaml.safe_load(f)
+                # Adjust the thumbnailPath
+                data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
                 collected_data.append(data)
 
             # Copy thumbnail to staging directory while preserving folder name
