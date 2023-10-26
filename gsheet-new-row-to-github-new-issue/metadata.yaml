@@ -8,5 +8,5 @@ componentPath: /gsheet-new-row-to-github-new-issue
 thumbnailPath: /gsheet-new-row-to-github-new-issue/icon.png
 documentationPath: /gsheet-new-row-to-github-new-issue/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

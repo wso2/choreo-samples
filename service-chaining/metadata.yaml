@@ -7,5 +7,4 @@ componentPath: /service-chaining
 thumbnailPath: /service-chaining/icon.png
 documentationPath: /service-chaining/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

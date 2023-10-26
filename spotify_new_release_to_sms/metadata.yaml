@@ -7,4 +7,4 @@ componentPath: /spotify_new_release_to_sms
 thumbnailPath: /spotify_new_release_to_sms/icon.png
 documentationPath: /spotify_new_release_to_sms/readme.md
 tags:
-- Category/Integration
+- Integration

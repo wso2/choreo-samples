@@ -8,5 +8,5 @@ componentPath: /gsheet-new-row-to-zoho-people-attendance
 thumbnailPath: /gsheet-new-row-to-zoho-people-attendance/icon.png
 documentationPath: /gsheet-new-row-to-zoho-people-attendance/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

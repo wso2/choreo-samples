@@ -7,5 +7,4 @@ componentPath: /data-mapping
 thumbnailPath: /data-mapping/icon.png
 documentationPath: /data-mapping/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

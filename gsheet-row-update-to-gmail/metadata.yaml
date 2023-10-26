@@ -8,5 +8,5 @@ componentPath: /gsheet-row-update-to-gmail
 thumbnailPath: /gsheet-row-update-to-gmail/icon.png
 documentationPath: /gsheet-row-update-to-gmail/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

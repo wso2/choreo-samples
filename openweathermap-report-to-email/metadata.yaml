@@ -7,4 +7,4 @@ componentPath: /openweathermap-report-to-email
 thumbnailPath: /openweathermap-report-to-email/icon.png
 documentationPath: /openweathermap-report-to-email/readme.md
 tags:
-- Category/Integration
+- Integration

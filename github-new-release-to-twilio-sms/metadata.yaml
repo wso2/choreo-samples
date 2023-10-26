@@ -8,5 +8,5 @@ componentPath: /github-new-release-to-twilio-sms
 thumbnailPath: /github-new-release-to-twilio-sms/icon.png
 documentationPath: /github-new-release-to-twilio-sms/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

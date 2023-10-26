@@ -8,5 +8,5 @@ componentPath: /ftp-new-file-to-mongodb-vfs
 thumbnailPath: /ftp-new-file-to-mongodb-vfs/icon.png
 documentationPath: /ftp-new-file-to-mongodb-vfs/readme.md
 tags:
-- Category/Integration
-- Internal/ftp
+- Integration
+- FTP

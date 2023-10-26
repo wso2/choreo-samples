@@ -7,5 +7,4 @@ componentPath: /circuit-breaker
 thumbnailPath: /circuit-breaker/icon.png
 documentationPath: /circuit-breaker/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

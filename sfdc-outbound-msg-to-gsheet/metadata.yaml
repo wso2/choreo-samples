@@ -8,4 +8,4 @@ componentPath: /sfdc-outbound-msg-to-gsheet
 thumbnailPath: /sfdc-outbound-msg-to-gsheet/icon.png
 documentationPath: /sfdc-outbound-msg-to-gsheet/readme.md
 tags:
-- Category/Integration
+- Integration

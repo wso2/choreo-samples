@@ -8,5 +8,5 @@ componentPath: /gmail-new-attachment-to-amazon-s3
 thumbnailPath: /gmail-new-attachment-to-amazon-s3/icon.png
 documentationPath: /gmail-new-attachment-to-amazon-s3/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

@@ -7,5 +7,4 @@ componentPath: /xml-to-json-conversion
 thumbnailPath: /xml-to-json-conversion/icon.png
 documentationPath: /xml-to-json-conversion/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

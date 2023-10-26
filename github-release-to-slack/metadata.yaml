@@ -8,5 +8,5 @@ componentPath: /github-release-to-slack
 thumbnailPath: /github-release-to-slack/icon.png
 documentationPath: /github-release-to-slack/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

@@ -7,5 +7,4 @@ componentPath: /csv-processing
 thumbnailPath: /csv-processing/icon.png
 documentationPath: /csv-processing/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

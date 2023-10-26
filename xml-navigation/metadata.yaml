@@ -8,5 +8,4 @@ componentPath: /xml-navigation
 thumbnailPath: /xml-navigation/icon.png
 documentationPath: /xml-navigation/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

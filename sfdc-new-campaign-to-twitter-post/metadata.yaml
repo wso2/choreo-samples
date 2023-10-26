@@ -8,5 +8,5 @@ componentPath: /sfdc-new-campaign-to-twitter-post
 thumbnailPath: /sfdc-new-campaign-to-twitter-post/icon.png
 documentationPath: /sfdc-new-campaign-to-twitter-post/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

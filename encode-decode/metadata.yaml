@@ -7,5 +7,4 @@ componentPath: /encode-decode
 thumbnailPath: /encode-decode/icon.png
 documentationPath: /encode-decode/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

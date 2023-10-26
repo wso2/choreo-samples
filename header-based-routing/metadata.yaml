@@ -7,5 +7,4 @@ componentPath: /header-based-routing
 thumbnailPath: /header-based-routing/icon.png
 documentationPath: /header-based-routing/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

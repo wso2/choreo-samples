@@ -7,5 +7,4 @@ componentPath: /worldbank-data-to-covid19-statistics
 thumbnailPath: /worldbank-data-to-covid19-statistics/icon.png
 documentationPath: /worldbank-data-to-covid19-statistics/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP
