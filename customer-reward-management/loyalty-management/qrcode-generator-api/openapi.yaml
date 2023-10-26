@@ -1,0 +1,2594 @@
+openapi: 3.0.1
+info:
+  title: QR Code Generator
+  description: A simple API to generate QR Codes
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Local server
+paths:
+  /qrcode:
+    get:
+      summary: Generate QR Code
+      description: Generate QR code for the provided content
+      tags:
+        - qr-code-generator-rest-controller
+      operationId: qrcode
+      parameters:
+        - name: content
+          description: Content to encode into QR code
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            image/png:
+              schema:
+                type: object
+                properties:
+                  accelerationPriority:
+                    type: number
+                    format: float
+                  colorModel:
+                    type: object
+                    properties:
+                      transparency:
+                        type: integer
+                        format: int32
+                      numComponents:
+                        type: integer
+                        format: int32
+                      numColorComponents:
+                        type: integer
+                        format: int32
+                      colorSpace:
+                        type: object
+                        properties:
+                          type:
+                            type: integer
+                            format: int32
+                          numComponents:
+                            type: integer
+                            format: int32
+                          cs_sRGB:
+                            type: boolean
+                      transferType:
+                        type: integer
+                        format: int32
+                      alphaPremultiplied:
+                        type: boolean
+                      componentSize:
+                        type: array
+                        items:
+                          type: integer
+                          format: int32
+                      pixelSize:
+                        type: integer
+                        format: int32
+                  raster:
+                    type: object
+                    properties:
+                      sampleModel:
+                        type: object
+                        properties:
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          dataType:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          sampleSize:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          transferType:
+                            type: integer
+                            format: int32
+                      dataBuffer:
+                        type: object
+                        properties:
+                          dataType:
+                            type: integer
+                            format: int32
+                          offset:
+                            type: integer
+                            format: int32
+                          size:
+                            type: integer
+                            format: int32
+                          offsets:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          numBanks:
+                            type: integer
+                            format: int32
+                      minX:
+                        type: integer
+                        format: int32
+                      minY:
+                        type: integer
+                        format: int32
+                      width:
+                        type: integer
+                        format: int32
+                      height:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateX:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateY:
+                        type: integer
+                        format: int32
+                      numBands:
+                        type: integer
+                        format: int32
+                      numDataElements:
+                        type: integer
+                        format: int32
+                      parent:
+                        type: object
+                        properties:
+                          sampleModel:
+                            type: object
+                            properties:
+                              width:
+                                type: integer
+                                format: int32
+                              height:
+                                type: integer
+                                format: int32
+                              numBands:
+                                type: integer
+                                format: int32
+                              dataType:
+                                type: integer
+                                format: int32
+                              numDataElements:
+                                type: integer
+                                format: int32
+                              sampleSize:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              transferType:
+                                type: integer
+                                format: int32
+                          dataBuffer:
+                            type: object
+                            properties:
+                              dataType:
+                                type: integer
+                                format: int32
+                              offset:
+                                type: integer
+                                format: int32
+                              size:
+                                type: integer
+                                format: int32
+                              offsets:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              numBanks:
+                                type: integer
+                                format: int32
+                          minX:
+                            type: integer
+                            format: int32
+                          minY:
+                            type: integer
+                            format: int32
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateX:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateY:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          bounds:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              size:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                              bounds2D:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                              empty:
+                                type: boolean
+                              location:
+                                type: object
+                                properties:
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                              rect:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                                writeOnly: true
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                          transferType:
+                            type: integer
+                            format: int32
+                      rect:
+                        type: object
+                        properties:
+                          sampleModel:
+                            type: object
+                            properties:
+                              width:
+                                type: integer
+                                format: int32
+                              height:
+                                type: integer
+                                format: int32
+                              numBands:
+                                type: integer
+                                format: int32
+                              dataType:
+                                type: integer
+                                format: int32
+                              numDataElements:
+                                type: integer
+                                format: int32
+                              sampleSize:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              transferType:
+                                type: integer
+                                format: int32
+                          dataBuffer:
+                            type: object
+                            properties:
+                              dataType:
+                                type: integer
+                                format: int32
+                              offset:
+                                type: integer
+                                format: int32
+                              size:
+                                type: integer
+                                format: int32
+                              offsets:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              numBanks:
+                                type: integer
+                                format: int32
+                          minX:
+                            type: integer
+                            format: int32
+                          minY:
+                            type: integer
+                            format: int32
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateX:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateY:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          bounds:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              size:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                              bounds2D:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                              empty:
+                                type: boolean
+                              location:
+                                type: object
+                                properties:
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                              rect:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                                writeOnly: true
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                          transferType:
+                            type: integer
+                            format: int32
+                        writeOnly: true
+                      bounds:
+                        type: object
+                        properties:
+                          x:
+                            type: number
+                            format: double
+                          y:
+                            type: number
+                            format: double
+                          width:
+                            type: number
+                            format: double
+                          height:
+                            type: number
+                            format: double
+                          size:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          empty:
+                            type: boolean
+                          location:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                          rect:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                            writeOnly: true
+                          minX:
+                            type: number
+                            format: double
+                          minY:
+                            type: number
+                            format: double
+                          maxX:
+                            type: number
+                            format: double
+                          maxY:
+                            type: number
+                            format: double
+                          centerX:
+                            type: number
+                            format: double
+                          centerY:
+                            type: number
+                            format: double
+                      transferType:
+                        type: integer
+                        format: int32
+                  alphaPremultiplied:
+                    type: boolean
+                  sampleModel:
+                    type: object
+                    properties:
+                      width:
+                        type: integer
+                        format: int32
+                      height:
+                        type: integer
+                        format: int32
+                      numBands:
+                        type: integer
+                        format: int32
+                      dataType:
+                        type: integer
+                        format: int32
+                      numDataElements:
+                        type: integer
+                        format: int32
+                      sampleSize:
+                        type: array
+                        items:
+                          type: integer
+                          format: int32
+                      transferType:
+                        type: integer
+                        format: int32
+                  alphaRaster:
+                    type: object
+                    properties:
+                      sampleModel:
+                        type: object
+                        properties:
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          dataType:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          sampleSize:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          transferType:
+                            type: integer
+                            format: int32
+                      dataBuffer:
+                        type: object
+                        properties:
+                          dataType:
+                            type: integer
+                            format: int32
+                          offset:
+                            type: integer
+                            format: int32
+                          size:
+                            type: integer
+                            format: int32
+                          offsets:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          numBanks:
+                            type: integer
+                            format: int32
+                      minX:
+                        type: integer
+                        format: int32
+                      minY:
+                        type: integer
+                        format: int32
+                      width:
+                        type: integer
+                        format: int32
+                      height:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateX:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateY:
+                        type: integer
+                        format: int32
+                      numBands:
+                        type: integer
+                        format: int32
+                      numDataElements:
+                        type: integer
+                        format: int32
+                      parent:
+                        type: object
+                        properties:
+                          sampleModel:
+                            type: object
+                            properties:
+                              width:
+                                type: integer
+                                format: int32
+                              height:
+                                type: integer
+                                format: int32
+                              numBands:
+                                type: integer
+                                format: int32
+                              dataType:
+                                type: integer
+                                format: int32
+                              numDataElements:
+                                type: integer
+                                format: int32
+                              sampleSize:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              transferType:
+                                type: integer
+                                format: int32
+                          dataBuffer:
+                            type: object
+                            properties:
+                              dataType:
+                                type: integer
+                                format: int32
+                              offset:
+                                type: integer
+                                format: int32
+                              size:
+                                type: integer
+                                format: int32
+                              offsets:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              numBanks:
+                                type: integer
+                                format: int32
+                          minX:
+                            type: integer
+                            format: int32
+                          minY:
+                            type: integer
+                            format: int32
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateX:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateY:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          bounds:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              size:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                              bounds2D:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                              empty:
+                                type: boolean
+                              location:
+                                type: object
+                                properties:
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                              rect:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                                writeOnly: true
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                          transferType:
+                            type: integer
+                            format: int32
+                      rect:
+                        type: object
+                        properties:
+                          sampleModel:
+                            type: object
+                            properties:
+                              width:
+                                type: integer
+                                format: int32
+                              height:
+                                type: integer
+                                format: int32
+                              numBands:
+                                type: integer
+                                format: int32
+                              dataType:
+                                type: integer
+                                format: int32
+                              numDataElements:
+                                type: integer
+                                format: int32
+                              sampleSize:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              transferType:
+                                type: integer
+                                format: int32
+                          dataBuffer:
+                            type: object
+                            properties:
+                              dataType:
+                                type: integer
+                                format: int32
+                              offset:
+                                type: integer
+                                format: int32
+                              size:
+                                type: integer
+                                format: int32
+                              offsets:
+                                type: array
+                                items:
+                                  type: integer
+                                  format: int32
+                              numBanks:
+                                type: integer
+                                format: int32
+                          minX:
+                            type: integer
+                            format: int32
+                          minY:
+                            type: integer
+                            format: int32
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateX:
+                            type: integer
+                            format: int32
+                          sampleModelTranslateY:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          bounds:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              size:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                              bounds2D:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                              empty:
+                                type: boolean
+                              location:
+                                type: object
+                                properties:
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                              rect:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                                writeOnly: true
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                          transferType:
+                            type: integer
+                            format: int32
+                        writeOnly: true
+                      bounds:
+                        type: object
+                        properties:
+                          x:
+                            type: number
+                            format: double
+                          y:
+                            type: number
+                            format: double
+                          width:
+                            type: number
+                            format: double
+                          height:
+                            type: number
+                            format: double
+                          size:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          empty:
+                            type: boolean
+                          location:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                          rect:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                            writeOnly: true
+                          minX:
+                            type: number
+                            format: double
+                          minY:
+                            type: number
+                            format: double
+                          maxX:
+                            type: number
+                            format: double
+                          maxY:
+                            type: number
+                            format: double
+                          centerX:
+                            type: number
+                            format: double
+                          centerY:
+                            type: number
+                            format: double
+                      transferType:
+                        type: integer
+                        format: int32
+                  width:
+                    type: integer
+                    format: int32
+                  height:
+                    type: integer
+                    format: int32
+                  minX:
+                    type: integer
+                    format: int32
+                  minY:
+                    type: integer
+                    format: int32
+                  transparency:
+                    type: integer
+                    format: int32
+                  graphics:
+                    type: object
+                    properties:
+                      color:
+                        type: object
+                        properties:
+                          red:
+                            type: integer
+                            format: int32
+                          green:
+                            type: integer
+                            format: int32
+                          blue:
+                            type: integer
+                            format: int32
+                          alpha:
+                            type: integer
+                            format: int32
+                          colorSpace:
+                            type: object
+                            properties:
+                              type:
+                                type: integer
+                                format: int32
+                              numComponents:
+                                type: integer
+                                format: int32
+                              cs_sRGB:
+                                type: boolean
+                          rgb:
+                            type: integer
+                            format: int32
+                          transparency:
+                            type: integer
+                            format: int32
+                      font:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          style:
+                            type: integer
+                            format: int32
+                          size:
+                            type: integer
+                            format: int32
+                          psname:
+                            type: string
+                          size2D:
+                            type: number
+                            format: float
+                          plain:
+                            type: boolean
+                          availableAttributes:
+                            type: array
+                            items:
+                              type: object
+                          transform:
+                            type: object
+                            properties:
+                              scaleX:
+                                type: number
+                                format: double
+                              shearY:
+                                type: number
+                                format: double
+                              shearX:
+                                type: number
+                                format: double
+                              scaleY:
+                                type: number
+                                format: double
+                              translateX:
+                                type: number
+                                format: double
+                              translateY:
+                                type: number
+                                format: double
+                              toRotation:
+                                type: number
+                                format: double
+                                writeOnly: true
+                              toQuadrantRotation:
+                                type: integer
+                                format: int32
+                                writeOnly: true
+                              determinant:
+                                type: number
+                                format: double
+                              type:
+                                type: integer
+                                format: int32
+                              identity:
+                                type: boolean
+                          family:
+                            type: string
+                          fontName:
+                            type: string
+                          bold:
+                            type: boolean
+                          italic:
+                            type: boolean
+                          numGlyphs:
+                            type: integer
+                            format: int32
+                          missingGlyphCode:
+                            type: integer
+                            format: int32
+                          italicAngle:
+                            type: number
+                            format: float
+                          transformed:
+                            type: boolean
+                          attributes:
+                            type: object
+                            additionalProperties:
+                              type: object
+                      clipBounds:
+                        type: object
+                        properties:
+                          x:
+                            type: number
+                            format: double
+                          y:
+                            type: number
+                            format: double
+                          width:
+                            type: number
+                            format: double
+                          height:
+                            type: number
+                            format: double
+                          size:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          empty:
+                            type: boolean
+                          location:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                          rect:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                            writeOnly: true
+                          minX:
+                            type: number
+                            format: double
+                          minY:
+                            type: number
+                            format: double
+                          maxX:
+                            type: number
+                            format: double
+                          maxY:
+                            type: number
+                            format: double
+                          centerX:
+                            type: number
+                            format: double
+                          centerY:
+                            type: number
+                            format: double
+                      xormode:
+                        type: object
+                        properties:
+                          red:
+                            type: integer
+                            format: int32
+                          green:
+                            type: integer
+                            format: int32
+                          blue:
+                            type: integer
+                            format: int32
+                          alpha:
+                            type: integer
+                            format: int32
+                          colorSpace:
+                            type: object
+                            properties:
+                              type:
+                                type: integer
+                                format: int32
+                              numComponents:
+                                type: integer
+                                format: int32
+                              cs_sRGB:
+                                type: boolean
+                          rgb:
+                            type: integer
+                            format: int32
+                          transparency:
+                            type: integer
+                            format: int32
+                        writeOnly: true
+                      clip:
+                        type: object
+                        properties:
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          bounds:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              size:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                              bounds2D:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                              empty:
+                                type: boolean
+                              location:
+                                type: object
+                                properties:
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                              rect:
+                                type: object
+                                properties:
+                                  width:
+                                    type: number
+                                    format: double
+                                  height:
+                                    type: number
+                                    format: double
+                                  minX:
+                                    type: number
+                                    format: double
+                                  minY:
+                                    type: number
+                                    format: double
+                                  x:
+                                    type: number
+                                    format: double
+                                  y:
+                                    type: number
+                                    format: double
+                                  maxX:
+                                    type: number
+                                    format: double
+                                  maxY:
+                                    type: number
+                                    format: double
+                                  centerX:
+                                    type: number
+                                    format: double
+                                  centerY:
+                                    type: number
+                                    format: double
+                                  empty:
+                                    type: boolean
+                                writeOnly: true
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                      clipRect:
+                        type: object
+                        properties:
+                          x:
+                            type: number
+                            format: double
+                          y:
+                            type: number
+                            format: double
+                          width:
+                            type: number
+                            format: double
+                          height:
+                            type: number
+                            format: double
+                          size:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          empty:
+                            type: boolean
+                          location:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                          rect:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                            writeOnly: true
+                          minX:
+                            type: number
+                            format: double
+                          minY:
+                            type: number
+                            format: double
+                          maxX:
+                            type: number
+                            format: double
+                          maxY:
+                            type: number
+                            format: double
+                          centerX:
+                            type: number
+                            format: double
+                          centerY:
+                            type: number
+                            format: double
+                        deprecated: true
+                      fontMetrics:
+                        type: object
+                        properties:
+                          font:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              style:
+                                type: integer
+                                format: int32
+                              size:
+                                type: integer
+                                format: int32
+                              psname:
+                                type: string
+                              size2D:
+                                type: number
+                                format: float
+                              plain:
+                                type: boolean
+                              availableAttributes:
+                                type: array
+                                items:
+                                  type: object
+                              transform:
+                                type: object
+                                properties:
+                                  scaleX:
+                                    type: number
+                                    format: double
+                                  shearY:
+                                    type: number
+                                    format: double
+                                  shearX:
+                                    type: number
+                                    format: double
+                                  scaleY:
+                                    type: number
+                                    format: double
+                                  translateX:
+                                    type: number
+                                    format: double
+                                  translateY:
+                                    type: number
+                                    format: double
+                                  toRotation:
+                                    type: number
+                                    format: double
+                                    writeOnly: true
+                                  toQuadrantRotation:
+                                    type: integer
+                                    format: int32
+                                    writeOnly: true
+                                  determinant:
+                                    type: number
+                                    format: double
+                                  type:
+                                    type: integer
+                                    format: int32
+                                  identity:
+                                    type: boolean
+                              family:
+                                type: string
+                              fontName:
+                                type: string
+                              bold:
+                                type: boolean
+                              italic:
+                                type: boolean
+                              numGlyphs:
+                                type: integer
+                                format: int32
+                              missingGlyphCode:
+                                type: integer
+                                format: int32
+                              italicAngle:
+                                type: number
+                                format: float
+                              transformed:
+                                type: boolean
+                              attributes:
+                                type: object
+                                additionalProperties:
+                                  type: object
+                          height:
+                            type: integer
+                            format: int32
+                          maxDescent:
+                            type: integer
+                            format: int32
+                          widths:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          maxAscent:
+                            type: integer
+                            format: int32
+                          maxDecent:
+                            type: integer
+                            format: int32
+                            deprecated: true
+                          maxAdvance:
+                            type: integer
+                            format: int32
+                          fontRenderContext:
+                            type: object
+                            properties:
+                              antiAliased:
+                                type: boolean
+                              transformType:
+                                type: integer
+                                format: int32
+                              transform:
+                                type: object
+                                properties:
+                                  scaleX:
+                                    type: number
+                                    format: double
+                                  shearY:
+                                    type: number
+                                    format: double
+                                  shearX:
+                                    type: number
+                                    format: double
+                                  scaleY:
+                                    type: number
+                                    format: double
+                                  translateX:
+                                    type: number
+                                    format: double
+                                  translateY:
+                                    type: number
+                                    format: double
+                                  toRotation:
+                                    type: number
+                                    format: double
+                                    writeOnly: true
+                                  toQuadrantRotation:
+                                    type: integer
+                                    format: int32
+                                    writeOnly: true
+                                  determinant:
+                                    type: number
+                                    format: double
+                                  type:
+                                    type: integer
+                                    format: int32
+                                  identity:
+                                    type: boolean
+                              antiAliasingHint:
+                                type: object
+                              fractionalMetricsHint:
+                                type: object
+                              transformed:
+                                type: boolean
+                          ascent:
+                            type: integer
+                            format: int32
+                          descent:
+                            type: integer
+                            format: int32
+                          leading:
+                            type: integer
+                            format: int32
+                  numXTiles:
+                    type: integer
+                    format: int32
+                  numYTiles:
+                    type: integer
+                    format: int32
+                  minTileX:
+                    type: integer
+                    format: int32
+                  minTileY:
+                    type: integer
+                    format: int32
+                  tileWidth:
+                    type: integer
+                    format: int32
+                  tileHeight:
+                    type: integer
+                    format: int32
+                  tileGridXOffset:
+                    type: integer
+                    format: int32
+                  tileGridYOffset:
+                    type: integer
+                    format: int32
+                  data:
+                    type: object
+                    properties:
+                      sampleModel:
+                        type: object
+                        properties:
+                          width:
+                            type: integer
+                            format: int32
+                          height:
+                            type: integer
+                            format: int32
+                          numBands:
+                            type: integer
+                            format: int32
+                          dataType:
+                            type: integer
+                            format: int32
+                          numDataElements:
+                            type: integer
+                            format: int32
+                          sampleSize:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          transferType:
+                            type: integer
+                            format: int32
+                      dataBuffer:
+                        type: object
+                        properties:
+                          dataType:
+                            type: integer
+                            format: int32
+                          offset:
+                            type: integer
+                            format: int32
+                          size:
+                            type: integer
+                            format: int32
+                          offsets:
+                            type: array
+                            items:
+                              type: integer
+                              format: int32
+                          numBanks:
+                            type: integer
+                            format: int32
+                      minX:
+                        type: integer
+                        format: int32
+                      minY:
+                        type: integer
+                        format: int32
+                      width:
+                        type: integer
+                        format: int32
+                      height:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateX:
+                        type: integer
+                        format: int32
+                      sampleModelTranslateY:
+                        type: integer
+                        format: int32
+                      numBands:
+                        type: integer
+                        format: int32
+                      numDataElements:
+                        type: integer
+                        format: int32
+                      bounds:
+                        type: object
+                        properties:
+                          x:
+                            type: number
+                            format: double
+                          y:
+                            type: number
+                            format: double
+                          width:
+                            type: number
+                            format: double
+                          height:
+                            type: number
+                            format: double
+                          size:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                          bounds2D:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                          empty:
+                            type: boolean
+                          location:
+                            type: object
+                            properties:
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                          rect:
+                            type: object
+                            properties:
+                              width:
+                                type: number
+                                format: double
+                              height:
+                                type: number
+                                format: double
+                              minX:
+                                type: number
+                                format: double
+                              minY:
+                                type: number
+                                format: double
+                              x:
+                                type: number
+                                format: double
+                              y:
+                                type: number
+                                format: double
+                              maxX:
+                                type: number
+                                format: double
+                              maxY:
+                                type: number
+                                format: double
+                              centerX:
+                                type: number
+                                format: double
+                              centerY:
+                                type: number
+                                format: double
+                              empty:
+                                type: boolean
+                            writeOnly: true
+                          minX:
+                            type: number
+                            format: double
+                          minY:
+                            type: number
+                            format: double
+                          maxX:
+                            type: number
+                            format: double
+                          maxY:
+                            type: number
+                            format: double
+                          centerX:
+                            type: number
+                            format: double
+                          centerY:
+                            type: number
+                            format: double
+                      transferType:
+                        type: integer
+                        format: int32
+                  writableTileIndices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        x:
+                          type: number
+                          format: double
+                        y:
+                          type: number
+                          format: double
+                  source:
+                    type: object
+                  type:
+                    type: integer
+                    format: int32
+                  propertyNames:
+                    type: array
+                    items:
+                      type: string
+                  sources:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sampleModel:
+                          type: object
+                          properties:
+                            width:
+                              type: integer
+                              format: int32
+                            height:
+                              type: integer
+                              format: int32
+                            numBands:
+                              type: integer
+                              format: int32
+                            dataType:
+                              type: integer
+                              format: int32
+                            numDataElements:
+                              type: integer
+                              format: int32
+                            sampleSize:
+                              type: array
+                              items:
+                                type: integer
+                                format: int32
+                            transferType:
+                              type: integer
+                              format: int32
+                        width:
+                          type: integer
+                          format: int32
+                        height:
+                          type: integer
+                          format: int32
+                        minX:
+                          type: integer
+                          format: int32
+                        minY:
+                          type: integer
+                          format: int32
+                        colorModel:
+                          type: object
+                          properties:
+                            transparency:
+                              type: integer
+                              format: int32
+                            numComponents:
+                              type: integer
+                              format: int32
+                            numColorComponents:
+                              type: integer
+                              format: int32
+                            colorSpace:
+                              type: object
+                              properties:
+                                type:
+                                  type: integer
+                                  format: int32
+                                numComponents:
+                                  type: integer
+                                  format: int32
+                                cs_sRGB:
+                                  type: boolean
+                            transferType:
+                              type: integer
+                              format: int32
+                            alphaPremultiplied:
+                              type: boolean
+                            componentSize:
+                              type: array
+                              items:
+                                type: integer
+                                format: int32
+                            pixelSize:
+                              type: integer
+                              format: int32
+                        numXTiles:
+                          type: integer
+                          format: int32
+                        numYTiles:
+                          type: integer
+                          format: int32
+                        minTileX:
+                          type: integer
+                          format: int32
+                        minTileY:
+                          type: integer
+                          format: int32
+                        tileWidth:
+                          type: integer
+                          format: int32
+                        tileHeight:
+                          type: integer
+                          format: int32
+                        tileGridXOffset:
+                          type: integer
+                          format: int32
+                        tileGridYOffset:
+                          type: integer
+                          format: int32
+                        propertyNames:
+                          type: array
+                          items:
+                            type: string
+                        data:
+                          type: object
+                          properties:
+                            sampleModel:
+                              type: object
+                              properties:
+                                width:
+                                  type: integer
+                                  format: int32
+                                height:
+                                  type: integer
+                                  format: int32
+                                numBands:
+                                  type: integer
+                                  format: int32
+                                dataType:
+                                  type: integer
+                                  format: int32
+                                numDataElements:
+                                  type: integer
+                                  format: int32
+                                sampleSize:
+                                  type: array
+                                  items:
+                                    type: integer
+                                    format: int32
+                                transferType:
+                                  type: integer
+                                  format: int32
+                            dataBuffer:
+                              type: object
+                              properties:
+                                dataType:
+                                  type: integer
+                                  format: int32
+                                offset:
+                                  type: integer
+                                  format: int32
+                                size:
+                                  type: integer
+                                  format: int32
+                                offsets:
+                                  type: array
+                                  items:
+                                    type: integer
+                                    format: int32
+                                numBanks:
+                                  type: integer
+                                  format: int32
+                            minX:
+                              type: integer
+                              format: int32
+                            minY:
+                              type: integer
+                              format: int32
+                            width:
+                              type: integer
+                              format: int32
+                            height:
+                              type: integer
+                              format: int32
+                            sampleModelTranslateX:
+                              type: integer
+                              format: int32
+                            sampleModelTranslateY:
+                              type: integer
+                              format: int32
+                            numBands:
+                              type: integer
+                              format: int32
+                            numDataElements:
+                              type: integer
+                              format: int32
+                            bounds:
+                              type: object
+                              properties:
+                                x:
+                                  type: number
+                                  format: double
+                                y:
+                                  type: number
+                                  format: double
+                                width:
+                                  type: number
+                                  format: double
+                                height:
+                                  type: number
+                                  format: double
+                                size:
+                                  type: object
+                                  properties:
+                                    width:
+                                      type: number
+                                      format: double
+                                    height:
+                                      type: number
+                                      format: double
+                                bounds2D:
+                                  type: object
+                                  properties:
+                                    width:
+                                      type: number
+                                      format: double
+                                    height:
+                                      type: number
+                                      format: double
+                                    minX:
+                                      type: number
+                                      format: double
+                                    minY:
+                                      type: number
+                                      format: double
+                                    x:
+                                      type: number
+                                      format: double
+                                    y:
+                                      type: number
+                                      format: double
+                                    maxX:
+                                      type: number
+                                      format: double
+                                    maxY:
+                                      type: number
+                                      format: double
+                                    centerX:
+                                      type: number
+                                      format: double
+                                    centerY:
+                                      type: number
+                                      format: double
+                                    empty:
+                                      type: boolean
+                                empty:
+                                  type: boolean
+                                location:
+                                  type: object
+                                  properties:
+                                    x:
+                                      type: number
+                                      format: double
+                                    y:
+                                      type: number
+                                      format: double
+                                rect:
+                                  type: object
+                                  properties:
+                                    width:
+                                      type: number
+                                      format: double
+                                    height:
+                                      type: number
+                                      format: double
+                                    minX:
+                                      type: number
+                                      format: double
+                                    minY:
+                                      type: number
+                                      format: double
+                                    x:
+                                      type: number
+                                      format: double
+                                    y:
+                                      type: number
+                                      format: double
+                                    maxX:
+                                      type: number
+                                      format: double
+                                    maxY:
+                                      type: number
+                                      format: double
+                                    centerX:
+                                      type: number
+                                      format: double
+                                    centerY:
+                                      type: number
+                                      format: double
+                                    empty:
+                                      type: boolean
+                                  writeOnly: true
+                                minX:
+                                  type: number
+                                  format: double
+                                minY:
+                                  type: number
+                                  format: double
+                                maxX:
+                                  type: number
+                                  format: double
+                                maxY:
+                                  type: number
+                                  format: double
+                                centerX:
+                                  type: number
+                                  format: double
+                                centerY:
+                                  type: number
+                                  format: double
+                            transferType:
+                              type: integer
+                              format: int32
+components: {}

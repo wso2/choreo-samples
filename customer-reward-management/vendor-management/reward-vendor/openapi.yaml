@@ -1,0 +1,134 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Reward Service API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/rewards": {
+      "post": {
+        "summary": "Create a reward",
+        "operationId": "createReward",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "rewardId": {
+                    "type": "string",
+                    "example": "RWD0000"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "example": "U0000"
+                  },
+                  "firstName": {
+                    "type": "string",
+                    "example": "John"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "example": "Doe"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "example": "john@example.com"
+                  }
+                },
+                "required": [
+                  "rewardId",
+                  "userId",
+                  "firstName",
+                  "lastName",
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully created reward",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rewardId": {
+                      "type": "string",
+                      "example": "RWD0000"
+                    },
+                    "userId": {
+                      "type": "string",
+                      "example": "U0000"
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "example": "John"
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "example": "Doe"
+                    },
+                    "email": {
+                      "type": "string",
+                      "format": "email",
+                      "example": "john@example.com"
+                    }
+                  },
+                  "required": [
+                    "rewardId",
+                    "userId",
+                    "firstName",
+                    "lastName",
+                    "email"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Reward": {
+        "type": "object",
+        "properties": {
+          "rewardId": {
+            "type": "string",
+            "example": "RWD0000"
+          },
+          "userId": {
+            "type": "string",
+            "example": "U0000"
+          },
+          "firstName": {
+            "type": "string",
+            "example": "John"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "Doe"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "john@example.com"
+          }
+        },
+        "required": [
+          "rewardId",
+          "userId",
+          "firstName",
+          "lastName",
+          "email"
+        ]
+      }
+    }
+  }
+}
