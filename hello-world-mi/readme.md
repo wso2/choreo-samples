@@ -4,7 +4,7 @@ Sample for Hello World service. This API responds with a "Hello: World" message 
 
 ## Getting started
 
-1. For this repository.
+1. Fork this repository.
 2. Delpoy as a service in Choreo.
 
 ## Testing
