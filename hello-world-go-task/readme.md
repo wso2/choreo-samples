@@ -1,4 +1,4 @@
-# Hello World Python
+# Hello World Go
 
 Sample for Hello World task. Print "Hello World" when run the main.go
 

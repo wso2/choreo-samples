@@ -1,4 +1,4 @@
-# Hello World Python
+# Hello World NodeJs
 
 Sample for Hello World task. Print "Hello World"
 

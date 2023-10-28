@@ -1,4 +1,4 @@
-# Hello World Java
+# Hello World PHP
 
 Sample for Hello World task. Print "Hello World"
 
