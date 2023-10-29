@@ -16,17 +16,22 @@ Note: The following file paths are relative to the path /go/greeter
 
 Please refer to the Choreo documentation under the [Develop a REST API](https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-rest-api/#step-1-create-a-service-component-from-a-dockerfile) section to learn how to deploy the application.
 
-#### Use the following config when creating this component in Choreo:
+You can select either Docker or Go as buildpacks. Fill as follow according to selected Buildpack.
 
-- Dockerfile: `go/greeter/Dockerfile`
-- Docker context: `go/greeter/`
+### Docker
+
+- Dockerfile: `greeting-service-go/go/greeter/Dockerfile`
+- Docker context: `greeting-service-go/go/greeter/`
+
+### Go
+- Project path - `greeting-service-go/go/greeter/`
 
 ## Execute the Sample Locally
 
 Navigate to the Go application directory
 
 ```bash
-cd choreo-sample-apps/go/greeter
+cd greeting-service-go/go/greeter
 ```
 
 Run the service
