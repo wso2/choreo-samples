@@ -4,7 +4,7 @@ componentType: service
 buildPreset: java
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /product-management-service
-# thumbnailPath: /product-management-service/icon.png
+thumbnailPath: /product-management-service/icon.png
 documentationPath: /product-management-service/readme.md
 tags:
 - Category/Service

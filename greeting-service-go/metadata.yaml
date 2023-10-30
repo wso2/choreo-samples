@@ -7,5 +7,3 @@ componentPath: /greeting-service-go
 thumbnailPath: /greeting-service-go/icon.png
 documentationPath: /greeting-service-go/readme.md
 tags:
-- Category/Service
-- Language/Go
