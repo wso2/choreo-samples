@@ -7,5 +7,3 @@ componentPath: /hello-world-go-task
 thumbnailPath: /hello-world-go-task/icon.png
 documentationPath: /hello-world-go-task/readme.md
 tags:
-- Category/Task
-- Language/Go
