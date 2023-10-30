@@ -7,5 +7,4 @@ componentPath: /hello-world-php-webapp
 thumbnailPath: /hello-world-php-webapp/icon.png
 documentationPath: /hello-world-php-webapp/readme.md
 tags:
-- Category/WebApplication
-- Language/PHP
+- Web Application

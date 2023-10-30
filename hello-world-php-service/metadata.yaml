@@ -7,5 +7,3 @@ componentPath: /hello-world-php-service
 thumbnailPath: /hello-world-php-service/icon.png
 documentationPath: /hello-world-php-service/readme.md
 tags:
-- Category/Service
-- Language/PHP
