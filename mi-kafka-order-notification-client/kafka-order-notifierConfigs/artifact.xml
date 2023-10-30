@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="orderProducerApi" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/orderProducerApi.xml</file>
+    </artifact>
+    <artifact name="orderProducerApi_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/orderProducerApi_swagger.yaml</file>
+    </artifact>
+    <artifact name="orderProducerApi_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/orderProducerApi_metadata.yaml</file>
+    </artifact>
+    <artifact name="orderConsumerInbound" groupId="com.example.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/orderConsumerInbound.xml</file>
+    </artifact>
+    <artifact name="orderCosumeSequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/orderCosumeSequence.xml</file>
+    </artifact>
+    <artifact name="orderConsumeErrorSequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/orderConsumeErrorSequence.xml</file>
+    </artifact>
+</artifacts>

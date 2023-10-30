@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inboundEndpoint class="org.wso2.carbon.inbound.kafka.KafkaMessageConsumer" name="orderConsumerInbound" onError="orderConsumeErrorSequence" sequence="orderCosumeSequence" suspend="false" xmlns="http://ws.apache.org/ns/synapse">
+    <parameters>
+        <parameter name="sequential">true</parameter>
+        <parameter name="interval">10</parameter>
+        <parameter name="coordination">true</parameter>
+        <parameter name="inbound.behavior">polling</parameter>
+        <parameter name="value.deserializer">org.apache.kafka.common.serialization.StringDeserializer</parameter>
+        <parameter name="topic.name">orders</parameter>
+        <parameter name="poll.timeout">100</parameter>
+        <parameter name="bootstrap.servers">$SYSTEM:KAFKA_URL</parameter>
+        <parameter name="group.id">order-group</parameter>
+        <parameter name="contentType">application/json</parameter>
+        <parameter name="key.deserializer">org.apache.kafka.common.serialization.StringDeserializer</parameter>
+        <parameter name="key.delegate.deserializer">org.apache.kafka.common.serialization.StringDeserializer</parameter>
+        <parameter name="value.delegate.deserializer">org.apache.kafka.common.serialization.StringDeserializer</parameter>
+        <parameter name="security.protocol">SASL_SSL</parameter>
+        <parameter name="sasl.jaas.config">$SYSTEM:KAFKA_JAAS_CONFIG</parameter>
+        <parameter name="sasl.mechanism">PLAIN</parameter>
+        <parameter name="class">org.wso2.carbon.inbound.kafka.KafkaMessageConsumer</parameter>
+    </parameters>
+</inboundEndpoint>
