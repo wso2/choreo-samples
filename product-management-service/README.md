@@ -14,18 +14,25 @@ Note: The following file paths are relative to the path /java/rest-api/
 
 ## Deploy Application
 
-Please refer to the Choreo documentation under the [Develop a REST API](https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-rest-api/#step-1-create-a-service-component-from-a-dockerfile) section to learn how to deploy the application.
+Please refer to the Choreo documentation under the [Develop an Application with Buildpacks](https://wso2.com/choreo/develop-components/deploy-an-application-with-buildpacks) to learn how to deploy the application.
 
-#### Use the following build config when creating this component in Choreo:
+1. Select `Service` Card from Component Creation Wizard
+2. Fork the repositoy
+3. Select `Java` as the buildpack. Fill as follow according to selected Buildpack.
 
-You can select `Java` or `Docker` as the Buildpack
+    | **Field**             | **Description**                               |
+    |-----------------------|-----------------------------------------------|
+    |Name           | Product Management Service              |
+    |Description    | Product Management Service       |
+    | **GitHub Account**    | Your account                                  |
+    | **GitHub Repository** | choreo-samples |
+    | **Branch**            | **`main`**                               |
+    | **Buildpack**      | Java|
+    | **Select Java Project Directory**       | product-management-service |
+    | **Select Language Version**              | 17 |
 
-### Docker
-- Dockerfile Path: `product-management-service/java/rest-api/Dockerfile`
-- Docker Context Path: `product-management-service/java/rest-api`
-
-### Java
-- Project Path - `product-management-service/java`
+4. Click Create. Once the component creation is complete, you will see the component overview page.
+5. Deploy the created component
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 

@@ -16,19 +16,26 @@ Note: The following file paths are relative to the path /nodejs/rest-api/
 
 Please refer to the Choreo documentation under the [Develop a REST API](https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-rest-api/#step-1-create-a-service-component-from-a-dockerfile) section to learn how to deploy the application.
 
-### Use the following configuration when creating this component in Choreo:
+You can select either Docker or Go as buildpacks. Fill as follow according to selected Buildpack.
 
+1. Select `Service` Card from Component Creation Wizard
+2. Fork the repositoy
+3. Select `NodeJs` as the buildpack. Fill as follow according to selected Buildpack.
 
-You can select `NodeJs` or `Docker` as the Buildpack
+    | **Field**             | **Description**                               |
+    |-----------------------|-----------------------------------------------|
+    |Name           | Reading books list service              |
+    |Description    | reading books list service        |
+    | **GitHub Account**    | Your account                                  |
+    | **GitHub Repository** | choreo-samples |
+    | **Branch**            | **`main`**                               |
+    | **Buildpack**      | `NodeJs` |
+    | **Select Go Project Directory**       | reading-books-list-service-nodejs|
+    | **Select Language Version**              | 18.x.x |
 
-### Docker
-- Dockerfile Path: `reading-books-list-service-nodejs/Dockerfile`
-- Docker Context Path: `reading-books-list-service-nodejs`
+4. Click Create. Once the component creation is complete, you will see the component overview page.
+5. Deploy the created component
 
-### NodeJs
-- Project Path - `reading-books-list-service-nodejs`
-
-The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
 ## Execute the Sample Locally
 
