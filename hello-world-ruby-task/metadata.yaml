@@ -1,9 +1,0 @@
-displayName: Hello World in Ruby
-description: Print Hello World message
-componentType: manual-task
-buildPreset: ruby
-repositoryUrl: https://github.com/wso2/choreo-samples/
-componentPath: /hello-world-ruby-task
-thumbnailPath: /hello-world-ruby-task/icon.png
-documentationPath: /hello-world-ruby-task/readme.md
-tags:
