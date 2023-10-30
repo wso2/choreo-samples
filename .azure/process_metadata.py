@@ -22,6 +22,10 @@ def collect_metadata_and_thumbnails():
             print(f"Found metadata.yaml in directory: {directory}")
             with open(metadata_file, 'r') as f:
                 data = yaml.safe_load(f)
+                
+                # Ensure 'tags' is a list, even if it's empty
+                data['tags'] = data.get('tags', [])
+
                 # Adjust the thumbnailPath
                 data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
                 collected_data.append(data)
