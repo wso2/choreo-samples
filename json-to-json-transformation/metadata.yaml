@@ -7,5 +7,4 @@ componentPath: /json-to-json-transformation
 thumbnailPath: /json-to-json-transformation/icon.png
 documentationPath: /json-to-json-transformation/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

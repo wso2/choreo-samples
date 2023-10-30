@@ -8,5 +8,5 @@ componentPath: /slack-new-message-to-servicenow-case
 thumbnailPath: /slack-new-message-to-servicenow-case/icon.png
 documentationPath: /slack-new-message-to-servicenow-case/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

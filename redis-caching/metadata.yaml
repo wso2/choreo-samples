@@ -8,5 +8,4 @@ componentPath: /redis-caching
 thumbnailPath: /redis-caching/icon.png
 documentationPath: /redis-caching/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

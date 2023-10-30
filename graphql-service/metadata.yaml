@@ -8,5 +8,4 @@ componentPath: /graphql-service
 thumbnailPath: /graphql-service/icon.png
 documentationPath: /graphql-service/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

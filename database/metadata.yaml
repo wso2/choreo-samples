@@ -7,5 +7,4 @@ componentPath: /database
 thumbnailPath: /database/icon.png
 documentationPath: /database/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

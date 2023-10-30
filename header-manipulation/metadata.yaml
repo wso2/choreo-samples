@@ -7,5 +7,4 @@ componentPath: /header-manipulation
 thumbnailPath: /header-manipulation/icon.png
 documentationPath: /header-manipulation/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

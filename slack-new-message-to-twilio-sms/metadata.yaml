@@ -8,5 +8,5 @@ componentPath: /slack-new-message-to-twilio-sms
 thumbnailPath: /slack-new-message-to-twilio-sms/icon.png
 documentationPath: /slack-new-message-to-twilio-sms/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

@@ -8,5 +8,4 @@ componentPath: /simple-passthrough
 thumbnailPath: /simple-passthrough/icon.png
 documentationPath: /simple-passthrough/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

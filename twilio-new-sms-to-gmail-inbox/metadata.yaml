@@ -8,5 +8,5 @@ componentPath: /twilio-new-sms-to-gmail-inbox
 thumbnailPath: /twilio-new-sms-to-gmail-inbox/icon.png
 documentationPath: /twilio-new-sms-to-gmail-inbox/readme.md
 tags:
-- Category/Integration
-- Internal/http
+- Integration
+- HTTP

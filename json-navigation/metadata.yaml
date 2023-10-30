@@ -7,5 +7,4 @@ componentPath: /json-navigation
 thumbnailPath: /json-navigation/icon.png
 documentationPath: /json-navigation/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP

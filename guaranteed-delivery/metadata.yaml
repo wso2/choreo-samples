@@ -7,5 +7,4 @@ componentPath: /guaranteed-delivery
 thumbnailPath: /guaranteed-delivery/icon.png
 documentationPath: /guaranteed-delivery/readme.md
 tags:
-- Category/Service
-- Internal/http
+- HTTP
