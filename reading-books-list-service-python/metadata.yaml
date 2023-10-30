@@ -1,9 +1,0 @@
-displayName: Book Management Service in Java
-description: CRUD operations for books
-componentType: service
-buildPreset: python
-repositoryUrl: https://github.com/wso2/choreo-samples/
-componentPath: /reading-books-list-service-python
-thumbnailPath: /reading-books-list-service/icon.png
-documentationPath: /reading-books-list-service-python/readme.md
-tags:
