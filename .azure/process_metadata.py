@@ -23,8 +23,9 @@ def collect_metadata_and_thumbnails():
             with open(metadata_file, 'r') as f:
                 data = yaml.safe_load(f)
                 
-                # Ensure 'tags' is a list, even if it's empty
-                data['tags'] = data.get('tags', [])
+                # Check if tags key exists and if it's either not set or None, assign an empty list
+                if not data.get('tags'):
+                    data['tags'] = []
 
                 # Adjust the thumbnailPath
                 data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
