@@ -1,0 +1,10 @@
+displayName: Test Runner Go
+description: Write test cases in Go to test applications hosted in Choreo
+componentType: test-runner
+buildPreset: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /test-runner-go
+thumbnailPath: /test-runner-go/icon.png
+documentationPath: /test-runner-go/readme.md
+tags:
+- Test
