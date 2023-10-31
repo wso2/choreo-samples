@@ -8,12 +8,12 @@ BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
 
 VALID_COMPONENT_TYPES = [
-    "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby"
+    "service", "webhook", "manual-task", "scheduled-task", 
+    "event-triggered", "event-handler", "test-runner"
 ]
 
 VALID_BUILD_PRESETS = [
-    "service", "webhook", "manual-task", "scheduled-task", 
-    "event-triggered", "event-handler", "test-runner"
+    "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby"
 ]
 
 def collect_metadata_and_thumbnails():
