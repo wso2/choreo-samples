@@ -1,1 +1,1 @@
-web: java -cp target/sample-app-1.0-SNAPSHOT.jar com.sample.app.App
+web: java -cp target/sample-1.0-SNAPSHOT.jar com.sample.app.App
