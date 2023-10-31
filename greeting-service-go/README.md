@@ -18,13 +18,23 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 
 You can select either Docker or Go as buildpacks. Fill as follow according to selected Buildpack.
 
-### Docker
+1. Select `Service` Card from Component Creation Wizard
+2. Fork the repositoy
+3. Select `Go` as the buildpack. Fill as follow according to selected Buildpack.
 
-- Dockerfile: `greeting-service-go/go/greeter/Dockerfile`
-- Docker context: `greeting-service-go/go/greeter/`
+    | **Field**             | **Description**                               |
+    |-----------------------|-----------------------------------------------|
+    |Name           | Greeting Service              |
+    |Description    | greeting service        |
+    | **GitHub Account**    | Your account                                  |
+    | **GitHub Repository** | choreo-samples |
+    | **Branch**            | **`main`**                               |
+    | **Buildpack**      | `Go` |
+    | **Select Go Project Directory**       | hello-world-go-task |
+    | **Select Language Version**              | 1.x |
 
-### Go
-- Project path - `greeting-service-go/go/greeter/`
+4. Click Create. Once the component creation is complete, you will see the component overview page.
+5. Deploy the created component
 
 ## Execute the Sample Locally
 
