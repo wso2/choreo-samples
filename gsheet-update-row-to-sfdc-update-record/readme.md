@@ -1,15 +1,12 @@
-Use template (Google Sheets Row Update to Salesforce Record Update) to update Salesforce object once Google sheet rows are updated.
-
+# Google Sheets Row Update to Salesforce Record Update
 # Use case
 When there is a need to store our data specific to business quickly, we can use the Google Sheets . But if
 we want to store it in a reliable way, we can use Salesforce custom objects. Now, you don't need to waste time copying 
 and pasting the data from Google Sheet to Salesforce. In such cases we can use an integration between Google Sheets and 
-Salesforce to make this task easier. This template is used for the scenario that once a specific column is updated in a 
+Salesforce to make this task easier. This sample is used for the scenario that once a specific column is updated in a 
 Google Sheet, an object is updated in the Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_update_row_to_sfdc_update_record <newProjectName>`
 * A Google Cloud Platform Account
 * A Salesforce Account
 * Use the `Salesforce New Record to Google Sheets Row` sample and populate a Google sheet with some data.
@@ -176,7 +173,7 @@ We need to enable the app script trigger if we want to listen to internal change
 6. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once a cell in a row is updated in Google sheet, the relevant record will be updated in Salesforce. 
 You can check the Salesforce account to verify after doing changes in Google sheet.

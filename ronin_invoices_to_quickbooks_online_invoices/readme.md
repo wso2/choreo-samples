@@ -1,12 +1,9 @@
-Use template (Ronin Invoices to Quickbooks Online Invoices) to create new Quickbooks online invoices from Ronin invoices.
-
+# Ronin Invoices to Quickbooks Online Invoices
 ## Use case
-At the execution of this template, the information from all the Ronin invoices updated within a particular day will be used 
+At the execution of this sample, the information from all the Ronin invoices updated within a particular day will be used 
 to create new Quickbooks online invoices. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/ronin_invoices_to_quickbooks_online_invoices <newProjectName>`
 * Ronin account
 * Quickbooks account
 
@@ -46,7 +43,7 @@ token = "<QUICKBOOKS_ACCESS_TOKEN>"
 6. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 The the information from all the Ronin invoices updated within a particular day will be used 
 to create new Quickbooks online invoices.

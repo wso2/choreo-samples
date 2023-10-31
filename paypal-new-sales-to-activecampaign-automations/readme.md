@@ -1,11 +1,8 @@
-Use template (Add Customers to ActiveCampaign Automations for New PayPal Successful Sales) to add the customer details of a successful sale to an ActiveCampaign automation.
-
+# Add Customers to ActiveCampaign Automations for New PayPal Successful Sales
 ## Use case
-At the execution of this template, it will add the customer details of a successful sale in Paypal to an ActiveCampaign automation.
+At the execution of this sample, it will add the customer details of a successful sale in Paypal to an ActiveCampaign automation.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/paypal_new_sales_to_activecampaign_automations <newProjectName>`
 * PayPal account
 * ActiveCampaign account
 
@@ -45,6 +42,6 @@ token = "<PAYPAL_ACCESS_TOKEN>"
 6. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 The email of the customer if his order is completed will be added to the specified ActiveCampaign automation.

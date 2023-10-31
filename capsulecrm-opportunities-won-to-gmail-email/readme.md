@@ -1,12 +1,9 @@
-Use template (CapsuleCRM Opportunities Won to Gmail Email) to send a Gmail email with detailed summary of new CapsuleCRM opportunities won.
-
+# CapsuleCRM Opportunities Won to Gmail Email
 ## Use case
-At the execution of this template, the detailed summary of all the new opportunities won in CapsuleCRM 
+At the execution of this sample, the detailed summary of all the new opportunities won in CapsuleCRM 
 within a particular day will be sent as a Gmail email. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/capsulecrm_opportunities_won_to_gmail_email <newProjectName>`
 * CapsuleCRM account
 * Gmail account
 
@@ -61,6 +58,6 @@ refreshToken = "<GMAIL_REFRESH_TOKEN>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 The detailed summary of all the new opportunities won in CapsuleCRM within a particular day will be sent as a Gmail email. 

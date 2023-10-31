@@ -1,14 +1,9 @@
-Use template (JWT Handling) to read fields from a JWT and processes them.
-
+# JWT Handling
 ## Use-case
-When the service is invoked with a JWT token, it checks the validity of the JWT token and returns the result. This template can be used to read fields from a JWT and processes them.
+When the service is invoked with a JWT token, it checks the validity of the JWT token and returns the result. This sample can be used to read fields from a JWT and processes them.
 
-## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/jwt_handling <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

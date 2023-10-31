@@ -1,16 +1,13 @@
-Use template (GitHub Issue Assigned to Twilio SMS) to send a Twilio SMS to the issue assignee when the issue is assigned in GitHub.
-
+# GitHub Issue Assigned to Twilio SMS
 ## Use case
 It is important to be updated with a particular software development tool that you or your team are using in the
 day-to-day development process and get notified immediately when a new issue is assigned. It is important to follow up
 with GitHub repositories as soon as an issue is assigned. There may be a specific person who wanted to be on alert of
 new issues assigned to a certain GitHub repository. Any time a new issue is assigned in GitHub,
-an SMS message will automatically send to the specific person of interest via Twilio. This template can be used to
+an SMS message will automatically send to the specific person of interest via Twilio. This sample can be used to
 send a Twilio SMS message to a given mobile number when a new issue is assigned in a specific GitHub repository.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_issue_assigned_to_twilio_sms`
 * GitHub account
 * Twilio account with SMS capable phone number.
 
@@ -50,6 +47,6 @@ secret = "<SECRET>"
 * SECRET - This secret will be used in registering webhook
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check the SMS received to verify with information in the assigned GitHub issue.

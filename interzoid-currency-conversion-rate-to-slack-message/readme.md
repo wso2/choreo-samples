@@ -1,12 +1,9 @@
-Use template (Interzoid Currency Conversion Rate to Slack Channel Message) to send a Slack notification for a given currency conversion periodically.
-
+# Interzoid Currency Conversion Rate to Slack Channel Message
 ## Use case
 It is important to have an idea about fluctuating currency conversion rates daily in a business. It helps to predict upcoming business opportunities or risks. 
-Using this template you can send notifications to a specified Slack Channel periodically about the requested currency conversion rate.
+Using this sample you can send notifications to a specified Slack Channel periodically about the requested currency conversion rate.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/interzoid_currency_conversion_rate_to_slack_message <newProjectName>`
 * Interzoid account
 * Slack account
 
@@ -35,5 +32,5 @@ license = "<INTERZOID_API_KEY>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 Then you can check on the specified Slack channel for currency conversion rate.

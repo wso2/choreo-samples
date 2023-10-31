@@ -1,15 +1,12 @@
-Use template (Salesforce New Record to Google Sheets Row) to add new row in Google Sheet once new Salesforce record is created.
-
+# Salesforce New Record to Google Sheets Row
 ## Use case
 For more successful growth of a business, continuous awareness on the changes of your Salesforce account is crucial. 
-Using this template user can maintain the Salesforce records in a Google Sheet allowing easy and organized access to 
-the important data. Using this template user can get newly added records into a selected Google Sheet realtime. 
+Using this sample user can maintain the Salesforce records in a Google Sheet allowing easy and organized access to 
+the important data. Using this sample user can get newly added records into a selected Google Sheet realtime. 
 User can select the SObject he/she needs to maintain a seperate Google Sheet and every new record of that SObject will 
 be added into the Sheet.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_record_to_google_sheet_row <newProjectName>`
 * Salesforce Account 
 * Slack Account
 
@@ -84,8 +81,8 @@ refreshToken = "<GSHEET_REFRESH_TOKEN>"
 
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can add new record in Salesforce Object and observe that integration template runtime has received the event 
+Now you can add new record in Salesforce Object and observe that integration sample runtime has received the event 
 notification for new record creation. You can check the Google Sheet to verify that new record is added to the 
 specified Sheet. 

@@ -1,13 +1,10 @@
-Use template (GitHub New Commit to Google Sheets Row) to append new rows to a Google Sheet, When new commits are made and pushed in GitHub.
-
+# GitHub New Commit to Google Sheets Row
 ## Use case
 We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. By 
 using this integration, we can organize and automatically set up a Google Sheet which will contain information about 
-commits made in a specific GitHub repository. This template can be used to create new rows in a Google Sheet when new commits are made and pushed.
+commits made in a specific GitHub repository. This sample can be used to create new rows in a Google Sheet when new commits are made and pushed.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_new_commit_to_google_sheet_row <newProjectName>`
 * GitHub Account
 * Google Cloud Platform account
 
@@ -71,6 +68,6 @@ and obtain a public URL that exposes your local service to the internet. (eg: ht
 * GSHEET_REFRESH_URL - Google cloud platform refresh URL. Here REFRESH_URL for Google Sheets API is `https://www.googleapis.com/oauth2/v3/token`.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Now for every new commit in specific repo, new row will be added in the sheet specified.

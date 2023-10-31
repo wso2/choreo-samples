@@ -1,15 +1,12 @@
-Use template (Salesforce Opportunity Closed Won to Slack Channel Message) to send a Slack notification when an opportunity in Salesforce is updated to `Closed Won`
-
+# Salesforce Opportunity Closed Won to Slack Channel Message
 ## Use case
 It is important to follow up with the updates for your opportunities in Salesforce as soon as they are added 
 to increase the efficiency of your sales team. Most importantly when you won a deal!!! 
 For constant communication your organization might be using a dedicated Slack Channel for new Salesforce updates. 
-Using this template you can send notification to your sales team's Slack Channel whenever an opportunity is WON to 
+Using this sample you can send notification to your sales team's Slack Channel whenever an opportunity is WON to 
 celebrate with the team.  
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_opportunity_closedwon_to_slack <newProjectName>`
 * Salesforce Account 
 * Slack Account
 
@@ -52,6 +49,6 @@ refreshUrl = "<SALESFORCE_REFRESH_URL>"
 
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 Check for a Slack message upon successful update on Salesforce opportunity to `Closed Won`
  

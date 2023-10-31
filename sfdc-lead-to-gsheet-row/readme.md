@@ -1,12 +1,9 @@
-Use template (Salesforce New Lead to Google Sheets Row) to add Google Sheet row upon new lead addition in Salesforce.
-
+# Salesforce New Lead to Google Sheets Row
 ## Use case
-At the execution of this template, each time new lead is added in salesforce, Google Sheets Spreadsheet row will be 
+At the execution of this sample, each time new lead is added in salesforce, Google Sheets Spreadsheet row will be 
 added containing all the defined fields in lead SObject.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_lead_to_gsheet_row <newProjectName>`
 * Google Cloud platform account
 * Salesforce account
 
@@ -87,6 +84,6 @@ refreshToken = "<GSHEET_REFRESH_TOKEN>"
 3. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once a new Lead is added in Salesforce, new row will be appended with specified fields in Google sheet.

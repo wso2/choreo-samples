@@ -1,11 +1,8 @@
-Use template (News API Headlines to Email) to fetch BBC top headlines and send as email to recipient.
-
+# News API Headlines to Email
 ## Use case
-This integration template helps to send email with BBC top headlines news.
+This integration sample helps to send email with BBC top headlines news.
 
 ## Pre-requisites
-* Pull the template from central  
-  `bal new -t choreo/newsapi_headlines_to_email <newProjectName>`
 * News API Account
 
 ### Setup News API Configurations
@@ -26,6 +23,6 @@ apiKey = "<NEWSAPI_API_KEY>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, BBC top headlines are fetched and sent as email to recipient.  

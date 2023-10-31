@@ -1,14 +1,11 @@
-Use template (Gmail New Attachment to Google Drive) to save new attachments in Gmail as a Google Drive files
-
+# Gmail New Attachment to Google Drive
 ## Use case
 When there are files attached to emails it is difficult to trackdown them easily. File management purposes become a need
 when they are valuable to the enterprise or a specific person and when there is need to reduce waste of time searching for attachments.
-For this, there must be a proper way of managing file attachments in an email. This template integrates Gmail with 
-Google Drive to achieve that task with ease. Whenever you get an email via Gmail with an attachment, this template will save the attachment file in Google Drive. By this way we can guarantee that the received attachment is saved in your google drive.
+For this, there must be a proper way of managing file attachments in an email. This sample integrates Gmail with 
+Google Drive to achieve that task with ease. Whenever you get an email via Gmail with an attachment, this sample will save the attachment file in Google Drive. By this way we can guarantee that the received attachment is saved in your google drive.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/gmail_new_attachment_to_drive <newProjectName>`
 * Google Cloud Platform Account
 
 ### Setting up Google Drive account and Gmail account
@@ -61,6 +58,6 @@ refreshToken = "<REFRESH_TOKEN>"
 > Note: Here GMAIL_REFRESH_URL is `https://oauth2.googleapis.com/token`
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can aend a new email with an attachment and observe if integration template runtime has logged the status of the response. You can check the Google Drive verify if a new file is created. 
+Now you can aend a new email with an attachment and observe if integration sample runtime has logged the status of the response. You can check the Google Drive verify if a new file is created. 

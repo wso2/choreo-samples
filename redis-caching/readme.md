@@ -1,11 +1,6 @@
-Use template (Redis Caching) to cache responses in a Redis cache.
-
+# Redis Caching
 ## Use case
 When the service is invoked with JSON data it invokes API endpoint and cache result in the Redis cache. For subsequent requests data is fetched from Redis cache instead of invoking API endpoint again and again.
-
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/redis_caching <newProjectName>`
 
 ## Configuration
 Create a file called `Config.toml` at the root of the project.
@@ -17,8 +12,8 @@ host = "<HOST_NAME_WITH_PORT>"
 password = "<PASSWORD>"
 ```
 
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 9090. Then you need to invoke the service using the following curl command
 ```

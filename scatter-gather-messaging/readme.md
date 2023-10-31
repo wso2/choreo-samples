@@ -1,13 +1,10 @@
-Use template (Scatter Gather Messaging) to demonstrate sending a message to multiple recipients and re-aggregating the responses back into a single message
-
+# Scatter Gather Messaging
 ## Use case
 To understand how you can build scatter-gather messaging using Ballerina, let's consider gathering temperature data for a list of locations. This package includes a scatter-gather component to get weather data from Open Weather API for three cities. Therefore, the component requires communicating with other necessary back-ends. For the demonstration service, the component sends three requests to the Open Weather API parallel using ballerina `future`. then it waits for the each response and when the responses come, it prepares the response message to the user by gathering the separate response details. The following diagram illustrates this use case clearly.
 
 ![diagram](./docs/diagram.png)
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/scatter_gather_messaging <newProjectName>`
 * [Open Weather Account](https://openweathermap.org/api)
 
 ### Setting up open weather account
@@ -26,4 +23,4 @@ apiKey : <API KEY OPEN WEATHER ACCOUNT>
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

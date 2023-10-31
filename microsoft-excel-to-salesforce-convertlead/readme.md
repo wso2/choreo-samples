@@ -1,11 +1,8 @@
-Use template (Microsoft Excel to Salesforce ConvertLead) to convert Salesforce Lead from details provided in Microsoft Excel worksheet.
-
+# Microsoft Excel to Salesforce ConvertLead
 ## Use case
-Using this template you can convert Salesforce Lead from the IDs provided in Microsoft Excel worksheet rows. When you run the template, given IDs will be converted as account, contact and opportunity objects and newly created object IDs will be updated in the same sheet.
+Using this sample you can convert Salesforce Lead from the IDs provided in Microsoft Excel worksheet rows. When you run the sample, given IDs will be converted as account, contact and opportunity objects and newly created object IDs will be updated in the same sheet.
 
 ## Pre-requisites
-* Pull the template from central  
-  `bal new -t choreo/microsoft_excel_to_salesforce_convertlead <newProjectName>`
 * A Microsoft OneDrive account
 * A Salesforce account
 
@@ -101,6 +98,6 @@ salesforceClientSecret = "<Salesforce Client Secrets>"
 salesforceRefreshToken = "<Salesforce Refresh Token>"
 ```
 ## Running the Template
-1. Run the Ballerina project created by the integration template by executing bal run from the root.
+1. Run the Ballerina project created by the integration sample by executing bal run from the root.
 
 2. You can check the Salesforce to verify whether Lead is converted. 

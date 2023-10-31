@@ -1,17 +1,14 @@
-Use template (SMS Voting Survey to Google Sheets Summary) to update a cell in a Google Sheet, When new SMS is received to a Twilio account
-
+# SMS Voting Survey to Google Sheets Summary
 ## Use case
 There are day-to-day scenarios where we come across surveys or competitions which are initiated with the use of SMS voting. 
-This integration template allows you to start such kind of scenario instantly and obtain the voting results with the 
-use of a Google Sheet. It listens to the incoming Twilio SMS (with a predefined template) and increments a count in a 
+This integration sample allows you to start such kind of scenario instantly and obtain the voting results with the 
+use of a Google Sheet. It listens to the incoming Twilio SMS (with a predefined sample) and increments a count in a 
 Google Sheet. This can be used to update specific data in the Google Sheet. The practical use case we have implemented 
 here is a scenario where `A survey to find out the best language for building microservices out of a set of given 
 languages`. The users have to send an SMS in the predefined format `Vote <Language Name>` to a given Twilio number. 
-The template will update the count on each valid SMS receive.
+The sample will update the count on each valid SMS receive.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/twilio_sms_to_gsheet <newProjectName>`
 * Twilio Account
 * Google Cloud Platform Account
 
@@ -57,7 +54,7 @@ refreshToken = "<REFRESH_TOKEN>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can send new messages in the format `Vote <LANGUAGE_NAME>` to the specific Twilio account and observe that integration template runtime has received the event notification upon receiving new message. You can check the Google Sheet to verify that how the count of each language is increased in the specified sheet.
+Now you can send new messages in the format `Vote <LANGUAGE_NAME>` to the specific Twilio account and observe that integration sample runtime has received the event notification upon receiving new message. You can check the Google Sheet to verify that how the count of each language is increased in the specified sheet.
  

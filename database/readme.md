@@ -1,14 +1,9 @@
-Use template (Database Connection) to read data from a MySQL database and returns a JSON response.
-
+# Database Connection
 ## Use-case
-When the service is invoked with a country specified, get the customers details in that country. This template can be used to read data from a MySQL database and returns a JSON response.
+When the service is invoked with a country specified, get the customers details in that country. This sample can be used to read data from a MySQL database and returns a JSON response.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/database <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command. Provide the specific country code. Example `usa`
 ```

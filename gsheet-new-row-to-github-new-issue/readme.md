@@ -1,13 +1,10 @@
-Use template (Google Sheets New Row to GitHub New Issue) to create a GitHub issue, for new row in Google sheet.
-
+# Google Sheets New Row to GitHub New Issue
 ## Use case
 It is important to make day-to-day information organized and represented in a generic format with the help of Google Sheets. By 
 using this integration, we can organize and automatically create a new GitHub issue using the row information in a corresponding Google Sheet which will contain information about GitHub issues. 
-We can easily keep track of new issues and interact using Google sheets. This template can be used to create a new issue in a GitHub repository when a new row with the issue information are appended to a Google sheet.
+We can easily keep track of new issues and interact using Google sheets. This sample can be used to create a new issue in a GitHub repository when a new row with the issue information are appended to a Google sheet.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_new_row_to_github_new_issue <newProjectName>`
 * A GitHub Account
 * A Google Cloud Platform Account
 
@@ -128,7 +125,7 @@ We need to enable the app script trigger if we want to listen to internal change
 6. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Upon successfully adding a row, You can check the GitHub repository to verify that the new issue is created.
 

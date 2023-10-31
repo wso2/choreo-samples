@@ -1,14 +1,9 @@
-Use template (Content Based Routing) to route requests depending on the content.
-
+# Content Based Routing
 ## Use case
-When the service is invoked with data in a request, it returns data according to the content provided in the request. This template can be used to route requests depending on the content.
+When the service is invoked with data in a request, it returns data according to the content provided in the request. This sample can be used to route requests depending on the content.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/content_based_routing <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

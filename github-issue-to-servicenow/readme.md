@@ -1,11 +1,8 @@
-Use template (GitHub New Issue to ServiceNow Record) to insert a new record in `incident` table of ServiceNow when a new issue is created in a specific GitHub repository.
-
+# GitHub New Issue to ServiceNow Record
 ## Use case
-It is important to be aware of the issues which are created in the GitHub repositories to take necessary actions. ServiceNow is an important tool in IT management. Update the `incident` table in ServiceNow with new GitHub issues will be helpful to track the issues easily. By using this integration template, we can insert a new record in `incident` table of ServiceNow when a new issue is created in a specific GitHub repository.
+It is important to be aware of the issues which are created in the GitHub repositories to take necessary actions. ServiceNow is an important tool in IT management. Update the `incident` table in ServiceNow with new GitHub issues will be helpful to track the issues easily. By using this integration sample, we can insert a new record in `incident` table of ServiceNow when a new issue is created in a specific GitHub repository.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_issue_to_servicenow <newProjectName>`
 * GitHub account
 * ServiceNow account
 
@@ -38,6 +35,6 @@ webhookSecret = "<SECRET>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, new record will be added to `incident` table in ServiceNow each time when a GitHub issue is created.

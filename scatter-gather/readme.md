@@ -1,14 +1,11 @@
-Use template (Message Aggregator) to send multiple requests to the backend, collects responses, and distill them into a single response.
-
+# Message Aggregator
 ## Use-case
-When the service is invoked with an array of employee Ids, it returns data obtained from employees corresponding to those employee Ids provided in the request. This template can be used to send multiple requests to the backend, collects responses, and distills them into a single response.
+When the service is invoked with an array of employee Ids, it returns data obtained from employees corresponding to those employee Ids provided in the request. This sample can be used to send multiple requests to the backend, collects responses, and distills them into a single response.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/scatter_gather <newProjectName>`
 
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

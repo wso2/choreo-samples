@@ -1,11 +1,8 @@
-Use template (MFTG New Message to MFTG client) to mark successfully received messages as unread.
-
+# MFTG New Message to MFTG client
 ## Use case
-This template will mark successfully received messages as unread. This uses MFTG Trigger to obtain newly received messages and uses MFTG Client to mark them as unread. 
+This sample will mark successfully received messages as unread. This uses MFTG Trigger to obtain newly received messages and uses MFTG Client to mark them as unread. 
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/mftg_trigger_to_mftg_client <newProjectName>`
 * MFT Gateway account (by Aayu Technologies)
 
 
@@ -32,4 +29,4 @@ as2From = "<AS2_FROM>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

@@ -1,11 +1,8 @@
-Use template (Google Sheets Row to Twitter Post) to create twitter post with a custom content if a date column in spreadsheet matches the current date. 
-
+# Google Sheets Row to Twitter Post
 ## Use case
 Update a Twitter post when date specified for that twitter messages matches current date.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_row_to_twitter_post <newProjectName>`
 * Google Cloud Platform account
 * Twitter account
 
@@ -77,6 +74,6 @@ accessTokenSecret = "<TWITTER_ACCESS_TOKEN_SECRET>"
 > Note: Here GSHEET_REFRESH_URL is https://www.googleapis.com/oauth2/v3/token
 
 ## Testing
-Run the Ballerina project created by the integration template by executing bal run from the root.
+Run the Ballerina project created by the integration sample by executing bal run from the root.
 
 Once successfully executed, You can check the Twitter to verify that when date in Google sheet row matches current date.

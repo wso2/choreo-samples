@@ -1,16 +1,13 @@
-Use template (Google Sheets New Row to Salesforce New Record) to create a new Salesforce record for each new row in Google sheet.
-
+# Google Sheets New Row to Salesforce New Record
 ## Use case
 When a new row with new Salesforce record information is appended in Google sheet, create a new Salesforce record.
 We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. By 
 using this integration, we can organize and automatically create a new Salesforce record using the row information in a 
 corresponding Google Sheet which will contain information about the new Salesforce record. We can easily keep track of 
-new Salesforce records and easily interact using Google sheets. This template can be used to create a new record in 
+new Salesforce records and easily interact using Google sheets. This sample can be used to create a new record in 
 Salesforce when a new row with the record information are appended to a Google sheet.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_new_row_to_sfdc_new_record <newProjectName>`
 * Salesforce account
 * Google cloud platform account
 
@@ -178,7 +175,7 @@ We need to enable the app script trigger if we want to listen to internal change
 6. Customize the service logic based on the record type (sfdcObject) you are willing to create.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once new row is added with specified fields in Google sheet, new Record will be added in Salesforce. 
 

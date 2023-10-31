@@ -1,16 +1,13 @@
-Use template (Salesforce New Lead to Twilio SMS) to send Twilio SMS for new Lead created in Salesforce.
-
+# Salesforce New Lead to Twilio SMS
 # Use case
 A customer can use Twilio to send internal notifications to a specific person of interest, based on the new lead 
 information in Salesforce. It is important to follow up with leads as soon as they are added in Salesforce. 
 There maybe a specific person who wanted to be on alert of new Salesforce leads. Any time you create a new lead 
-in Salesforce, an SMS message will automatically send to the specific person via Twilio. This template can be used to 
+in Salesforce, an SMS message will automatically send to the specific person via Twilio. This sample can be used to 
 send a Twilio SMS message containing all the defined fields in lead SObject to a given mobile number when a new lead is 
 created in Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_lead_to_twilio_sms <newProjectName>`
 * Google Cloud platform account
 * Twilio account
 
@@ -60,7 +57,7 @@ Phone numbers must be provided in E.164 format: +<country code><number>, for exa
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check the SMS received to verify that information about the new lead created.
 

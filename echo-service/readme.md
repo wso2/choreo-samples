@@ -1,14 +1,9 @@
-Use template (Echo Service) to respond with the same message received via an HTTP POST.
-
+# Echo Service
 ## Use case
 When the service is invoked with a message, the service will respond with the same message received via an HTTP POST.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/echo_service <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

@@ -1,14 +1,9 @@
-Use template (Service Chaining) to link two endpoints to get the details of an employee profile.
-
+# Service Chaining
 ## Use-case
-When the service is invoked with an employee Id, it returns data obtained from two different endpoints as a summary about an employee. This template can be used to link two endpoints to get the details of an employee profile.
+When the service is invoked with an employee Id, it returns data obtained from two different endpoints as a summary about an employee. This sample can be used to link two endpoints to get the details of an employee profile.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/service_chaining <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

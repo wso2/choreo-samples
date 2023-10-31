@@ -1,12 +1,9 @@
-Use template (Google Calendar Event to Microsoft Teams Channel Message) to send a message in Microsoft Teams Channel when, When a new event is created in Google Calendar.
-
+# Google Calendar Event to Microsoft Teams Channel Message
 ## Use case
 Update your team on the events with the help of Google Calendar and Microsoft Teams. By using this integration, 
 we can automatically send a message to a Microsoft Teams channel about the new event.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gcalendar_new_event_to_msteams_message <newProjectName>`
 * Google account
 * Microsoft Teams account
 
@@ -75,4 +72,4 @@ refreshUrl = "<REFRESH_URL>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

@@ -1,12 +1,9 @@
-Use template (Google Drive New File to Google Sheets Row) to add a row in google sheet, When a new file is added in Google drive
-
+# Google Drive New File to Google Sheets Row
 ## Use case
 It's important usecase to track the files uploaded to a Google drive.
 This temaplate logs "FileID", "File Name", "Time", "Mime type" of the files uploaded to the Google drive in a Google sheet as rows.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/gdrive_new_file_to_gsheet_rows <newProjectName>`
 * Google Account
 
 
@@ -67,6 +64,6 @@ refreshUrl = "<REFRESH_URL>"
 > Note: Here REFRESH_URL for Google Sheets API is `https://www.googleapis.com/oauth2/v3/token`
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the 
+Run the Ballerina project created by the integration sample by executing `bal run` from the 
 
 Now you can add new file to google drive and check new rows in google sheet. You can check the metadata in rows to verify the file added.

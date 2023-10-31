@@ -1,17 +1,14 @@
-Use template (Salesforce Opportunity Update to Twilio SMS) to send Twilio SMS, When an opportunity in Salesforce is updated.
-
+# Salesforce Opportunity Update to Twilio SMS
 ## Use case
 Updated and accurate opportunities drive precise forecasts. A customer can use Twilio to send internal notifications to 
 a specific person of interest, based on the opportunity update information in Salesforce. 
 It is important to follow up with opportunities as soon as they are updated in Salesforce. There maybe a specific 
 person who wanted to be on alert of updated Salesforce opportunities. Any time you update an opportunity in Salesforce, 
-a SMS message will automatically send to the specific person via Twilio. This template can be used to send a Twilio SMS 
+a SMS message will automatically send to the specific person via Twilio. This sample can be used to send a Twilio SMS 
 message containing all the defined fields in opportunity SObject to a given mobile number when an opportunity is updated 
 in Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_opportunity_update_to_twilio_sms <newProjectName>`
 * Salesforce Account
 * Twilio Account
 
@@ -57,5 +54,5 @@ authToken = "<TWILIO_AUTH_TOKEN>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 You can check the SMS received to verify that information about the opportunity updated. 

@@ -1,13 +1,10 @@
-Use the template (Guaranteed Delivery) to demonstrate the Azure Service Bus capability on guaranteed message delivery.
-
+# Guaranteed Delivery
 ## Use case
 When the HTTP service is invoked with a JSON payload as described, it compiles the JSON body into an ASB message and sends it to the specified queue. Then this will trigger the ASB Message service which listens to new messages from the queue. New record will be generated out of an extracted JSON from a triggered message and that record will be appended in a form on a row in Google sheet.
 
-This template can be used to demonstrate the Azure Service Bus capability on guaranteed message delivery.
+This sample can be used to demonstrate the Azure Service Bus capability on guaranteed message delivery.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/guaranteed_delivery <newProjectName>`
 * Azure account
 * Google cloud platform account
 
@@ -40,8 +37,8 @@ Create a Google account and create a connected app by visiting [Google cloud pla
 14. Here refresh URL for Google Sheets API is `https://www.googleapis.com/oauth2/v3/token`
 
 
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 

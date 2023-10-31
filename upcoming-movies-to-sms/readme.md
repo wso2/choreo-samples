@@ -1,11 +1,8 @@
-Use template (Today's Movies to SMS Notification) to fetch the movies that are released on the day and send as SMS to recipient phone number.
-
+# Today's Movies to SMS Notification
 ## Use case
-When this template is executed it sends an SMS with the movie detail if the movie release date matches the current date.
+When this sample is executed it sends an SMS with the movie detail if the movie release date matches the current date.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/upcoming_movies_to_sms <newProjectName>`
 * The Movie Database (TMDB) account
 
 ### Setting up The Movie Database (TMDB) account
@@ -32,6 +29,6 @@ apiKey = <API_KEY>
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, A SMS will be sent to the phone number specified if any movies with release date matches current utc date otherwise it will print the relevant error log.

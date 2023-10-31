@@ -1,5 +1,4 @@
-Use template (GitHub Issue Summary to Email) to generate a GitHub issue summary report and email to a specified email address.
-
+# GitHub Issue Summary to Email
 ## Use case
 Managers always like summaries. In this scenario, we generate a report out of the issues reported at a GitHub repository.
 It contains information on how many issues are assigned to each contributor of the project, total issues opened and total
@@ -7,8 +6,6 @@ issues closed so far. You could configure this report to be generated daily and 
 It will provide continuous feedback about the project issue status.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_issue_summary_to_email <newProjectName>`
 * GitHub account
 * Email account
 
@@ -28,6 +25,6 @@ recipientAddress = "<RECIPIENT_ADDRESS>"
 * RECIPIENT_ADDRESS - an email address
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, the GitHub issue summary report will be received to the email specified.
