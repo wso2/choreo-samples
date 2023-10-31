@@ -1,15 +1,12 @@
-Use template (Salesforce Record Update to Google Sheets Row Update) to update a row in Google sheet, When a record is updated in Salesforce.
-
+# Salesforce Record Update to Google Sheets Row Update
 ## Use case
 It is tiresome to continuously go through Google Sheets and Salesforce to update them with data from your updated records. 
 Automating this process would save the effort and time of Salesforce admins. We use spreadsheets to append new Salesforce 
 records and track them easily to share across multiple stockholders. But manually updating the relevant row in a spreadsheet 
-with the updated Salesforce record information is an annoying task. This template can be used to update the relevant row 
+with the updated Salesforce record information is an annoying task. This sample can be used to update the relevant row 
 in a specific Google Sheet with all the defined fields of a particular SObject, when a record is updated in Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_record_update_to_gsheet_update_row <newProjectName>`
 * Salesforce account
 * Google Cloud Platform Account
 
@@ -72,8 +69,8 @@ refreshToken = "<GSHEET_REFRESH_TOKEN>"
 
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can add update records in Salesforce account and observe that integration template runtime has received the 
+Now you can add update records in Salesforce account and observe that integration sample runtime has received the 
 event notification for the new record update. You can check the Google Sheet to verify that the relevant record is 
 updated in the specified sheet. 

@@ -1,13 +1,10 @@
-Use template (Salesforce New Hot Lead to Slack Channel Message) to send a Slack notification for Hot lead created in Salesforce.
-
+# Salesforce New Hot Lead to Slack Channel Message
 ## Use case
 It is important to follow up with `Hot` leads as soon as they are added to increase the efficiency of your sales team. 
 For constant communication your organization might use a dedicated Slack Channel for new Salesforce updates. Using this 
-template you can send notification to your sales team's Slack Channel whenever a new `Hot` lead is created. 
+sample you can send notification to your sales team's Slack Channel whenever a new `Hot` lead is created. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_hot_lead_to_slack <newProjectName>`
 * Salesforce Account 
 * Slack Account
 
@@ -62,5 +59,5 @@ refreshUrl = "<SALESFORCE_REFRESH_URL>"
 > Note: Here SALESFORCE_REFRESH_URL is https://login.salesforce.com/services/oauth2/token
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 You can check for Slack notification on successful creation of Salesforce Hot lead.

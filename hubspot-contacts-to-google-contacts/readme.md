@@ -1,11 +1,8 @@
-Use template (Hubspot Contacts to Google Contacts) to sync Hubspot Contacts with Google Contacts.
-
+# Hubspot Contacts to Google Contacts
 ## Use case
-Using this template, you can sync your contacts from Hubspot to Google Contacts.
+Using this sample, you can sync your contacts from Hubspot to Google Contacts.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/hubspot_contacts_to_google_contacts <newProjectName>`
 * Google account
 * Hubspot account
 
@@ -34,6 +31,6 @@ hubspotAccessToken = ""
 ```
 
 ## Testing
-1. Run the Ballerina project created by the integration template by executing `bal run` from the root. 
+1. Run the Ballerina project created by the integration sample by executing `bal run` from the root. 
 
 2. Now you can check your Google Contacts to verify if the new contacts are added.

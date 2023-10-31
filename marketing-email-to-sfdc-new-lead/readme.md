@@ -1,11 +1,8 @@
-Use template (Send Marketing Email to Salesforce New Lead) to send a marketing email via Gmail to new Salesforce lead when it is created in a specific Salesforce account.
-
+# Send Marketing Email to Salesforce New Lead
 ## Use case
-It is important to follow up with new leads as soon as they are added, to increase the efficiency of your sales team. Sending a proper marketing email with required detail will hook up them with you. This template will help to send a marketing email via Gmail to new Salesforce lead when it is created in a specific Salesforce account.
+It is important to follow up with new leads as soon as they are added, to increase the efficiency of your sales team. Sending a proper marketing email with required detail will hook up them with you. This sample will help to send a marketing email via Gmail to new Salesforce lead when it is created in a specific Salesforce account.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/marketing_email_to_sfdc_new_lead <newProjectName>`
 * Salesforce account 
 * Gmail account
 
@@ -77,5 +74,5 @@ refreshToken = "<REFRESH_TOKEN>"
 > Note: Here SALESFORCE_REFRESH_URL is https://login.salesforce.com/services/oauth2/token and GMAIL_REFRESH_URL is https://oauth2.googleapis.com/token by default.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 When a new lead is added in Salesforce, a marketing email will be sent to that lead's email address via gmail.

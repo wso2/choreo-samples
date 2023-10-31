@@ -1,18 +1,15 @@
-Use template (Google Sheets Row Update to Gmail Message) to send an email once the cell in Google sheet is updated.
-
+# Google Sheets Row Update to Gmail Message
 ## Use case
 When there are multiple tasks to perform by one person it becomes overwhelming how about the state where you have to
-send emails to each and every person you update a specific column in a Google sheet?. This template integrates
+send emails to each and every person you update a specific column in a Google sheet?. This sample integrates
 Gmail and Google Sheets will be perfect choices for handling this scenario. You can send a Gmail automatically to a
-person at that same instant you update your Google Sheet. This template would be useful for people like accountants,
-finance officers, bankers, and others who involve in similar tasks. This template is used for the scenario that
+person at that same instant you update your Google Sheet. This sample would be useful for people like accountants,
+finance officers, bankers, and others who involve in similar tasks. This sample is used for the scenario that
 once a specific column is updated in a Google Sheet, a Gmail is sent to the specified email address of that person.
-The use-case involved in this specific template is updating the bonus amount of a person and at that instance, an
+The use-case involved in this specific sample is updating the bonus amount of a person and at that instance, an
 email is sent.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_row_update_to_gmail <newProjectName>`
 * Google cloud platform account
 * Gmail account
 
@@ -154,6 +151,6 @@ We need to enable the app script trigger if we want to listen to internal change
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once a row is updated in Google sheet, a new Gmail email will be sent. You can check the Gmail of the receiver to verify the information received. 

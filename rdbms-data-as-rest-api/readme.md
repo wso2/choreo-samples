@@ -1,11 +1,6 @@
-Use template (RDBMS Data as REST API) to expose data as REST API with basic CRUD operations (Insert, Select, Update and Delete) from a MySQL database.
-
+# RDBMS Data as REST API
 ## Use-case
-When the service is invoked, relevant CRUD operations will be performed in the database. This template can be used to expose data that resides in a MySQL database using CRUD operations. In this use case, the data is exposed as a REST service.
-
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/rdbms_data_as_rest_api <newProjectName>`
+When the service is invoked, relevant CRUD operations will be performed in the database. This sample can be used to expose data that resides in a MySQL database using CRUD operations. In this use case, the data is exposed as a REST service.
 
 * Create a database in MySQL 
 ```
@@ -20,8 +15,8 @@ CREATE TABLE employees (EmployeeId int(11) NOT NULL, FirstName varchar(50) NOT N
 
 * Configure values for `host`, `port`, `user`, `password`, and `database`. 
 
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following  HTTP requests.
 

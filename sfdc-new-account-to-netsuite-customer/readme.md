@@ -1,14 +1,11 @@
-Use template (Salesforce New Account to NetSuite New Customer) to create a new NetSuite customer on every new Salesforce account.
-
+# Salesforce New Account to NetSuite New Customer
 ## Use case
-This integration template helps to create a new customer in Netsuite for each new account in salesforce. 
-There is a listener in the template. It listens any new account creation events in salesforce. 
-If there is a newly created account in the salesforce then this template fetch the data of that account record and 
+This integration sample helps to create a new customer in Netsuite for each new account in salesforce. 
+There is a listener in the sample. It listens any new account creation events in salesforce. 
+If there is a newly created account in the salesforce then this sample fetch the data of that account record and 
 create a new customer record in the NetSuite.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_account_to_netsuite_customer <newProjectName>`
 * Netsuite account
 * Salesforce account
 
@@ -66,6 +63,6 @@ netsuiteSubsidiaryID = "<NS_SUBSIDIARY_ID>"
 salesforceBaseUrl="<SF_BASE_URL>"
 ```
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check for Netsuite new customer on successful creation of Salesforce account.

@@ -1,12 +1,9 @@
-Use template (Salesforce Products to Stripe Products) to migrate products in your Salesforce account to your Stripe account at once. 
-
+# Salesforce Products to Stripe Products
 ## Use Case
 
-Using this template you can migrate your data from Salesforce to Stripe at once to keep your products in Stripe up to date with Salesforce. 
+Using this sample you can migrate your data from Salesforce to Stripe at once to keep your products in Stripe up to date with Salesforce. 
 
 ## Pre-requisites
-* Pull the template from central  
-  `bal new -t choreo/salesforce_products_to_stripe_products <newProjectName>`
 * A Salesforce account
 * A Stripe account
 
@@ -49,6 +46,6 @@ refreshUrl = "<Salesforce Refresh URL>"
 ```
 
 ## Running the Template
-1. Run the Ballerina project created by the integration template by executing bal run from the root.
+1. Run the Ballerina project created by the integration sample by executing bal run from the root.
 
 2. You can check the Stripe to verify whether the new products are added. 

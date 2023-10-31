@@ -1,11 +1,8 @@
-Use template (Slack Channel New Message to Twilio SMS) to send an SMS for every new message on Slack.
-
+# Slack Channel New Message to Twilio SMS
 ## Use case
 We can use track new incoming messages for a specific Slack channel using this.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/slack_new_message_to_twilio_sms <newProjectName>`
 * Slack Account
 * Twilio Account
 
@@ -48,6 +45,6 @@ Channel ID must be obtianed by the channel URL or using below steps.
   3. Copy the channel ID.
  
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check for Twilio SMS once new Slack message is received.

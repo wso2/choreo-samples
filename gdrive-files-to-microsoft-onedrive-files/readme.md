@@ -1,11 +1,8 @@
-Use template (Sync Google Drive files to Microsoft OneDrive) to sync Google Drive files to Microsoft OneDrive.
-
+# Sync Google Drive files to Microsoft OneDrive
 ## Use case
-Using this template, you can sync files in a given Google Drive folder to a given Microsoft OneDrive folder.
+Using this sample, you can sync files in a given Google Drive folder to a given Microsoft OneDrive folder.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/gdrive_files_to_microsoft_onedrive_files <newProjectName>`
 * Google account
 * Microsoft OneDrive account
 
@@ -84,6 +81,6 @@ filesOverridable =
 ```
 
 ## Testing
-1. Run the Ballerina project created by the integration template by executing `bal run` from the root. 
+1. Run the Ballerina project created by the integration sample by executing `bal run` from the root. 
 
 2 .Now you can check the OneDrive folder to verify whether file is added.

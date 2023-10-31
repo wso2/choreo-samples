@@ -1,14 +1,9 @@
-Use template (XML to JSON Conversion) to convert an XML request to JSON.
-
+# XML to JSON Conversion
 ## Use case
-When the service is invoked with XML data, it returns data in JSON format. This template can be used to convert provided XML request to JSON response.
+When the service is invoked with XML data, it returns data in JSON format. This sample can be used to convert provided XML request to JSON response.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/xml_to_json_conversion <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command. 
 ```

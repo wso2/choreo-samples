@@ -1,11 +1,8 @@
-Use template (Google Drive New File to MFTG Send Message) to send an AS2 message on each new file added to Google Drive.
-
+# Google Drive New File to MFTG Send Message
 ## Use case
-This template will send an AS2 message from a specified Station to Partner whenever a new file is uploaded to specified Google Drive. The file uploaded is used as the attachment in the AS2 message.
+This sample will send an AS2 message from a specified Station to Partner whenever a new file is uploaded to specified Google Drive. The file uploaded is used as the attachment in the AS2 message.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/gdrive_new_file_to_mftg_message <newProjectName>`
 * Google Drive account
 * MFT Gateway account (by Aayu Technologies)
 
@@ -41,6 +38,6 @@ refreshUrl = "<REFRESH_URL>"
 > Note: Here REFRESH_URL for Google Drive API is `https://www.googleapis.com/oauth2/v3/token`
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Now you can add new file to google drive and check for logs.

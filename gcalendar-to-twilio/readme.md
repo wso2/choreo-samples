@@ -1,12 +1,9 @@
-Use template (Google Calendar Event to Twilio SMS) to send a Twilio SMS, When a new event is created in Google Calendar.
-
+# Google Calendar Event to Twilio SMS
 ## Use case
 We can make our day-to-day events organized with the help of Google Calendar and Twilio. By using this integration, 
 we can automatically send SMS to anyone about the new the event.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gcalendar_to_twilio <newProjectName>`
 * Google account
 * Twilio account
 
@@ -46,4 +43,4 @@ calendarId = "<CALENDAR_ID>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

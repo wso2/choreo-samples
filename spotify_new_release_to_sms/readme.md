@@ -1,12 +1,9 @@
-Use template (Spotify New Release to SMS) to receive SMS notifications on new Spotify releases by your favorite artist. 
-
+# Spotify New Release to SMS
 ## Use Case
 
-Using this template you can keep in touch with your music. Whenever a new release is added to Spotify by your favorite artist we will send a sms alert to you with the link to the album. 
+Using this sample you can keep in touch with your music. Whenever a new release is added to Spotify by your favorite artist we will send a sms alert to you with the link to the album. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_issue_to_gsheet <newProjectName>`
 * Spotify account.
 * SMS enabled phone number.
 
@@ -59,6 +56,6 @@ clientSecret = "<Client Secret>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, you will receive a SMS notification on new Spotify releases by your favorite artist.

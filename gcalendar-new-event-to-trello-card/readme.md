@@ -1,12 +1,9 @@
-Use template (Google Calendar Event to Trello Card) to create a card in trello board, When a new event is created in Google Calendar.
-
+# Google Calendar Event to Trello Card
 ## Use case
 Manage your personal tasks based on the events with the help of Google Calendar and Trello. By using this integration, 
 we can automatically add a card to Trello containing information about the new event.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gcalendar_new_event_to_trello_card <newProjectName>`
 * Google account
 * Trello account
 
@@ -52,4 +49,4 @@ callbackURL="<CALLBACK_URL>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

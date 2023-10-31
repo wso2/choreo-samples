@@ -1,11 +1,8 @@
-Use template (Azure CosmosDB Data as REST API) to expose Azure CosmosDB data as REST API through CRUD operations (Create, Read, Update and Delete).
-
+# Azure CosmosDB Data as REST API
 ## Use-case
-Using this template, CRUD operations could be used to access the data stored in Azure CosmosDB via REST API.
+Using this sample, CRUD operations could be used to access the data stored in Azure CosmosDB via REST API.
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/azure_cosmosdb_data_as_rest_api <newProjectName>`
 * [Create a Microsoft Account with Azure Subscription](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/)
 * [Create an Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-manage-database-account/)
 * Create a container and set partition key as `id`.
@@ -26,8 +23,8 @@ databaseId = "<DATABASE_ID>"
 primaryKeyOrResourceToken = "<TOKEN>"
 ```
 
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, listener will run on port 8090. Then you could invoke the service using the following curl commands.
 

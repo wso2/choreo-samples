@@ -1,12 +1,9 @@
-Use template (CapsuleCRM Opportunities Lost to Slack Channel Message) to send a Slack channel message with detailed summary of new CapsuleCRM opportunities lost.
-
+# CapsuleCRM Opportunities Lost to Slack Channel Message
 ## Use case
-At the execution of this template, the detailed summary of all the new opportunities lost in CapsuleCRM 
+At the execution of this sample, the detailed summary of all the new opportunities lost in CapsuleCRM 
 within a particular day will be sent as a Slack channel message. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/capsulecrm_opportunities_lost_to_slack_channel_message <newProjectName>`
 * CapsuleCRM account
 * Slack account
 
@@ -47,6 +44,6 @@ token = "<SLACK_USER_OAUTH_TOKEN>"
 4. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 The detailed summary of all the new opportunities lost in CapsuleCRM within a particular day will be sent as a Slack channel message. 

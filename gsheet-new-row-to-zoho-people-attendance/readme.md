@@ -1,11 +1,8 @@
-Use template (Google Sheets New Row to Zoho People Attendance) to add the attendance entry in Zoho People when a new row is added to Google Sheets.
-
+# Google Sheets New Row to Zoho People Attendance
 ## Use case
-We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. Most companies use fingerprint systems to take the attendance of their employees. In such cases, they can append each attendance entry to a Google Sheet. By using this integration, we can automatically add the attendance entry in Zoho People when a new row is added to a Google Sheet which will contain information about the check-in and check-out details of each employee. It will make easy the process of keep tracking the attendance in Zoho People. This template can be used to add the attendance entry in Zoho People when a new row is added to Google Sheets.
+We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. Most companies use fingerprint systems to take the attendance of their employees. In such cases, they can append each attendance entry to a Google Sheet. By using this integration, we can automatically add the attendance entry in Zoho People when a new row is added to a Google Sheet which will contain information about the check-in and check-out details of each employee. It will make easy the process of keep tracking the attendance in Zoho People. This sample can be used to add the attendance entry in Zoho People when a new row is added to Google Sheets.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_new_row_to_zoho_people_attendance <newProjectName>`
 * Zoho People account
 * Google cloud platform account
 
@@ -160,7 +157,7 @@ We need to enable the app script trigger if we want to listen to internal change
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once new row is added with specified fields in Google sheet, new attendance will be added in Zoho People. 
 

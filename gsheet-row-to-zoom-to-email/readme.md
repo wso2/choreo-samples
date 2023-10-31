@@ -1,14 +1,11 @@
-Use template (GSheet Row to Zoom Meeting) to Schedule a zoom meeting with live stream details and send invitations to the participants using the information entered in a Google Sheet. 
-
+# GSheet Row to Zoom Meeting
 ## Use Case
 
 Add your meeting details in a Google Sheet and let us schedule the meeting and send the invitation to participants. 
 
-When creating a scheduled non-recurring zoom meeting, zoom does not provide any option to add participants. Meeting hosts have to manually share the invitation to the intended participants. Using this template you can schedule any number of meetings at a time while sending the invitations to the participants automatically as soon as new row with corresponding information is appended to the Google sheet.  Users are also get an opportunity add custom live stream details which can also be shared automatically with all the participants along with the invitation email.
+When creating a scheduled non-recurring zoom meeting, zoom does not provide any option to add participants. Meeting hosts have to manually share the invitation to the intended participants. Using this sample you can schedule any number of meetings at a time while sending the invitations to the participants automatically as soon as new row with corresponding information is appended to the Google sheet.  Users are also get an opportunity add custom live stream details which can also be shared automatically with all the participants along with the invitation email.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gsheet_row_to_zoom_to_email <newProjectName>`
 * Google Cloud Platform account
 * Zoom account
 
@@ -37,7 +34,7 @@ Create a Google account and create a connected app by visiting [Google cloud pla
 3. Generate access token and refresh token for your Zoom app following the authorization code flow. Follow the detailed steps given [here](https://marketplace.zoom.us/docs/guides/auth/oauth)
     - Please note that to set live stream details meeting host need to have a Pro license. 
 5. Copy the credentials obtained from above steps 2 and 3 and copy them in Config.toml
-    - Please note that once you stop the deployment of the template you need to provide new refresh token for the next run. 
+    - Please note that once you stop the deployment of the sample you need to provide new refresh token for the next run. 
 
 ## Configurations 
 
@@ -76,6 +73,6 @@ refreshUrl = "<GSHEET_REFRESH_URL>"
 > Note: Here GSHEET_REFRESH_URL is https://www.googleapis.com/oauth2/v3/token
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, you will receive a SMS notification on new Spotify releases by your favorite artist.

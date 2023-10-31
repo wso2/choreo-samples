@@ -1,12 +1,9 @@
-Use template (Salesforce New Case to Google Sheets Row) to create a new row in Google Sheets for a new case in Salesforce.
-
+# Salesforce New Case to Google Sheets Row
 ## Use case
-This integration template helps to create a spreadsheet for each new case in salesforce. There is a listener in the
-template. It listens to the changes that happen for a case record in salesforce. If there is a new case created in the salesforce then this template fetches all data of that case record and creates a spreadsheet with the case information.
+This integration sample helps to create a spreadsheet for each new case in salesforce. There is a listener in the
+sample. It listens to the changes that happen for a case record in salesforce. If there is a new case created in the salesforce then this sample fetches all data of that case record and creates a spreadsheet with the case information.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_case_to_gsheet_row <newProjectName>`
 * Netsuite account
 * Google cloud platform account
 
@@ -75,7 +72,7 @@ refreshToken = "<GSHEET_REFRESH_TOKEN>"
     * SF_REFERSH_URL : https://login.salesforce.com/services/oauth2/token
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Now You can check for new Google sheet rows on Salesforce new cases. 
 

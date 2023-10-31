@@ -1,12 +1,9 @@
-Use template (Pipedrive New Activities to Trello Tasks) to create new tasks in Trello for new Pipedrive activities.
-
+# Pipedrive New Activities to Trello Tasks
 ## Use case
-At the execution of this template, the details of all the new activities of type `task` in Pipedrive, scheduled 
+At the execution of this sample, the details of all the new activities of type `task` in Pipedrive, scheduled 
 within the particular day will be added to the relevant Trello list as tasks in Trello cards. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/pipedrive_new_activities_to_trello_tasks <newProjectName>`
 * Pipedrive account
 * Trello account
 
@@ -41,6 +38,6 @@ token = "<TRELLO_API_TOKEN>"
 3. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 The the details of all the new activities of type `task` in Pipedrive, scheduled within the particular day will be added to the relevant Trello list as tasks in Trello cards. 

@@ -1,12 +1,9 @@
-Use template (Google Calendar New Event to Asana Task) to create Asana Task, when a new event is created in Google Calendar.
-
+# Google Calendar New Event to Asana Task
 ## Use case
 
-Using this template, you can create tasks in Asana, when a new event is created in Google Calendar.
+Using this sample, you can create tasks in Asana, when a new event is created in Google Calendar.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/gcalendar_new_event_to_asana_new_task <newProjectName>`
 * Google account
 * Asana account
 
@@ -45,4 +42,4 @@ workspace = "<WORKSPACE_ID>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.

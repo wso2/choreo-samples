@@ -1,14 +1,11 @@
-Use template (GitHub Issue Assigned to SMS Notification) to send an SMS when an issue is assigned to you.
-
+# GitHub Issue Assigned to SMS Notification
 ## Use case
 It is important to follow up with GitHub repositories as soon as an issue is assigned.
 You may want to be on alert of issues assigned to you in a certain GitHub repository.
 Any time an issue is assigned, an SMS message will automatically be sent to you.
-This template can be used to send an SMS when an issue is assigned to you.
+This sample can be used to send an SMS when an issue is assigned to you.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_issue_assigned_to_sms <newProjectName>`
 * GitHub account
 * Recipient Phone Number
 
@@ -36,6 +33,6 @@ secret = "<SECRET>"
 * SECRET - This secret will be used in registering webhook
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check the SMS received to verify with information in the assigned GitHub issue.

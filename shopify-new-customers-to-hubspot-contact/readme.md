@@ -1,12 +1,9 @@
-Use template (Shopify New Customers to HubSpot Create/Update Contact) to add new Shopify customers as contacts on HubSpot.
-
+# Shopify New Customers to HubSpot Create/Update Contact
 ## Use case
-At the execution of this template, all the new customers in Shopify within a particular day will be added 
+At the execution of this sample, all the new customers in Shopify within a particular day will be added 
 to your HubSpot account as new contacts.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/shopify_new_customers_to_hubspot_contact <newProjectName>`
 * Shopify account
 * HubSpot account
 
@@ -43,6 +40,6 @@ token = "<HUBSPOT_ACCESS_TOKEN>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 All the new customers in Shopify within a particular day will be added to your Mailchimp subscriber list(audience) as new members(contacts).

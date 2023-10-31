@@ -1,11 +1,8 @@
-Use template (GitHub New Release to Twitter Post) to update a Twitter post when a release is made in a GitHub repository.
-
+# GitHub New Release to Twitter Post
 ## Use case
 It is important to be updated with a particular software development tool that you or your team are using in the day-to-day development process and get notified immediately on a new release of it. It is important to follow up with Github repositories as soon as they are released. There maybe a specific person who wanted to be on alert of new releases of a certain Github repository. Any time a new release is made or updated in Github, a twitter post is updated. 
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_new_release_to_twitter_post <newProjectName>`
 * GitHub account.
 * Twitter account.
 
@@ -38,6 +35,6 @@ secret = "<SECRET>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing bal run from the root.
+Run the Ballerina project created by the integration sample by executing bal run from the root.
 
 Once successfully executed, New tweet will be posted in Twitter each time when a new GitHub release is done.

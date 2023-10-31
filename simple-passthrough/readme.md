@@ -1,14 +1,9 @@
-Use template (Pass-through Service) to forward the request that the passthrough resource received to the backend.
-
+# Pass-through Service
 ## Use-case
 When forwarding, the request is made using the same HTTP method that was used to invoke the passthrough resource
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/simple_passthrough <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command.
 ```

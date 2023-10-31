@@ -1,12 +1,9 @@
-Use template (Send Welcome Email using MS Outlook to New Shopify Customers) to send mails to new Shopify customers via Microsoft Outlook.
-
+# Send Welcome Email using MS Outlook to New Shopify Customers
 ## Use case
-At the execution of this template, each new customers in Shopify created within last five minutes period will receive welcome emails 
+At the execution of this sample, each new customers in Shopify created within last five minutes period will receive welcome emails 
 from Microsoft Outlook account. The content for the email is extracted from Microsoft OneDrive account.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/shopify_new_customers_to_outlook_mail <newProjectName>`
 * Shopify account
 * Microsoft Outlook account
 * Microsoft OneDrive account
@@ -57,6 +54,6 @@ refreshToken = "<ONEDRIVE_REFRESH_TOKEN>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 All the new customers in Shopify store within a five minutes period will receive a welcome email from an Microsoft Outlook account.

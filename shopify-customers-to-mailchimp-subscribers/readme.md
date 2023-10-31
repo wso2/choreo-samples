@@ -1,12 +1,9 @@
-Use template (Shopify New Customers to Mailchimp Subscribers) to add new Shopify customers as subscribers in Mailchimp.
-
+# Shopify New Customers to Mailchimp Subscribers
 ## Use case
-At the execution of this template, all the new customers in Shopify within a particular day will be added 
+At the execution of this sample, all the new customers in Shopify within a particular day will be added 
 to your Mailchimp subscriber list(audience) as new members(contacts).
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/shopify_customers_to_mailchimp_subscribers <newProjectName>`
 * Shopify account
 * Mailchimp account
 
@@ -48,6 +45,6 @@ There are a few ways to find your data center. It’s the first part of the URL 
 6. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 All the new customers in Shopify within a particular day will be added to your Mailchimp subscriber list(audience) as new members(contacts).

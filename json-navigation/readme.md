@@ -1,14 +1,9 @@
-Use template (JSON Navigation) to navigate through the fields of a JSON object and extracts the data.
-
+# JSON Navigation
 ## Use case
-When the service is invoked with JSON data, it returns extracts the data in JSON format. This template can be used to navigate through the fields of a JSON object and extracts the data.
+When the service is invoked with JSON data, it returns extracts the data in JSON format. This sample can be used to navigate through the fields of a JSON object and extracts the data.
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/json_navigation <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

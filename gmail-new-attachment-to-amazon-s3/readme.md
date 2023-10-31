@@ -1,14 +1,11 @@
-Use template (Gmail New Attachment to Amazon S3) to save new attachments in Gmail as an Amazon S3 files
-
+# Gmail New Attachment to Amazon S3
 ## Use case
 When there are files attached to emails it is difficult to trackdown them easily. File management purposes become a need
 when they are valuable to the enterprise or a specific person and when there is need to reduce waste of time searching for attachments.
-For this, there must be a proper way of managing file attachments in an email. This template integrates Gmail with 
-Amazon S3 to achieve that task with ease. Whenever you get an email via Gmail with an attachment, this template will save the attachment file in Amazon S3 bucket. By this way we can guarantee that the received attachment is saved in your Amazon S3 bucket.
+For this, there must be a proper way of managing file attachments in an email. This sample integrates Gmail with 
+Amazon S3 to achieve that task with ease. Whenever you get an email via Gmail with an attachment, this sample will save the attachment file in Amazon S3 bucket. By this way we can guarantee that the received attachment is saved in your Amazon S3 bucket.
 
 ## Prerequisites
-* Pull the template from central 
-  `bal new -t choreo/gmail_new_attachment_to_amazon_s3 <newProjectName>`
 * Google Cloud Platform Account
 
 ### Setting up Google Cloud Platform account
@@ -62,6 +59,6 @@ region = "<AMAZON_S3_REGION>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can send a new email with an attachment and observe if integration template runtime has logged the status of the response. You can check the Amazon S3 bucket to verify that the the new attachment file is uploaded. 
+Now you can send a new email with an attachment and observe if integration sample runtime has logged the status of the response. You can check the Amazon S3 bucket to verify that the the new attachment file is uploaded. 

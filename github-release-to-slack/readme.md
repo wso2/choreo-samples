@@ -1,16 +1,13 @@
-Use template (GitHub New Release to Slack Channel Message) to send a message to a Slack channel for a new release is done in GitHub.
-
+# GitHub New Release to Slack Channel Message
 ## Use case
 It is important to be updated with a particular software development tool that you or your team are using in the
 day-to-day development process and get notified immediately on a new release of it. There can be a Slack channel
-followed by a development community or a team that uses that specific tool. This template makes it easier to provide
+followed by a development community or a team that uses that specific tool. This sample makes it easier to provide
 such notification by allowing to send a message to a targeted Slack channel when there is a new release in a specific
-GitHub repository. This template can be used to send a message to a selected Slack channel when a new release is done in a specific
+GitHub repository. This sample can be used to send a message to a selected Slack channel when a new release is done in a specific
 repository in GitHub.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_release_to_slack <newProjectName>`
 * GitHub account
 * Slack workspace with admin privileges
 
@@ -46,6 +43,6 @@ secret = "<SECRET>"
 * SECRET - This secret will be used in registering webhook
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Upon successful configuration, Slack message will be sent on each GitHub release.

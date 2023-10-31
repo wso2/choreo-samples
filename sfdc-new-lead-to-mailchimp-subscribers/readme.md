@@ -1,11 +1,8 @@
-Use template (Salesforce New Lead to Mailchimp Subscribers List) to create a new contact in Mailchimp subscribers list when a new lead is created in a specific Salesforce account.
-
+# Salesforce New Lead to Mailchimp Subscribers List
 ## Use case
-It is important to follow up with new leads as soon as they are added, to increase the efficiency of your sales team. Add new leads to Mailchimp subscribers list will help you to send them marketing emails or to run campaigns when ever required. This template will help to add new Salesforce leads to Mailchimp subscribers list when ever they newly added to Salesforce.
+It is important to follow up with new leads as soon as they are added, to increase the efficiency of your sales team. Add new leads to Mailchimp subscribers list will help you to send them marketing emails or to run campaigns when ever required. This sample will help to add new Salesforce leads to Mailchimp subscribers list when ever they newly added to Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_lead_to_mailchimp_subscribers <newProjectName>`
 * Salesforce account 
 * Mailchimp account
 
@@ -68,5 +65,5 @@ password = "<MAILCHIMP_PASSWORD>"
 > Note: Here SALESFORCE_REFRESH_URL is https://login.salesforce.com/services/oauth2/token by default.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 When a new lead is added in Salesforce, that lead will be added to your Mailchimp subscribers list(audience) as new member(contact).

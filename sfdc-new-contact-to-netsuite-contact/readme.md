@@ -1,14 +1,11 @@
-Use template (Salesforce New Contact to NetSuite New Contact) to create a new NetSuite contact on every new Salesforce contact.
-
+# Salesforce New Contact to NetSuite New Contact
 ## Use case
-This integration template helps to create a new contact in Netsuite for each new contact in salesforce. 
-There is a listener in the template. It listens any new contact creation events in salesforce. 
-If there is a newly created contact in the salesforce then this template fetch the data of that contact record and 
+This integration sample helps to create a new contact in Netsuite for each new contact in salesforce. 
+There is a listener in the sample. It listens any new contact creation events in salesforce. 
+If there is a newly created contact in the salesforce then this sample fetch the data of that contact record and 
 create a new contact record in the NetSuite.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_contact_to_netsuite_contact <newProjectName>`
 * Netsuite account
 * Salesforce account
 
@@ -60,6 +57,6 @@ nsSubsidiaryId = "<NS_SUBSIDIARY_ID>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check for Netsuite new contact on successful creation of Salesforce contact.

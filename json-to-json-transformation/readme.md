@@ -1,14 +1,9 @@
-Use template (JSON Transformation) to transform the structure of the JSON request.
-
+# JSON Transformation
 ## Use case
-When the service is invoked with JSON data, it returns extracted and manipulated data in JSON format. This template can be used to transform the structure of the JSON request. 
+When the service is invoked with JSON data, it returns extracted and manipulated data in JSON format. This sample can be used to transform the structure of the JSON request. 
 
-## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/json_to_json_transformation <newProjectName>`
-
-## Run the template
-Run the Ballerina project created by the service template by executing `bal run` from the root.
+## Run the sample
+Run the Ballerina project created by the service sample by executing `bal run` from the root.
 
 Once successfully executed, Listener will be started at port 8090. Then you need to invoke the service using the following curl command
 ```

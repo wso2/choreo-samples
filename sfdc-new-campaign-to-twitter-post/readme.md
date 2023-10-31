@@ -1,11 +1,8 @@
-Use template (Salesforce New Campaign to Twitter Post) to post a Twitter post for a Salesforce new campaign.
-
+# Salesforce New Campaign to Twitter Post
 ## Use case
-This integration template helps to post a Tweet in Twitter for each new campaigns in salesforce. It listens the changes happens for a case record in salesforce. At the execution of this template, each time new campaign is added in salesforce, Twitter post is created with details. 
+This integration sample helps to post a Tweet in Twitter for each new campaigns in salesforce. It listens the changes happens for a case record in salesforce. At the execution of this sample, each time new campaign is added in salesforce, Twitter post is created with details. 
 
 ## Pre-requisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_campaign_to_twitter_post <newProjectName>`
 * Google Cloud Platform Account
 * Twitter Developer Account
 
@@ -43,6 +40,6 @@ accessTokenSecret = "<TWITTER_ACCESS_TOKEN_SECRET>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, New tweet will be posted in Twitter each time when a new Salesforce campaign created.

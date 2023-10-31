@@ -1,14 +1,11 @@
-Use template (Salesforce Outbound Message to Google Sheets Row) to add a new row to a Google Sheet, When a new Outbound Message is received from Salesforce.
-
+# Salesforce Outbound Message to Google Sheets Row
 ## Use case
 We can make our day-to-day information organized with the help of Google Sheets. But creating layouts and formatting a
 sheet takes much more time than we think. By using this integration, we can organize and automatically set up a Google Sheet
-which will contain information about exchanges Salesforce initiated with our callback endpoint. This template can be used
+which will contain information about exchanges Salesforce initiated with our callback endpoint. This sample can be used
 to create a new row in a specific Google Sheet when a new Outbound Message is received from Salesforce.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_outbound_msg_to_gsheet <newProjectName>`
 * Salesforce Account
 * Google Cloud Platform Account
 
@@ -57,10 +54,10 @@ refreshToken = "<Sheet refresh token>"
 > Note: Here Sheet refresh URL is https://www.googleapis.com/oauth2/v3/token
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Now you can do actions that trigger the `Workflow Rule` that is linked to the `Outbound Message` and observe that
-integration template runtime has received the `POST` request to the callback URL specified in the outbound message.
+integration sample runtime has received the `POST` request to the callback URL specified in the outbound message.
 
 You can check the Google Sheet to verify that a new row was added containing information in the outbound message. 
 

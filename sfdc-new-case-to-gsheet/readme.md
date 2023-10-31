@@ -1,13 +1,10 @@
-Use template (Salesforce New Case to Google Sheets New Spreadsheet) to creates Sheet in Google Sheet, When a new case in Salesforce is created.
-
+# Salesforce New Case to Google Sheets New Spreadsheet
 ## Use case
-This integration template helps to create a spreadsheet for each new cases in salesforce. There is a listner in the template. 
+This integration sample helps to create a spreadsheet for each new cases in salesforce. There is a listner in the sample. 
 It listens the changes happens for a case record in salesforce. If there is a new case created in the 
-salesforce then this template fetch all data of that case record and create a spreadsheet with the case information.  
+salesforce then this sample fetch all data of that case record and create a spreadsheet with the case information.  
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_case_to_gsheet <newProjectName>`
 * Salesforce account
 * Google cloud platform account 
 
@@ -89,6 +86,6 @@ refreshToken = "<Sheet refresh token>"
 
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can create a new Salesforce Case and observe that integration template runtime has received the event notification for the created Salesforce Case. Also you can check the Google drive , there will be a new spreadsheet with Case Number as the spreadsheet name . 
+Now you can create a new Salesforce Case and observe that integration sample runtime has received the event notification for the created Salesforce Case. Also you can check the Google drive , there will be a new spreadsheet with Case Number as the spreadsheet name . 

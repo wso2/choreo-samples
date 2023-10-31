@@ -1,12 +1,9 @@
-Use template (Salesforce New Campaign to AWS SES Email) to send an email upon new campaign addition in Salesforce.
-
+# Salesforce New Campaign to AWS SES Email
 ## Use case
-At the execution of this template, each time new campaign is added in salesforce, AWS SES email will be 
+At the execution of this sample, each time new campaign is added in salesforce, AWS SES email will be 
 added containing all the defined fields in campaign SObject.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_new_campaign_to_aws_ses_email <newProjectName>`
 * Salesforce account
 * AWS account
 
@@ -47,6 +44,6 @@ secretAccessKey = "<AWS_SECRET_ACCESS_KEY>"
 3. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 So once a new Campaign is added in Salesforce, new AWS SES email will be sent.

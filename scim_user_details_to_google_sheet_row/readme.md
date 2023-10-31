@@ -1,13 +1,10 @@
-Use template (SCIM user details to Google Sheets Row) to add a new Google Sheet row for SCIM user details coming to the API endpoint.
-
+# SCIM user details to Google Sheets Row
 ## Use case
 We can make our day-to-day information organized and represented in a generic format with the help of Google Sheets. By
 using this integration, we can organize and automatically set up a Google Sheet which will contain information about
 Users details which are created in the WSO2 identity server.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/scim_user_details_to_google_sheet_row <newProjectName>`
 * WSO2 identity server running on the machine
 * Google Cloud Platform account
 
@@ -47,6 +44,6 @@ Create a file called `Config.toml` at the root of the project.
 * GSHEET_CLIENT_SECRET - Google cloud platform account client secret.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 Once successfully executed, New row will be added each time when user is created in the WSO2 identity server(with scim-choreo outbound provisioning).

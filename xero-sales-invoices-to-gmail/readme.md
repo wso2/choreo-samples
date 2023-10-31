@@ -1,11 +1,8 @@
-Use template (Xero Sales Invoices to Gmail) to send Xero sales invoices created in the past week as an attachment to a recipient via Gmail.
-
+# Xero Sales Invoices to Gmail
 ## Use casefor a week to customers as contacts on HubSpot
-At the execution of this template, all sales invoices created within the last week is sent to an email recipient as a Gmail.
+At the execution of this sample, all sales invoices created within the last week is sent to an email recipient as a Gmail.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/xero_sales_invoices_to_gmail <newProjectName>`
 * Xero account
 * Gmail account
 
@@ -61,6 +58,6 @@ refreshToken = "<GMAIL_REFRESH_TOKEN>"
 5. Replace the necessary fields in the `Config.toml` file with your data.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 All the new customers in Shopify within a particular day will be added to your Mailchimp subscriber list(audience) as new members(contacts).

@@ -1,13 +1,10 @@
-Use template (Google Drive New File to Twilio SMS) to send a Twilio SMS to a specified number, When a new file is added in Google drive
-
+# Google Drive New File to Twilio SMS
 ## Use case
 We can use track google drive changes this way easily. For an example, If someones adds files to shared google drive, we
-get notified via SMS. This template can be configured to watch for whole drive or specific folder only.
+get notified via SMS. This sample can be configured to watch for whole drive or specific folder only.
 
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/gdrive_new_file_to_twilio_sms <newProjectName>`
 * Google Account
 * Twilio Account
 
@@ -51,7 +48,7 @@ driveRefreshToken = "<REFRESH_TOKEN>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root. 
+Run the Ballerina project created by the integration sample by executing `bal run` from the root. 
 
 Now you can add new file to google drive and check for triggered SMS.
 You can check the SMS received to verify that information about the new file added to the drive.

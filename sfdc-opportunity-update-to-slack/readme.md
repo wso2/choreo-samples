@@ -1,14 +1,11 @@
-Use template (Salesforce Opportunity Update to Slack Channel Message) to send a notification in a given Slack Channel, When an opportunity in Salesforce is updated.
-
+# Salesforce Opportunity Update to Slack Channel Message
 ## Use case
 It is important to follow up with the updates for your opportunities in Salesforce as soon as they are added to increase 
 the efficiency of your sales team. For constant communication your organization might be using a dedicated Slack Channel 
-for new Salesforce updates. Using this template you can send notification to your sales team's Slack Channel whenever 
+for new Salesforce updates. Using this sample you can send notification to your sales team's Slack Channel whenever 
 any field of your existing opportunity is updated.  
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/sfdc_opportunity_update_to_slack <newProjectName>`
 * Salesforce Account
 * Slack Account
 
@@ -51,5 +48,5 @@ refreshUrl = "<SALESFORCE_REFRESH_URL>"
 
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 You can check for Slack notification, When an opportunity in Salesforce is updated.

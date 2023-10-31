@@ -1,12 +1,9 @@
-Use template (Twilio New SMS to Gmail Message) to send an email when SMS is received to a Twilio account.
-
+# Twilio New SMS to Gmail Message
 ## Use case
 There are day-to-day scenarios where we come across surveys or competitions which are initiated with the use of SMS voting. 
-This integration template allows you to start such kind of scenario instantly.<br>
+This integration sample allows you to start such kind of scenario instantly.<br>
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/twilio_new_sms_to_gmail_inbox <newProjectName>`
 * Google cloud account
 * Twilio account
 
@@ -32,7 +29,7 @@ Select OAuth client Id.
     Click close.
 9. Then,Complete step 1 (Select and Authorize APIs)
 10. Select the required Gmail API scopes from the list of APIs. 
-    (Minimum scope required for this template https://www.googleapis.com/auth/gmail.send)
+    (Minimum scope required for this sample https://www.googleapis.com/auth/gmail.send)
 11. Click `Authorize APIs` and You will be in step 2.
 12. Exchange Auth code for tokens.
 13. Copy `access token` and `refresh token`. Put it on the config(Config.toml) file.
@@ -60,10 +57,10 @@ refreshUrl = "<REFRESH_URL>"
 2. Setup ngrok, copy callback url in Twilio.
 3. Extract Gmail credentials as explained above.
 4. Add it inside Config.toml.
-5. Run the template.
+5. Run the sample.
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can send new message to the specific Twilio account and observe that integration template runtime has received the event notification upon receiving new message. You can check the Gmail inbox to verify the email received.
+Now you can send new message to the specific Twilio account and observe that integration sample runtime has received the event notification upon receiving new message. You can check the Gmail inbox to verify the email received.
  

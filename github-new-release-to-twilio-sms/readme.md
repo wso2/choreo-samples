@@ -1,17 +1,14 @@
-Use template (GitHub New Release to Twilio SMS) to send a Twilio SMS for new release in GitHub.
-
+# GitHub New Release to Twilio SMS
 ## Use case
 It is important to be updated with a particular software development tool that you or your team are using in the 
 day-to-day development process and get notified immediately on a new release of it. 
 It is important to follow up with GitHub repositories as soon as they are released. 
 There maybe a specific person who wanted to be on alert of new releases of a certain GitHub repository. 
 Any time a new release is made in GitHub, an SMS message will automatically send to the specific person of 
-interest via Twilio. This template can be used to send a Twilio SMS message to a given mobile number when a new 
+interest via Twilio. This sample can be used to send a Twilio SMS message to a given mobile number when a new 
 release is made in a specific GitHub repository.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/github_new_release_to_twilio_sms <newProjectName>`
 * GitHub account
 * Twilio account with SMS capable phone number.
 
@@ -51,7 +48,7 @@ secret = "<SECRET>"
 * SECRET - This secret will be used in registering webhook
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check the SMS received to verify with information related to GitHub release.
 

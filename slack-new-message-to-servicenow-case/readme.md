@@ -1,11 +1,8 @@
-Use template (Slack Channel New Message to ServiceNow Case) to create new case for every new message on Slack.
-
+# Slack Channel New Message to ServiceNow Case
 ## Use case
 We can create new ServiceNow cases for published messages in a specific Slack channel.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/slack_new_message_to_servicenow_case <newProjectName>`
 * Slack Account
 * ServiceNow Account
 
@@ -40,6 +37,6 @@ username = "<USERNAME_OF_YOUR_SERVICENOW_INSTANCE>"
 password = "<PASSWORD_OF_YOUR_SERVICENOW_INSTANCE>"
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
 You can check the cases in ServiceNow dashboard once new Slack message is received.

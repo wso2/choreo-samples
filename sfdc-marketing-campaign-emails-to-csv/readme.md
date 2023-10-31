@@ -1,11 +1,8 @@
-Use template (Salesforce Campaign Emails to Azure Blob Storage) to export a list of email addresses belonging to contact of a specific Account, Industry or Geography for a Marketing Campaign.
-
+# Salesforce Campaign Emails to Azure Blob Storage
 ## Use case
 Scheduled export of email addresses belonging to a specific Account, Industry or Geography for a specific Marketing Campaign to a CSV and store it in Azure Blob storage
 
 ## Prerequisites
-* Pull the template from central  
-`bal new -t choreo/sfdc_marketing_campaign_emails_to_csv <newProjectName>`
 * Salesforce Account.
 * Azure Storage Account.
 
@@ -36,7 +33,7 @@ Create a file called `Config.toml` at the root of the project.
 
 ### Config.toml 
 ```
-[<ORG_NAME>.template_sfdc_marketing_campaign_emails_to_csv]
+[<ORG_NAME>.sample_sfdc_marketing_campaign_emails_to_csv]
 sfdcClientId = "<SFDC_CLIENT_ID>"
 sfdcClientSecret = "<SFDC_CCLIENT_SECRET>"
 sfdcRefreshToken = "<SFDC_C_REFRESH_URL>"
@@ -51,6 +48,6 @@ authorizationMethod = "<BLOB_AUTHORIZATION_METHOD>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 
-Now you can add a new Contact to the Marketing Campaign and observe if integration template will add a  new CSV file.
+Now you can add a new Contact to the Marketing Campaign and observe if integration sample will add a  new CSV file.

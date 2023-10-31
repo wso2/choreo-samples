@@ -1,11 +1,8 @@
-Use template (Interzoid Weather Update to Slack Channel Message) to send weather updates to a Slack channel periodically.
-
+# Interzoid Weather Update to Slack Channel Message
 ## Use case
-It is important to have an idea about the weather in your living city. Using this template you can send weather updates (for cities in US only) to a specified Slack channel. This can be configured to run periodically.
+It is important to have an idea about the weather in your living city. Using this sample you can send weather updates (for cities in US only) to a specified Slack channel. This can be configured to run periodically.
 
 ## Prerequisites
-* Pull the template from central  
-  `bal new -t choreo/interzoid_weather_updates_to_slack_message <newProjectName>`
 * Interzoid account
 * Slack account
 
@@ -33,5 +30,5 @@ license = "<INTERZOID_API_KEY>"
 ```
 
 ## Testing
-Run the Ballerina project created by the integration template by executing `bal run` from the root.
+Run the Ballerina project created by the integration sample by executing `bal run` from the root.
 Then you can check on the specified Slack channel for weather updates.
