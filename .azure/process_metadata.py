@@ -7,6 +7,15 @@ REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
 
+VALID_COMPONENT_TYPES = [
+    "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby"
+]
+
+VALID_BUILD_PRESETS = [
+    "service", "webhook", "manual-task", "scheduled-task", 
+    "event-triggered", "event-handler", "test-runner"
+]
+
 def collect_metadata_and_thumbnails():
     collected_data = []
     print("Starting to collect metadata and thumbnails...")
@@ -19,10 +28,20 @@ def collect_metadata_and_thumbnails():
         print(f"Checking directory: {directory}")
         
         if os.path.isdir(dir_path) and os.path.exists(metadata_file):
-            print(f"Found metadata.yaml in directory: {directory}")
             with open(metadata_file, 'r') as f:
                 data = yaml.safe_load(f)
-                
+
+                component_type = data.get('componentType', '').lower()
+                build_preset = data.get('buildPreset', '').lower()
+
+                if component_type not in VALID_COMPONENT_TYPES:
+                    print(f"Warning: '{component_type}' is not a valid componentType for directory: {directory}. Excluding from index.json.")
+                    continue
+
+                if build_preset not in VALID_BUILD_PRESETS:
+                    print(f"Warning: '{build_preset}' is not a valid buildPreset for directory: {directory}. Excluding from index.json.")
+                    continue
+
                 # Check if tags key exists and if it's either not set or None, assign an empty list
                 if not data.get('tags'):
                     data['tags'] = []
