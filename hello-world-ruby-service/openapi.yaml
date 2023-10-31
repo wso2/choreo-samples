@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+info:
+  title: Hello Service
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      description: Hello World
+      tags:
+        - hello
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []

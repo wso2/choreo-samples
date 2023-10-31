@@ -1,0 +1,156 @@
+openapi: 3.0.3
+info:
+  title: Choreo Samples - Reading List - Python REST API
+  description: >-
+    This is a sample API specification for a simple reading list application with in-memory cache
+    written in Python.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Choreo
+  url: https://choreo.dev
+servers:
+  - url: http://localhost:5000
+tags:
+  - name: books
+    description: In-memory book list cache API
+paths:
+  /books:
+    summary: List all books
+    get:
+      summary: List all books
+      operationId: ListAllBooks
+      tags:
+        - books
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StringArray"
+    post:
+      summary: Insert a new book
+      operationId: InstallNewBook
+      responses:
+        "200":
+          description: Successful operation
+        "400":
+          description: Invalid request body
+      tags:
+        - books
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/KeyValue"
+
+  /books/{id}:
+    summary: Get book by ID
+    get:
+      tags:
+        - books
+      summary: Get book by ID
+      operationId: GetBookById
+      parameters:
+        - name: id
+          in: path
+          description: id of book to return
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KeyValue"
+        "404":
+          description: id not found
+    delete:
+      tags:
+        - books
+      summary: Delete book by id
+      description: Deletes a single book based on the id supplied
+      operationId: DeleteBookById
+      parameters:
+        - name: id
+          in: path
+          description: id of book to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Id not found
+    put:
+      tags:
+        - books
+      summary: Update book status by id
+      description: Updates the status of the book based on the id supplied
+      operationId: UpdateBookStatusById
+      parameters:
+        - name: id
+          in: path
+          description: id of book to update
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: id not found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Status"
+  /healthz:
+    summary: Healthcheck endpoint
+    get:
+      summary: Healthcheck
+      operationId: Healthcheck
+      responses:
+        "200":
+          description: Healthy response
+
+components:
+  schemas:
+    Key:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "my-id"
+    Status:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "read"
+    KeyValue:
+      type: object
+      required:
+        - name
+        - author
+        - status
+      properties:
+        name:
+          type: string
+          example: "my-name"
+        author:
+          type: string
+          example: "my-author"
+        status:
+          type: string
+          example: "read"
+    StringArray:
+      type: array
+      items:
+        type: string
