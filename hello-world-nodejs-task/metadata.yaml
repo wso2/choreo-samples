@@ -1,7 +1,7 @@
 displayName: Hello World in NodeJS
 description: Print Hello World message
 componentType: manual-task
-buildPreset: NodeJS
+buildPreset: nodejs
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /hello-world-nodejs-task
 thumbnailPath: /hello-world-nodejs-task/icon.png
