@@ -10,9 +10,9 @@ When the test runner component is triggered manually, it will run a job to execu
 
 - A valid Choreo account with available resource quota.
 
-Let's write some tests in Javascript and run those tests in Choreo.
+Let's write some tests using Postman collections and run those tests in Choreo.
 
-### Create a test runner component using a Go buildpack
+### Create a test runner component using a Postman buildpack
 
 1. Go to [https://console.choreo.dev/](https://console.choreo.dev/cloud-native-app-developer) and sign in. This opens the project home page.
 2. Click **Create** button in the Component Listing section. Choose **Test Runner** component type.
