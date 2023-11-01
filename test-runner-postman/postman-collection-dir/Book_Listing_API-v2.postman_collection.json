@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "63d39160-27c8-4c8f-8e4d-a4adb912a5e2",
+    "name": "Book Listing API v2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "11138974"
+  },
+  "item": [
+    {
+      "name": "List Books",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "",
+              "pm.test(\"Response status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Response is an array with at least one element\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array');",
+              "    pm.expect(responseData).to.have.lengthOf.at.least(1);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Each book object has the required fields\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array').that.is.not.empty;",
+              "    responseData.forEach(function (book) {",
+              "        pm.expect(book).to.have.property('id');",
+              "        pm.expect(book).to.have.property('title');",
+              "        pm.expect(book).to.have.property('author');",
+              "    });",
+              "});",
+              "",
+              "",
+              "pm.test(\"Check if id is a non-negative integer\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array');",
+              "",
+              "    responseData.forEach(function (book) {",
+              "        pm.expect(book.id).to.be.a('number').and.to.be.at.least(0);",
+              "    });",
+              "});",
+              "",
+              "",
+              "pm.test(\"Title and Author should be non-empty strings\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array').that.is.not.empty;",
+              "",
+              "    responseData.forEach(function (book) {",
+              "        pm.expect(book.title).to.be.a('string').and.to.not.be.empty;",
+              "        pm.expect(book.author).to.be.a('string').and.to.not.be.empty;",
+              "    });",
+              "});",
+              "",
+              "",
+              "pm.test(\"Response has required fields - id, title, and author\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array').that.is.not.empty;",
+              "",
+              "    responseData.forEach(function (book) {",
+              "        pm.expect(book).to.have.property('id');",
+              "        pm.expect(book).to.have.property('title');",
+              "        pm.expect(book).to.have.property('author');",
+              "    });",
+              "});",
+              "",
+              "",
+              "pm.test(\"Verify the response array contains the expected number of elements\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array').and.to.have.lengthOf(2);",
+              "});",
+              "",
+              "",
+              "",
+              "pm.test(\"Each book object has the correct values\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('array').that.is.not.empty;",
+              "",
+              "    const expectedData = [",
+              "        { \"id\": 1, \"title\": \"Book 1\", \"author\": \"Author 1\" },",
+              "        { \"id\": 2, \"title\": \"Book 2\", \"author\": \"Author 2\" }",
+              "    ];",
+              "",
+              "    responseData.forEach(function (book, index) {",
+              "        pm.expect(book).to.deep.equal(expectedData[index]);",
+              "    });",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{apikey}}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "API-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "API-Key",
+            "value": "{{apikey}}}",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/books",
+          "host": ["{{url}}"],
+          "path": ["books"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "",
+              "pm.test(\"Response status code is 201\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Id is a non-negative integer\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.id).to.exist.and.to.be.a('number');",
+              "    pm.expect(responseData.id).to.be.at.least(0, \"Id should be a non-negative integer\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Title is a non-empty string\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('object');",
+              "    pm.expect(responseData.title).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Author is a non-empty string\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.author).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Author should not be empty\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"The id should be equal to 3\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.id).to.equal(3);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Title is equal to 'New Book'\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.title).to.equal(\"New Book\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Author is equal to 'New Author'\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.author).to.equal(\"New Author\");",
+              "});",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{apikey}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "API-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 3, \"title\": \"New Book\", \"author\": \"New Author\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/books/add",
+          "host": ["{{url}}"],
+          "path": ["books", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "",
+              "pm.test(\"Response status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "",
+              "pm.test(\"The 'id' field should be a non-negative integer\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData).to.be.an('object');",
+              "    pm.expect(responseData.id).to.be.a('number', \"'id' should be a number\");",
+              "    pm.expect(responseData.id).to.be.at.least(0, \"'id' should be a non-negative integer\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"The title field should be a non-empty string\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Validate author field is a non-empty string\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.author).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Author field should not be empty\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Validate the 'id' field is 1\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.id).to.equal(1);",
+              "});",
+              "",
+              "",
+              "pm.test(\"Validate the 'title' field is 'Updated Book'\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.title).to.equal(\"Updated Book\");",
+              "});",
+              "",
+              "",
+              "pm.test(\"Validate 'author' field is 'Updated Author'\", function () {",
+              "    const responseData = pm.response.json();",
+              "",
+              "    pm.expect(responseData.author).to.equal(\"Updated Author\");",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{apikey}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "API-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 1, \"title\": \"Updated Book\", \"author\": \"Updated Author\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/books/update",
+          "host": ["{{url}}"],
+          "path": ["books", "update"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Response status code is 204\", function () {",
+              "    pm.response.to.have.status(204);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{apikey}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "API-Key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/books/delete?id=2",
+          "host": ["{{url}}"],
+          "path": ["books", "delete"],
+          "query": [
+            {
+              "key": "id",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://b3127d1c-180f-4696-9aca-90bc5224d4d8-dev.e1-us-east-azure.choreoapis.dev/kkpj/book-listing-api/book-listing-5c6/v1.0"
+    },
+    {
+      "key": "port",
+      "value": "8080"
+    },
+    {
+      "key": "apikey",
+      "value": "eyJraWQiOiJnYXRld2F5X2NlcnRpZmljYXRlX2FsaWFzIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2OTA1Y2VhYS02MDRhLTQyZDUtOTMyOC1mMjliZDUzYzk4MWFAY2FyYm9uLnN1cGVyIiwiaXNzIjoiaHR0cHM6XC9cL3N0cy5jaG9yZW8uZGV2OjQ0M1wvb2F1dGgyXC90b2tlbiIsImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOm51bGwsIm5hbWUiOiJCb29rIExpc3RpbmcgQVBJIC0gQm9vayBMaXN0aW5nIiwiY29udGV4dCI6IlwvYjMxMjdkMWMtMTgwZi00Njk2LTlhY2EtOTBiYzUyMjRkNGQ4XC9ra3BqXC9ib29rLWxpc3RpbmctYXBpXC9ib29rLWxpc3RpbmctNWM2XC92MS4wIiwicHVibGlzaGVyIjoiY2hvcmVvX3Byb2RfYXBpbV9hZG1pbiIsInZlcnNpb24iOiJ2MS4wIiwic3Vic2NyaXB0aW9uVGllciI6bnVsbH1dLCJleHAiOjE2OTYyNDcxNjksInRva2VuX3R5cGUiOiJJbnRlcm5hbEtleSIsImlhdCI6MTY5NjI0NjU2OSwianRpIjoiMjE5MzY2YjMtZTZkNi00NmMyLWJkZDEtOTZiZGUwMzJjOTczIn0.C7HUR0I9CD3Vlcwc7fcAWwkpE02lqgn_iBtlVXkeuw3MSf9cQe0ug8TNpd1tFk4YmqHS-Mp3rJrqqb6gbaW0YSEx_Ku1zx9nahMANBzNS16fsVFj-lgluoRnDw-wky7JO0tWnT0MQGFTInIn6uXm1vZhi4AmDt85BP2WKwHpj9-YhbDWprRF7dSP_f3AG2gIk53L6ZkR2g9nhQn4GITau9juymviQR5xJVIKEyq7yguNe_Yz5ZismfE4Nk7Sc3qXfmMNFnSofhcBRkr4lCj0wWXkMV7kj5xzvWkfUi-ptL7JHoPsELTlQFeD9fZdBzzOBLJgbARyVHrkyfYoZL7gpGCUbyot2NNmjx2D3E042_kNEwWQN67W6D5LWf8oAGIa5bBX-8TaWa5iq_ImeNSCzla3y8HiV6nFtQyka1nou-LCU3-RkLxa0bKRUmYj3PyI6Fw6mNpe4GxwvkXeQPWStEjoKRg8sS_H6yizVs1uzuuJg1Iz8vOQdTfcxOFxIfWHy8fk5XugnPporxTvoOw0p-eH5tb79GJR2icmfGYkzQmpAGiqK8Yd-6uCzQG2uHOvpgavDyn8U5oXkVMBKSAcavwiwPBjqhwWGfOnditYNOtvV3fXP5ZAPs89As4WfoAjVIsq4FmzNVyD7Zwd9gcPe71iv77yvtkweVk7C_40oSI",
+      "type": "string"
+    }
+  ]
+}
