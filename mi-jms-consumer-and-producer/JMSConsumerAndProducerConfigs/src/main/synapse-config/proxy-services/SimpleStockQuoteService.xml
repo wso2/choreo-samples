@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="SimpleStockQuoteService" startOnLoad="true" transports="jms" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="full">
+            </log>
+            <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <send>
+                <endpoint>
+                    <address uri="jms:/SimpleStockQuoteService?transport.jms.ConnectionFactory=myQueueSender">
+                        <suspendOnFailure>
+                            <initialDuration>-1</initialDuration>
+                            <progressionFactor>1</progressionFactor>
+                        </suspendOnFailure>
+                        <markForSuspension>
+                            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                        </markForSuspension>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.jms.ConnectionFactory">myQueueListener</parameter>
+    <parameter name="transport.jms.Destination">SimpleStockQuoteServiceSource</parameter>
+</proxy>

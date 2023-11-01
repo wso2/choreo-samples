@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="SimpleStockQuoteService" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/SimpleStockQuoteService.xml</file>
+    </artifact>
+    <artifact name="SimpleStockQuoteService_proxy_metadata" groupId="com.example.proxy-service.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/SimpleStockQuoteService_proxy_metadata.yaml</file>
+    </artifact>
+</artifacts>
