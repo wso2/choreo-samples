@@ -46,3 +46,7 @@ export interface Q4RewardPageProps {
 export interface Q5QrCodeProps {
   className?: any;
 }
+
+export interface Q6RewardConfirmationsProps {
+  className?: any;
+}

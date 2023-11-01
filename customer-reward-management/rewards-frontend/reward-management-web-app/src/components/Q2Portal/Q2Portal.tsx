@@ -2426,7 +2426,7 @@ const Footer11: any = styled(Footer1)(({ theme }: any) => ({
 function Q2Portal(props: Q2PortalProps): JSX.Element {
   const { data, fns } = useQ2Portal();
 
-  if (data.isAuthLoading || !data.signedIn) {
+  if (data.isAuthLoading) {
     return (
       <Box
         display="flex"

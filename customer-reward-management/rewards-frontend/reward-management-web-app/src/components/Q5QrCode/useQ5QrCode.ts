@@ -110,7 +110,7 @@ const useQ5QrCode = () => {
 
   useEffect(() => {
     if (state.sub && reward) {
-      getGeneratedQRCode("U451298", reward.id);
+      getGeneratedQRCode(state.sub, reward.id);
     }
   }, [state.sub, reward]);
 

@@ -1,6 +1,6 @@
-import { get } from "./http";
+import { get, post } from "./http";
 import { AxiosResponse } from "axios";
-import { CardDetails, Reward } from "./types";
+import { CardDetails, Reward, RewardConfirmation, RewardSelection } from "./types";
 
 // const qrGeneratorUrl = window.config.qrGeneratorApiUrl;
 
@@ -34,3 +34,28 @@ export const getQRCode = async (userId: string, rewardId: string) => {
   const response = await get(url, params, false, headers, 'blob');
   return response as AxiosResponse<any>;
 }
+
+export const getRewardConfirmations = async (userId: string) => {
+  const params = {
+    userId: userId
+  }
+  const url = 'reward-confirmations';
+  const response = await get(url, params, false);
+  console.log('initial reward confirmations');
+  console.log(response);
+  return response as AxiosResponse<RewardConfirmation[]>;
+}
+
+
+export const selectReward = async ( userId: string, selectedRewardDealId: string, acceptedTnC: boolean) => {
+  const selection: RewardSelection = {
+    userId,
+    selectedRewardDealId,
+    acceptedTnC
+  };
+
+  const url = 'select-reward'; 
+  const response = await post(url, undefined, selection); 
+  console.log('Reward selection response:', response);
+  return response;
+};
