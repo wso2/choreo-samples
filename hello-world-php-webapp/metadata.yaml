@@ -5,6 +5,6 @@ buildPreset: php
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /hello-world-php-webapp
 thumbnailPath: /hello-world-php-webapp/icon.png
-documentationPath: /hello-world-php-webapp/readme.md
+documentationPath: /hello-world-php-webapp/README.md
 tags:
 - Web Application
