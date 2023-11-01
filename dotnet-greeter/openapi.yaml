@@ -1,0 +1,27 @@
+openapi: "3.0.0"
+info:
+  title: Greeting Service
+  version: 1.0.0
+paths:
+  /greeter/greet:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
