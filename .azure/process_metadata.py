@@ -31,8 +31,8 @@ def collect_metadata_and_thumbnails():
             with open(metadata_file, 'r') as f:
                 data = yaml.safe_load(f)
 
-                component_type = data.get('componentType', '').lower()
-                build_preset = data.get('buildPreset', '').lower()
+                component_type = data.get('componentType', '')
+                build_preset = data.get('buildPreset', '')
 
                 if component_type not in VALID_COMPONENT_TYPES:
                     print(f"Warning: '{component_type}' is not a valid componentType for directory: {directory}. Excluding from index.json.")
