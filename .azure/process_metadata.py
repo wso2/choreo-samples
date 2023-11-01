@@ -15,7 +15,7 @@ VALID_COMPONENT_TYPES = [
 
 VALID_BUILD_PRESETS = [
     "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby", 
-    "javascript", "many", "postman", "react"
+    "javascript", "many", "postman", "react", "docker"
 ]
 
 def collect_metadata_and_thumbnails():
