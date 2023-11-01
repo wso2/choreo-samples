@@ -12,6 +12,9 @@ Note: The following file paths are relative to the path /go/greeter
 | .choreo/endpoints.yaml | Choreo-specific configuration that provides information about how Choreo exposes the service.                                                                        |
 | openapi.yaml           | OpenAPI contract of the greeter service. This is needed to publish our service as a managed API. This openapi.yaml file is referenced by the .choreo/endpoints.yaml. |
 
+### Prerequisites
+1. Fork the repositoy
+
 ## Deploy Application
 
 Please refer to the Choreo documentation under the [Develop a REST API](https://wso2.com/choreo/docs/develop-components/develop-services/develop-a-rest-api/#step-1-create-a-service-component-from-a-dockerfile) section to learn how to deploy the application.
@@ -19,8 +22,7 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 You can select either Docker or Go as buildpacks. Fill as follow according to selected Buildpack.
 
 1. Select `Service` Card from Component Creation Wizard
-2. Fork the repositoy
-3. Select `Go` as the buildpack. Fill as follow according to selected Buildpack.
+2. Select `Go` as the buildpack. Fill as follow according to selected Buildpack.
 
     | **Field**             | **Description**                               |
     |-----------------------|-----------------------------------------------|
@@ -31,10 +33,10 @@ You can select either Docker or Go as buildpacks. Fill as follow according to se
     | **Branch**            | **`main`**                               |
     | **Buildpack**      | `Go` |
     | **Select Go Project Directory**       | hello-world-go-task |
-    | **Select Language Version**              | 1.x |
+    | **Language Version**              | 1.x |
 
-4. Click Create. Once the component creation is complete, you will see the component overview page.
-5. Deploy the created component
+3. Click Create. Once the component creation is complete, you will see the component overview page.
+4. Deploy the created component
 
 ## Execute the Sample Locally
 
