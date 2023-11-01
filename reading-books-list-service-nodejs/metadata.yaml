@@ -1,4 +1,4 @@
-displayName: Book Management Service in Java
+displayName: Book Management Service in NodeJS
 description: CRUD operations for books
 componentType: service
 buildPreset: nodejs
