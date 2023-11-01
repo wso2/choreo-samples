@@ -1,0 +1,10 @@
+---
+key: "SimpleStockQuoteService_proxy-1.0.0"
+name : "SimpleStockQuoteService"
+displayName : "SimpleStockQuoteService"
+description: "Sample Proxy Service"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/services/SimpleStockQuoteService"
+definitionType: "WSDL1"
+securityType: "BASIC"
+mutualSSLEnabled: false
