@@ -9,11 +9,13 @@ BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.n
 
 VALID_COMPONENT_TYPES = [
     "service", "webhook", "manual-task", "scheduled-task", 
-    "event-triggered", "event-handler", "test-runner"
+    "event-triggered", "event-handler", "test-runner", "many",
+    "web-application"
 ]
 
 VALID_BUILD_PRESETS = [
-    "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby"
+    "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby", 
+    "javascript", "many"
 ]
 
 def collect_metadata_and_thumbnails():
