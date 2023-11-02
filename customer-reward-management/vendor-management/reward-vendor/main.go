@@ -85,13 +85,12 @@ func HandleCreateReward(w http.ResponseWriter, r *http.Request) {
 	var reward Reward
 	_ = json.NewDecoder(r.Body).Decode(&reward)
 
-	logger.Info("creating a reward", zap.Any("reward", reward))
-
+	logger.Info("creating a reward")
 	rewards = append(rewards, reward)
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(reward)
+	logger.Info("successfully created a reward")
 
-	logger.Info("responding with reward confirmation", zap.Any("reward", reward))
 	RespondWithRewardConfirmation(reward.RewardId, reward.UserId)
 }
 
