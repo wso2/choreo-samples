@@ -122,7 +122,6 @@ configurable string clientSecret = ?;
 configurable string tokenUrl = ?;
 configurable string loyaltyApiUrl = ?;
 configurable string vendorManagementApiUrl = ?;
-configurable string qrcodeGeneratorApiUrl = ?;
 
 oauth2:ClientOAuth2Provider provider = new ({
     tokenUrl: tokenUrl,
