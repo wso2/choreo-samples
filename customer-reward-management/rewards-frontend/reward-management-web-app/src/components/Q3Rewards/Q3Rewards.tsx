@@ -872,7 +872,7 @@ function Q3Rewards(props: Q3RewardsProps): JSX.Element {
   return (
     <ScreenDesktop className={props.className}>
       <Helmet>
-        <title>Q3Rewards</title>
+        <title>Redeem Rewards</title>
       </Helmet>
       <BannerTop1 />
       <Banner data={data}>

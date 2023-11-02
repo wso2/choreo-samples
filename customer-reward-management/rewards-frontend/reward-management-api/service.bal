@@ -106,6 +106,17 @@ public type RewardConfirmation record {|
     string rewardConfirmationNumber;
 |};
 
+# Represents a reward confirmation with QR code.
+#
+# + userId - id of the user
+# + rewardId - reward id
+# + qrCode - qr code
+public type RewardConfirmationWithQR record {|
+    string userId;
+    string rewardId;
+    string qrCode;
+|};
+
 configurable string clientId = ?;
 configurable string clientSecret = ?;
 configurable string tokenUrl = ?;
@@ -153,16 +164,11 @@ http:Client vendorManagementClientEp = check new (vendorManagementApiUrl, {
 }
 service / on new http:Listener(9090) {
 
-    resource function post select\-reward(RewardSelection selection) returns string|error {
+    resource function post select\-reward(RewardSelection selection, http:Headers headers) returns string|error {
+
         log:printInfo("reward selected: ", selection = selection);
-
-        User|http:Error user = loyaltyAPIEndpoint->/user/[selection.userId];
-        if user is http:Error {
-            log:printError("error retrieving user: ", 'error = user);
-            return user;
-        }
-
-        log:printInfo("user retrieved: ", user = user);
+        string jwtHeader = check headers.getHeader("x-jwt-assertion");
+        User user = check validateAndDecodeUserInfo(jwtHeader);
         Reward reward = transform(user, selection);
 
         http:Response|http:Error response = vendorManagementClientEp->post("/rewards", reward);
@@ -189,9 +195,8 @@ service / on new http:Listener(9090) {
         return cardDetails;
     }
 
-    resource function get rewards() returns RewardOffer[]|error{
+    resource function get rewards(http:Request request) returns RewardOffer[]|error {
         log:printInfo("get all rewards available");
-
         RewardOffer[]|http:Error rewardsOffers = loyaltyAPIEndpoint->/rewards();
         if rewardsOffers is http:Error {
             log:printError("error retrieving rewards: ", 'error = rewardsOffers);
@@ -215,14 +220,26 @@ service / on new http:Listener(9090) {
         log:printInfo("generate QR code for: ", userId = userId, rewardId = rewardId);
 
         http:Response|http:ClientError response = loyaltyAPIEndpoint->/qr\-code(userId = userId, rewardId = rewardId);
-        if response is http:Response  && response.statusCode == http:STATUS_OK {
-                byte[] binaryPayload = check response.getBinaryPayload();
-                http:Response newResponse = new;
-                newResponse.setBinaryPayload(binaryPayload, mime:IMAGE_PNG);
-                return newResponse;
+        if response is http:Response && response.statusCode == http:STATUS_OK {
+            byte[] binaryPayload = check response.getBinaryPayload();
+            http:Response newResponse = new;
+            newResponse.setBinaryPayload(binaryPayload, mime:IMAGE_PNG);
+            return newResponse;
         } else {
             return response;
         }
+    }
+
+    resource function get reward\-confirmations(string userId) returns RewardConfirmationWithQR[]|error {
+        log:printInfo("get all reward confirmations for: ", userId = userId);
+
+        RewardConfirmationWithQR[]|http:Error rewardConfirmations =
+            loyaltyAPIEndpoint->/reward\-confirmations(userId = userId);
+        if rewardConfirmations is http:Error {
+            log:printError("error retrieving reward confirmations : ", 'error = rewardConfirmations);
+            return rewardConfirmations;
+        }
+        return rewardConfirmations;
     }
 }
 

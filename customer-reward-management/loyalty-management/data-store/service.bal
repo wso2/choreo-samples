@@ -175,6 +175,29 @@ service / on new http:Listener(9090) {
         return rewardConfirmation;
     }
 
+    resource function get reward\-confirmations(string userId) returns RewardConfirmation[]|error {
+        RewardConfirmation[] rewardConfirmations = [];
+        sql:ParameterizedQuery selectQuery = `
+            SELECT reward_id, user_id, reward_confirmation_number FROM reward_confirmation
+            WHERE user_id = ${userId}
+            ORDER BY id DESC
+            LIMIT 5
+        `;
+        stream<RewardConfirmationDAO, error?> resultStream = mysqlEndpoint->query(selectQuery);
+        check from RewardConfirmationDAO rewardConfirmation in resultStream
+            do {
+                rewardConfirmations.push({
+                    userId: rewardConfirmation.user_id,
+                    rewardId: rewardConfirmation.reward_id,
+                    rewardConfirmationNumber: rewardConfirmation.reward_confirmation_number
+                });
+            };
+        check resultStream.close();
+        string msg = "successfully retrieved the reward confirmations";
+        log:printInfo(msg);
+        return rewardConfirmations;
+    }
+
     resource function get users() returns User[]|error {
         User[] users = [];
         sql:ParameterizedQuery selectQuery = `SELECT user_id, first_name, last_name, email FROM user`;

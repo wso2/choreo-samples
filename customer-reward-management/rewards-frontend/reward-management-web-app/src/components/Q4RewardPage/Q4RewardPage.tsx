@@ -660,7 +660,7 @@ function Q4RewardPage(props: Q4RewardPageProps): JSX.Element {
                       size={"large"}
                       color={"primary"}
                       disabled={!data.isAgreementChecked}
-                      onClick={() => fns.handleRedeemClick(data.reward?.id)}
+                      onClick={() => fns.handleConfirmedRewardsClick()}
                       data={data}
                     >
                       {"REDEEM"}

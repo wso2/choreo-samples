@@ -66,10 +66,10 @@ const useQ2Portal = () => {
   }, [state]);
 
   useEffect(() => {
-    if (signedIn && state.sub) {
+    if (state.sub) {
       getCardInfo(state.sub);
     }
-  }, [signedIn, state.sub]);
+  }, [state.sub]);
 
   async function getCardInfo(userId) {
     setIsCardDetailsLoading(true);

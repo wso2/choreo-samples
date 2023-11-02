@@ -13,7 +13,7 @@
  **********************************************************************/
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LogoLightImage from 'src/assets/images/BannerTop_logo_light.png';
 import SearchIconImage from 'src/assets/images/BannerTop_search_icon.png';
 import { styled } from '@mui/material/styles';
@@ -458,6 +458,8 @@ const Underline5: any = styled('div')({
 function BannerTop(props: BannerTopProps): JSX.Element {
   const { data, fns } = useBannerTop();
   const { state } = data;
+  const { pathname } = useLocation();
+  const splitLocation = pathname.split('/');
 
   return (
     <Property1Desktop className={props.className}>
@@ -492,30 +494,22 @@ function BannerTop(props: BannerTopProps): JSX.Element {
         <LinksContainer>
           <Links1>
             <Link1>
-              <Accounts>{`Accounts`}</Accounts>
-              <Underline></Underline>
+              <InternalLink to="/accounts">
+                <Accounts>{`Accounts`}</Accounts>
+              </InternalLink>
+              {(splitLocation[1] == "accounts" || splitLocation[1] == "") && <Underline></Underline>}
             </Link1>
-            <Link2>
-              <PayTransfer data={data}>{`Pay & transfer`}</PayTransfer>
-              {false && <Underline1></Underline1>}
-            </Link2>
-            <Link3>
-              <Investments>{`Investments`}</Investments>
-              {false && <Underline2></Underline2>}
-            </Link3>
-            <Link4>
-              <Security>{`Security`}</Security>
-              {false && <Underline3></Underline3>}
-            </Link4>
-            <Link5>
-              <Products>{`Products`}</Products>
-              {false && <Underline4></Underline4>}
-            </Link5>
             <Link6>
               <InternalLink to="/rewards">
-                <Rewards>{`Rewards`}</Rewards>
+                <Rewards>{`Redeem Rewards`}</Rewards>
               </InternalLink>
-              {false && <Underline5></Underline5>}
+              {splitLocation[1] == "rewards" && <Underline5></Underline5>}
+            </Link6>
+            <Link6>
+              <InternalLink to="/confirmed-rewards">
+                <Rewards>{`Confirmed Rewards`}</Rewards>
+              </InternalLink>
+              {splitLocation[1] == "confirmed-rewards" && <Underline5></Underline5>}
             </Link6>
           </Links1>
         </LinksContainer>
