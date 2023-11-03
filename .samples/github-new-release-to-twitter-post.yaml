@@ -1,0 +1,11 @@
+displayName: GitHub New Release to Twitter Post
+description: Post a tweet when a new release is made in a specific GitHub repository
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-new-release-to-twitter-post
+thumbnailPath: /icons/github-new-release-to-twitter-post.png
+documentationPath: /github-new-release-to-twitter-post/readme.md
+tags:
+  - Integration
+  - HTTP

@@ -1,0 +1,13 @@
+displayName: Kafka Order Notification Client in MI
+description: >-
+  A Kafka order notification producer and consumer project created using the
+  WSO2 Integration Studio
+componentType: event-handler
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-kafka-order-notification-client
+thumbnailPath: /icons/mi-kafka-order-notification-client.png
+documentationPath: /mi-kafka-order-notification-client/README.md
+tags:
+  - Integration
+  - Kafka

@@ -1,0 +1,13 @@
+displayName: GitHub New Release to Slack Channel Message
+description: >-
+  Posts a message to a Slack channel when a release is made in a specific GitHub
+  repository
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-release-to-slack
+thumbnailPath: /icons/github-release-to-slack.png
+documentationPath: /github-release-to-slack/readme.md
+tags:
+  - Integration
+  - HTTP

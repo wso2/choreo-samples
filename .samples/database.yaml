@@ -1,0 +1,10 @@
+displayName: Database Connection
+description: Reads data from a MySQL database and returns a JSON response
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /database
+thumbnailPath: /icons/database.png
+documentationPath: /database/readme.md
+tags:
+  - HTTP

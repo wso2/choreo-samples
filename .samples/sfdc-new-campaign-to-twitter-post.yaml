@@ -1,0 +1,11 @@
+displayName: Salesforce New Campaign to Twitter Post
+description: Post a tweet when a new campaign is created in a specific Salesforce account.
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-new-campaign-to-twitter-post
+thumbnailPath: /icons/sfdc-new-campaign-to-twitter-post.png
+documentationPath: /sfdc-new-campaign-to-twitter-post/readme.md
+tags:
+  - Integration
+  - HTTP

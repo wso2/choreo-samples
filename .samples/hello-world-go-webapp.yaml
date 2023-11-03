@@ -1,0 +1,10 @@
+displayName: Hello World Web in Go
+description: A Hello World web app created using Go
+componentType: web-application
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-go-webapp
+thumbnailPath: /icons/hello-world-go-webapp.png
+documentationPath: /hello-world-go-webapp/readme.md
+tags:
+  - Web Application

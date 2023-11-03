@@ -1,0 +1,10 @@
+displayName: Guaranteed Delivery using Azure Service Bus
+description: Provides guaranteed delivery for messages in ASB queue
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /guaranteed-delivery
+thumbnailPath: /icons/guaranteed-delivery.png
+documentationPath: /guaranteed-delivery/readme.md
+tags:
+  - HTTP

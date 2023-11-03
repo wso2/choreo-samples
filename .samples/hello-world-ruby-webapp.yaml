@@ -1,0 +1,10 @@
+displayName: Hello World Web in Ruby
+description: A Hello World web app created using Ruby
+componentType: web-application
+buildPack: ruby
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-ruby-webapp
+thumbnailPath: /icons/hello-world-ruby-webapp.png
+documentationPath: /hello-world-ruby-webapp/readme.md
+tags:
+  - Web Application

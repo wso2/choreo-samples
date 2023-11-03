@@ -1,0 +1,12 @@
+displayName: Salesforce Record Update to Google Sheets Row Update
+description: >-
+  Updates details in a spreadsheet row when a record is updated in a specific
+  Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-record-update-to-gsheet-update-row
+thumbnailPath: /icons/sfdc-record-update-to-gsheet-update-row.png
+documentationPath: /sfdc-record-update-to-gsheet-update-row/readme.md
+tags:
+  - Integration

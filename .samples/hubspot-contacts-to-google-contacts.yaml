@@ -1,0 +1,10 @@
+displayName: Hubspot contacts to Google contacts
+description: Sync Hubspot contacts with Google Contacts
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hubspot-contacts-to-google-contacts
+thumbnailPath: /icons/hubspot-contacts-to-google-contacts.png
+documentationPath: /hubspot-contacts-to-google-contacts/readme.md
+tags:
+  - Integration

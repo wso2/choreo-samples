@@ -1,0 +1,13 @@
+displayName: VFS with file processing and transfer
+description: >-
+  A VFS sample to process files in specified source directory and move them to
+  specified location
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /ftp-new-file-to-mongodb-vfs
+thumbnailPath: /icons/ftp-new-file-to-mongodb-vfs.png
+documentationPath: /ftp-new-file-to-mongodb-vfs/readme.md
+tags:
+  - Integration
+  - FTP

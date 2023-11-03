@@ -1,0 +1,10 @@
+displayName: Test Runner Postman
+description: Use Postman Collections to test applications hosted in Choreo
+componentType: test-runner
+buildPack: postman
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /test-runner-postman
+thumbnailPath: /icons/test-runner-postman.png
+documentationPath: /test-runner-postman/readme.md
+tags:
+  - Test

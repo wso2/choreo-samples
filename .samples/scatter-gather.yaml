@@ -1,0 +1,12 @@
+displayName: Message Aggregator
+description: >-
+  Sends multiple requests to the backend, collects responses, and distills them
+  into a single response
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /scatter-gather
+thumbnailPath: /icons/scatter-gather.png
+documentationPath: /scatter-gather/readme.md
+tags:
+  - HTTP

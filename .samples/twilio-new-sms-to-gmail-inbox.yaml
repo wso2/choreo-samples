@@ -1,0 +1,13 @@
+displayName: Twilio New SMS to Gmail Message
+description: >-
+  Sends an email to a recipient through Gmail when a new SMS is received on
+  Twilio
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /twilio-new-sms-to-gmail-inbox
+thumbnailPath: /icons/twilio-new-sms-to-gmail-inbox.png
+documentationPath: /twilio-new-sms-to-gmail-inbox/readme.md
+tags:
+  - Integration
+  - HTTP

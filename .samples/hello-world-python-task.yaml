@@ -1,0 +1,9 @@
+displayName: Hello World in Python
+description: Print Hello World message
+componentType: manual-task
+buildPack: python
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-python-task
+thumbnailPath: /icons/hello-world-python-task.png
+documentationPath: /hello-world-python-task/readme.md
+tags: null

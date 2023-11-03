@@ -1,0 +1,9 @@
+displayName: Greeting Service
+description: Responds with a record including the message received via an HTTP GET
+componentType: service
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /greeting-service-go
+thumbnailPath: /icons/greeting-service-go.png
+documentationPath: /greeting-service-go/readme.md
+tags: null

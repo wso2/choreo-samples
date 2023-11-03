@@ -1,0 +1,10 @@
+displayName: Usage of Redis Cache to cache responses
+description: Fetch data from Redis cache instead of invoking API endpoints again and again.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /redis-caching
+thumbnailPath: /icons/redis-caching.png
+documentationPath: /redis-caching/readme.md
+tags:
+  - HTTP

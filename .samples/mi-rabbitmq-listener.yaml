@@ -1,0 +1,11 @@
+displayName: RabbitMQ Listener Integration in MI
+description: RabbitMQ listener developed usign WSO2 Integration Studio
+componentType: event-handler
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-rabbitmq-listener
+thumbnailPath: /icons/mi-rabbitmq-listener.png
+documentationPath: /mi-rabbitmq-listener/readme.md
+tags:
+  - Integration
+  - RabbitMQ

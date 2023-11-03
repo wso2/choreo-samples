@@ -1,0 +1,12 @@
+displayName: Custom Data Types
+description: >-
+  Creates a custom data type and populates it with data received from a POST
+  request
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /custom-data-types
+thumbnailPath: /icons/custom-data-types.png
+documentationPath: /custom-data-types/readme.md
+tags:
+  - HTTP

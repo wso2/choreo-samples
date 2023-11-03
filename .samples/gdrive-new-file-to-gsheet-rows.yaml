@@ -1,0 +1,13 @@
+displayName: Google Drive New File to Google Sheets Row
+description: >-
+  Adds details to a spreadsheet row when a new file is created in a specific
+  Google Drive
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gdrive-new-file-to-gsheet-rows
+thumbnailPath: /icons/gdrive-new-file-to-gsheet-rows.png
+documentationPath: /gdrive-new-file-to-gsheet-rows/readme.md
+tags:
+  - Integration
+  - HTTP

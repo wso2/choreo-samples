@@ -1,0 +1,12 @@
+displayName: Send Marketing Email to Salesforce New Lead
+description: >-
+  Send a marketing email via Gmail to new Salesforce lead when it is created in
+  a specific Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /marketing-email-to-sfdc-new-lead
+thumbnailPath: /icons/marketing-email-to-sfdc-new-lead.png
+documentationPath: /marketing-email-to-sfdc-new-lead/readme.md
+tags:
+  - Integration

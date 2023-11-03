@@ -1,0 +1,13 @@
+displayName: GitHub New Issue to ServiceNow Record
+description: >-
+  Insert details to a new record in Incident table of ServiceNow when a new
+  issue is created in a specific GitHub repository
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-issue-to-servicenow
+thumbnailPath: /icons/github-issue-to-servicenow.png
+documentationPath: /github-issue-to-servicenow/readme.md
+tags:
+  - Integration
+  - HTTP

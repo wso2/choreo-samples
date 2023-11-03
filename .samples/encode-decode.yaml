@@ -1,0 +1,10 @@
+displayName: Data Encoding and Decoding
+description: Encodes and decodes data using base64 or URL encoding schemes
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /encode-decode
+thumbnailPath: /icons/encode-decode.png
+documentationPath: /encode-decode/readme.md
+tags:
+  - HTTP

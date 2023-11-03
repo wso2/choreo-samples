@@ -1,0 +1,10 @@
+displayName: Error Handling
+description: Handle errors at different levels of granularities
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /error-handling
+thumbnailPath: /icons/error-handling.png
+documentationPath: /error-handling/readme.md
+tags:
+  - HTTP

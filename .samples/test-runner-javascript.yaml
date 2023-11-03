@@ -1,0 +1,10 @@
+displayName: Test Runner Javascript
+description: Write test cases in Javascript to test applications hosted in Choreo
+componentType: test-runner
+buildPack: nodejs
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /test-runner-javascript
+thumbnailPath: /icons/test-runner-javascript.png
+documentationPath: /test-runner-javascript/readme.md
+tags:
+  - Test

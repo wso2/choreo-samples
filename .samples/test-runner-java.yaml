@@ -1,0 +1,10 @@
+displayName: Test Runner Java
+description: Write test cases in Java to test applications hosted in Choreo
+componentType: test-runner
+buildPack: java
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /test-runner-java
+thumbnailPath: /icons/test-runner-java.png
+documentationPath: /test-runner-java/readme.md
+tags:
+  - Test

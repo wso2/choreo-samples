@@ -1,0 +1,12 @@
+displayName: Github Issue Summary to Email
+description: >-
+  Schedules a task to generate a report out of issues at a GitHub repository &
+  send an email
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-issue-summary-to-email
+thumbnailPath: /icons/github-issue-summary-to-email.png
+documentationPath: /github-issue-summary-to-email/readme.md
+tags:
+  - Integration

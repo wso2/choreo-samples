@@ -1,0 +1,11 @@
+displayName: Hello World in MI
+description: A Hello World project created using the WSO2 Integration Studio
+componentType: service
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-mi
+thumbnailPath: /icons/hello-world-mi.png
+documentationPath: /hello-world-mi/readme.md
+tags:
+  - Integration
+  - HTTP

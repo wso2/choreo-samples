@@ -1,0 +1,12 @@
+displayName: Salesforce Outbound Message to Google Sheets Row
+description: >-
+  Adds details to a spreadsheet row when a new outbound message is received from
+  a Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-outbound-msg-to-gsheet
+thumbnailPath: /icons/sfdc-outbound-msg-to-gsheet.png
+documentationPath: /sfdc-outbound-msg-to-gsheet/readme.md
+tags:
+  - Integration

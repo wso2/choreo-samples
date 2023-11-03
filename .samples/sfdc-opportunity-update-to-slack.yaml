@@ -1,0 +1,12 @@
+displayName: Salesforce Opportunity Update to Slack Channel Message
+description: >-
+  Posts a message to a Slack channel when an opportunity is updated in a
+  specific Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-opportunity-update-to-slack
+thumbnailPath: /icons/sfdc-opportunity-update-to-slack.png
+documentationPath: /sfdc-opportunity-update-to-slack/readme.md
+tags:
+  - Integration

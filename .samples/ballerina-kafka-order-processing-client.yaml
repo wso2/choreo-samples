@@ -1,0 +1,10 @@
+displayName: Kafka Order Processing Client in Ballerina
+description: Kafka order processing client developed in Ballerina.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /ballerina-kafka-order-processing-client
+thumbnailPath: /icons/ballerina-kafka-order-processing-client.png
+documentationPath: /ballerina-kafka-order-processing-client/readme.md
+tags:
+  - Kafka

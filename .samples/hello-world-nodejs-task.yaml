@@ -1,0 +1,9 @@
+displayName: Hello World in NodeJS
+description: Print Hello World message
+componentType: manual-task
+buildPack: nodejs
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-nodejs-task
+thumbnailPath: /icons/hello-world-nodejs-task.png
+documentationPath: /hello-world-nodejs-task/readme.md
+tags: null

@@ -1,0 +1,11 @@
+displayName: Google Sheets New Row to Salesforce New Lead
+description: Adds a lead in Salesforce when new lead details are added to a spreadsheet row
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gsheet-new-row-to-sfdc-new-lead
+thumbnailPath: /icons/gsheet-new-row-to-sfdc-new-lead.png
+documentationPath: /gsheet-new-row-to-sfdc-new-lead/readme.md
+tags:
+  - Integration
+  - HTTP

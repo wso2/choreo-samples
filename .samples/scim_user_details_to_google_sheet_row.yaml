@@ -1,0 +1,13 @@
+displayName: SCIM User Details To Google Sheets Row
+description: >-
+  Add google sheet rows according to the user details coming into the service
+  endpoint
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /scim_user_details_to_google_sheet_row
+thumbnailPath: /icons/scim_user_details_to_google_sheet_row.png
+documentationPath: /scim_user_details_to_google_sheet_row/readme.md
+tags:
+  - Integration
+  - HTTP
