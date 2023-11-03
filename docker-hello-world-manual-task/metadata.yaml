@@ -7,6 +7,5 @@ componentPath: /docker-hello-world-manual-task
 thumbnailPath: /docker-hello-world-manual-task/icon.png
 documentationPath: /docker-hello-world-manual-task/readme.md
 tags:
-- Manual Task
 - BYOC
 - Go
