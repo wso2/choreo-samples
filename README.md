@@ -2,7 +2,7 @@
 
 This repository contains a collection of sample projects ready to deploy in [Choreo](https://console.choreo.dev/), a developer platform for easily taking your work to production. These samples demonstrate various use cases and provide examples for different scenarios.
 
-Change 1 from yomal123
+Change 1 from yomal123st
 
 ## Samples
 
