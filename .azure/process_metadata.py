@@ -25,12 +25,11 @@ def collect_metadata_and_thumbnails():
     # Iterate through directories and collect metadata from metadata.yaml
     samples_dir = os.path.join(REPO_BASE_DIR, '.samples')
     for meta_file in os.listdir(samples_dir):
-        meta_path = os.path.join(REPO_BASE_DIR, meta_file)
-        # metadata_file = os.path.join(meta_path, 'metadata.yaml')
+        meta_path = os.path.join(samples_dir, meta_file)
 
         print(f"Checking file: {meta_file}")
         
-        if os.path.isFile(meta_path):
+        if os.path.isfile(meta_path):
             with open(meta_path, 'r') as f:
                 data = yaml.safe_load(f)
 
@@ -41,24 +40,23 @@ def collect_metadata_and_thumbnails():
                     print(f"Warning: '{component_type}' is not a valid componentType for directory: {meta_file}. Excluding from index.json.")
                     continue
 
-                if build_pack not in VALID_BUILD_PRESETS:
+                if build_pack not in VALID_BUILD_PACKS:
                     print(f"Warning: '{build_pack}' is not a valid buildPreset for directory: {meta_file}. Excluding from index.json.")
                     continue
 
                 # Check if tags key exists and if it's either not set or None, assign an empty list
                 if not data.get('tags'):
                     data['tags'] = []
-                
 
-            # Copy thumbnail to staging directory while preserving folder name
-            thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath'))
-            thumbnail_dest_folder = os.path.join(BUILD_STAGING_DIRECTORY, data.get('thumbnailPath'))
+            # Copy thumbnail to staging directory.
+            thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
+            thumbnail_dest_folder = os.path.join(BUILD_STAGING_DIRECTORY, 'icons')
             os.makedirs(thumbnail_dest_folder, exist_ok=True)
             if os.path.exists(thumbnail_src):
                 print(f"Copying thumbnail for {meta_file}")
-                shutil.copy(thumbnail_src, BUILD_STAGING_DIRECTORY)
+                shutil.copy(thumbnail_src, thumbnail_dest_folder)
             else:
-                print(f"Thumbnail not found for {meta_file}")
+                print(f"Thumbnail not found for {thumbnail_src}")
             
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
