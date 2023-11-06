@@ -6,6 +6,7 @@ import shutil
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
+WSO2_SAMPLES_REPO_URL = 'https://github.com/wso2/choreo-samples/'
 
 VALID_COMPONENT_TYPES = [
     "service", "webhook", "manual-task", "scheduled-task", 
@@ -31,6 +32,13 @@ def collect_metadata_and_thumbnails():
         if os.path.isfile(meta_path):
             with open(meta_path, 'r') as f:
                 data = yaml.safe_load(f)
+
+                component_path = data.get('componentPath')
+                # Check if the componentPath exists
+                if not os.path.exists(os.path.join(REPO_BASE_DIR, component_path.lstrip('/'))):
+                    if WSO2_SAMPLES_REPO_URL == data.get('repositoryUrl'):
+                        print(f"Warning: Component path '{component_path}' does not exist. This will be excluded from index.json.")
+                        continue
 
                 component_type = data.get('componentType', '')
                 build_pack = data.get('buildPack', '')
@@ -58,12 +66,6 @@ def collect_metadata_and_thumbnails():
             
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
-
-            component_path = data.get('componentPath')
-            # Check if the componentPath exists
-            if not os.path.exists(os.path.join(REPO_BASE_DIR, component_path.lstrip('/'))):
-                print(f"Warning: Component path '{component_path}' does not exist. This will be excluded from index.json.")
-                continue
 
             samples_dirnames_set.add(component_path.lstrip('/'))
             collected_data.append(data)
