@@ -67,7 +67,7 @@ def collect_metadata_and_thumbnails():
     # Check if there are any directories without corresponding metadata files
     for dir_name in os.listdir(REPO_BASE_DIR):
         dir_path = os.path.join(REPO_BASE_DIR, dir_name)
-        if not os.path.isdir(dir_path) or dir_name.startswith('.'):
+        if os.path.isfile(dir_path) or dir_name.startswith('.'):
             continue
         if dir_name not in samples_dirnames_set:
             print(f"Warning: Directory '{dir_name}' does not have a corresponding metadata file. This will be excluded form index.json.")
