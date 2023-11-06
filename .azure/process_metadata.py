@@ -22,7 +22,8 @@ def collect_metadata_and_thumbnails():
     collected_data = []
     print("Starting to collect metadata and thumbnails...")
 
-    # Iterate through directories and collect metadata from metadata.yaml
+    # Iterate through directories and collect metadata from metadata files
+    samples_dirnames_set = set()
     samples_dir = os.path.join(REPO_BASE_DIR, '.samples')
     for meta_file in os.listdir(samples_dir):
         meta_path = os.path.join(samples_dir, meta_file)
@@ -60,7 +61,16 @@ def collect_metadata_and_thumbnails():
             
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
+            samples_dirnames_set.add(data.get('componentPath').lstrip('/'))
             collected_data.append(data)
+
+    # Check if there are any directories without corresponding metadata files
+    for dir_name in os.listdir(REPO_BASE_DIR):
+        dir_path = os.path.join(REPO_BASE_DIR, dir_name)
+        if not os.path.isdir(dir_path) or dir_name.startswith('.'):
+            continue
+        if dir_name not in samples_dirnames_set:
+            print(f"Warning: Directory '{dir_name}' does not have a corresponding metadata file. This will be excluded form index.json.")
 
     return collected_data
 
