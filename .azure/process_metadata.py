@@ -27,8 +27,6 @@ def collect_metadata_and_thumbnails():
     samples_dir = os.path.join(REPO_BASE_DIR, '.samples')
     for meta_file in os.listdir(samples_dir):
         meta_path = os.path.join(samples_dir, meta_file)
-
-        print(f"Checking file: {meta_file}")
         
         if os.path.isfile(meta_path):
             with open(meta_path, 'r') as f:
@@ -54,14 +52,20 @@ def collect_metadata_and_thumbnails():
             thumbnail_dest_folder = os.path.join(BUILD_STAGING_DIRECTORY, 'icons')
             os.makedirs(thumbnail_dest_folder, exist_ok=True)
             if os.path.exists(thumbnail_src):
-                print(f"Copying thumbnail for {meta_file}")
                 shutil.copy(thumbnail_src, thumbnail_dest_folder)
             else:
                 print(f"Thumbnail not found for {thumbnail_src}")
             
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
-            samples_dirnames_set.add(data.get('componentPath').lstrip('/'))
+
+            component_path = data.get('componentPath')
+            # Check if the componentPath exists
+            if not os.path.exists(os.path.join(REPO_BASE_DIR, component_path.lstrip('/'))):
+                print(f"Warning: Component path '{component_path}' does not exist. This will be excluded from index.json.")
+                continue
+
+            samples_dirnames_set.add(component_path.lstrip('/'))
             collected_data.append(data)
 
     # Check if there are any directories without corresponding metadata files
