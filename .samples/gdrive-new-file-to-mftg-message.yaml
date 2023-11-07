@@ -1,0 +1,11 @@
+displayName: Google Drive New File to MFTG Send Message
+description: Sends an AS2 message for new file created in Google Drive.
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gdrive-new-file-to-mftg-message
+thumbnailPath: /icons/gdrive-new-file-to-mftg-message.png
+documentationPath: /gdrive-new-file-to-mftg-message/readme.md
+tags:
+  - Integration
+  - HTTP

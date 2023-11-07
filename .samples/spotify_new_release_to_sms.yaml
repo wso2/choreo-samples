@@ -1,0 +1,10 @@
+displayName: Spotify New Release to SMS
+description: Sends SMS notifications on new Spotify releases by your favorite artist
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /spotify_new_release_to_sms
+thumbnailPath: /icons/spotify_new_release_to_sms.png
+documentationPath: /spotify_new_release_to_sms/readme.md
+tags:
+  - Integration

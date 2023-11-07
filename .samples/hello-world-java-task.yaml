@@ -1,0 +1,9 @@
+displayName: Hello World in Java
+description: Print Hello World message
+componentType: manual-task
+buildPack: java
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-java-task
+thumbnailPath: /icons/hello-world-java-task.png
+documentationPath: /hello-world-java-task/readme.md
+tags: null

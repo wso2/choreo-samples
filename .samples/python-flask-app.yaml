@@ -1,0 +1,12 @@
+displayName: Flask Application
+description: Flask application for reservation management
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /python-flask-app
+thumbnailPath: /icons/python-flask-app.png
+documentationPath: /python-flask-app/readme.md
+tags:
+  - Python
+  - Flask
+  - REST

@@ -1,0 +1,10 @@
+displayName: COVID-19 Statistics
+description: Provides the COVID-19 cases per million people in a specific country
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /worldbank-data-to-covid19-statistics
+thumbnailPath: /icons/worldbank-data-to-covid19-statistics.png
+documentationPath: /worldbank-data-to-covid19-statistics/readme.md
+tags:
+  - HTTP

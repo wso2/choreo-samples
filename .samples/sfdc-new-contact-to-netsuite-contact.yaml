@@ -1,0 +1,10 @@
+displayName: Salesforce New Contact to NetSuite New Contact
+description: Adds a new contact in NetSuite when a new contact is created in Salesforce
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-new-contact-to-netsuite-contact
+thumbnailPath: /icons/sfdc-new-contact-to-netsuite-contact.png
+documentationPath: /sfdc-new-contact-to-netsuite-contact/readme.md
+tags:
+  - Integration

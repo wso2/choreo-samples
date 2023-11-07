@@ -1,0 +1,9 @@
+displayName: Hello World in PHP
+description: Print Hello World message
+componentType: manual-task
+buildPack: php
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-php-task
+thumbnailPath: /icons/hello-world-php-task.png
+documentationPath: /hello-world-php-task/readme.md
+tags: null

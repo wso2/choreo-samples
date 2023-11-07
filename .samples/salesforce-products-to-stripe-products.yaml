@@ -1,0 +1,10 @@
+displayName: Saleforce Products to Stripe Products
+description: Migrate products in Salesforce account to Stripe
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /salesforce-products-to-stripe-products
+thumbnailPath: /icons/salesforce-products-to-stripe-products.png
+documentationPath: /salesforce-products-to-stripe-products/readme.md
+tags:
+  - Integration

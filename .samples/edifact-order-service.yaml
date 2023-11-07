@@ -1,0 +1,11 @@
+displayName: Edifact Order Service in Ballerina
+description: Edifact order service developed in Ballerina.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /edifact-order-service
+thumbnailPath: /icons/edifact-order-service.png
+documentationPath: /edifact-order-service/readme.md
+tags:
+  - EDI
+  - EDIFACT

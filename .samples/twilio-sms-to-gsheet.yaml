@@ -1,0 +1,13 @@
+displayName: SMS Voting Survey to Google Sheets Summary
+description: >-
+  A survey to find out the best language for building microservices out of a set
+  of given languages
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /twilio-sms-to-gsheet
+thumbnailPath: /icons/twilio-sms-to-gsheet.png
+documentationPath: /twilio-sms-to-gsheet/readme.md
+tags:
+  - Integration
+  - HTTP

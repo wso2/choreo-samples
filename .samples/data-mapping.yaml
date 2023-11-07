@@ -1,0 +1,10 @@
+displayName: Data Mapping
+description: Maps data fields from one data structure to another
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /data-mapping
+thumbnailPath: /icons/data-mapping.png
+documentationPath: /data-mapping/readme.md
+tags:
+  - HTTP

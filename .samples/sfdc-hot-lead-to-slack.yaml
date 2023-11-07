@@ -1,0 +1,12 @@
+displayName: Salesforce New Hot Lead to Slack Channel Message
+description: >-
+  Posts a message to a Slack channel when a new hot lead is created in a
+  specific Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-hot-lead-to-slack
+thumbnailPath: /icons/sfdc-hot-lead-to-slack.png
+documentationPath: /sfdc-hot-lead-to-slack/readme.md
+tags:
+  - Integration

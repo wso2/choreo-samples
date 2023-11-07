@@ -1,0 +1,13 @@
+displayName: Google Calendar Event to Microsoft Teams Channel Message
+description: >-
+  Sends a message to Microsoft Teams channel when a new event is created in a
+  specific Google Calendar
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gcalendar-new-event-to-msteams-message
+thumbnailPath: /icons/gcalendar-new-event-to-msteams-message.png
+documentationPath: /gcalendar-new-event-to-msteams-message/readme.md
+tags:
+  - Integration
+  - HTTP

@@ -1,0 +1,10 @@
+displayName: Content Based Routing
+description: Routes requests depending on the content
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /content-based-routing
+thumbnailPath: /icons/content-based-routing.png
+documentationPath: /content-based-routing/readme.md
+tags:
+  - HTTP

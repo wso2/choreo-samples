@@ -1,0 +1,12 @@
+displayName: Add Customers to ActiveCampaign Automations for New PayPal Successful Sales
+description: >-
+  Add customer details of a successful sale in Paypal to an ActiveCampaign
+  automation.
+componentType: scheduled-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /paypal-new-sales-to-activecampaign-automations
+thumbnailPath: /icons/paypal-new-sales-to-activecampaign-automations.png
+documentationPath: /paypal-new-sales-to-activecampaign-automations/readme.md
+tags:
+  - Integration

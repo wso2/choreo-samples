@@ -1,0 +1,10 @@
+displayName: HTTP Header Manipulation
+description: Manipulates HTTP headers to implement HTTP basic authentication scenarios
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /header-manipulation
+thumbnailPath: /icons/header-manipulation.png
+documentationPath: /header-manipulation/readme.md
+tags:
+  - HTTP

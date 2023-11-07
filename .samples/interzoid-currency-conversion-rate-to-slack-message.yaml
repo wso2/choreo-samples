@@ -1,0 +1,12 @@
+displayName: Send a Slack message with specified currency conversion rate periodically
+description: >-
+  Send a Slack message with requested currency conversion rate. This can be
+  scheduled to run periodically
+componentType: scheduled-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /interzoid-currency-conversion-rate-to-slack-message
+thumbnailPath: /icons/interzoid-currency-conversion-rate-to-slack-message.png
+documentationPath: /interzoid-currency-conversion-rate-to-slack-message/readme.md
+tags:
+  - Integration

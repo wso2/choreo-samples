@@ -1,0 +1,10 @@
+displayName: Test Runner Python
+description: Write test cases in Python to test applications hosted in Choreo
+componentType: test-runner
+buildPack: python
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /test-runner-python
+thumbnailPath: /icons/test-runner-python.png
+documentationPath: /test-runner-python/readme.md
+tags:
+  - Test

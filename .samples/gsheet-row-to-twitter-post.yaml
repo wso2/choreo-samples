@@ -1,0 +1,12 @@
+displayName: Google Sheets Row to Twitter Post
+description: >-
+  Post a tweet with content in the Google sheet for the records which matches
+  with the current date.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gsheet-row-to-twitter-post
+thumbnailPath: /icons/gsheet-row-to-twitter-post.png
+documentationPath: /gsheet-row-to-twitter-post/readme.md
+tags:
+  - Integration

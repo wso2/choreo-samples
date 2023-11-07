@@ -1,0 +1,10 @@
+displayName: Echo Service
+description: Responds with the same message received via an HTTP POST
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /echo-service
+thumbnailPath: /icons/echo-service.png
+documentationPath: /echo-service/readme.md
+tags:
+  - HTTP

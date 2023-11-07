@@ -1,0 +1,12 @@
+displayName: CapsuleCRM Opportunities Won to Gmail Email
+description: >-
+  Sends an email to a recipient through Gmail for new CapsuleCRM opportunities
+  won.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /capsulecrm-opportunities-won-to-gmail-email
+thumbnailPath: /icons/capsulecrm-opportunities-won-to-gmail-email.png
+documentationPath: /capsulecrm-opportunities-won-to-gmail-email/readme.md
+tags:
+  - Integration

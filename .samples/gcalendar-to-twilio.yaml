@@ -1,0 +1,13 @@
+displayName: Google Calendar Event to Twilio SMS
+description: >-
+  Sends a Twilio SMS to a phone number when a new event is created in a specific
+  Google Calendar
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gcalendar-to-twilio
+thumbnailPath: /icons/gcalendar-to-twilio.png
+documentationPath: /gcalendar-to-twilio/readme.md
+tags:
+  - Integration
+  - HTTP

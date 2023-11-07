@@ -1,0 +1,9 @@
+displayName: Hello World Service in PHP
+description: A Hello World service created using Go
+componentType: service
+buildPack: php
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-php-service
+thumbnailPath: /icons/hello-world-php-service.png
+documentationPath: /hello-world-php-service/readme.md
+tags: null

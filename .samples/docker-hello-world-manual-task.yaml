@@ -1,0 +1,11 @@
+displayName: Docker Hello World Manual Task
+description: A simple Go application packaged as a docker image that prints "Hello, World".
+componentType: manual-task
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /docker-hello-world-manual-task
+thumbnailPath: /icons/docker-hello-world-manual-task.png
+documentationPath: /docker-hello-world-manual-task/readme.md
+tags:
+  - BYOC
+  - Go

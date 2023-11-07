@@ -1,0 +1,13 @@
+displayName: GitHub New Commit to Google Sheets Row
+description: >-
+  Adds details to a spreadsheet row when a new commit is made in a specific
+  GitHub repository
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-new-commit-to-google-sheet-row
+thumbnailPath: /icons/github-new-commit-to-google-sheet-row.png
+documentationPath: /github-new-commit-to-google-sheet-row/readme.md
+tags:
+  - Integration
+  - HTTP

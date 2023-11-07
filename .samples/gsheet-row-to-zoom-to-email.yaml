@@ -1,0 +1,12 @@
+displayName: GSheet Row to Zoom Meeting
+description: >-
+  Schedule a zoom meeting with live stream details and send invitations to the
+  participants using the information entered in a Google Sheet
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gsheet-row-to-zoom-to-email
+thumbnailPath: /icons/gsheet-row-to-zoom-to-email.png
+documentationPath: /gsheet-row-to-zoom-to-email/readme.md
+tags:
+  - Integration

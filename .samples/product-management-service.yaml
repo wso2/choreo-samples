@@ -1,0 +1,9 @@
+displayName: Product Management Service in Java
+description: CRUD operations for products
+componentType: service
+buildPack: java
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /product-management-service
+thumbnailPath: /icons/product-management-service.png
+documentationPath: /product-management-service/readme.md
+tags: null

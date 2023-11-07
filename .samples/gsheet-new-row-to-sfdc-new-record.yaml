@@ -1,0 +1,13 @@
+displayName: Google Sheets New Row to Salesforce New Record
+description: >-
+  Adds a record in Salesforce when new record details are added to a spreadsheet
+  row
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gsheet-new-row-to-sfdc-new-record
+thumbnailPath: /icons/gsheet-new-row-to-sfdc-new-record.png
+documentationPath: /gsheet-new-row-to-sfdc-new-record/readme.md
+tags:
+  - Integration
+  - HTTP

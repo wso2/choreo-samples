@@ -1,0 +1,10 @@
+displayName: Hello World
+description: Responds with the Hello World message
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world
+thumbnailPath: /icons/hello-world.png
+documentationPath: /hello-world/readme.md
+tags:
+  - HTTP

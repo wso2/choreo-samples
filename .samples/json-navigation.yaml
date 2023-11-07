@@ -1,0 +1,10 @@
+displayName: JSON Navigation
+description: Navigates through the fields of a JSON object and extracts the data
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /json-navigation
+thumbnailPath: /icons/json-navigation.png
+documentationPath: /json-navigation/readme.md
+tags:
+  - HTTP

@@ -1,0 +1,12 @@
+displayName: Salesforce New Lead to Mailchimp Subscribers List
+description: >-
+  Create a new contact in Mailchimp subscribers list when a new lead is created
+  in a specific Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-new-lead-to-mailchimp-subscribers
+thumbnailPath: /icons/sfdc-new-lead-to-mailchimp-subscribers.png
+documentationPath: /sfdc-new-lead-to-mailchimp-subscribers/readme.md
+tags:
+  - Integration
