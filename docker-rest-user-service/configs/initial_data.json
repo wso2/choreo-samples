@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "fe2594d0-ccea-42a2-97ac-0487458b5642",
+      "name": "Sam",
+      "age": 12,
+      "location": "New York"
+    },
+    {
+      "id": "b1b4b3b0-0b1a-4b1a-8b1a-0b1a0b1a0b1a",
+      "name": "Clark",
+      "age": 10,
+      "location": "Sydney"
+    },
+    {
+      "id": "3c17c654-0609-4842-9525-d98cef921a1d",
+      "name": "Mike",
+      "age": 8,
+      "location": "London"
+    },
+    {
+      "id": "d6ebd120-2b21-4210-a482-c919c90eda73",
+      "name": "Dorthy",
+      "age": 9,
+      "location": "Paris"
+    }
+  ]
+}
