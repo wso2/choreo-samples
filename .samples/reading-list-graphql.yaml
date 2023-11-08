@@ -1,0 +1,10 @@
+displayName: Reading List GraphQL Service
+description: Reading List GraphQL Service implemented in Ballerina.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /reading-list-graphql
+thumbnailPath: /icons/reading-list-graphql.png
+documentationPath: /reading-list-graphql/readme.md
+tags:
+  - GraphQL
