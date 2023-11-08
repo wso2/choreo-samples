@@ -1,0 +1,28 @@
+openapi: 3.0.1
+info:
+  title: Content based router example
+  description: Content based router example using news service
+  version: 1.0.0
+servers:
+  - url: http://localhost:8290/newsapi
+paths:
+  /:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              default:
+                value:
+                  type: 'sports'
+      responses:
+        default:
+          description: Default response
+          content:
+            application/json:
+              examples:
+                default:
+                  value: "{}"
