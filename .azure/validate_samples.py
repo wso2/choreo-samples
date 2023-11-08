@@ -24,9 +24,6 @@ def validate_metadata_and_thumbnails():
     This function iterates through the directories in the `.samples` directory and collects metadata from metadata files.
     It checks if the componentPath exists and if the thumbnail exists. It also checks if there are any directories without
     corresponding metadata files.
-
-    Returns:
-        True if all metadata and thumbnails are valid, otherwise raises a ValueError or FileNotFoundError.
     """
 
     # Iterate through directories and collect metadata from metadata files
@@ -69,18 +66,14 @@ def validate_metadata_and_thumbnails():
         if dir_name not in samples_dirnames_set:
             raise ValueError(f"Warning: Directory '{dir_name}' does not have a corresponding metadata file. This will be excluded form index.json.")
 
-    return True
 
 
 def main():
     try:
-        is_valid = validate_metadata_and_thumbnails()
-        if is_valid:
-            print("Metadata validated successfully!")
-        else:
-            print("Metadata validation failed!")
+        validate_metadata_and_thumbnails()
     except (ValueError, FileNotFoundError) as e:
         print(f"Failed: {e}")
+        exit(1)
 
 if __name__ == '__main__':
     main()
