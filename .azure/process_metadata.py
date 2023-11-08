@@ -87,7 +87,7 @@ def generate_index_json(data):
         "count": len(data)
     }
 
-    with open(os.path.join(BUILD_STAGING_DIRECTORY, 'index-v6.json'), 'w') as f:
+    with open(os.path.join(BUILD_STAGING_DIRECTORY, 'index-v7.json'), 'w') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
     print("Generated index.json")
 
