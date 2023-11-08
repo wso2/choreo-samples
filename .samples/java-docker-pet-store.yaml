@@ -1,0 +1,10 @@
+displayName: Java Petstore Service
+description: Petstore service implemented in Java and packaged as a docker image.
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /java-docker-pet-store
+thumbnailPath: /icons/java-docker-pet-store.png
+documentationPath: /java-docker-pet-store/readme.md
+tags:
+  - HTTP
