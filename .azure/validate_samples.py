@@ -73,11 +73,14 @@ def validate_metadata_and_thumbnails():
 
 
 def main():
-    is_valid = validate_metadata_and_thumbnails()
-    if is_valid:
-        print("Metadata validated successfully!")
-    else:
-        print("Metadata validation failed!")
+    try:
+        is_valid = validate_metadata_and_thumbnails()
+        if is_valid:
+            print("Metadata validated successfully!")
+        else:
+            print("Metadata validation failed!")
+    except (ValueError, FileNotFoundError) as e:
+        print(f"Failed: {e}")
 
 if __name__ == '__main__':
     main()
