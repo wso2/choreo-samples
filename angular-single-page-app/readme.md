@@ -10,15 +10,14 @@ npx @angular/cli new angular-spa --defaults
 
 - Select Create Component with `Web Application` type.
 - Provide component name and description.
-- Select `Deploy an image from a Container Registry` as the source.
 - Select `Angular SPA` tile and create component.
 
 ### Use the following configuration when creating this component in Choreo:
 
-- Build Preset: WebApp
-- Build Context Path: `web-apps/angular-spa`
+- Build Pack: WebApp
+- Build Context Path: `angular-single-page-app`
 - Build Command: `npm run build`
-- Build output directory: `dist/angular-spa`
+- Build output directory: `dist/angular-single-page-app`
 - Node Version: `18`
 
 ### Use thr following commands to build and run the app using Docker:
