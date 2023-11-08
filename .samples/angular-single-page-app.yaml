@@ -1,0 +1,11 @@
+displayName: Angular Single Page Application
+description: Simple Angular Single Page Web Application
+componentType: web-application
+buildPack: angular
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /angular-single-page-app
+thumbnailPath: /icons/angular-single-page-app.png
+documentationPath: /angular-single-page-app/readme.md
+tags:
+  - Angular
+  - Single Page Application
