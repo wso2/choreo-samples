@@ -1,0 +1,56 @@
+openapi: 3.0.1
+info:
+  title: Data service integration
+  description: API Definition of Data service integration
+  version: 1.0.0
+servers:
+  - url: http://localhost:8290
+paths:
+  /services/RDBMSDataService/Employee/{EmployeeId}:
+    get:
+      parameters:
+        - in: path
+          name: EmployeeId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the Employee
+          examples:
+            default:
+              value: 14001
+      responses:
+        '200':
+          description: A user object.
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                success:
+                  value: "{\n\t\"Employees\": {\n\t\t\"Employee\": [{\n\t\t\t\"EmployeeNumber\": \"1\",\n\t\t\t\"FirstName\": \"John\",\n\t\t\t\"LastName\": \"Doe\",\n\t\t\t\"Email\": \"JohnDoe@gmail.com\",\n\t\t\t\"Salary\": \"10000\"\n\t\t}, {\n\t\t\t\"EmployeeNumber\": \"1\",\n\t\t\t\"FirstName\": \"John\",\n\t\t\t\"LastName\": \"Doe\",\n\t\t\t\"Email\": \"JohnDoe@gmail.com\",\n\t\t\t\"Salary\": \"20000\"\n\t\t}]\n\t}\n}"
+  /services/RDBMSDataService/Employee:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              default:
+                value:
+                  user_defined_value:
+                    EmployeeNumber: '1234'
+                    FirstName: John
+                    LastName: Doe
+                    Email: JohnDoe@gmail.com
+                    Salary: '20000'
+                       
+      responses:
+        default:
+          description: Default response
+          content:
+            application/json:
+              examples:
+                default:
+                  value: "{\n\t\t\t\"EmployeeNumber\": \"1\",\n\t\t\t\"FirstName\": \"John\",\n\t\t\t\"LastName\": \"Doe\",\n\t\t\t\"Email\": \"JohnDoe@gmail.com\",\n\t\t\t\"Salary\": \"20000\"\n\t\t}"

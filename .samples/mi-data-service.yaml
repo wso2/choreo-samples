@@ -1,0 +1,12 @@
+displayName: Data Service Integration in MI
+description: Data service developed usign WSO2 Integration Studio.
+componentType: service
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-data-service
+thumbnailPath: /icons/mi-data-service.png
+documentationPath: /mi-data-servicer/readme.md
+tags:
+  - Integration
+  - Database
+  - RDBMS
