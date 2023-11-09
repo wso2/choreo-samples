@@ -1,5 +1,5 @@
-displayName: Data Service Integration in MI
-description: Data service developed usign WSO2 Integration Studio.
+displayName: Data service integration
+description: Integrates with a RDBMS and exposes information stored in the database as a REST API.
 componentType: service
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/

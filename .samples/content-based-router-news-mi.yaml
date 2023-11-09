@@ -1,5 +1,5 @@
-displayName: Content Based Routing in WSO2 Micro Integrator
-description: Content Based Routing for a NEWS API in WSO2 Micro Integrator
+displayName: Content-Based Router in MI
+description: Route message to different endpoints based on the payload content
 componentType: service
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
