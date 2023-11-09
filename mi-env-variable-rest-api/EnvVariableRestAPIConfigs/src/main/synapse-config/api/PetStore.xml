@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/petstore" name="PetStore" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/pet/{petid}">
+        <inSequence>
+            <send>
+                <endpoint>
+                    <address uri="$SYSTEM:PET_STORE_ENDPOINT">
+                        <suspendOnFailure>
+                            <initialDuration>-1</initialDuration>
+                            <progressionFactor>1</progressionFactor>
+                        </suspendOnFailure>
+                        <markForSuspension>
+                            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                        </markForSuspension>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
