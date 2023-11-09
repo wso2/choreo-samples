@@ -5,7 +5,7 @@ Webhook to send GitHub events to an email address.
 ## Deploying in Choreo
 1. Create Webhook Component
     - Fork this repository
-    - Login to [Choreo](https://wso2.com/choreo/)
+    - Login to [Choreo](https://console.choreo.dev/)
     - Navigate to create a `Webhook` component
     - Provide a name and description for the component
     - Authorize and select the GitHub details
@@ -19,8 +19,7 @@ Webhook to send GitHub events to an email address.
     - Configure the following environment variables:
         - `gitWebhookSecret` - Add a secret value to be used for the GitHub webhook
         - `toEmail` - Email address to send the GitHub events to
-        Make sure the copy the `Invoke URL` of the component given in the `Configuration` panel.\
-https://3d5e62ae-dbb2-4a75-b820-556fce7cb0a7-dev.e1-us-east-azure.preview-dv.choreoapis.dev/uqmg/gittomailw/v1.0
+        Make sure the copy the `Invoke URL` of the component given in the `Configuration` panel.
     - Deploy the component
 
 ## Configuring the GitHub Webhook
