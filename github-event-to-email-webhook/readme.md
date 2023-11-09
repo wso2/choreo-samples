@@ -13,6 +13,22 @@ Webhook to send GitHub events to an email address.
     - Select the `Branch` as `main`
     - Select `Ballerina` as `Buildpack`
     - Select `github-event-to-email-webhook` as the `Ballerina Project Directory`
+    - Select `External` as `Access Mode`
     - Click on "Create" to create the component
 2. Build and deploy the component
-    
+    - Configure the following environment variables:
+        - `gitWebhookSecret` - Add a secret value to be used for the GitHub webhook
+        - `toEmail` - Email address to send the GitHub events to
+        Make sure the copy the `Invoke URL` of the component given in the `Configuration` panel.\
+https://3d5e62ae-dbb2-4a75-b820-556fce7cb0a7-dev.e1-us-east-azure.preview-dv.choreoapis.dev/uqmg/gittomailw/v1.0
+    - Deploy the component
+
+## Configuring the GitHub Webhook
+1. Go to the GitHub repository and navigate to `Settings > Webhooks > Add webhook`
+2. Add the `Invoke URL` of the component as the `Payload URL`
+3. Add the secret value configured in the component as the `Secret`
+
+## Testing the Component
+1. Create a new issue in the GitHub repository
+2. Add a label to the issue
+3. Check the email address to see the email sent by the component
