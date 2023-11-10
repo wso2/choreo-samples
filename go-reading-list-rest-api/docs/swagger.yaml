@@ -1,0 +1,164 @@
+basePath: /api/v1/reading-list
+definitions:
+  models.Book:
+    properties:
+      author:
+        example: J. R. R. Tolkien
+        type: string
+      id:
+        example: fe2594d0-ccea-42a2-97ac-0487458b5642
+        type: string
+      status:
+        allOf:
+        - $ref: '#/definitions/models.ReadStatus'
+        enum:
+        - to_read
+        - reading
+        - read
+        example: to_read
+      title:
+        example: The Lord of the Rings
+        type: string
+    type: object
+  models.ReadStatus:
+    enum:
+    - to_read
+    - reading
+    - read
+    type: string
+    x-enum-varnames:
+    - ReadStatusToRead
+    - ReadStatusReading
+    - ReadStatusRead
+  utils.ErrorResponse:
+    properties:
+      message:
+        example: error message
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a sample service that manages a list of reading items.
+  title: Choreo Reading List
+  version: "1.0"
+paths:
+  /books:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/models.Book'
+            type: array
+      summary: List all the reading list books
+      tags:
+      - books
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: New book details
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.Book'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.Book'
+        "400":
+          description: invalid book details
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+        "409":
+          description: book already exists
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Add a new book to the reading list
+      tags:
+      - books
+  /books/{id}:
+    delete:
+      parameters:
+      - description: Book ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.Book'
+        "404":
+          description: book not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Delete a reading list book by id
+      tags:
+      - books
+    get:
+      parameters:
+      - description: Book ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.Book'
+        "404":
+          description: book not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Get reading list book by id
+      tags:
+      - books
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Book ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Updated book details
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.Book'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.Book'
+        "400":
+          description: invalid book details
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+        "404":
+          description: book not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Update a reading list book by id
+      tags:
+      - books
+swagger: "2.0"

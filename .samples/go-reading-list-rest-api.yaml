@@ -1,0 +1,11 @@
+displayName: Reading List REST Service in Go
+description: A simple REST API service written in Go
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /go-reading-list-rest-api
+thumbnailPath: /icons/go-reading-list-rest-api.png
+documentationPath: /go-reading-list-rest-api/readme.md
+tags:
+  - HTTP
+  - REST
