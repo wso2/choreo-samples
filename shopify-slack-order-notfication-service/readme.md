@@ -21,8 +21,8 @@ A slack channel named **orders** should be created.
 
 1. **Fork the Repository:** [choreo-examples repository](https://github.com/wso2/choreo-examples.git).
 
-2. **Create Event-triggered integration Component in Choreo:** 
-- Log into Choreo, navigate to **Create a New Component** page in your Choreo Project and select **Event-Triggered Integration**.
+2. **Create Event Handler Component in Choreo:** 
+- Log into Choreo, navigate to **Create a New Component** page in your Choreo Project and select **Event Handler**.
 - Fill out general details, name and description.
 - Authorize the **Github** as the vesrion control vendor.
 - Point your forked repository and provide `integrations/ballerina/shopify-slack-order-notfication-service` as the project path.
