@@ -1,0 +1,65 @@
+openapi: 3.0.1
+info:
+  title: Service Openapi Yaml
+  version: 1.0.0
+servers:
+- url: "{server}:{port}/"
+  variables:
+    server:
+      default: http://localhost
+    port:
+      default: "9090"
+paths:
+  /messages:
+    post:
+      summary: Send an email
+      operationId: postMessages
+      requestBody:
+        description: email content
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailContent'
+      responses:
+        "200":
+          description: Ok
+        "500":
+          description: Internal server error
+          content:
+            text/plain:
+              schema:
+                type: string
+components:
+  schemas:
+    EmailType:
+      oneOf:
+      - {}
+      - {}
+    EmailContent:
+      required:
+      - emailSubject
+      - emailType
+      - properties
+      - receipient
+      type: object
+      properties:
+        emailType:
+          $ref: '#/components/schemas/EmailType'
+        properties:
+          type: array
+          items:
+            $ref: '#/components/schemas/Property'
+        receipient:
+          type: string
+        emailSubject:
+          type: string
+    Property:
+      required:
+      - name
+      - value
+      type: object
+      properties:
+        name:
+          type: string
+        value:
+          type: string
