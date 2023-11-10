@@ -10,7 +10,7 @@ This is a sample React application that can be used to demonstrate WebApp deploy
 ### Use the following configuration when creating this component in Choreo:
 
 - Build Pack: **React**
-- Build Context Path: `web-apps/react-spa`
+- Project Directory: `react-single-page-app`
 - Build Command: `npm run build`
 - Build output directory: `build`
 - Node Version: `18`
