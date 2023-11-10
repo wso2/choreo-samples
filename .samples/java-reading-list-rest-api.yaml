@@ -1,4 +1,4 @@
-displayName: Reading List REST Service
+displayName: Reading List REST Service in Java
 description: A simple REST API service written in Java Spring Boot
 componentType: service
 buildPack: docker
