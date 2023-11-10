@@ -1,5 +1,5 @@
 displayName: GitHub Issues and PRs to Google Sheet Task
-description: Ballerina Manual Task to fetch GitHub Issues and PRs and add them to a Google Sheet
+description: Manual Task to fetch GitHub Issues and PRs and add them to a Google Sheet
 componentType: manual-task
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
