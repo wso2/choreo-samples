@@ -1,0 +1,6 @@
+[package]
+org = "<your-organization-name>"
+name = "greeting_lib"
+version = "0.1.0"
+distribution = "2201.4.1"
+visibility = "private"
