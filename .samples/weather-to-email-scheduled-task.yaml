@@ -1,0 +1,11 @@
+displayName: Weather Report to Email
+description: Sends weather report to email in a scheduled manner
+componentType: scheduled-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /weather-to-email-scheduled-task
+thumbnailPath: /icons/weather-to-email-scheduled-task.png
+documentationPath: /weather-to-email-scheduled-task/readme.md
+tags:
+  - Integration
+
