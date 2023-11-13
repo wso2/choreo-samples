@@ -19,8 +19,8 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 #### Use the following build config when creating this component in Choreo:
 
 - Build Preset: **Dockerfile**
-- Dockerfile Path: `java/rest-api/Dockerfile`
-- Docker Context Path: `java/rest-api`
+- Dockerfile Path: `java-reading-list-rest-api/Dockerfile`
+- Docker Context Path: `java-reading-list-rest-api`
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
@@ -32,7 +32,7 @@ The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configur
 Navigate to the Java application directory
 
 ```bash
-cd choreo-sample-apps/java/rest-api
+cd choreo-samples/java-reading-list-rest-api
 ```
 
 Build the project

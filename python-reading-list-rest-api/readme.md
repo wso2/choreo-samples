@@ -19,8 +19,8 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 ### Use the following configuration when creating this component in Choreo:
 
 - Build Preset: **Dockerfile**
-- Dockerfile Path: `python/rest-api/Dockerfile`
-- Docker Context Path: `python/rest-api`
+- Dockerfile Path: `python-reading-list-rest-api/Dockerfile`
+- Docker Context Path: `python-reading-list-rest-api`
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
@@ -29,7 +29,7 @@ The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configur
 Navigate to the Python application directory
 
 ```bash
-cd choreo-sample-apps/python/rest-api
+cd choreo-samples/python-reading-list-rest-api
 ```
 
 Run the service

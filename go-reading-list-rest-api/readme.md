@@ -3,8 +3,8 @@
 ### Use the following configuration when creating this component in Choreo:
 
 - Build Preset: **Dockerfile**
-- Dockerfile Path: `go/rest-api/Dockerfile`
-- Docker Context Path: `go/rest-api`
+- Dockerfile Path: `go-reading-list-rest-api/Dockerfile`
+- Docker Context Path: `go-reading-list-rest-api`
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
