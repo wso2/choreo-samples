@@ -1,0 +1,8 @@
+[package]
+org = "wso2"
+name = "github.to.google.sheet.integration"
+version = "0.1.0"
+distribution = "2201.4.1"
+
+[build-options]
+observabilityIncluded = true

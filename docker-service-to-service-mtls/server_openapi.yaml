@@ -1,0 +1,20 @@
+openapi: "3.0.0"
+info:
+  title: Greeting Service
+  version: 1.0.0
+paths:
+  /greeter/greet:
+    get:
+      summary: Greet a client
+      description: Greet a mTLS client by certificate CN name
+      tags:
+        - greeting
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []

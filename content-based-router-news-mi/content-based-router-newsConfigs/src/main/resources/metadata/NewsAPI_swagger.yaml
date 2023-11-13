@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: NewsAPI
+  description: API Definition of NewsAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/newsapi
+paths:
+  /:
+    post:
+      responses:
+        default:
+          description: Default response

@@ -1,0 +1,11 @@
+displayName: Reading List REST Service in Python
+description: A simple REST API service written in Python
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /python-reading-list-rest-api
+thumbnailPath: /icons/python-reading-list-rest-api.png
+documentationPath: /python-reading-list-rest-api/readme.md
+tags:
+  - HTTP
+  - REST

@@ -1,0 +1,11 @@
+displayName: Ballerina Private Package Application
+description: A sample Ballerina component that uses private packages
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /ballerina-private-package-usage
+thumbnailPath: /icons/ballerina-private-package-usage.png
+documentationPath: /ballerina-private-package-usage/readme.md
+tags:
+  - HTTP
+  - REST

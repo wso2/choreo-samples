@@ -1,0 +1,12 @@
+displayName: Docker User Service in Go
+description: User management REST Service implemented in Go and packaged as a docker image.
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /docker-rest-user-service
+thumbnailPath: /icons/docker-rest-user-service.png
+documentationPath: /docker-rest-user-service/readme.md
+tags:
+  - REST
+  - Go
+  - HTTP

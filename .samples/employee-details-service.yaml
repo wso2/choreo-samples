@@ -1,0 +1,11 @@
+displayName: Employee Details Service
+description: Sample Ballerina service exposing employee details via REST API
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /employee-details-service
+thumbnailPath: /icons/employee-details-service.png
+documentationPath: /employee-details-service/readme.md
+tags:
+  - HTTP
+  - REST

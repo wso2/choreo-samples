@@ -1,0 +1,11 @@
+displayName: Reading List REST Service in NodeJS
+description: A simple REST API service written in NodeJS Express
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /nodejs-reading-list-rest-api
+thumbnailPath: /icons/nodejs-reading-list-rest-api.png
+documentationPath: /nodejs-reading-list-rest-api/readme.md
+tags:
+  - HTTP
+  - REST

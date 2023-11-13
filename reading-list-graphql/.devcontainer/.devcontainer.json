@@ -1,0 +1,20 @@
+{
+    "name": "Ballerina Reading List",
+    "image": "ballerina/ballerina-devcontainer:2201.3.1",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "WSO2.ballerina",
+                "github.copilot",
+                "github.copilot-labs"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.autoSave": "afterDelay",
+                "files.trimFinalNewlines": true,
+                "files.trimTrailingWhitespace": true
+            }
+        }
+    }
+}

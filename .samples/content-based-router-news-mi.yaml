@@ -1,0 +1,11 @@
+displayName: Content-Based Router in MI
+description: Route message to different endpoints based on the payload content
+componentType: service
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /content-based-router-news-mi
+thumbnailPath: /icons/content-based-router-news-mi.png
+documentationPath: /content-based-router-news-mi/readme.md
+tags:
+  - HTTP
+  - Integration

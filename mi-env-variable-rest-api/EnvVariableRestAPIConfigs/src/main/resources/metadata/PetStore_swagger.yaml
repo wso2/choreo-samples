@@ -1,0 +1,19 @@
+openapi: 3.0.1
+info:
+  title: PetStore
+  description: API Definition of PetStore
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/petstore
+paths:
+  /pets/{petid}:
+    get:
+      parameters:
+      - name: petid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

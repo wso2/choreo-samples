@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/ubuntu
+{
+  "name": "Ballerina Private Package Usage",
+  "image": "ballerina/ballerina-devcontainer:2201.4.1",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        "files.autoSave": "afterDelay",
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "[ballerina]": {
+          "editor.defaultFormatter": "wso2.ballerina"
+        },
+        "prettier.printWidth": 120,
+        "prettier.tabWidth": 2
+      },
+      "extensions": [
+        "eamodio.gitlens",
+        "WSO2.ballerina",
+        "bungcip.better-toml",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+
+  "forwardPorts": [9090]
+}

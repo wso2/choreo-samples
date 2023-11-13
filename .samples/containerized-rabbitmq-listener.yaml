@@ -1,0 +1,10 @@
+displayName: RabbitMQ Listener
+description: RabbitMQ Listener to listen to messages from a RabbitMQ queue and logs them
+componentType: event-handler
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /containerized-rabbitmq-listener
+thumbnailPath: /icons/containerized-rabbitmq-listener.png
+documentationPath: /containerized-rabbitmq-listener/readme.md
+tags:
+  - Integration
