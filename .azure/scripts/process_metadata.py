@@ -4,6 +4,7 @@ import json
 import shutil
 import metadata_validator
 
+INDEX_VERSION = 'v9' 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
@@ -73,7 +74,7 @@ def generate_index_json(data):
         "count": len(data)
     }
 
-    with open(os.path.join(BUILD_STAGING_DIRECTORY, 'index-v8.json'), 'w') as f:
+    with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{INDEX_VERSION}.json"), 'w') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
     print("Generated index.json")
 
