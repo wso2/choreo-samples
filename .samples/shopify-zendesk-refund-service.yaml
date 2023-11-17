@@ -4,7 +4,7 @@ componentType: webhook
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /shopify-zendesk-refund-service
-thumbnailPath: /icons/shopify-zendesk-refund-service.png
+thumbnailPath: /icons/shopify-zendesk-refund-service.svg
 documentationPath: /shopify-zendesk-refund-service/readme.md
 tags:
   - Integration

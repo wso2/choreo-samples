@@ -4,7 +4,7 @@ componentType: manual-task
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /weather-to-email-integration
-thumbnailPath: /icons/weather-to-email-integration.png
+thumbnailPath: /icons/weather-to-email-integration.svg
 documentationPath: /weather-to-email-integration/readme.md
 tags:
   - Integration

@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /pet-care-b2c-app
-thumbnailPath: /icons/pet-care-b2c-app.png
+thumbnailPath: /icons/pet-care-b2c-app.svg
 documentationPath: /pet-care-b2c-app/readme.md
 tags:
   - Integration

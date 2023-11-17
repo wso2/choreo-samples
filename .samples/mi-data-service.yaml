@@ -4,7 +4,7 @@ componentType: service
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /mi-data-service
-thumbnailPath: /icons/mi-data-service.png
+thumbnailPath: /icons/mi-data-service.svg
 documentationPath: /mi-data-servicer/readme.md
 tags:
   - Integration
