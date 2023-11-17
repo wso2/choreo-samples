@@ -4,7 +4,7 @@ import json
 import shutil
 import metadata_validator
 
-INDEX_VERSION = 'v0' 
+INDEX_VERSION = 'v1' 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
