@@ -1,0 +1,7 @@
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+}
