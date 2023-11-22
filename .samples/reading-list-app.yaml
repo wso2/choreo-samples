@@ -1,5 +1,5 @@
-displayName: Cloud Native App
-description: Service to with reading list front end back end
+displayName: Reading List App
+description: A multi-user reading list manager.
 componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
