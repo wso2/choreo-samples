@@ -1,0 +1,9 @@
+displayName: Hello World in Go
+description: Print Hello World message
+componentType: manual-task
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-go-task
+thumbnailPath: /icons/hello-world-go-task.png
+documentationPath: /hello-world-go-task/readme.md
+tags: null

@@ -1,0 +1,10 @@
+displayName: Circuit Breaker
+description: Handles outages and service slowness gracefully to avoid cascading failures
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /circuit-breaker
+thumbnailPath: /icons/circuit-breaker.png
+documentationPath: /circuit-breaker/readme.md
+tags:
+  - HTTP

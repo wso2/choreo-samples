@@ -1,0 +1,11 @@
+displayName: Google Calendar New Event to Asana Task
+description: Creates a new task in Asana when a new event is created in a Google Calendar
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gcalendar-new-event-to-asana-new-task
+thumbnailPath: /icons/gcalendar-new-event-to-asana-new-task.png
+documentationPath: /gcalendar-new-event-to-asana-new-task/readme.md
+tags:
+  - Integration
+  - HTTP

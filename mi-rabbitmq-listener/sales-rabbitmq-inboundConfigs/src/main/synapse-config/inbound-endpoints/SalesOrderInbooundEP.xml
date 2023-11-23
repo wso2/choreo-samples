@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inboundEndpoint name="SalesOrderInbooundEP" onError="Sequence" protocol="rabbitmq" sequence="SalesOrderSequence" suspend="false" xmlns="http://ws.apache.org/ns/synapse">
+
     <parameters>
         <parameter name="sequential">true</parameter>
         <parameter name="coordination">true</parameter>
@@ -7,7 +8,7 @@
         <parameter name="rabbitmq.server.host.name">$SYSTEM:HOSTNAME</parameter>
         <parameter name="rabbitmq.server.port">5672</parameter>
         <parameter name="rabbitmq.server.user.name">$SYSTEM:USERNAME</parameter>
-        <parameter name="rabbitmq.server.password">$SYSTEM:PASSWORD</parameter>
+        <parameter name="rabbitmq.server.password">{wso2:vault-lookup('PASSWORD')}</parameter>
         <parameter name="rabbitmq.queue.name">SalesOrderQueue</parameter>
         <parameter name="rabbitmq.exchange.name">amq.direct</parameter>
         <parameter name="rabbitmq.server.virtual.host">$SYSTEM:VHOST</parameter>

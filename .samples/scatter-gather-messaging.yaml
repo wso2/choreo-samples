@@ -1,0 +1,12 @@
+displayName: Scatter Gather Messaging
+description: >-
+  Send a message to multiple recipients and re-aggregates the responses back
+  into a single message
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /scatter-gather-messaging
+thumbnailPath: /icons/scatter-gather-messaging.png
+documentationPath: /scatter-gather-messaging/readme.md
+tags:
+  - Integration

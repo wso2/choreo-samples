@@ -1,0 +1,13 @@
+displayName: Slack Channel New Message to Twilio SMS
+description: >-
+  Sends a Twilio SMS to a phone number when a new message is posted to a
+  specific Slack channel
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /slack-new-message-to-twilio-sms
+thumbnailPath: /icons/slack-new-message-to-twilio-sms.png
+documentationPath: /slack-new-message-to-twilio-sms/readme.md
+tags:
+  - Integration
+  - HTTP

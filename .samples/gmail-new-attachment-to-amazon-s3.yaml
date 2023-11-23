@@ -1,0 +1,13 @@
+displayName: Gmail New Attachment to Amazon S3
+description: >-
+  Upload attachments to Amazon S3 when a new Gmail email is received with
+  attachments
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gmail-new-attachment-to-amazon-s3
+thumbnailPath: /icons/gmail-new-attachment-to-amazon-s3.png
+documentationPath: /gmail-new-attachment-to-amazon-s3/readme.md
+tags:
+  - Integration
+  - HTTP

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/newsapi" name="NewsAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <switch source="//type">
+                <case regex="sports">
+                    <send>
+                        <endpoint>
+                            <http method="get" uri-template="https://feeds.bbci.co.uk/sport/rss.xml">
+                                <suspendOnFailure>
+                                    <initialDuration>-1</initialDuration>
+                                    <progressionFactor>1</progressionFactor>
+                                </suspendOnFailure>
+                                <markForSuspension>
+                                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                                </markForSuspension>
+                            </http>
+                        </endpoint>
+                    </send>
+                </case>
+                <case regex="news">
+                    <send>
+                        <endpoint>
+                            <http method="get" uri-template="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml">
+                                <suspendOnFailure>
+                                    <initialDuration>-1</initialDuration>
+                                    <progressionFactor>1</progressionFactor>
+                                </suspendOnFailure>
+                                <markForSuspension>
+                                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                                </markForSuspension>
+                            </http>
+                        </endpoint>
+                    </send>
+                </case>
+                <default>
+                    <payloadFactory media-type="json">
+                        <format>
+							{"message":"Unsuccessful request"}
+						</format>
+                        <args/>
+                    </payloadFactory>
+                    <respond/>
+                </default>
+            </switch>
+        </inSequence>
+        <outSequence>
+            <property name="messageType" value="application/json" scope="axis2"></property>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

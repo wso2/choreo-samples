@@ -1,0 +1,12 @@
+displayName: Shopify to Slack Order Notification Service
+description: Shopify to Slack order notification developed in Ballerina.
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /shopify-slack-order-notfication-service
+thumbnailPath: /icons/shopify-slack-order-notfication-service.png
+documentationPath: /shopify-slack-order-notfication-service/readme.md
+tags:
+  - Shopify
+  - Slack
+  - Integration

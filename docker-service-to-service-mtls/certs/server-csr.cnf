@@ -1,0 +1,16 @@
+[req]
+default_bits = 2048
+default_md = sha256
+prompt = no
+distinguished_name = dn
+req_extensions = req_ext
+
+[dn]
+CN = mTLS Server
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+# Update the hostname here
+DNS.1 = localhost

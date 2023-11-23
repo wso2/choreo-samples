@@ -1,0 +1,10 @@
+displayName: CapsuleCRM Opportunities Lost to Slack Channel Message
+description: Sends a message to a slack channel for new CapsuleCRM opportunities lost.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /capsulecrm-opportunities-lost-to-slack-channel-message
+thumbnailPath: /icons/capsulecrm-opportunities-lost-to-slack-channel-message.png
+documentationPath: /capsulecrm-opportunities-lost-to-slack-channel-message/readme.md
+tags:
+  - Integration

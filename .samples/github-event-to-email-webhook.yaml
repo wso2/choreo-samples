@@ -1,0 +1,10 @@
+displayName: GitHub Events to Email
+description: Webhook to send email on GitHub events
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-event-to-email-webhook
+thumbnailPath: /icons/github-event-to-email-webhook.png
+documentationPath: /github-event-to-email-webhook/readme.md
+tags:
+  - Integration

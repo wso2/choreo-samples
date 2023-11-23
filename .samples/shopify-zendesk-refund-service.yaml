@@ -1,0 +1,10 @@
+displayName: Shopify to Zendesk Refund Service
+description: Shopify to Zendesk Refund Serivce to open Zendesk issues.
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /shopify-zendesk-refund-service
+thumbnailPath: /icons/shopify-zendesk-refund-service.svg
+documentationPath: /shopify-zendesk-refund-service/readme.md
+tags:
+  - Integration

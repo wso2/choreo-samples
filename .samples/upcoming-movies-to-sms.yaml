@@ -1,0 +1,10 @@
+displayName: Today's Movies to SMS Notification
+description: Send an SMS with the movies that are released on the day.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /upcoming-movies-to-sms
+thumbnailPath: /icons/upcoming-movies-to-sms.png
+documentationPath: /upcoming-movies-to-sms/readme.md
+tags:
+  - Integration

@@ -1,0 +1,13 @@
+displayName: JMS Integration in MI
+description: JMS Integration to publish message to JMS queue on REST API call and consume message from JMS queue
+componentType: service
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-jms-integration
+thumbnailPath: /icons/mi-jms-integration.png
+documentationPath: /mi-jms-integration/readme.md
+tags:
+  - Integration
+  - JMS
+  - Messaging
+  - HTTP

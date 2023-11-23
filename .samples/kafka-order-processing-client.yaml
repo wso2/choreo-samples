@@ -1,0 +1,10 @@
+displayName: Kafka Order Processing Client
+description: Kafka Order Processing Client consumes orders from "orders" topic and sends them to "processed-orders" topic
+componentType: event-handler
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /kafka-order-processing-client
+thumbnailPath: /icons/kafka-order-processing-client.png
+documentationPath: /kafka-order-processing-client/readme.md
+tags:
+  - Integration

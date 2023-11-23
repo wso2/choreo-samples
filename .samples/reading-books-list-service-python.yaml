@@ -1,0 +1,9 @@
+displayName: Book Management Service in Python
+description: CRUD operations for books
+componentType: service
+buildPack: python
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /reading-books-list-service-python
+thumbnailPath: /icons/reading-books-list-service-python.png
+documentationPath: /reading-books-list-service-python/readme.md
+tags: null

@@ -1,0 +1,12 @@
+displayName: Customer Reward Management
+description: >-
+  Initiates a customer reward management workflow when a customer chooses a
+  reward deal
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /customer-reward-management
+thumbnailPath: /icons/customer-reward-management.png
+documentationPath: /customer-reward-management/readme.md
+tags:
+  - Integration

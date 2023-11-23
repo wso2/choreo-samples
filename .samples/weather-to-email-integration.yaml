@@ -1,0 +1,11 @@
+displayName: Weather Report to Email
+description: Sends weather report to email as a manual task
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /weather-to-email-integration
+thumbnailPath: /icons/weather-to-email-integration.svg
+documentationPath: /weather-to-email-integration/readme.md
+tags:
+  - Integration
+

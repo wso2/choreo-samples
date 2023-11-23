@@ -1,0 +1,146 @@
+basePath: /api/v1
+definitions:
+  models.User:
+    properties:
+      age:
+        type: integer
+      id:
+        example: fe2594d0-ccea-42a2-97ac-0487458b5642
+        type: string
+      location:
+        type: string
+      name:
+        type: string
+    type: object
+  utils.ErrorResponse:
+    properties:
+      message:
+        example: error message
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a sample service that manages a list of users
+  title: Choreo User Store
+  version: "1.0"
+paths:
+  /users:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/models.User'
+            type: array
+      summary: List all the user store users
+      tags:
+      - users
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: New user details
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: invalid user details
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+        "409":
+          description: user already exists
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Add a new user to the user store
+      tags:
+      - users
+  /users/{id}:
+    delete:
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.User'
+        "404":
+          description: user not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Delete a user store user by id
+      tags:
+      - users
+    get:
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.User'
+        "404":
+          description: user not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Get user store user by id
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Updated user details
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: invalid user details
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+        "404":
+          description: user not found
+          schema:
+            $ref: '#/definitions/utils.ErrorResponse'
+      summary: Update a user store user by id
+      tags:
+      - users
+swagger: "2.0"

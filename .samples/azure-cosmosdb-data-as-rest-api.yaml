@@ -1,0 +1,10 @@
+displayName: Expose Azure CosmosDB data as Rest API
+description: Expose Azure CosmosDB data as Rest API
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /azure-cosmosdb-data-as-rest-api
+thumbnailPath: /icons/azure-cosmosdb-data-as-rest-api.png
+documentationPath: /azure-cosmosdb-data-as-rest-api/readme.md
+tags:
+  - HTTP

@@ -1,0 +1,9 @@
+[package]
+org = "WSO2"
+name = "email_service"
+version = "1.0.0"
+export = ["email_service"]
+distribution = "2201.5.0"
+
+[build-options]
+observabilityIncluded = true

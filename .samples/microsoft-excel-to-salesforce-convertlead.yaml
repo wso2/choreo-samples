@@ -1,0 +1,12 @@
+displayName: Microsoft Excel Row to Salesforce Lead Conversion
+description: >-
+  Convert Salesforce Lead from the details provided in Microsoft Excel Worksheet
+  Row
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /microsoft-excel-to-salesforce-convertlead
+thumbnailPath: /icons/microsoft-excel-to-salesforce-convertlead.png
+documentationPath: /microsoft-excel-to-salesforce-convertlead/readme.md
+tags:
+  - Integration

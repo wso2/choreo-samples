@@ -1,0 +1,10 @@
+displayName: Hello World Web in PHP
+description: A Hello World web app created using PHP
+componentType: web-application
+buildPack: php
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-php-webapp
+thumbnailPath: /icons/hello-world-php-webapp.png
+documentationPath: /hello-world-php-webapp/README.md
+tags:
+  - Web Application

@@ -1,0 +1,14 @@
+displayName: Pet Management Application
+description: The B2C Pet Management application comprises a pet management service developed in Ballerina, deployed in Choreo to function as an API. A React JS web application is hosted within Choreo, while Asgardeo is responsible for user authentication, enhancing the user experience
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /pet-care-b2c-app
+thumbnailPath: /icons/pet-care-b2c-app.svg
+documentationPath: /pet-care-b2c-app/readme.md
+tags:
+  - Integration
+  - APIM
+  - CIAM
+  - Multi-Component
+  - B2C

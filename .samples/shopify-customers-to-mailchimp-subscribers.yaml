@@ -1,0 +1,12 @@
+displayName: Add Shopify New Customers to Mailchimp Subscribers
+description: >-
+  Adds new contacts(members) to a Mailchimp audience(subscriber list) for new
+  Shopify customers.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /shopify-customers-to-mailchimp-subscribers
+thumbnailPath: /icons/shopify-customers-to-mailchimp-subscribers.png
+documentationPath: /shopify-customers-to-mailchimp-subscribers/readme.md
+tags:
+  - Integration

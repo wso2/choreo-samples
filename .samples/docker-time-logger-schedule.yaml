@@ -1,0 +1,12 @@
+displayName: Scheduled Time Logger
+description: A simple Go application that logs time and runs on a schedule.
+componentType: scheduled-task
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /docker-time-logger-schedule
+thumbnailPath: /icons/docker-time-logger-schedule.png
+documentationPath: /docker-time-logger-schedule/readme.md
+tags:
+  - Scheduled Task
+  - BYOC
+  - Go

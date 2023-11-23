@@ -1,0 +1,10 @@
+displayName: Expose RDBMS data as Rest API
+description: Use MySQL database as RDBMS and expose the data as Rest API
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /rdbms-data-as-rest-api
+thumbnailPath: /icons/rdbms-data-as-rest-api.png
+documentationPath: /rdbms-data-as-rest-api/readme.md
+tags:
+  - HTTP

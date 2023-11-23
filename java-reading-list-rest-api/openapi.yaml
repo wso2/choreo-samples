@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: product-catalog-api
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /products:
+    post:
+      tags:
+        - default
+      summary: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 1
+                name: prodcut one
+                quantity: 20
+                price: 2000
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 1
+                name: prodcut one
+                quantity: 50
+                price: 2000
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /products/1:
+    delete:
+      tags:
+        - default
+      summary: delete
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

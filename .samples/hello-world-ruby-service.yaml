@@ -1,0 +1,9 @@
+displayName: Hello World in Ruby
+description: Return Hello World message
+componentType: service
+buildPack: ruby
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-ruby-service
+thumbnailPath: /icons/hello-world-ruby-service.png
+documentationPath: /hello-world-ruby-service/readme.md
+tags: null

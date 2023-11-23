@@ -1,0 +1,11 @@
+displayName: Go gRPC Greeter
+description: gRPC service and client developed using Go
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /go-grpc
+thumbnailPath: /icons/go-grpc.png
+documentationPath: /go-grpc/readme.md
+tags:
+  - Go
+  - GRPC

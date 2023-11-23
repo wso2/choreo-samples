@@ -1,0 +1,13 @@
+displayName: Google Drive New File to Twilio SMS
+description: >-
+  Sends a Twilio SMS to a phone number when a new file is created in a specific
+  Google Drive
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /gdrive-new-file-to-twilio-sms
+thumbnailPath: /icons/gdrive-new-file-to-twilio-sms.png
+documentationPath: /gdrive-new-file-to-twilio-sms/readme.md
+tags:
+  - Integration
+  - HTTP

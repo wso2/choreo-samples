@@ -1,0 +1,9 @@
+displayName: Book Management Service in NodeJS
+description: CRUD operations for books
+componentType: service
+buildPack: nodejs
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /reading-books-list-service-nodejs
+thumbnailPath: /icons/reading-books-list-service-nodejs.png
+documentationPath: /reading-books-list-service-nodejs/readme.md
+tags: null

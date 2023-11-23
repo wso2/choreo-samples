@@ -1,0 +1,14 @@
+displayName: Pet Care Veterinary Practise Management Application
+description: The B2B application comprises three Ballerina services; email, channel, and pet management, where email and channel services connect to send emails. These services are deployed in Choreo, functioning as APIs. The Choreo platform also hosts a React JS web app. Asgardeo is responsible for user authentication and improving the user experience through CIAM, while also supporting B2B application features.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /pet-care-b2b-app
+thumbnailPath: /icons/pet-care-b2b-app.svg
+documentationPath: /pet-care-b2b-app/readme.md
+tags:
+  - Integration
+  - APIM
+  - CIAM
+  - Multi-Component
+  - B2B

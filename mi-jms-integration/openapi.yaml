@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: OrderPaymentServiceAPI
+  description: API Definition of OrderPaymentServiceAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290
+paths:
+  /orderpayment:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              default:
+                value:
+                  Payment:
+                    Id: '1'
+                    Amount: '100'
+                  
+      responses:
+        default:
+          description: Default response

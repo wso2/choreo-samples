@@ -1,0 +1,10 @@
+displayName: Reading List App
+description: A multi-user reading list manager.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /reading-list-app
+thumbnailPath: /icons/reading-list-app.png
+documentationPath: /reading-list-app/readme.md
+tags:
+  - HTTP

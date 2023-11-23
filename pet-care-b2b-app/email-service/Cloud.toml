@@ -1,0 +1,7 @@
+[[container.copy.files]]
+sourceFile="./resources/email-templates/booking_confirmation.html"
+target="/home/ballerina/resources/email-templates/booking_confirmation.html"
+
+[[container.copy.files]]
+sourceFile="./resources/email-templates/vaccination_alert.html"
+target="/home/ballerina/resources/email-templates/vaccination_alert.html"

@@ -1,0 +1,13 @@
+displayName: GitHub Issue Assigned to Twilio SMS
+description: >-
+  Sends a Twilio SMS to a phone number when a GitHub issue is assigned to a
+  particular user
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /github-issue-assigned-to-twilio-sms
+thumbnailPath: /icons/github-issue-assigned-to-twilio-sms.png
+documentationPath: /github-issue-assigned-to-twilio-sms/readme.md
+tags:
+  - Integration
+  - HTTP

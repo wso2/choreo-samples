@@ -1,0 +1,7 @@
+
+# Ignore files generated certificates and keys
+*.crt
+*.key
+*.csr
+
+.DS_Store

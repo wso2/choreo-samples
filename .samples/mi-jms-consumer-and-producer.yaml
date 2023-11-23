@@ -1,0 +1,12 @@
+displayName: JMS Producer and Consumer Integration in MI
+description: JMS Producer and Consumer developed usign WSO2 Integration Studio
+componentType: event-handler
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-jms-consumer-and-producer
+thumbnailPath: /icons/mi-jms-consumer-and-producer.png
+documentationPath: /mi-jms-consumer-and-producer/readme.md
+tags:
+  - Integration
+  - JMS
+  - Messaging

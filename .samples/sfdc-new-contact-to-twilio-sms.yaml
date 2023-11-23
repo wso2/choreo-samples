@@ -1,0 +1,12 @@
+displayName: Salesforce New Contact to Twilio SMS
+description: >-
+  Send a Twilio SMS to a phone number when a new contact is created in a
+  specific Salesforce account
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-new-contact-to-twilio-sms
+thumbnailPath: /icons/sfdc-new-contact-to-twilio-sms.png
+documentationPath: /sfdc-new-contact-to-twilio-sms/readme.md
+tags:
+  - Integration

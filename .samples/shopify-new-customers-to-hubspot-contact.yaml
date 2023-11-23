@@ -1,0 +1,12 @@
+displayName: Shopify New Customers to HubSpot Create/Update Contact
+description: >-
+  Adds new or updates existing contacts in HubSpot account on new Shopify
+  customers
+componentType: scheduled-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /shopify-new-customers-to-hubspot-contact
+thumbnailPath: /icons/shopify-new-customers-to-hubspot-contact.png
+documentationPath: /shopify-new-customers-to-hubspot-contact/readme.md
+tags:
+  - Integration

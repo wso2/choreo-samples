@@ -1,0 +1,12 @@
+displayName: Data service integration
+description: Integrates with a RDBMS and exposes information stored in the database as a REST API.
+componentType: service
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /mi-data-service
+thumbnailPath: /icons/mi-data-service.svg
+documentationPath: /mi-data-servicer/readme.md
+tags:
+  - Integration
+  - Database
+  - RDBMS

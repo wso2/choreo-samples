@@ -1,0 +1,10 @@
+displayName: Pipedrive New Activities to Trello Tasks
+description: Creates new tasks in Trello for new Pipedrive activities.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /pipedrive-new-activities-to-trello-tasks
+thumbnailPath: /icons/pipedrive-new-activities-to-trello-tasks.png
+documentationPath: /pipedrive-new-activities-to-trello-tasks/readme.md
+tags:
+  - Integration

@@ -2509,13 +2509,16 @@ function Q2Portal(props: Q2PortalProps): JSX.Element {
                 <Top1 data={data}>
                   <Text1 data={data}>
                     <Card>
-                      <CardNumber>{`CREDIT CARD (...${data.cardDetails?.cardNumber
-                        .toString()
-                        .slice(-4)})`}</CardNumber>
+                      <CardNumber>{`CREDIT CARD (...${
+                        data.cardDetails?.cardNumber.toString().slice(-4) ||
+                        'XXXX'
+                      })`}</CardNumber>
                     </Card>
                     <Balance>
                       <BalanceDetails>
-                        <Details6>{`$${data.cardDetails?.currentBalance}`}</Details6>
+                        <Details6>{`$${
+                          data.cardDetails?.currentBalance || '0.0'
+                        }`}</Details6>
                         <Details7>{`Current Balance`}</Details7>
                         <Link1
                           color={"primary"}
@@ -2532,7 +2535,9 @@ function Q2Portal(props: Q2PortalProps): JSX.Element {
                     <Card2></Card2>
                     <Balance1>
                       <BalanceDetails1 data={data}>
-                        <Details8>{`$${data.cardDetails?.lastStatementBalance}`}</Details8>
+                        <Details8>{`$${
+                          data.cardDetails?.lastStatementBalance || '0.0'
+                        }`}</Details8>
                         <Details9>{`Last statement balance`}</Details9>
                       </BalanceDetails1>
                     </Balance1>
@@ -2541,7 +2546,9 @@ function Q2Portal(props: Q2PortalProps): JSX.Element {
                     <Card3></Card3>
                     <Balance2>
                       <BalanceDetails2 data={data}>
-                        <Details10>{`$${data.cardDetails?.availableCredit}`}</Details10>
+                        <Details10>{`$${
+                          data.cardDetails?.availableCredit || '0.0'
+                        }`}</Details10>
                         <Details11>{`Available credit`}</Details11>
                       </BalanceDetails2>
                     </Balance2>

@@ -1,0 +1,10 @@
+displayName: OpenWeatherMap Report to Email
+description: Schedules a task to generate a weather report & send an email.
+componentType: manual-task
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /openweathermap-report-to-email
+thumbnailPath: /icons/openweathermap-report-to-email.png
+documentationPath: /openweathermap-report-to-email/readme.md
+tags:
+  - Integration

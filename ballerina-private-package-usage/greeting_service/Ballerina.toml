@@ -1,0 +1,16 @@
+[package]
+org = "<your-organization-name>"
+name = "greeting_service"
+version = "0.1.0"
+distribution = "2201.4.1"
+
+[build-options]
+observabilityIncluded = true
+
+# Uncomment below line to test the private package locally using the local repository
+# See https://ballerina.io/learn/manage-dependencies/#use-dependencies-from-the-local-repository
+# [[dependency]]
+# org = "<your-organization-name>"
+# name = "greeting_lib"
+# version = "0.1.0"
+# repository = "local"

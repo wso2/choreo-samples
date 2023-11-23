@@ -1,0 +1,10 @@
+displayName: Service to Service mTLS
+description: Service to Service mTLS implemented in Go and packaged as a docker image.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /docker-service-to-service-mtls
+thumbnailPath: /icons/docker-service-to-service-mtls.png
+documentationPath: /docker-service-to-service-mtls/readme.md
+tags:
+  - mTLS

@@ -1,0 +1,12 @@
+displayName: TCP Client and Server
+description: TCP Client and Server implemented in Go and packaged as docker images.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /dokcer-tcp-service
+thumbnailPath: /icons/dokcer-tcp-service.png
+documentationPath: /dokcer-tcp-service/readme.md
+tags:
+  - TCP
+  - Docker
+  - Go

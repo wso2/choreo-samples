@@ -1,0 +1,12 @@
+displayName: Salesforce Campaign Emails to Azure Blob Storage
+description: >-
+  Exports email addresses of Salesforce campaign members to a CSV file and
+  stores in Azure Blob Storage
+componentType: webhook
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /sfdc-marketing-campaign-emails-to-csv
+thumbnailPath: /icons/sfdc-marketing-campaign-emails-to-csv.png
+documentationPath: /sfdc-marketing-campaign-emails-to-csv/readme.md
+tags:
+  - Integration

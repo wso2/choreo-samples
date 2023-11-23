@@ -1,0 +1,87 @@
+<data name="RDBMSDataService" serviceStatus="active" transports="http https local">
+   <config enableOData="false" id="Datasource">
+      <property name="driverClassName">$SYSTEM:DB_DRIVER_CLASS</property>
+      <property name="url">$SYSTEM:DB_CONNECTION_URL</property>
+      <property name="username">$SYSTEM:DB_USER</property>
+      <property name="password">$SYSTEM:DB_PASS</property>
+   </config>
+   <query id="GetEmployeeDetails" useConfig="Datasource">
+      <sql>select EmployeeNumber, FirstName, LastName, Email, Salary from Employees where EmployeeNumber=:EmployeeNumber</sql>
+      <result outputType="json">{
+   "Employees":{
+      "Employee":[
+         {
+            "EmployeeNumber":"$EmployeeNumber",
+            "FirstName":"$FirstName",
+            "LastName":"$LastName",
+            "Email":"$Email",
+            "Salary":"$Salary"
+         }
+      ]
+   }
+}</result>
+      <param name="EmployeeNumber" sqlType="STRING"/>
+   </query>
+   <query id="AddEmployeeDetails" useConfig="Datasource">
+      <sql>insert into Employees (EmployeeNumber, FirstName, LastName, Email, Salary) values(:EmployeeNumber,:FirstName,:LastName,:Email,:Salary)</sql>
+      <param name="EmployeeNumber" sqlType="STRING"/>
+      <param name="FirstName" sqlType="STRING"/>
+      <param name="LastName" sqlType="STRING"/>
+      <param name="Email" sqlType="STRING"/>
+      <param name="Salary" sqlType="STRING"/>
+   </query>
+   <query id="UpdateEmployeeDetails" useConfig="Datasource">
+      <sql>update Employees set LastName=:LastName, FirstName=:FirstName, Email=:Email, Salary=:Salary where EmployeeNumber=:EmployeeNumber</sql>
+      <param name="LastName" sqlType="STRING"/>
+      <param name="FirstName" sqlType="STRING"/>
+      <param name="Email" sqlType="STRING"/>
+      <param name="Salary" sqlType="STRING"/>
+      <param name="EmployeeNumber" sqlType="STRING"/>
+   </query>
+   <operation name="GetEmployeeOp">
+      <call-query href="GetEmployeeDetails">
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+      </call-query>
+   </operation>
+   <operation name="AddEmployeeOp">
+      <call-query href="AddEmployeeDetails">
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+         <with-param name="FirstName" query-param="FirstName"/>
+         <with-param name="LastName" query-param="LastName"/>
+         <with-param name="Email" query-param="Email"/>
+         <with-param name="Salary" query-param="Salary"/>
+      </call-query>
+   </operation>
+   <operation name="UpdateEmployeeOp">
+      <call-query href="UpdateEmployeeDetails">
+         <with-param name="LastName" query-param="LastName"/>
+         <with-param name="FirstName" query-param="FirstName"/>
+         <with-param name="Email" query-param="Email"/>
+         <with-param name="Salary" query-param="Salary"/>
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+      </call-query>
+   </operation>
+   <resource method="GET" path="Employee/{EmployeeNumber}">
+      <call-query href="GetEmployeeDetails">
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="Employee">
+      <call-query href="AddEmployeeDetails">
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+         <with-param name="FirstName" query-param="FirstName"/>
+         <with-param name="LastName" query-param="LastName"/>
+         <with-param name="Email" query-param="Email"/>
+         <with-param name="Salary" query-param="Salary"/>
+      </call-query>
+   </resource>
+   <resource method="PUT" path="Employee">
+      <call-query href="UpdateEmployeeDetails">
+         <with-param name="LastName" query-param="LastName"/>
+         <with-param name="FirstName" query-param="FirstName"/>
+         <with-param name="Email" query-param="Email"/>
+         <with-param name="Salary" query-param="Salary"/>
+         <with-param name="EmployeeNumber" query-param="EmployeeNumber"/>
+      </call-query>
+   </resource>
+</data>

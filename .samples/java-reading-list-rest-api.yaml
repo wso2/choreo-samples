@@ -1,0 +1,12 @@
+displayName: Reading List REST Service in Java
+description: A simple REST API service written in Java Spring Boot
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /java-reading-list-rest-api
+thumbnailPath: /icons/java-reading-list-rest-api.png
+documentationPath: /java-reading-list-rest-api/readme.md
+tags:
+  - HTTP
+  - REST
+  - Spring Boot
