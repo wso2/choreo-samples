@@ -4,7 +4,7 @@ componentType: event-handler
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /mi-rabbitmq-listener
-thumbnailPath: /icons/mi-rabbitmq-listener.png
+thumbnailPath: /icons/mi-rabbitmq-listener.svg
 documentationPath: /mi-rabbitmq-listener/readme.md
 tags:
   - Integration

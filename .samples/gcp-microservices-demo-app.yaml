@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /gcp-microservices-demo-app
-thumbnailPath: /icons/gcp-microservices-demo-app.png
+thumbnailPath: /icons/gcp-microservices-demo-app.svg
 documentationPath: /gcp-microservices-demo-app/readme.md
 tags:
   - Integration

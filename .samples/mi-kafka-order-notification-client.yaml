@@ -6,7 +6,7 @@ componentType: event-handler
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /mi-kafka-order-notification-client
-thumbnailPath: /icons/mi-kafka-order-notification-client.png
+thumbnailPath: /icons/mi-kafka-order-notification-client.svg
 documentationPath: /mi-kafka-order-notification-client/README.md
 tags:
   - Integration
