@@ -4,7 +4,7 @@ componentType: service
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /ballerina-private-package-usage
-thumbnailPath: /icons/ballerina-private-package-usage.png
+thumbnailPath: /icons/ballerina-private-package-usage.svg
 documentationPath: /ballerina-private-package-usage/readme.md
 tags:
   - HTTP

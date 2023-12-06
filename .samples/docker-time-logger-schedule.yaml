@@ -4,7 +4,7 @@ componentType: scheduled-task
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-time-logger-schedule
-thumbnailPath: /icons/docker-time-logger-schedule.png
+thumbnailPath: /icons/docker-time-logger-schedule.svg
 documentationPath: /docker-time-logger-schedule/readme.md
 tags:
   - Scheduled Task
