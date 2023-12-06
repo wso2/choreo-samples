@@ -4,7 +4,7 @@ componentType: service
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /mi-env-variable-rest-api
-thumbnailPath: /icons/mi-env-variable-rest-api.png
+thumbnailPath: /icons/mi-env-variable-rest-api.svg
 documentationPath: /mi-env-variable-rest-apir/readme.md
 tags:
   - Integration

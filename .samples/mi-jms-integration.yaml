@@ -4,7 +4,7 @@ componentType: service
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /mi-jms-integration
-thumbnailPath: /icons/mi-jms-integration.png
+thumbnailPath: /icons/mi-jms-integration.svg
 documentationPath: /mi-jms-integration/readme.md
 tags:
   - Integration
