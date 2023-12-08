@@ -4,7 +4,7 @@ componentType: service
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /reading-list-graphql
-thumbnailPath: /icons/reading-list-graphql.png
+thumbnailPath: /icons/reading-list-graphql.svg
 documentationPath: /reading-list-graphql/readme.md
 tags:
   - GraphQL

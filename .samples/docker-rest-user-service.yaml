@@ -4,7 +4,7 @@ componentType: service
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-rest-user-service
-thumbnailPath: /icons/docker-rest-user-service.png
+thumbnailPath: /icons/docker-rest-user-service.svg
 documentationPath: /docker-rest-user-service/readme.md
 tags:
   - REST
