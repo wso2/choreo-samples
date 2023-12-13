@@ -1,7 +1,7 @@
 displayName: 
 description: 
 componentType: service
-buildPack: Ballerina
+buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /model-gateway-service
 thumbnailPath: /icons/model-gateway-service.png
