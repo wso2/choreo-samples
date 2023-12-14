@@ -1,11 +1,11 @@
-displayName: Weather Report to Logs -  Manual Task
+displayName: Weather Report to Logs - Scheduled Task
 description: Log tabulated weather report with OpenWeatherMap data
-componentType: manual-task
+componentType: scheduled-task
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
-componentPath: /weather-to-logs-mi-manual-task
+componentPath: /weather-to-logs-mi-scheduled-task
 thumbnailPath: /icons/weather-to-email-integration.svg
-documentationPath: /weather-to-logs-mi-manual-task/readme.md
+documentationPath: /weather-to-logs-mi-scheduled-task/readme.md
 tags:
   - Integration
   - OpenWeatherMap

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="WeatherToLogsSequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/WeatherToLogsSequence.xml</file>
+    </artifact>
+</artifacts>
