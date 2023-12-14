@@ -1,0 +1,40 @@
+openapi: 3.0.3
+info:
+  title: Choreo Samples - Question Answering - Python REST API
+  description: >-
+    This the API specification for a question answering service using LLMs written in Python.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /generate_answer:
+    summary: Generate an answer to a question using LLMs.
+    post:
+      summary: Generate an answer to a question a given question by providin context from relevant documents to the LLM.
+      operationId: GenerateAnswer
+      responses:
+        "200":
+          description: Successful operation
+        "400":
+          description: Invalid request body
+        "500":
+          description: Internal server error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Question"
+
+components:
+  schemas:
+    Question:
+      type: object
+      required:
+        - question
+      properties:
+        question:
+          type: string
+          example: "What is Choreo?"

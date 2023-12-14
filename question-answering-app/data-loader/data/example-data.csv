@@ -1,0 +1,120 @@
+title,content
+What is Choreo?,"Choreo is a powerful SaaS application development suite that streamlines the process of creating digital experiences. With Choreo, you can build, deploy, monitor, and manage your cloud-native applications with ease, enabling you to focus on innovation and reduce time-to-market.
+The Choreo suite comprises 5 profiles that work together seamlessly:  
+ - **Internal Developer Platform** is a full lifecycle cloud native application development platform to create, deploy, run, and govern APIs, integrations, and microservices on Kubernetes. Gives you the benefit of organization-wide productivity via self-service teams, governance and security, enterprise marketplaces, and business metrics.
+ - **API Manager** is an enterprise-grade, API-first development platform to create, deploy, run, and manage APIs and services that integrate perfectly with your development practices across multiple environments. You can deploy to the Choreo cloud or any private cloud within minutes.
+ - **iPaaS** is a developer-friendly, serverless platform for writing real integrations as code or low-code. You can create scheduled tasks, reusable APIs, or event-driven integrations, and build, deploy, run, and observe in a seamless serverless, multi-cloud, and multi-environment setup.
+ - **Cloud Native App Developer** provides you with the flexibility to design, develop, deploy, and operate your backend APIs, services, integrations, and more with any programming language of your choice.
+ - **DevOps** allows you to release and manage applications on Kubernetes without compromising on security, reliability, or governance, across any cloud."
+Organizations and data planes,"Data planes are connected to the organization and are available for all the projects in the organization. When you create an environment in a project, the data plane connected to the organization is linked with an automatically generated Kubernetes namespace."
+Environments and data planes,"Choreo allows multiple Kubernetes clusters to be associated with an environment.
+This allows you to build highly resilient and resource-efficient solutions that utilize multiple clusters. Choreo synchronizes your applications and workloads between associated clusters in an environment. This allows you to perform multi-cluster deployment with a single click."
+Components and environments,"Components belong to a project in Choreo and environments are provisioned per project as well. When a component is deployed, it is deployed as a container to the specified environment. Once deployed, you can promote the container image across the environments available in the project."
+Organization,An organization in Choreo is a logical grouping of users and user resources. A first-time user must create an organization and be a member of it when signing in to Choreo. Users and resources in an organization cannot access resources in another organization unless an admin of the other organization invites them and adds them as a member of that organization. A user cannot create more than one organization.
+Project,"A project in Choreo is a logical group of related components that typically represent a single cloud native application. A project consists of one or more components. All components within a project can ideally be (but is not restricted to) in a single GitHub repository under different paths. This is also known as the monorepo architecture.
+At deployment time, all components within a given project are deployed into a single namespace of the Kubernetes cluster. Components within a project can be exposed to the public internet, internally to the rest of the organization, or privately within the project only. A project in Choreo is represented as a cell with regard to the Cell-based architecture"
+Component,"A component within a project represents a single unit of work in a cloud native application. A component is usually a single microservice, API, or job/task. Each component in Choreo is attached to a given directory path in a Git repository which either contains program source code or a Dockerfile with build instructions. A component is Choreo’s unit of deployment. Each component maps to a single pod in the Kubernetes cluster (data plane) at deployment time. Therefore, you can deploy, manage, and scale each component in Choreo independently.
+Choreo supports different component types for various use cases. These include component types such as services, API proxies, integrations, web applications, and so on. Each component type hosts unique features based on its characteristics. For example, a scheduled integration component can accept a cron expression as a configuration to schedule an integration job/task."
+Endpoint,"An Endpoint is a network-exposed function that resides within a component. In Choreo, service components expose one or more endpoints. Each endpoint in a component can have a service contract (OpenAPI, GraphQL SDL) associated with it. This contract is used to expose the endpoint to consumers. In the absence of a contract, Choreo uses /* exposed on all HTTP verbs as the default contract to expose the service.
+Each endpoint exposed in a component is considered a single API. Therefore, Choreo allows you to do API management per endpoint for a given component. For example, you can perform lifecycle management and configure security settings per endpoint in a given component."
+Data Planes,"At its heart, the Choreo control plane is a configuration manager and an orchestrator. It consists of many components that help developers to define and create Choreo applications. APIs manage communication between consumers and the Choreo control plane.
+Similarly, the Choreo data plane is a Kubernetes cluster where applications are deployed and run. The data plane has a few system components that facilitate user applications to run with the support of the control plane. While the data plane needs support from the control plane, it can operate independently in a disaster scenario. All communication between the control plane and the data plane is made via APIs."
+Environments,"Choreo offers developers one or more environments to run their applications within a given data plane. By default, the Choreo cloud data plane provides two environments (i.e., development and production). Each project in Choreo is associated with one or more environments available in the organization. For example, project A may choose to utilize dev, staging, and production environments, while project B may only use development and production environments.
+You can promote components within a project across available environments. When you promote a component, its configuration values can be overridden with environment-specific values."
+Choreo Marketplace,"The Choreo Marketplace promotes and facilitates API reuse. It offers a comprehensive collection of prebuilt connectors and triggers, which developers can use to design their cloud-native applications. Using the prebuilt connectors and triggers can save significant time and effort that otherwise would be spent on developing functionality from scratch.
+The Choreo Marketplace also serves as a platform for API developers to publish their own connectors for Choreo users to access. These connectors can be made available for purchase or offered free of charge.
+When you discover a connector or trigger in the Choreo Marketplace that meets your requirements, you can either purchase it, acquire it through a Freemium account or use it for free."
+Develop Components Using VS Code,"The [Choreo VS Code extension](https://marketplace.visualstudio.com/items?itemName=WSO2.choreo) provides a wide range of project and component management capabilities to enhance the local development of projects and components in Choreo.
+## Prerequisites
+For a seamless development experience with the Choreo extension, ensure you configure the following in your local environment:
+1. [Visual Studio Code](https://code.visualstudio.com/download) with the Choreo extension installed.
+2. [Ballerina distribution](https://ballerina.io) Update 4 or later.
+3. [Ballerina extension](https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina) for VS Code, version 4.0.0 or later
+## Get started
+You need an active Choreo account to utilize the capabilities of the Choreo extension in the VS Code editor. If you already have a Choreo account, follow the steps given below to set up the extension:
+1. Install the [Choreo VS Code extension](https://marketplace.visualstudio.com/items?itemName=WSO2.choreo) and wait for activation.
+2. Sign in to Choreo using one of the following methods:
+    - Click **Sign In** on successful activation of the extension.
+    - Click the Choreo icon on the left navigation menu on the VS Code editor and then click **Sign In**.
+    This redirects you to an external URI to complete the authentication process. On successful sign-in, the Choreo activity pane displays all the projects and organizations linked to your Choreo account.
+## Create a project
+!!! tip 
+      If you already have a Choreo project, you can skip this section and move to the [Clone a project](#clone-a-project) section.
+To create a new Choreo project directly via VS Code, follow the steps below:
+1. Click **+** next to the **PROJECTS** in the Choreo activity pane. Alternatively, execute the `Create new project` command.
+2. In the **New Choreo Project** pane, specify appropriate values for the required fields.
+    !!! tip
+         If you want to use a monorepo where you can have all components of the project stored, select **Initialize a monorepo**. This will take you to GitHub to authorize a repository to link to the project.
+## Clone a project
+You can clone a project to easily create a copy of a project in your local machine. 
+To clone a project, follow the steps given below:
+1. In the Choreo activity pane, click on the project you want to clone. This opens the project overview displaying the list of components of the project.
+2. Click **Clone Project**.
+3. Select a directory in your local machine to store the project. Once the project is cloned, it opens as a workspace in VS Code.
+    !!! tip
+         Each component in the project will be available as a workspace item.
+## Design and develop your application
+To design and develop your application, follow the steps given below:
+1. In the Choreo activity pane, click on a project. 
+2. In the **Project Overview** page, click **Architecture View**.
+3. To create a new component, click **+ COMPONENT** and specify appropriate values for the required fields.
+This creates a source for the component locally in the given repository and displays the component as a workspace item in VS Code.
+## Push changes to Choreo
+When you create a component, you must follow the steps given below to push the changes to Choreo.
+1. In the **Project Overview** page, click **Push to Choreo**. This pushes changes related to a component to the GitHub repository.
+    !!! tip
+        The **Project Overview** page indicates if a change related to a component has not been pushed to the GitHub repository.
+2. Click **Open Source Control**, enter an appropriate commit message, and click **Commit**. and commit the changes
+3. To upload the local component changes to the Choreo platform, click **Sync Changes**."
+Work with the Micro Integrator Runtime in Choreo - Integration types,"Choreo iPaaS supports the following WSO2 MI integrations that cater to different use cases and requirements. Each integration type serves a specific purpose. Therefore, it is essential to understand their differences to easily choose the most appropriate integration for your use case.
+- **Integration as an API**: Exposes an integration as an API via HTTP, making it possible to create a RESTful interface for your integration services. This type is ideal for scenarios where you need to provide an API for external systems or clients to interact with your integration.
+- **Event-triggered integration**: Triggers an integration based on external events such as messages arriving on a queue or updates in a database. This type is well-suited for implementing event-driven architectures or responding to changes in your system's environment.
+- **Scheduled integration**: Runs an integration automatically at predefined time intervals, ensuring that specific integration tasks occur at regular intervals. This type is ideal for batch processing, data synchronization, or periodic maintenance tasks.
+- **Manually-triggered integration**: Initiates an integration via user action, giving you full control over when the integration executes. This type is useful for on-demand tasks, testing, or debugging purposes."
+Work with the Micro Integrator Runtime in Choreo - Develop integrations with WSO2 Integration Studio,"[WSO2 Integration Studio](https://wso2.com/integration/integration-studio/) is a powerful, Eclipse-based graphical development environment that enables you to build and deploy integration artifacts in WSO2 Micro Integrator. This comprehensive IDE offers a robust set of tools for designing and testing integration flows and crafting integration artifacts. By utilizing the visual, drag-and-drop capabilities of WSO2 Integration Studio, developers can significantly reduce the time and effort needed to construct and deploy integration flows.
+In addition to streamlining the development process, Integration Studio offers features such as debugging, testing, and version control to ensure the quality and reliability of integration flows. By creating an Integration project and Composite Exporter project in WSO2 Integration Studio, developers can export their integration projects as a single deployment artifact, known as a composite application. This composite application encompasses all the components and configurations necessary for deploying the integration project to WSO2 Micro Integrator.
+The Composite Exporter project simplifies the deployment process by allowing developers to package their integration projects as a single, self-contained artifact that can be easily deployed and managed. This approach enhances the consistency and reliability of integration projects while streamlining the overall deployment process.
+To start developing integrations with WSO2 Integration Studio, see [WSO2 API Manager Documentation - Developing Integration Solutions](https://apim.docs.wso2.com/en/latest/integrate/develop/intro-integration-development/)."
+Work with the Micro Integrator Runtime in Choreo - Integration project directory structure,"An Integration Project in WSO2 Integration Studio is a multi-module Maven project that can contain multiple modules with WSO2 Synapse configurations and a composite application module to export all the configurations as a single deployable artifact.
+An integration project directory structure includes the following key components:
+ - WSO2 Synapse configurations: These modules contain the essential configurations for the integration project.
+ - Composite Application module: This module is responsible for exporting all the Synapse configurations as a single deployable artifact.
+Optionally, you can include the following components in your integration project:
+ - OpenAPI definition file: You can add the OpenAPI definition file to any location within the project. When creating a component, you'll need to define the path to this file. Choreo will automatically generate an OpenAPI definition for you based on your integration project, if you don't provide one.
+ - Java libraries: If your integration project requires additional Java libraries, you can add them to the libs directory located in the project root.
+ - deployment.toml file: This optional configuration file allows you to customize the preconfigured settings of WSO2 MI instances running on Choreo. By including this file, you can tailor the behavior of your WSO2 MI instances to better suit your project's specific requirements.
+Understanding the Integration Project directory structure is crucial for organizing your project and ensuring that all necessary components are included in the final deployable artifact."
+Work with the Micro Integrator Runtime in Choreo - OpenAPI support,"OpenAPI Support plays a crucial role in enhancing the functionality of integrations exposed as APIs. By providing an OpenAPI definition for your exposed integration, you can streamline testing and management processes, ensuring a more efficient and user-friendly experience. Choreo will automatically generate an OpenAPI definition for you based on your integration project, if you don't provide one, saving you time and effort.
+To incorporate OpenAPI support, store the OpenAPI definition file within the repository hosting your Integration Studio project. When creating the project, simply point to the file's location in the repository. If needed, you can change the location of the OpenAPI definition file later via the deploy page.
+By leveraging OpenAPI Support, you can optimize the way you test and manage your integrations, resulting in a more efficient development process and a smoother user experience."
+Work with the Micro Integrator Runtime in Choreo - Work with third-party libraries,"The use of third-party libraries in your Micro Integrator project can offer several advantages, such as enhanced functionality, improved integration capabilities, optimized performance, and reduced development time.
+Here are some of the benefits of adding third-party JARs to the Micro Integrator:
+ - Increased functionality: Third-party libraries can extend the core Micro Integrator distribution, allowing for greater flexibility and customization of integration solutions.
+ - Enhanced integration capabilities: Third-party libraries enable the Micro Integrator to interact with existing systems such as databases or other APIs, improving overall integration capabilities.
+ - Optimized performance: By offering optimized implementations of common functions, third-party libraries can improve the performance of the Micro Integrator.
+ - Efficient development: Developers can avoid re-implementing commonly used functions, reducing development time and increasing efficiency.
+To incorporate third-party libraries into your Micro Integrator project, create a new directory called `libs` at the
+root of your project. If your project root and GitHub repository root are not the same, place the `libs` directory in
+the project root. After adding the required JAR files to the `libs` directory, the Micro Integrator runtime will
+automatically include them when deploying the component. This process ensures that any dependencies needed by your
+integration flow are available at runtime.
+In addition to `jar` libraries, you may also need to incorporate OSGi bundle JARs into your project. To do this,
+create another directory called `dropins` at the root of your project. Similarly, if the project root and GitHub
+repository root differ, place the `dropins` directory in the project root. Within the `dropins` directory, add the OSGi
+bundle JAR files. The OSGI runtime will pick up these bundles during deployment, enabling you to utilize their
+functionality within your Micro Integrator project."
+Builds and Deployments,"Choreo provides a streamlined continuous build and deployment experience to deploy applications and services efficiently across multiple environments.
+In Choreo, environments are created for each project. All components in a project share environments. An environment is an isolated deployment area with restricted network and resource access. Services deployed in one environment cannot communicate with or reach services deployed in another environment.
+The Choreo cloud data plane provides two default environments (i.e., development and production). However, if you are in a private data plane organization, you can customize the environments and have multiple environments based on your requirements. 
+Choreo adopts a *build-once and promote* strategy to manage components across multiple environments. An application is built only once (i.e., per commit if auto-build on commit is enabled or based on the selected commit during a manual build), and then it is promoted to subsequent environments. Lower, non-production environments such as development allow you to test changes before promoting a selected build into a production environment.
+Configurations and secrets are maintained at the environment level and are injected at runtime into components. This ensures a strict separation of environment-specific configurations from source code. Although configurations can vary across environments, the code and the built container do not change. Configurations and secrets include values such as: 
+ - Resource credentials to a database, cache, or other backing services.
+ - Credentials to external cloud services such as Amazon S3 or an external API.
+All configurations and secrets are encrypted at rest and in transit and stored in a secure vault. If you are in a private data plane organization, configurations and secrets are stored in your own infrastructure."
+Triggering a build,"There are two approaches to trigger a new build in Choreo:
+- Manually build and deploy: In the **Deploy** view, go to **Build Area** card and click **Deploy Manually**. This triggers a manual build on demand.
+- Automatically deploy on GitHub commit: In the **Deploy** view, go to **Build Area** card and click the **Auto Deploy on Commit** toggle to enable the setting. Choreo creates the necessary webhooks on your connected GitHub repository to enable automatic deployment. When you commit or merge a pull request to a branch in your GitHub repository, Choreo automatically triggers a build pipeline and deploys it to your development environment.
+!!! note
+    - You must trigger the first build in a Ballerina component manually to ensure that the required configurations are applied to the development environment. You can enable automatic builds subsequently.
+    - Choreo automatically checks the configurables defined in your source code against the configurable values applied in an environment. The configurable values are requested on deployment and promotion. If you have changed the configurables in your Ballerina component, auto-build pipelines can fail as a precaution to avoid a component crash at runtime due to missing configurables.
+    - The configurable verifying capability is only available for Ballerina components. For Dockerfile-based components, you must make sure to manage and update the configurations and secrets in environments ahead of time. You must also ensure backward compatibility between at least one release if you change the configurations."
