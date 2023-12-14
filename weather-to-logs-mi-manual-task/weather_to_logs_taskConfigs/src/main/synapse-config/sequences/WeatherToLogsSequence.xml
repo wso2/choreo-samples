@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="WeatherToLogsSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property expression="get-property('env', 'LATITUDE')" name="lat" scope="default" type="STRING"/>
+    <property expression="get-property('env', 'LONGITUDE')" name="lon" scope="default" type="STRING"/>
+    <property expression="get-property('env', 'API_KEY')" name="api_key" scope="default" type="STRING"/>
+    <property expression="concat('https://api.openweathermap.org/data/2.5/forecast?lat=',get-property('lat'),'&amp;lon=',get-property('lon'),'&amp;cnt=7&amp;appid=',get-property('api_key'))" name="uri.var.URL" scope="default" type="STRING"/>
+    <call>
+        <endpoint>
+            <http method="get" uri-template="{uri.var.URL}">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>1</progressionFactor>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </http>
+        </endpoint>
+    </call>
+    <switch source="get-property('axis2', 'HTTP_SC')">
+        <case regex="200">
+            <log level="custom">
+                <property name="SuccessMessage" value="Successfully fetched the weather forecast data."/>
+            </log>
+            <!-- Extract JSON payload from the response -->
+            <enrich>
+                <source clone="true" type="body"/>
+                <target property="jsonPayload" type="property"/>
+            </enrich>
+            <!-- Prepare the JSON payload as a formatted table -->
+            <script language="js"><![CDATA[{
+            var jsonString = mc.getProperty('jsonPayload');
+        var jsonObject = JSON.parse(jsonString);
+
+        var table ="\n\nWeather Forecast Table\n";
+        table += "-------------------------------------------------------------\n";
+        table += "| Date/Time           |   Description  | Temp(K) | Humid(%) |\n";
+        table += "-------------------------------------------------------------\n";
+        
+        if(jsonObject.list){
+         for (var i = 0; i < jsonObject.list.length; i++) {
+            table += '| ' + jsonObject.list[i].dt_txt + ' | ' +
+                     jsonObject.list[i].weather[0].description + ' | ' +
+                     jsonObject.list[i].main.temp + ' | ' +
+                     jsonObject.list[i].main.humidity + ' |\n';
+        }}
+        
+        table += "-------------------------------------------------------------\n";
+
+        mc.setProperty('weather_table', table.toString());
+}]]></script>
+            <!-- Log the formatted table -->
+            <log level="custom">
+                <property expression="get-property('weather_table')" name="WeatherForecastTable"/>
+            </log>
+        </case>
+        <default>
+            <log level="custom">
+                <property name="ErrorMessage" value="Failed to fetch weather forecast data."/>
+            </log>
+        </default>
+    </switch>
+</sequence>
