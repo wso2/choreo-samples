@@ -34,7 +34,7 @@ To use the example:
    git clone [URL of your forked repository]
    ```
 6. Log into [Choreo](https://console.choreo.dev/)
-7. Create a project in choreo and create a new componant of type **Manual Task**.
+7. Create a project in choreo and create a new componant of type **Manual Task** by providing the repository path for the `question-answering-data-loader`, with the `Python` buildpack and `3.10.x` as the Python version.
 8. Add the contents of the generate Google Service Account credentials as a configmap and specify the mount path as `/config/gs_credentials.json`.
 9. Configure the following configs as environment variables in the component.
     ```

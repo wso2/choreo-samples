@@ -25,9 +25,9 @@ To engage with these examples:
    ```
 3. Log into [Choreo](https://console.choreo.dev/)
 4. Create a mono repo project and create the components based on the READMEs in the respective directories.
-    - [Data Loader](./data-loader/README.md)
-    - [Backend Service](./backend-service/README.md)
-    - [Frontend](./frontend/README.md)
+    - [Data Loader](./question-answering-data-loader/README.md)
+    - [Backend Service](./question-answering-backend/README.md)
+    - [Frontend](./question-answering-app-frontend/README.md)
 
 ### Contribution & Feedback
 

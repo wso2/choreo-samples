@@ -17,10 +17,11 @@ To use this example:
    ```
 3. Log into [Choreo](https://console.choreo.dev/)
 4. **Configure Asgardeo as an IDP**: [Configure Asgardeo as an IDP](https://wso2.com/choreo/docs/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp/) in your Choreo organization.
-5. Deploy and publish the backend service in Choreo.
+5. Deploy and publish the [`question-answering-backend`](../question-answering-backend/) in Choreo. Refer to the [README](../question-answering-backend/README.md) for more information.
 6. Log into [Choreo Developer Portal](https://devportal.choreo.dev/) and create a new application.
 7. In the **Credentials** section select the IDP configured in (4) for production.
-8. Create a component by providing the repo, with React build preset and the following information:
+8. [Subscribe to the `question-answering-backend`](https://wso2.com/choreo/docs/consuming-services/consuming-a-sevice/#subscribe-to-an-api) API through the created dev portal application.
+8. In the Choreo console create a new component of type `Web Application` by providing the repositpry path for `question-answering-app-front-end`, with `React` build preset and the following information:
    ```
     Build Command: npm install && npm run build
     Build Output: dist
@@ -30,10 +31,10 @@ To use this example:
 10. Add the config file with the following information as a configmap and specify the mount path as `/usr/share/nginx/html/config.js`.
     ```
     window.config = {
-        redirectUrl: <URL of the deployed webapp>,
-        asgardeoClientId: <asgardeo-client-id>,
-        asgardeoBaseUrl: "https://api.asgardeo.io/t/<your-org-name>",
-        choreoApiUrl: <URL of the backend service deployed in Choreo>,
+        redirectUrl: <URL-of-the-deployed-webapp>,
+        asgardeoClientId: <asgardeo-client-id (obrained in step(4))>,
+        asgardeoBaseUrl: "https://api.asgardeo.io/t/<your-asgardeo-org-name>",
+        choreoApiUrl: <URL-of-the-backend-service-deployed-in-Choreo>,
     };
     ```
 

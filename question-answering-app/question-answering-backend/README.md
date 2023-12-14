@@ -27,7 +27,7 @@ To use the example:
    git clone [URL of your forked repository]
    ```
 5. Log into [Choreo](https://console.choreo.dev/)
-6. Create a project in choreo and create a new service component with the `Python` buildpack and provide `3.10.x` as the Python version.
+6. Create a project in choreo and create a new service component by providing the repository path for the `question-answering-backend`, with the `Python` buildpack and `3.10.x` as the Python version.
 7. Configure the following configs as environment variables and deploy the component.
     ```
     OPENAI_API_KEY : <Azure OpenAI API Key>
