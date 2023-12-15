@@ -1,0 +1,12 @@
+displayName: Weather Report to Logs -  Manual Task
+description: Log tabulated weather report with OpenWeatherMap data
+componentType: manual-task
+buildPack: wso2-mi
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /weather-to-logs-mi-manual-task
+thumbnailPath: /icons/weather-to-logs-mi-manual-task.svg
+documentationPath: /weather-to-logs-mi-manual-task/readme.md
+tags:
+  - Integration
+  - OpenWeatherMap
+

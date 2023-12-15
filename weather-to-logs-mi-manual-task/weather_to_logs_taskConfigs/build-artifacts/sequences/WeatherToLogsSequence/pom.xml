@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>weather_to_logs_taskConfigs_module</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <groupId>com.example.sequence</groupId>
+  <artifactId>WeatherToLogsSequence</artifactId>
+  <version>1.0.0</version>
+  <packaging>synapse/sequence</packaging>
+  <name>WeatherToLogsSequence</name>
+  <description>WeatherToLogsSequence</description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.wso2.maven</groupId>
+        <artifactId>wso2-mi-synapse-plugin</artifactId>
+        <version>5.2.44</version>
+        <extensions>true</extensions>
+        <dependencies>
+          <dependency>
+            <groupId>com.sun.activation</groupId>
+            <artifactId>javax.activation</artifactId>
+            <version>1.2.0</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <artifact>../../../src/main/synapse-config/sequences/WeatherToLogsSequence.xml</artifact>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
