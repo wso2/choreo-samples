@@ -4,7 +4,7 @@ componentType: manual-task
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /weather-to-logs-mi-manual-task
-thumbnailPath: /icons/weather-to-email-integration.svg
+thumbnailPath: /icons/weather-to-email-scheduled-task.png
 documentationPath: /weather-to-logs-mi-manual-task/readme.md
 tags:
   - Integration
