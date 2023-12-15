@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="WeatherToLogsSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <property expression="get-property('env', 'LATITUDE')" name="lat" scope="default" type="STRING"/>
-    <property expression="get-property('env', 'LONGITUDE')" name="lon" scope="default" type="STRING"/>
-    <property expression="get-property('env', 'API_KEY')" name="api_key" scope="default" type="STRING"/>
-    <property expression="concat('https://api.openweathermap.org/data/2.5/forecast?lat=',get-property('lat'),'&amp;lon=',get-property('lon'),'&amp;cnt=7&amp;appid=',get-property('api_key'))" name="uri.var.URL" scope="default" type="STRING"/>
+    <!-- Getting env variables -->
+    <property expression="get-property('env', 'LATITUDE')" name="uri.var.lat" scope="default" type="STRING"/>
+    <property expression="get-property('env', 'LONGITUDE')" name="uri.var.lon" scope="default" type="STRING"/>
+    <property expression="get-property('env', 'API_KEY')" name="uri.var.api_key" scope="default" type="STRING"/>
+    <!-- API call to fetch weather forecast data -->
     <call>
         <endpoint>
-            <http method="get" uri-template="{uri.var.URL}">
+            <http method="get" uri-template="https://api.openweathermap.org/data/2.5/forecast?lat={uri.var.lat}&amp;lon={uri.var.lon}&amp;cnt=7&amp;appid={uri.var.api_key}">
                 <suspendOnFailure>
                     <initialDuration>-1</initialDuration>
                     <progressionFactor>1</progressionFactor>
@@ -17,6 +18,7 @@
             </http>
         </endpoint>
     </call>
+    <!-- Check the response status code -->
     <switch source="get-property('axis2', 'HTTP_SC')">
         <case regex="200">
             <log level="custom">
@@ -55,9 +57,10 @@
             </log>
         </case>
         <default>
-            <log level="custom">
+            <log level="full">
                 <property name="ErrorMessage" value="Failed to fetch weather forecast data."/>
             </log>
         </default>
+        <!-- Log the error message -->
     </switch>
 </sequence>
