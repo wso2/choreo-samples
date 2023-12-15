@@ -37,7 +37,7 @@ def validate_directories_for_metafiles(samples_dirnames_set):
     # Check if there are any directories without corresponding metadata files
     for dir_name in os.listdir(REPO_BASE_DIR):
         dir_path = os.path.join(REPO_BASE_DIR, dir_name)
-        if os.path.isfile(dir_path) or dir_name.startswith('.'):
+        if os.path.isfile(dir_path) or dir_name.startswith('.') or dir_name == 'proxy': # Proxy directory is not treated as a sample
             continue
         if dir_name not in samples_dirnames_set:
             return False, dir_name
