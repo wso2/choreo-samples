@@ -4,7 +4,7 @@ componentType: scheduled-task
 buildPack: wso2-mi
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /weather-to-logs-mi-scheduled-task
-thumbnailPath: /icons/weather-to-email-scheduled-task.png
+thumbnailPath: /icons/weather-to-logs-mi-scheduled-task.svg
 documentationPath: /weather-to-logs-mi-scheduled-task/readme.md
 tags:
   - Integration
