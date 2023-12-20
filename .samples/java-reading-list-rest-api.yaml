@@ -4,7 +4,7 @@ componentType: service
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /java-reading-list-rest-api
-thumbnailPath: /icons/java-reading-list-rest-api.png
+thumbnailPath: /icons/java-reading-list-rest-api.svg
 documentationPath: /java-reading-list-rest-api/readme.md
 tags:
   - HTTP

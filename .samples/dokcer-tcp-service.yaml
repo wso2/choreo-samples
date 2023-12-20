@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /dokcer-tcp-service
-thumbnailPath: /icons/dokcer-tcp-service.png
+thumbnailPath: /icons/dokcer-tcp-service.svg
 documentationPath: /dokcer-tcp-service/readme.md
 tags:
   - TCP

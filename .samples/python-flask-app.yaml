@@ -4,7 +4,7 @@ componentType: service
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /python-flask-app
-thumbnailPath: /icons/python-flask-app.png
+thumbnailPath: /icons/python-flask-app.svg
 documentationPath: /python-flask-app/readme.md
 tags:
   - Python

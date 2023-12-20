@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-udp-service
-thumbnailPath: /icons/docker-udp-service.png
+thumbnailPath: /icons/docker-udp-service.svg
 documentationPath: /docker-udp-service/readme.md
 tags:
   - UDP
