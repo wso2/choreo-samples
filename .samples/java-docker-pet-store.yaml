@@ -4,7 +4,7 @@ componentType: service
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /java-docker-pet-store
-thumbnailPath: /icons/java-docker-pet-store.png
+thumbnailPath: /icons/java-docker-pet-store.svg
 documentationPath: /java-docker-pet-store/readme.md
 tags:
   - HTTP

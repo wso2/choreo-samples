@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-service-to-service-mtls
-thumbnailPath: /icons/docker-service-to-service-mtls.png
+thumbnailPath: /icons/docker-service-to-service-mtls.svg
 documentationPath: /docker-service-to-service-mtls/readme.md
 tags:
   - mTLS
