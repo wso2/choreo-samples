@@ -1,0 +1,11 @@
+displayName: 
+description: 
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /model-gateway-service
+thumbnailPath: /icons/model-gateway-service.png
+documentationPath: /model-gateway-service/README.md
+tags:
+  - HTTP
+  - REST

@@ -1,0 +1,8 @@
+[package]
+org = "jayanihewavitharana"
+name = "model_gateway_service"
+version = "0.1.0"
+distribution = "2201.8.0"
+
+[build-options]
+observabilityIncluded = true
