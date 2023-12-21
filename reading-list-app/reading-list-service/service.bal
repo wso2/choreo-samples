@@ -49,15 +49,33 @@ service /readinglist on new http:Listener(9090) {
     }
 
     resource function post books(http:Headers headers,
-                                 @http:Payload BookItem newBook) returns http:Created|http:BadRequest|error {
+            @http:Payload BookItem newBook) returns http:Created|http:BadRequest|error {
 
         string bookId = uuid:createType1AsString();
         map<Book>|http:BadRequest usersBooks = check getUsersBooks(headers);
         if (usersBooks is map<Book>) {
             usersBooks[bookId] = {...newBook, id: bookId};
-            return <http:Created>{};
+            map<string> locationHeader = {"Location": "/readinglist/books/" + bookId};
+            return <http:Created>{headers: locationHeader};
         }
         return <http:BadRequest>usersBooks;
+    }
+
+    resource function get books/[string bookId](http:Headers headers) returns http:NotFound|http:BadRequest|Book|error {
+        
+        //Get the booklist that belongs to the logged in user.
+        map<Book>|http:BadRequest usersBooks = check getUsersBooks(headers);
+        if (usersBooks is map<Book>) {
+            if (usersBooks.hasKey(bookId)) {
+                //Return matched book.
+                return usersBooks.get(bookId);
+            }
+            //Return 404 not found since matching book hasn't been found.
+            return <http:NotFound>{};
+        }
+        else {
+            return <http:BadRequest>{};
+        }
     }
 
     resource function delete books(http:Headers headers,
