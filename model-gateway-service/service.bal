@@ -51,14 +51,7 @@ service / on new http:Listener(9090) {
         string|string[]? prompt = request?.prompt;
 
         // Check if the prompt(s) contain(s) PII
-        if prompt is string && containsPii(prompt) {
-            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-            return {
-                body: PII_DETECTION_ERROR_MESSAGE
-            };
-        }
-
-        if prompt is string[] && containsPii(" ".'join(...prompt)) {
+        if (prompt is string && containsPii(prompt)) || (prompt is string[] && containsPii(" ".'join(...prompt))) {
             log:printWarn(PII_DETECTION_ERROR_MESSAGE);
             // Return a 400 Bad Request response if PII is detected
             return {
@@ -103,14 +96,7 @@ service / on new http:Listener(9090) {
         string|string[]? input = request?.input;
 
         // Check if the input(s) contains PII
-        if input is string && containsPii(input) {
-            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-            return {
-                body: PII_DETECTION_ERROR_MESSAGE
-            };
-        }
-
-        if input is string[] && containsPii(" ".'join(...input)) {
+        if (input is string && containsPii(input)) || (input is string[] && containsPii(" ".'join(...input))) {
             log:printWarn(PII_DETECTION_ERROR_MESSAGE);
             // Return a 400 Bad Request response if PII is detected
             return {
