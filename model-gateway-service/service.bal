@@ -51,13 +51,11 @@ service / on new http:Listener(9090) {
         string|string[]? prompt = request?.prompt;
 
         // Check if the prompt(s) contain(s) PII
-        if prompt is string {
-            if containsPii(prompt) {
-                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                return {
-                    body:  PII_DETECTION_ERROR_MESSAGE
-                };
-            }
+        if prompt is string && containsPii(prompt) {
+            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+            return {
+                body:  PII_DETECTION_ERROR_MESSAGE
+            };
         }
 
         if prompt is string[] {
@@ -86,14 +84,12 @@ service / on new http:Listener(9090) {
         // Check if the chat messages contains PII
         foreach chat:ChatCompletionRequestMessage message in request.messages {
             string? messageContent = message.content;
-            if messageContent is string {
-                if containsPii(messageContent) {
-                    log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                    // Return a 400 Bad Request response if PII is detected
-                    return {
-                        body:  PII_DETECTION_ERROR_MESSAGE
-                    };
-                }
+            if messageContent is string && containsPii(messageContent) {
+                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+                // Return a 400 Bad Request response if PII is detected
+                return {
+                    body:  PII_DETECTION_ERROR_MESSAGE
+                };
             }
         }
 
@@ -111,13 +107,11 @@ service / on new http:Listener(9090) {
         string|string[]? input = request?.input;
 
         // Check if the input(s) contains PII
-        if input is string {
-            if containsPii(input) {
-                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                return {
-                    body:  PII_DETECTION_ERROR_MESSAGE
-                };
-            }
+        if input is string && containsPii(input) {
+            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+            return {
+                body:  PII_DETECTION_ERROR_MESSAGE
+            };
         }
 
         if input is string[] {
