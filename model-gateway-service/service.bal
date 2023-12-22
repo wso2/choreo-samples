@@ -51,25 +51,12 @@ service / on new http:Listener(9090) {
         string|string[]? prompt = request?.prompt;
 
         // Check if the prompt(s) contain(s) PII
-        if prompt is string {
-            if containsPii(prompt) {
-                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                return {
-                    body:  PII_DETECTION_ERROR_MESSAGE
-                };
-            }
-        }
-
-        if prompt is string[] {
-            foreach string promptItem in prompt {
-                if containsPii(promptItem) {
-                    log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                    // Return a 400 Bad Request response if PII is detected
-                    return {
-                        body:  PII_DETECTION_ERROR_MESSAGE
-                    };
-                }
-            }
+        if (prompt is string && containsPii(prompt)) || (prompt is string[] && containsPii(" ".'join(...prompt))) {
+            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+            // Return a 400 Bad Request response if PII is detected
+            return {
+                body: PII_DETECTION_ERROR_MESSAGE
+            };
         }
 
         // Forward the request to the Azure OpenAI completions endpoint
@@ -86,14 +73,12 @@ service / on new http:Listener(9090) {
         // Check if the chat messages contains PII
         foreach chat:ChatCompletionRequestMessage message in request.messages {
             string? messageContent = message.content;
-            if messageContent is string {
-                if containsPii(messageContent) {
-                    log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                    // Return a 400 Bad Request response if PII is detected
-                    return {
-                        body:  PII_DETECTION_ERROR_MESSAGE
-                    };
-                }
+            if messageContent is string && containsPii(messageContent) {
+                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+                // Return a 400 Bad Request response if PII is detected
+                return {
+                    body: PII_DETECTION_ERROR_MESSAGE
+                };
             }
         }
 
@@ -111,25 +96,12 @@ service / on new http:Listener(9090) {
         string|string[]? input = request?.input;
 
         // Check if the input(s) contains PII
-        if input is string {
-            if containsPii(input) {
-                log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                return {
-                    body:  PII_DETECTION_ERROR_MESSAGE
-                };
-            }
-        }
-
-        if input is string[] {
-            foreach string inputItem in input {
-                if containsPii(inputItem) {
-                    log:printWarn(PII_DETECTION_ERROR_MESSAGE);
-                    // Return a 400 Bad Request response if PII is detected
-                    return {
-                        body:  PII_DETECTION_ERROR_MESSAGE
-                    };
-                }
-            }
+        if (input is string && containsPii(input)) || (input is string[] && containsPii(" ".'join(...input))) {
+            log:printWarn(PII_DETECTION_ERROR_MESSAGE);
+            // Return a 400 Bad Request response if PII is detected
+            return {
+                body: PII_DETECTION_ERROR_MESSAGE
+            };
         }
 
         // Forward the request to the Azure OpenAI embeddings endpoint
@@ -151,9 +123,7 @@ function containsPii(string text) returns boolean {
     string:RegExp ipv6Pattern = re `([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}`;
     string:RegExp creditCardPattern = re `(\d{4}[-.\s]?){3}\d{4}|\d{16}`;
 
-    if emailPattern.find(text) is regexp:Span || phoneNumberPattern.find(text) is regexp:Span
-        || ssnPattern.find(text) is regexp:Span || ipv4Pattern.find(text) is regexp:Span
-        || ipv6Pattern.find(text) is regexp:Span || creditCardPattern.find(text) is regexp:Span {
+    if re `${emailPattern}|${phoneNumberPattern}|${ssnPattern}|${ipv4Pattern}|${ipv6Pattern}|${creditCardPattern}`.find(text) is regexp:Span {
         return true;
     }
 
