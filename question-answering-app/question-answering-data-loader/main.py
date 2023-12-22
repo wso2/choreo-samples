@@ -18,10 +18,9 @@
 
 import logging
 
-import gspread
 import openai
+import pandas as pd
 import pinecone
-from oauth2client.service_account import ServiceAccountCredentials
 
 from config_loader import load_configs
 from constants import *
@@ -52,61 +51,36 @@ def get_embedding(text):
     return result["data"][0]["embedding"]
 
 
-def read_data_from_google_sheets(sheet_id, sheet_name):
+def main():
     """
-    Function to read data from Google Sheets
+    Main function
     """
-    try:
-        # Authorize Google Sheets client
-        scope = ['https://www.googleapis.com/auth/spreadsheets',
-                 "https://www.googleapis.com/auth/drive"]
-        credentials = ServiceAccountCredentials.from_json_keyfile_name(GS_CREDENTIALS_PATH, scope)
-        gsclient = gspread.authorize(credentials)
 
-        # Open the Google Sheet and read the data
-        sh = gsclient.open_by_key(sheet_id)
-        worksheet = sh.worksheet(sheet_name)
-        values = worksheet.get_all_values()[1:]  # Skip the header
+    pinecone_data = []
 
-    except Exception as e:
-        logging.exception("Error reading data from the google sheet and generating embeddings")
-        return
+    data = pd.read_csv("data/example-data.csv")
 
     try:
         # Generate data arrays to be inserted into Pinecone
-        data = []
-        for row in values:
+        for index, row in data.iterrows():
             title, content = row
-            data.append({
-                "id": title,
-                "values": get_embedding(content),
+            pinecone_data.append({
+                "id": title + "-" + str(index),
+                "values": get_embedding(title + content),
                 "metadata": {"content": content}
             })
-
-        return data
 
     except Exception as e:
         logging.exception("Error generating data vectors with embeddings")
         return
 
-
-def main():
-    """
-    Main function
-    """
-    # Read data from Google Sheets
-    data = read_data_from_google_sheets(config["SHEET_ID"], config["WORKSHEET_NAME"])
-
-    if data is None:
-        return
-
-    if len(data) == 0:
-        logging.error("No data found in the Google Sheet.")
+    if len(pinecone_data) == 0:
+        logging.error("No data found.")
         return
 
     # Insert data into Pinecone index
     index = pinecone.Index(config["PINECONE_INDEX_NAME"])
-    index.upsert(data)
+    index.upsert(pinecone_data)
 
     logging.info("Successfully inserted data into Pinecone.")
 
