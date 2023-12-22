@@ -18,5 +18,3 @@
 
 OPENAI_API_TYPE = "azure"
 OPENAI_API_VERSION = "2023-05-15"
-
-GS_CREDENTIALS_PATH = "/config/gs_credentials.json"

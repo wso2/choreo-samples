@@ -24,7 +24,7 @@ def load_configs():
     Load configs from environment variables.
     """
     config_keys = ["OPENAI_API_KEY", "OPENAI_API_BASE", "OPENAI_EMBEDDING_MODEL", "SHEET_ID", "WORKSHEET_NAME",
-                   "PINECONE_API_KEY", "PINECONE_INDEX_NAME", "PINECONE_ENVIRONMENT"]
+                   "PINECONE_API_KEY", "PINECONE_INDEX_NAME", "PINECONE_ENVIRONMENT", "DATA_URL"]
     loaded_configs = {}
 
     for key in config_keys:
