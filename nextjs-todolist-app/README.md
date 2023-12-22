@@ -43,7 +43,7 @@ In this step, you are playing the role of an API developer. You will create a se
 
 Follow the steps below to create the service:
 
-1. Go to [https://console.choreo.dev/](https://console.choreo.dev/cloud-native-app-developer) and sign in. This opens the project home page.
+1. Go to [https://console.choreo.dev/](https://console.choreo.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Go to the **Service** card and click **Create**.
 4. Enter a unique name and a description of the service. You can enter the name and description given below:
@@ -55,7 +55,7 @@ Follow the steps below to create the service:
 
 5. Click **Next**.
 6. To allow Choreo to connect to your GitHub account, click **Authorize with GitHub**.
-7. If you have not already connected your GitHub repository to Choreo, enter your GitHub credentials, and select the repository you created by forking [https://github.com/wso2/choreo-examples](https://github.com/wso2/choreo-examples) to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
+7. If you have not already connected your GitHub repository to Choreo, enter your GitHub credentials, and select the repository you created by forking [https://github.com/wso2/choreo-samples](https://github.com/wso2/choreo-samples) to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
     !!! info
          The **Choreo GitHub App** requires the following permissions:<br/><br/>- Read and write access to code and pull requests.<br/><br/>- Read access to issues and metadata.<br/><br/>You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) if you do not want Choreo to have access to your GitHub account. However, write access is only needed to send pull requests to a user repository. Choreo will not directly push any changes to a repository.
@@ -70,7 +70,7 @@ Follow the steps below to create the service:
     | **Branch**            | **`main`**                               |
     | **Buildpack**      | Click **Docker** because you are creating the REST API from a Dockerfile.|
     | **Dockerfile Path**            | **`nextjs-todolist-app/nexjs-todolist-app-backend/Dockerfile`**                               |
-    | **Docker Context Path**            | **`web-apps/NextJs-App/nexjs-todolist-app-backend`**                               |
+    | **Docker Context Path**            | **`nextjs-todolist-app/nexjs-todolist-app-backend`**                               |
 
 9. Click **Create**. This initializes the service with the implementation from your GitHub repository and takes you to the **Overview** page of the component.
 
@@ -86,7 +86,7 @@ For the REST endpoint of the service to be invokable, you need to deploy it. To 
 
 !!! info
 
-1.  To successfully build your container with Choreo, it is essential to explicitly define a User ID (UID) under the USER instruction in your Dockerfile. For reference, see [sample Dockerfile](https://github.com/wso2/choreo-sample-apps/blob/main/go/greeter/Dockerfile).
+1.  To successfully build your container with Choreo, it is essential to explicitly define a User ID (UID) under the USER instruction in your Dockerfile. For reference, see [sample Dockerfile](https://github.com/wso2/choreo-samples/blob/main/greeting-service-go/Dockerfile).
 
 To ensure that the defined USER instruction is valid, it must conform to the following conditions:
 
