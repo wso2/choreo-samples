@@ -16,7 +16,7 @@ This guide walks you through the following steps:
 
 Before you try out this guide, complete the following:
 
-1. Create a GitHub repository to save the service implementation. For this guide, you can fork [https://github.com/wso2/choreo-sample-apps](https://github.com/wso2/choreo-sample-apps).
+1. Create a GitHub repository to save the service implementation. For this guide, you can fork [https://github.com/wso2/choreo-samples.git](https://github.com/wso2/choreo-samples.git).
 2. If you are signing in to the Choreo Console for the first time, create an organization as follows:
 
     1. Go to [https://console.choreo.dev/](https://console.choreo.dev/), and sign in using your Google, GitHub, or Microsoft account.
@@ -66,12 +66,11 @@ Follow the steps below to create the service:
     | **Field**             | **Description**                               |
     |-----------------------|-----------------------------------------------|
     | **GitHub Account**    | Your account                                  |
-    | **GitHub Repository** | **`choreo--sample-apps`** |
+    | **GitHub Repository** | **`choreo--samples`** |
     | **Branch**            | **`main`**                               |
-    | **Build Preset**      | Click **Dockerfile** because you are creating the REST API from a Dockerfile.|
-    | **Project Path**              | **`web-apps/NextJs-App/backend-service`**                    |
-    | **Dockerfile Path**            | **`web-apps/NextJs-App/backend-service/Dockerfile`**                               |
-    | **Docker Context Path**            | **`web-apps/NextJs-App/backend-service`**                               |
+    | **Buildpack**      | Click **Docker** because you are creating the REST API from a Dockerfile.|
+    | **Dockerfile Path**            | **`nextjs-todolist-app/nexjs-todolist-app-backend/Dockerfile`**                               |
+    | **Docker Context Path**            | **`web-apps/NextJs-App/nexjs-todolist-app-backend`**                               |
 
 9. Click **Create**. This initializes the service with the implementation from your GitHub repository and takes you to the **Overview** page of the component.
 
@@ -79,9 +78,11 @@ Follow the steps below to create the service:
 
 For the REST endpoint of the service to be invokable, you need to deploy it. To deploy the service, follow the steps given below:
 
-1. In the left navigation menu, click **Deploy**.
+1. In the left navigation menu, click **Build** and then select the latest commit and build.
 
-2. In the **Build Area** card, click **Configure & Deploy** from the split button.
+2. In the left navigation menu, click **Deploy** and then select the latest image and build.
+
+2. In the **Setup Area** card, click **Configure & Deploy** from the split button.
 
 !!! info
 
@@ -135,11 +136,11 @@ To host the front-end application in Choreo, you must create a web application c
     | **Field**             | **Description**                               |
     |-----------------------|-----------------------------------------------|
     | **GitHub Account**    | Your account                                  |
-    | **GitHub Repository** | **`choreo-sample-apps`** |
+    | **GitHub Repository** | **`choreo-samples`** |
     | **Branch**            | **`main`**                               |
-    | **Build Preset**      | Click **Dockerfile** since the frontend is a containerized Next.js application built using a Dockerfile|
-    | **Dockerfile Path***              | **`web-apps/NextJs-App/backend-service/Dockerfile`** |
-    | **Dockerfile context Path***     | **`web-apps/NextJs-App/frontend-app/`**             |
+    | **Buildpack**      | Click **Docker** since the frontend is a containerized Next.js application built using a Dockerfile|
+    | **Dockerfile Path***              | **`/choreo-samples/nextjs-todolist-app/nexjs-todolist-app-frontend/Dockerfile`** |
+    | **Dockerfile context Path***     | **`/choreo-samples/nextjs-todolist-app/nexjs-todolist-app-frontend/`**             |
     | **Port** | **`3000`** |
 
 9. Click **Create**. This initializes the service with the implementation from your GitHub repository and takes you to the **Overview** page of the component.
@@ -150,8 +151,9 @@ Let's consume the service through the web app. Choreo services are by default se
 
 Once you create the web application component, you can deploy it to the Choreo runtime. To deploy the web application component, follow the steps below:
 
+1. In the left menu, click **Build** and select the latest commit and build.
 1. In the left menu, click **Deploy**.
-2. In the **Build Area** card, select **Deploy** from the split button and click to deploy. 
+2. In the **Set up Area** card, select **Deploy** from the split button and click to deploy. 
 3. The deployment may take a few minutes to complete. See how to define and read configurations at [Develop a Web Application page](https://wso2.com/choreo/docs/develop-components/develop-a-web-application/#creating-a-web-application).
 4. Once you deploy the web application, copy the **Web App URL** from the development environment card.
 
@@ -189,6 +191,7 @@ ASGARDEO_CLIENT_SECRET={Asgardeo client secret of the Asgardeo application creat
 ASGARDEO_SCOPES=openid email profile
 ASGARDEO_SERVER_ORIGIN=https://api.asgardeo.io/t/{org-name}
 TODO_API_BASE_URL={project URL of the todo list service}
+NEXTAUTH_URL= {Copied web app url}
 ```
 
 !!! info
@@ -197,9 +200,6 @@ TODO_API_BASE_URL={project URL of the todo list service}
 
     2. See more details on NEXTAUTH_URL and NEXTAUTH_SECRET configurations at [Next.js Official Documentation] (https://next-auth.js.org/configuration/options)
 
-
-4. Once the web application is deployed, copy the **Web App URL** from the development environment card.
-5. Navigate to the **DevOps** view from the left pane and click Configs & Secrets and add a new config as `NEXTAUTH_URL= {Copied web app url}` to the created config map at the deployment . 
 6. Click save.
 5. After a few seconds when the deployment is active, navigate to the copied web app URL. You can verify that the web app is successfully hosted.
 
