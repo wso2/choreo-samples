@@ -58,7 +58,7 @@ def main():
 
     pinecone_data = []
 
-    data = pd.read_csv("data/example-data.csv")
+    data = pd.read_csv(config["DATA_URL"])
 
     try:
         # Generate data arrays to be inserted into Pinecone
