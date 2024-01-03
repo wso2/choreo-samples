@@ -4,6 +4,6 @@ componentType: service
 buildPack: nodejs
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /reading-books-list-service-nodejs
-thumbnailPath: /icons/reading-books-list-service-nodejs.png
+thumbnailPath: /icons/reading-books-list-service-nodejs.svg
 documentationPath: /reading-books-list-service-nodejs/readme.md
 tags: null
