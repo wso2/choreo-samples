@@ -14,7 +14,7 @@ VALID_COMPONENT_TYPES = [
 
 VALID_BUILD_PACKS = [
     "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby",
-    "vue", "many", "postman", "react", "docker", "angular"
+    "vue", "many", "postman", "react", "docker", "angular", "dotnet"
 ]
 
 def validate_component_path(component_path, repository_url):
