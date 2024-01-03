@@ -4,6 +4,6 @@ componentType: service
 buildPack: python
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /reading-books-list-service-python
-thumbnailPath: /icons/reading-books-list-service-python.png
+thumbnailPath: /icons/reading-books-list-service-python.svg
 documentationPath: /reading-books-list-service-python/readme.md
 tags: null
