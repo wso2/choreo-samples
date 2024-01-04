@@ -25,8 +25,26 @@ def validate_metadata_and_thumbnails():
             with open(meta_path, 'r') as f:
                 data = yaml.safe_load(f)
 
+                dispaly_name = data.get('displayName')
+                if not dispaly_name:
+                    raise ValueError(f"Error: 'displayName' is not set for the sample: {meta_file}.")
+                
+                description = data.get('description')
+                if not description:
+                    raise ValueError(f"Error: 'description' is not set for the sample: {meta_file}.")
+
+                documentation_path = data.get('documentationPath')
+                if not documentation_path:
+                    raise ValueError(f"Error: 'documentationPath' is not set for the sample: {meta_file}.")
+                
                 component_path = data.get('componentPath')
+                if not component_path:
+                    raise ValueError(f"Error: 'componentPath' is not set for the sample: {meta_file}.")
+                
                 repository_url = data.get('repositoryUrl')
+                if not repository_url:
+                    raise ValueError(f"Error: 'repositoryUrl' is not set for the sample: {meta_file}.")
+                
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
