@@ -4,7 +4,7 @@ componentType: many
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /nextjs-todolist-app
-thumbnailPath: /icons/nextjs-todolist-app.png
+thumbnailPath: /icons/nextjs-todolist-app.svg
 documentationPath: /nextjs-todolist-app/README.md
 tags:
   - HTTP

@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /question-answering-app
-thumbnailPath: /icons/question-answering-app.png
+thumbnailPath: /icons/question-answering-app.svg
 documentationPath: /question-answering-app/README.md
 tags:
   - HTTP
