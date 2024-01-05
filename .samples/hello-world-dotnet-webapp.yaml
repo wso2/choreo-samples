@@ -1,5 +1,5 @@
 displayName: Hello World Web App in .NET
-description: Print Hello World message
+description: Web Aappliction to display "Hello World" in .NET
 componentType: web-application
 buildPack: dotnet
 repositoryUrl: https://github.com/wso2/choreo-samples/

@@ -1,4 +1,4 @@
-# Hello World .NET
+# Hello World Web Application in .NET
 
 Sample for Hello World web app.
 

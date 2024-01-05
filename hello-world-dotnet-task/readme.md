@@ -1,4 +1,4 @@
-# Hello World .NET
+# Hello World task in .NET
 
 Sample for Hello World task. Print "Hello World" when run dotnet run
 
