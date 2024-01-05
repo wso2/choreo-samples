@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /reading-list-app
-thumbnailPath: /icons/reading-list-app.png
+thumbnailPath: /icons/reading-list-app.svg
 documentationPath: /reading-list-app/readme.md
 tags:
   - HTTP
