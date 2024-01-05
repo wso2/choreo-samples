@@ -20,7 +20,7 @@ Please refer to the Choreo documentation under the [Develop an Application with 
     | **GitHub Repository** | choreo-samples |
     | **Branch**            | **`main`**                               |
     | **Buildpack**      | Go|
-    | **Select Go Project Directory**       | hello-world-go-task |
+    | **Select Go Project Directory**       | hello-world-go-webapp |
     | **Language Version**              | 1.x |
     | **Port** | 8080|
 
