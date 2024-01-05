@@ -1,0 +1,9 @@
+displayName: Hello World Web App in .NET
+description: Print Hello World message
+componentType: web-application
+buildPack: dotnet
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-dotnet-webapp
+thumbnailPath: /icons/hello-world-dotnet-webapp.png
+documentationPath: /hello-world-dotnet-webapp/readme.md
+tags: .NET
