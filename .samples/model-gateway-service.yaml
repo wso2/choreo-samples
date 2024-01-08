@@ -1,0 +1,11 @@
+displayName: Model Gateway Service
+description: Ballerina service which acts as a model gateway in order to detect Personal Identifiable Information (PII) in text inputs prior to sending them to hosted machine learning models (e.g., LLMs).
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /model-gateway-service
+thumbnailPath: /icons/model-gateway-service.png
+documentationPath: /model-gateway-service/README.md
+tags:
+  - HTTP
+  - REST

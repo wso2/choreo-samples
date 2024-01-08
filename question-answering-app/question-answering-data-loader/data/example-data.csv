@@ -1,0 +1,97 @@
+title,content
+What is Choreo?,"Choreo is an internal developer platform that redefines how you create digital experiences. Choreo empowers you to seamlessly design, develop, deploy, and govern your cloud native applications, unlocking innovation while reducing time-to-market.
+
+The following are some of the cutting-edge capabilities of Choreo:
+
+Design that leads to end-to-end security, governance, and operational efficiency:
+
+Domain-driven design: Organize your enterprise systems into domains, exposing managed APIs, events, and data through projects., A project consists of components representing units of deployment.
+Application security design: Cell-based architecture, where projects become governable units from development to deployment, ensuring managed access via APIs, events, and data.
+Architecture and code parity: Application architecture design that allows the code to be the architecture, preventing architecture drift. Powered by Ballerina.
+Efficient and effective development:
+
+Code in any language: Develop applications in your team's preferred programming language, harnessing existing skill sets to build powerful polyglot APIs, services, events, tasks, and more.
+Native support for VSCode and GitHub: Seamlessly collaborate and manage code with VSCode and GitHub in a feature-rich and visually-enhanced development environment.
+Seamless deployment:
+
+CI/CD: Eliminate manual builds and unreliable deployments with Choreo's industry-standard CI/CD tooling, providing complete control and flexibility.
+Multi-cloud Kubernetes: Easily deliver cloud native applications across Azure, AWS, GCP, or your Kubernetes clusters.
+Configuration management: Centralize configuration parameters, sensitive credentials, and secrets across deployment environments via an intuitive interface.
+Effortless management of APIs, integrations, microservices, and web applications:
+
+Enable security: Empower security teams to manage data flows, ensuring seamless control over sensitive information like access credentials.
+Scale up or down: Kubernetes handles scaling automatically, optimizing costs by scaling services based on demand.
+Ensure reliability: DevOps and SRE teams can easily manage deployed components with built-in insights and observability.
+Reusable digital assets:
+
+Discover assets: Accelerate delivery times by finding and reusing digital assets developed by others via Choreo's library of over 400 connectors.
+Control visibility and sharing: Publish your digital assets to a shared marketplace for consumption by internal or external stakeholders, managed by role-based access control.
+Enterprise Marketplace: Choreo's secure enterprise marketplace fosters transparency and efficiency with granular access control for publishers and consumers.
+Comprehensive observability:
+
+Performance predictions: Optimize your applications by leveraging Choreo's performance predictions based on historical and real-time system data.
+Anomaly detection: Stay ahead of issues with prompt notifications, ensuring balanced scaling and immediate action during unexpected mishaps.
+Troubleshoot and debug: Quickly pinpoint and address root causes using detailed logs and data aligned in the same timeline, down to the machine-level details.
+Robust governance:
+
+DORA metrics: Monitor your DevOps efficiency with Choreo DORA metrics, experiencing rapid improvements in time from deployment to production safely and robustly.
+Engineering insights: Gain visibility into engineering insights and advanced data analytics to make data-driven decisions, optimize processes, and improve efficiency.
+API analytics: Understand API performance and adoption patterns to identify and resolve operational bottlenecks."
+Organization,"An organization in Choreo is a logical grouping of users and user resources. A first-time user must create an organization and be a member of it when signing in to Choreo. Users and resources in an organization cannot access resources in another organization unless an admin of the other organization invites them and adds them as a member of that organization. A user cannot create more than one organization.
+
+"
+Project,"A project in Choreo is a logical group of related components that typically represent a single cloud native application. A project consists of one or more components. All components within a project can ideally be (but is not restricted to) in a single GitHub repository under different paths. This is also known as the monorepo architecture.
+
+At deployment time, all components within a given project are deployed into a single namespace of the Kubernetes cluster. Components within a project can be exposed to the public internet, internally to the rest of the organization, or privately within the project only. A project in Choreo is represented as a cell with regard to the Cell-based architecture. "
+Component,"A component within a project represents a single unit of work in a cloud native application. A component is usually a single microservice, API, or job/task. Each component in Choreo is attached to a given directory path in a Git repository which either contains program source code or a Dockerfile with build instructions. A component is Choreo’s unit of deployment. Each component maps to a single pod in the Kubernetes cluster (data plane) at deployment time. Therefore, you can deploy, manage, and scale each component in Choreo independently.
+
+Choreo supports different component types for various use cases. These include component types such as services, API proxies, integrations, web applications, and so on. Each component type hosts unique features based on its characteristics. For example, a scheduled integration component can accept a cron expression as a configuration to schedule an integration job/task."
+Endpoint,"An Endpoint is a network-exposed function that resides within a component. In Choreo, service and integration components expose one or more endpoints. Each endpoint in a component can have a service contract (OpenAPI, GraphQL SDL) associated with it. This contract is used to expose the endpoint to consumers. In the absence of a contract, Choreo uses /* exposed on all HTTP verbs as the default contract to expose the service or the integration.
+
+Each endpoint exposed in a component is considered a single API. Therefore, Choreo allows you to do API management per endpoint for a given component. For example, you can perform lifecycle management and configure security settings per endpoint in a given component."
+Data Planes,"The Choreo control plane serves as a configuration manager and orchestrator at its core. It comprises various components that assist developers in defining and creating Choreo applications. APIs facilitate communication between consumers and the Choreo control plane.
+
+Similarly, the Choreo data plane is a Kubernetes cluster where applications are deployed and run. The data plane incorporates specific system components that allow user applications to run with the support of the control plane. While the data plane relies on the control plane for assistance, it can operate independently during a disaster scenario. All communication between the control plane and the data plane happens via APIs."
+Environments,"Choreo offers developers one or more environments to run their applications within a given data plane. By default, the Choreo cloud data plane provides two environments (i.e., development and production). Each project in Choreo is associated with one or more environments available in the organization. For example, project A may choose to utilize dev, staging, and production environments, while project B may only use development and production environments.
+
+You can promote components within a project across available environments. When you promote a component, its configuration values can be overridden with environment-specific values."
+Choreo Marketplace,"The Choreo Marketplace promotes and facilitates reusing and sharing services. It allows you to share all the services deployed in Choreo. You can easily browse and search available services within the Marketplace and refer to the service definitions, documentation, instructions on how you can use it, etc."
+Deployment Tracks,"Deployment Tracks in Choreo are structured pathways for simplified software component deployment. They act like advanced CI/CD pipelines, ensuring your components reach their destinations seamlessly, whether from source code or prebuilt images. They establish an organized and structured approach that minimizes the chances of errors and challenges that are typically associated with deployment workflows.
+
+The significance of Deployment Tracks
+Deployment Tracks offer practical solutions to enhance the API consumer experience by addressing two critical challenges:
+
+Streamlined deployment: Deployment Tracks serve as ll-designed routes for your software components, enhancing the organization and reliability of the deployment process, similar to a ll-structured express route.
+
+Efficient API versioning: Especially beneficial for managed APIs, Deployment Tracks provide a straightforward method for creating API versions that seamlessly interact with previous iterations. This simplified version management benefits both API creators and consumers alike."
+CI/CD,"Choreo provides a streamlined continuous integration and continuous-development experience to deploy applications and services efficiently across multiple environments.
+
+Choreo created environments for each project. All components in a project share environments. An environment is an isolated deployment area with restricted network and resource access. Services deployed in one particular environment cannot communicate with or reach services deployed in another.
+
+The Choreo cloud data plane provides two default environments (i.e., development and production). However, if you are in a private data plane organization, you can customize the environments and have multiple based on your requirements.
+
+Choreo adopts a Build Once, Deploy Many strategy to manage components across multiple environments. An application is built only once (i.e., per commit if auto-build on commit is enabled or based on the selected commit during a manual build), and then it is promoted to subsequent environments. Lower, non-production environments such as development allow you to test changes before promoting a selected build into a production environment.
+
+Choreo injects configurations and secrets you maintain at the environment level into components at runtime. This ensures a strict separation of environment-specific configurations from source code. Although configurations can vary across environments, the code and the built container do not change. Configurations and secrets include values such as:
+
+Resource credentials to a database, cache, or other backing services.
+Credentials to external cloud services such as Amazon S3 or an external API.
+All configurations and secrets are encrypted at rest and in transit and stored in a secure vault. In a private data plane organization, you can store configurations and secrets in your infrastructure."
+Develop a Service,"A service component in Choreo lets you deploy and expose REST, GraphQL, gRPC, UDP, or TCP services. It is a fundamental building block for creating cloud-native applications in Choreo. They provide a simple and effective way to expose functionality as a service to other components within Choreo or to the outside world.
+
+Service components encapsulate business logic and provide standardized interfaces, called endpoints, for communicating with other components or systems. You can deploy and scale services independently, which makes them highly flexible and adaptable to changing workloads.
+
+With the help of the service component, developers can quickly create APIs and microservices, making it easier to implement and manage complex software systems. Service components can also be integrated with other Choreo components, that acts as message processors, connectors, and data sources, etc to create powerful end-to-end solutions.
+
+Services and integrations are exposed to other services, integrations, or applications through endpoints. A service or an integration can expose multiple endpoints, each representing a unique entry point into the service. For example, a service may expose a REST API endpoint and a GraphQL endpoint, each providing different ways to interact with the service. Endpoints provide specific details for how the service or the integration can be consumed. For instance, the port number, protocol, and the schema such as open API specification (OAS) or GraphQL schema. By defining these details, endpoints make it possible for other services, integrations, and applications to discover and interact with the service in a standardized way.
+
+Choreo defines endpoints by combining port binding, protocol, endpoint name, network visibility, endpoint schema, and additional protocol-related fields. The following table describes each attribute of an endpoint."
+Develop Components with Git,"Choreo enables you to develop components by connecting your GitHub or Bitbucket repository. You have the flexibility to either connect an existing repository or start with an empty repository and commit the source code later. By integrating your repositories with Choreo, you can automate tasks and optimize workflows across multiple systems, all within the Choreo platform. As of now, Choreo supports GitHub and Bitbucket as its Git provider.
+
+In Choreo, you can connect a Git repository that contains Ballerina source code or a Docker project. To connect your Git repository as a Docker project, your Git repository should contain the Dockerfile and the build's context. The Dockerfile specifies the instructions for building the Docker image, while the build context is a set of files located in the specified path used to build the image.
+
+In Choreo, you can connect a Git repository that contains Ballerina source code or a Docker project. To connect your Git repository to Choreo as a Docker project, your Git repository must contain the following:
+
+A Dockerfile A build context The Dockerfile specifies the instructions for building the Docker image. The build context is a set of files located in the specified path used to build the image.
+
+Once you have connected your Git repository to Choreo, you can build, deploy, and manage your application easily."

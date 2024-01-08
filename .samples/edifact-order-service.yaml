@@ -4,7 +4,7 @@ componentType: service
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /edifact-order-service
-thumbnailPath: /icons/edifact-order-service.png
+thumbnailPath: /icons/edifact-order-service.svg
 documentationPath: /edifact-order-service/readme.md
 tags:
   - EDI

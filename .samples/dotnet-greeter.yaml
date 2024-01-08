@@ -1,10 +1,10 @@
 displayName: .NET Greeter
 description: Simple .NET service that exposes a REST API to greet a user.
 componentType: service
-buildPack: docker
+buildPack: dotnet
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /dotnet-greeter
-thumbnailPath: /icons/dotnet-greeter.png
+thumbnailPath: /icons/dotnet-greeter.svg
 documentationPath: /dotnet-greeter/readme.md
 tags:
   - .NET

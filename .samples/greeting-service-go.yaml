@@ -4,6 +4,6 @@ componentType: service
 buildPack: go
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /greeting-service-go
-thumbnailPath: /icons/greeting-service-go.png
+thumbnailPath: /icons/greeting-service-go.svg
 documentationPath: /greeting-service-go/readme.md
 tags: null

@@ -1,0 +1,10 @@
+displayName: Hello World in .NET
+description: Task to print "Hello World" in .NET
+componentType: manual-task
+buildPack: dotnet
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hello-world-dotnet-task
+thumbnailPath: /icons/hello-world-dotnet-task.png
+documentationPath: /hello-world-dotnet-task/readme.md
+tags: 
+  - .NET

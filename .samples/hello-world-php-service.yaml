@@ -1,5 +1,5 @@
 displayName: Hello World Service in PHP
-description: A Hello World service created using Go
+description: A Hello World service created using PHP
 componentType: service
 buildPack: php
 repositoryUrl: https://github.com/wso2/choreo-samples/

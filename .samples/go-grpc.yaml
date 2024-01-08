@@ -4,7 +4,7 @@ componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /go-grpc
-thumbnailPath: /icons/go-grpc.png
+thumbnailPath: /icons/go-grpc.svg
 documentationPath: /go-grpc/readme.md
 tags:
   - Go

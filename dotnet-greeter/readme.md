@@ -13,16 +13,26 @@ Note: The following file paths are relative to the path /dotnet/greeter
 | .choreo/endpoints.yaml | Choreo-specific configuration that provides information about how Choreo exposes the service.                                                                        |
 | openapi.yaml           | OpenAPI contract of the greeter service. This is needed to publish our service as a managed API. This openapi.yaml file is referenced by the .choreo/endpoints.yaml. |
 
-## Deploy Application in Choreo
+## Getting started
 
-1. Fork this repository.
-2. Create a `Service` component in Choreo with Docker Buildpack.
-3. Use the following config when creating this component in Choreo:
-    - Dockerfile: `<repository-url>/dotnet-greeter/Dockerfile`
-    - Docker context: `<repository-url>/dotnet-greeter/`
+Please refer to the Choreo documentation under the [Develop an Application with Buildpacks](https://wso2.com/choreo/develop-components/deploy-an-application-with-buildpacks) to learn how to deploy the application.
 
-    Make sure to replace `<repository-url>` with your repository URL.
-4. Deploy the component.
+1. Select `Service` Card from Component Creation Wizard
+2. Select `.NET` as the buildpack. Fill as follow according to selected Buildpack.
+
+    | **Field**             | **Description**                               |
+    |-----------------------|-----------------------------------------------|
+    | Name           | Greeting Service              |
+    | Description    | greeting service       |
+    | **GitHub Account**    | Your account                                  |
+    | **GitHub Repository** | choreo-samples |
+    | **Branch**            | **`main`**                               |
+    | **Buildpack**      | .NET |
+    | **Select Go Project Directory**       | dotnet-greeter |
+    | **Select Language Version**              | 7.x |
+
+3. Click Create. Once the component creation is complete, you will see the component overview page.
+4. Deploy the created component
 
 ## Testing the Application
 

@@ -33,7 +33,7 @@ You can select either Docker or Go as buildpacks. Fill as follow according to se
     | **Branch**            | **`main`**                               |
     | **Buildpack**      | `Python` |
     | **Select Go Project Directory**       | reading-books-list-service-python|
-    | **Select Language Version**              | 3.1.x |
+    | **Select Language Version**              | 3.10.x |
 
 3. Click Create. Once the component creation is complete, you will see the component overview page.
 4. Deploy the created component

@@ -43,3 +43,6 @@ dist
 
 # vscode
 .vscode/
+
+# maven
+target/

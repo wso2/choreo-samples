@@ -1,0 +1,12 @@
+displayName: Question Answering App
+description: A chatbot to answer questions based on documentation.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /question-answering-app
+thumbnailPath: /icons/question-answering-app.svg
+documentationPath: /question-answering-app/README.md
+tags:
+  - HTTP
+  - Web Application
+  - Manual Task

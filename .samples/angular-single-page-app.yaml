@@ -4,7 +4,7 @@ componentType: web-application
 buildPack: angular
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /angular-single-page-app
-thumbnailPath: /icons/angular-single-page-app.png
+thumbnailPath: /icons/angular-single-page-app.svg
 documentationPath: /angular-single-page-app/readme.md
 tags:
   - Angular

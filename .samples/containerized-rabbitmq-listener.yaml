@@ -4,7 +4,7 @@ componentType: event-handler
 buildPack: docker
 repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /containerized-rabbitmq-listener
-thumbnailPath: /icons/containerized-rabbitmq-listener.png
+thumbnailPath: /icons/containerized-rabbitmq-listener.svg
 documentationPath: /containerized-rabbitmq-listener/readme.md
 tags:
   - Integration
