@@ -18,5 +18,5 @@ def resolve_version(url):
     # If the version number is greater than 99, set it to 1
     if version > 99:
         version = 1
-
-    return "v" + version
+    print(f"Resolved version: {version}")
+    return "v" + str(version)
