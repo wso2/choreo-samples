@@ -18,15 +18,9 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 
 #### Use the following build config when creating this component in Choreo:
 
-- Build Preset: **Dockerfile**
+- Build Pack: **Dockerfile**
 - Dockerfile Path: `spring-boot-reading-list-rest-api/Dockerfile`
 - Docker Context Path: `spring-boot-reading-list-rest-api`
-
-The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
-
-## Use the following build config when creating this component in Choreo:
-
-- Build Preset: **Dockerfile**
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
