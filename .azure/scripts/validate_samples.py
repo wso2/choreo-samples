@@ -45,6 +45,10 @@ def validate_metadata_and_thumbnails():
                 if not repository_url:
                     raise ValueError(f"Error: 'repositoryUrl' is not set for the sample: {meta_file}.")
                 
+                tags = data.get('tags')
+                if tags and not isinstance(tags, list):
+                    raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
+                
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")

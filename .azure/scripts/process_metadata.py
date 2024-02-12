@@ -3,8 +3,8 @@ import yaml
 import json
 import shutil
 import metadata_validator
+import version_manager
 
-INDEX_VERSION = 'v8'
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
@@ -74,7 +74,20 @@ def generate_index_json(data):
         "count": len(data)
     }
 
-    with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{INDEX_VERSION}.json"), 'w') as f:
+    version_file_path = BASE_URL_FOR_THUMBNAILS + '/choreo-samples-version.txt'
+    try:
+        index_version = version_manager.resolve_version(version_file_path)
+    except Exception as e:
+        print(f"Failed to resolve version from version file: {e}")
+        index_version = "v0" # Fallback to default version
+        print(f"Using default version: {index_version}")
+    
+    # Write version value to file
+    with open(os.path.join(BUILD_STAGING_DIRECTORY, 'choreo-samples-version.txt'), 'w', encoding='utf-8') as f:
+        f.write(index_version)
+        print(f"Generated version.txt with value: {index_version}")
+
+    with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{index_version}.json"), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
     print("Generated index.json")
 
