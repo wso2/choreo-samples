@@ -18,7 +18,7 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 
 #### Use the following build config when creating this component in Choreo:
 
-- Build Preset: **Dockerfile**
+- Build Pack: **Dockerfile**
 - Dockerfile Path: `java-product-catalog-rest-api/Dockerfile`
 - Docker Context Path: `java-product-catalog-rest-api`
 
