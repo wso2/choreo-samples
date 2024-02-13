@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: reading-list-api
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /books:
+    post:
+      tags:
+        - default
+      summary: Add a new book
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 3
+                title: To Kill a Mockingbird
+                author: Harper Lee
+                status: READ
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: Update an existing book's details
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: 1
+                title: Gulliver's Travels
+                author: Jonathan Swift
+                status: READ
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: Get all books
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      summary: Delete book by ID
+      parameters:
+        - name: id
+          in: query
+          description: ID of the book to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /books/id:
+    get:
+      summary: Get book by ID
+      parameters:
+        - name: id
+          in: query
+          description: ID of the book to find
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}

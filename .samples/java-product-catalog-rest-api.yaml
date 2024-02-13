@@ -1,0 +1,12 @@
+displayName: Product Catalog REST Service in Java
+description: A simple REST API service written in Java Spring Boot
+componentType: service
+buildPack: docker
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /java-product-catalog-rest-api
+thumbnailPath: /icons/java-product-catalog-rest-api.svg
+documentationPath: /java-product-catalog-rest-api/readme.md
+tags:
+  - HTTP
+  - REST
+  - Spring Boot

@@ -1,9 +1,9 @@
-# Sample Java REST API
+# Sample Spring Boot REST API
 
 ## Repository File Structure
 
 The below table gives a brief overview of the important files in the service.\
-Note: The following file paths are relative to the path /java/rest-api/
+Note: The following file paths are relative to the path /springBoot/rest-api/
 
 | Filepath               | Description                                                                                                                                                  |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -18,24 +18,18 @@ Please refer to the Choreo documentation under the [Develop a REST API](https://
 
 #### Use the following build config when creating this component in Choreo:
 
-- Build Preset: **Dockerfile**
-- Dockerfile Path: `java-reading-list-rest-api/Dockerfile`
-- Docker Context Path: `java-reading-list-rest-api`
+- Build Pack: **Dockerfile**
+- Dockerfile Path: `spring-boot-reading-list-rest-api/Dockerfile`
+- Docker Context Path: `spring-boot-reading-list-rest-api`
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
 ## Execute the Sample Locally
 
-> NOTE: You need to have java 17 installed in your system or Docker and VS Code installed to
+> NOTE: You need to have java 17 installed in your system or a docker and VS Code installed to
 > open this in a dev container
 
-Navigate to the Java application directory
-
-```bash
-cd choreo-samples/java-reading-list-rest-api
-```
-
-Build the project
+Use following command to build the project
 
 ```bash
 $ ./mvnw clean install
