@@ -35,6 +35,7 @@ export const performRequestWithRetry = async (url: string, options: AxiosRequest
           // Redirect to the login page
           console.log('Failed to refresh token. Status: ' + refreshError.response.status);
           window.location.href = '/auth/login';
+          return;
         } else {
           // We can't refresh the token due to a server error.
           // Hence just throw the original 401 error from the API.
