@@ -26,11 +26,9 @@ export const performRequestWithRetry = async (url: string, options: AxiosRequest
   } catch (error) {
     if (error.response && error.response.status === 401) {
       // Access token may be expired. Try to refresh the tokens.
+      console.log('Access token may be expired. Trying to refresh the tokens.');
       try {
         await axios.post('/auth/refresh');
-        // Token refresh successful. Retry the API call.
-        const retryResponse = await axios(url, options);
-        return retryResponse;
       } catch (refreshError) {
         if (refreshError.response && refreshError.response.status === 401) {
           // Session has expired (i.e., Refresh token has also expired).
@@ -43,6 +41,10 @@ export const performRequestWithRetry = async (url: string, options: AxiosRequest
           throw error;
         }
       }
+      // Token refresh successful. Retry the API call.
+      console.log('Token refresh successful. Retrying the API call.');
+      const retryResponse = await axios(url, options);
+      return retryResponse;
     } else {
       throw error;
     }
