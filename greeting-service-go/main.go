@@ -28,6 +28,8 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"golang.org/x/net/http2"
 )
 
 func main() {
@@ -40,6 +42,9 @@ func main() {
 		Addr:    fmt.Sprintf(":%d", serverPort),
 		Handler: serverMux,
 	}
+	http2.ConfigureServer(server, &http2.Server{})
+	server.SetKeepAlivesEnabled(false)
+
 	go func() {
 		log.Printf("Starting HTTP Greeter on port %d\n", serverPort)
 		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
@@ -67,6 +72,7 @@ func greet(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "Stranger"
 	}
+	w.Header().Set("Connection", "close")
 	log.Println("got a hello request; time: " + time.Now().String())
-	fmt.Fprintf(w, "Hello, %s!\n", name)
+	fmt.Fprintf(w, "Hello - 2, %s!\n", name)
 }
