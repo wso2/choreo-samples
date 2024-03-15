@@ -1,5 +1,4 @@
 import ballerina/http;
-import ballerina/config;
 
 // Define a configurable string variable
 configurable string greetingSuffix = "";
