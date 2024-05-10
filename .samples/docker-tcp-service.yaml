@@ -3,9 +3,9 @@ description: TCP Client and Server implemented in Go and packaged as docker imag
 componentType: many
 buildPack: many
 repositoryUrl: https://github.com/wso2/choreo-samples/
-componentPath: /dokcer-tcp-service
-thumbnailPath: /icons/dokcer-tcp-service.svg
-documentationPath: /dokcer-tcp-service/readme.md
+componentPath: /docker-tcp-service
+thumbnailPath: /icons/docker-tcp-service.svg
+documentationPath: /docker-tcp-service/readme.md
 tags:
   - TCP
   - Docker
