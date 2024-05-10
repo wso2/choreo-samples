@@ -8,8 +8,8 @@ This sample shows how you can deploy server-client services utilizing UDP for co
 
 1. Create a new Service component with following parameters
    - Build Pack: `Dockerfile`
-   - Dockerfile path: `go/udp-service/Dockerfile.server`
-   - Build Context: `go/udp-service`
+   - Dockerfile path: `docker-udp-service/Dockerfile.server`
+   - Build Context: `docker-udp-service`
 2. Deploy the component
 3. Navigate to the **Overview** page of the component and copy the endpoint address with the Project visibility.
 
@@ -17,8 +17,8 @@ This sample shows how you can deploy server-client services utilizing UDP for co
 
 1. Create a new Manual Trigger component with following parameters
    - Build Pack: `Dockerfile`
-   - Dockerfile path: `go/udp-service/Dockerfile.client`
-   - Build Context: `go/udp-service`
+   - Dockerfile path: `docker-udp-service/Dockerfile.client`
+   - Build Context: `docker-udp-service`
 2. Navigate to the **Configs & Secrets** page of the component and add the following environment variables as the `ConfigMap` with a custom config name.
 
    - `SERVER_ADDRESS`: `<server-address>`
