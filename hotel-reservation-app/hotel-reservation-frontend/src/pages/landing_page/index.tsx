@@ -23,7 +23,8 @@ export default function LandingPage() {
         Enjoy convienence
       </Typography>
       <Button
-        onClick={() => {"/auth/login";
+        onClick={() => {
+          window.location.href = "/auth/login";
         }}
         variant="contained"
         color="secondary"
