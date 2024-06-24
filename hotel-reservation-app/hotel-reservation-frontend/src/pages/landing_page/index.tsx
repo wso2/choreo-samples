@@ -23,8 +23,7 @@ export default function LandingPage() {
         Enjoy convienence
       </Typography>
       <Button
-        onClick={() => {
-          window.location.href = "/rooms";
+        onClick={() => {"/auth/login";
         }}
         variant="contained"
         color="secondary"
@@ -36,7 +35,7 @@ export default function LandingPage() {
           fontSize: 18,
         }}
       >
-        Get Started
+        Sign In
       </Button>
     </Box>
   );
