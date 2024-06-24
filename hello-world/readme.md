@@ -9,4 +9,4 @@ Once successfully executed, Listener will be started at port 9090. Then you need
 ```
 $ curl http://localhost:8090/hello/greeting
 ```
-Now service will be invoked and returns the message as `Hello World`
+Now service will be invoked and returns the message as `Hello World`tt
