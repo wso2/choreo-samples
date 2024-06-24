@@ -1,0 +1,293 @@
+openapi: 3.0.1
+info:
+  title: Hotel reservation API - Reservations
+  version: 0.1.0
+servers:
+- url: "{server}:{port}/reservations"
+  variables:
+    port:
+      default: '9090'
+    server:
+      default: http://localhost
+paths:
+  "/":
+    post:
+      operationId: post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/NewReservationRequest"
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Reservation"
+        '202':
+          description: Accepted
+        '400':
+          description: BadRequest
+        '404':
+          description: NotFound
+          content:
+            text/plain:
+              schema:
+                type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ErrorPayload"
+      security:
+      - default: []
+  "/roomTypes":
+    get:
+      operationId: getRoomtypes
+      parameters:
+      - name: checkinDate
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: checkoutDate
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: guestCapacity
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/RoomType"
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ErrorPayload"
+      security:
+      - default: []
+  "/users/{userId}":
+    get:
+      operationId: getUsersUserid
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/Reservation"
+      security:
+      - default: []
+  "/{reservationId}":
+    put:
+      operationId: putReservationid
+      parameters:
+      - name: reservationId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/UpdateReservationRequest"
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Reservation"
+        '404':
+          description: NotFound
+          content:
+            text/plain:
+              schema:
+                type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ErrorPayload"
+      security:
+      - default: []
+    delete:
+      operationId: deleteReservationid
+      parameters:
+      - name: reservationId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Ok
+        '404':
+          description: NotFound
+      security:
+      - default: []
+components:
+  schemas:
+    ErrorPayload:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message
+        method:
+          type: string
+          description: Method type of the request
+        path:
+          type: string
+          description: Request path
+        reason:
+          type: string
+          description: Reason phrase
+        status:
+          type: integer
+          description: Relevant HTTP status code
+          format: int32
+        timestamp:
+          type: string
+          description: Timestamp of the error
+    NewReservationRequest:
+      required:
+      - checkinDate
+      - checkoutDate
+      - rate
+      - roomType
+      - user
+      type: object
+      properties:
+        checkinDate:
+          type: string
+        checkoutDate:
+          type: string
+        rate:
+          type: integer
+          format: int64
+        roomType:
+          type: string
+        user:
+          "$ref": "#/components/schemas/User"
+    Reservation:
+      required:
+      - checkinDate
+      - checkoutDate
+      - id
+      - room
+      - user
+      type: object
+      properties:
+        checkinDate:
+          type: string
+        checkoutDate:
+          type: string
+        id:
+          type: integer
+          format: int64
+        room:
+          "$ref": "#/components/schemas/Room"
+        user:
+          "$ref": "#/components/schemas/User"
+    Room:
+      required:
+      - number
+      - type
+      type: object
+      properties:
+        number:
+          type: integer
+          format: int64
+        type:
+          "$ref": "#/components/schemas/RoomType"
+    RoomType:
+      required:
+      - guestCapacity
+      - id
+      - name
+      - price
+      type: object
+      properties:
+        guestCapacity:
+          type: integer
+          format: int64
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        price:
+          type: number
+          format: double
+    UpdateReservationRequest:
+      required:
+      - checkinDate
+      - checkoutDate
+      type: object
+      properties:
+        checkinDate:
+          type: string
+        checkoutDate:
+          type: string
+    User:
+      required:
+      - email
+      - id
+      - mobileNumber
+      - name
+      type: object
+      properties:
+        email:
+          type: string
+        id:
+          type: string
+        mobileNumber:
+          type: string
+        name:
+          type: string
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: {}
