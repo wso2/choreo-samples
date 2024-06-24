@@ -45,13 +45,11 @@ export default function App() {
       var userInfo = userInfoCookie ? JSON.parse(atob(userInfoCookie)) : {};
       setSignedIn(true);
       setUser(getMappedUser(userInfo));
-      window.location.pathname = "/rooms";
     } else if (sessionStorage.getItem("userInfo")) {
       // We have already logged in
       var userInfo = JSON.parse(atob(sessionStorage.getItem("userInfo")!));
       setSignedIn(true);
       setUser(getMappedUser(userInfo));
-      window.location.pathname = "/rooms";
     } else {
       console.log("User is not signed in");
       if (
@@ -63,6 +61,12 @@ export default function App() {
     }
     setIsAuthLoading(false);
   }, []);
+
+  useEffect(() => {
+    if (signedIn && user.id !== "" && window.location.pathname === "/") {
+      window.location.pathname = "/rooms"
+    }
+   }, [signedIn, user]);
 
   if (isAuthLoading) {
     return <div>User authenticating...</div>;
