@@ -1,0 +1,12 @@
+displayName: Hotel Reservation App
+description: An application to demo a simple hotel reservation use case.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /hotel-reservation-app
+thumbnailPath: /icons/react-single-page-app.svg
+documentationPath: /hotel-reservation-app/readme.md
+tags:
+  - HTTP
+  - React
+  - NodeJs
