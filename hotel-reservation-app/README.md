@@ -1,6 +1,6 @@
-# Choreo Reading List Example
+# Choreo Hotel Reservation App
 
-Welcome to the Choreo Hotel Reservation App Example! This application is designed to help you get familiar with the Choreo platform and its features.
+Welcome to the Choreo Hotel Reservation App! This application is designed to help you get familiar with the Choreo platform and its features.
 
 ## Overview
 
