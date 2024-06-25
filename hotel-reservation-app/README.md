@@ -11,7 +11,7 @@ This application has a front end developed using React.js and an API service imp
 The repository is structured into distinct sections:
 
 - **Frontend**: React web frontend with auth handled through Choreo itself.
-- **Backend** - backend microservice that handles the application logic
+- **Backend**: Backend microservice that handles the application logic
 
 ### Getting Started
 
