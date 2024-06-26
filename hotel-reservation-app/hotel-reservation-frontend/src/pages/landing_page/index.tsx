@@ -38,7 +38,7 @@ export default function LandingPage() {
           fontSize: 18,
         }}
       >
-        Get Started
+        Sign In
       </Button>
     </Box>
   );
