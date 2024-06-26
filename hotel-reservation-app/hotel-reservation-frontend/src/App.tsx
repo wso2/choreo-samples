@@ -25,12 +25,6 @@ export default function App() {
   });
   const [isAuthLoading, setIsAuthLoading] = useState(false);
 
-  useEffect(() => {
-    if (signedIn && user.id !== "" && window.location.pathname === "/") {
-      window.location.pathname = "/rooms"
-    }
-   }, [signedIn, user]);
-
   if (isAuthLoading) {
     return <div>User authenticating...</div>;
   }
