@@ -1,4 +1,3 @@
-import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RoomListing from "./pages/room_listing";
@@ -24,43 +23,7 @@ export default function App() {
     name: "",
     mobileNumber: "",
   });
-  const [isAuthLoading, setIsAuthLoading] = useState(true);
-
-  function getMappedUser(userInfo: any): User {
-    return {
-      email: userInfo?.email || "",
-      id: userInfo?.sub || "",
-      name: userInfo?.first_name + " " + userInfo?.last_name,
-      mobileNumber: userInfo?.mobile_number || "",
-    };
-  }
-
-  useEffect(() => {
-    setIsAuthLoading(true);
-    if (Cookies.get("userinfo")) {
-      // We are here after a login
-      const userInfoCookie = Cookies.get("userinfo");
-      sessionStorage.setItem("userInfo", userInfoCookie || "");
-      Cookies.remove("userinfo");
-      var userInfo = userInfoCookie ? JSON.parse(atob(userInfoCookie)) : {};
-      setSignedIn(true);
-      setUser(getMappedUser(userInfo));
-    } else if (sessionStorage.getItem("userInfo")) {
-      // We have already logged in
-      var userInfo = JSON.parse(atob(sessionStorage.getItem("userInfo")!));
-      setSignedIn(true);
-      setUser(getMappedUser(userInfo));
-    } else {
-      console.log("User is not signed in");
-      if (
-        window.location.pathname !== "/auth/login" &&
-        window.location.pathname !== "/"
-      ) {
-        window.location.pathname = "/auth/login";
-      }
-    }
-    setIsAuthLoading(false);
-  }, []);
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
     if (signedIn && user.id !== "" && window.location.pathname === "/") {

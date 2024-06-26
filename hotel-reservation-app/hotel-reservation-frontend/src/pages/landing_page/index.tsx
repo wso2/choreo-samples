@@ -20,12 +20,9 @@ export default function LandingPage() {
         Reserve a room online
       </Typography>
       <Typography mb={8} textAlign="center" variant="h2" color="white">
-        Enjoy convienence
+        Enjoy convenience
       </Typography>
       <Button
-        onClick={() => {
-          window.location.href = "/auth/login";
-        }}
         variant="contained"
         color="secondary"
         style={{
@@ -36,7 +33,7 @@ export default function LandingPage() {
           fontSize: 18,
         }}
       >
-        Sign In
+        Get Started
       </Button>
     </Box>
   );
