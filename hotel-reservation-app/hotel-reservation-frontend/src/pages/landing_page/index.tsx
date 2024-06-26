@@ -20,9 +20,12 @@ export default function LandingPage() {
         Reserve a room online
       </Typography>
       <Typography mb={8} textAlign="center" variant="h2" color="white">
-        Enjoy convenience
+        Enjoy convienence
       </Typography>
       <Button
+        onClick={() => {
+          window.location.href = "/rooms";
+        }}
         variant="contained"
         color="secondary"
         style={{
