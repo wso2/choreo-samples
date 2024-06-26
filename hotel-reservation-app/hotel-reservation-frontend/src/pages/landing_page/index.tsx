@@ -26,7 +26,7 @@ export default function LandingPage() {
       </Typography>
       <Button
         onClick={() => {
-          navigate("/rooms");
+          navigate("/auth/login");
         }}
         variant="contained"
         color="secondary"

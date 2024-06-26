@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -13,6 +14,7 @@ import { UserContext } from "../contexts/user";
 import Cookies from "js-cookie";
 
 function UserMenu() {
+  const navigate = useNavigate();
   const user = React.useContext(UserContext);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
@@ -54,7 +56,12 @@ function UserMenu() {
             <Typography textAlign="center">My Reservations</Typography>
           </Button>
         </MenuItem>
-        <MenuItem>
+        <MenuItem
+          onClick={() => {
+            sessionStorage.removeItem("userInfo");
+            navigate(`/auth/logout?session_hint=${Cookies.get("session_hint")}`);
+          }}
+        >
           <Button style={{ textTransform: "none" }}>
             <Typography textAlign="center">Logout</Typography>
           </Button>
