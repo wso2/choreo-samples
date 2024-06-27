@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RoomListing from "./pages/room_listing";
 import Header from "./layout/AppBar";
 import ReservationAddingPage from "./pages/reservations_adding";
@@ -17,7 +17,6 @@ import theme from "./theme";
 import ErrorPage from "./pages/error";
 
 export default function App() {
-  const navigate = useNavigate();
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState<User>({
     email: "",
@@ -57,7 +56,7 @@ export default function App() {
         window.location.pathname !== "/auth/login" &&
         window.location.pathname !== "/"
       ) {
-        navigate("/auth/login");
+        window.location.href = "/auth/login";
       }
     }
     setIsAuthLoading(false);
@@ -65,7 +64,7 @@ export default function App() {
 
   useEffect(() => {
     if (signedIn && user.id !== "" && window.location.pathname === "/") {
-      navigate("/rooms");
+      window.location.href = "rooms";
     }
    }, [signedIn, user]);
 
