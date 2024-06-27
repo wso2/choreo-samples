@@ -2,7 +2,6 @@ import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  const navigate = useNavigate();
   return (
     <Box
       display="flex"
@@ -26,7 +25,7 @@ export default function LandingPage() {
       </Typography>
       <Button
         onClick={() => {
-          navigate("/auth/login");
+          window.location.href = "/auth/login";
         }}
         variant="contained"
         color="secondary"
