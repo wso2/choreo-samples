@@ -1,5 +1,6 @@
+import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import RoomListing from "./pages/room_listing";
 import Header from "./layout/AppBar";
 import ReservationAddingPage from "./pages/reservations_adding";
@@ -16,6 +17,7 @@ import theme from "./theme";
 import ErrorPage from "./pages/error";
 
 export default function App() {
+  const navigate = useNavigate();
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState<User>({
     email: "",
@@ -24,6 +26,48 @@ export default function App() {
     mobileNumber: "",
   });
   const [isAuthLoading, setIsAuthLoading] = useState(false);
+
+  function getMappedUser(userInfo: any): User {
+    return {
+      email: userInfo?.email || "",
+      id: userInfo?.sub || "",
+      name: userInfo?.first_name + " " + userInfo?.last_name,
+      mobileNumber: userInfo?.mobile_number || "",
+    };
+  }
+
+  useEffect(() => {
+    setIsAuthLoading(true);
+    if (Cookies.get("userinfo")) {
+      // We are here after a login
+      const userInfoCookie = Cookies.get("userinfo");
+      sessionStorage.setItem("userInfo", userInfoCookie || "");
+      Cookies.remove("userinfo");
+      var userInfo = userInfoCookie ? JSON.parse(atob(userInfoCookie)) : {};
+      setSignedIn(true);
+      setUser(getMappedUser(userInfo));
+    } else if (sessionStorage.getItem("userInfo")) {
+      // We have already logged in
+      var userInfo = JSON.parse(atob(sessionStorage.getItem("userInfo")!));
+      setSignedIn(true);
+      setUser(getMappedUser(userInfo));
+    } else {
+      console.log("User is not signed in");
+      if (
+        window.location.pathname !== "/auth/login" &&
+        window.location.pathname !== "/"
+      ) {
+        window.location.href = "/auth/login";
+      }
+    }
+    setIsAuthLoading(false);
+  }, []);
+
+  useEffect(() => {
+    if (signedIn && user.id !== "" && window.location.pathname === "/") {
+      navigate("/rooms");
+    }
+   }, [signedIn, user]);
 
   if (isAuthLoading) {
     return <div>User authenticating...</div>;
