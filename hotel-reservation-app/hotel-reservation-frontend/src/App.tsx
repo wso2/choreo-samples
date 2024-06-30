@@ -65,7 +65,7 @@ export default function App() {
 
   useEffect(() => {
     if (signedIn && user.id !== "" && window.location.pathname === "/") {
-      navigate("/rooms");
+      window.location.href = "/rooms";
     }
    }, [signedIn, user]);
 
