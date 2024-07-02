@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
   return (
