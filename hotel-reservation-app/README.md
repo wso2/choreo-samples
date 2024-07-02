@@ -1,6 +1,6 @@
-# Choreo Reading List Example
+# Choreo Hotel Reservation App
 
-Welcome to the Choreo Hotel Reservation App Example! This application is designed to help you get familiar with the Choreo platform and its features.
+Welcome to the Choreo Hotel Reservation App! This application is designed to help you get familiar with the Choreo platform and its features.
 
 ## Overview
 
@@ -11,7 +11,7 @@ This application has a front end developed using React.js and an API service imp
 The repository is structured into distinct sections:
 
 - **Frontend**: React web frontend with auth handled through Choreo itself.
-- **Backend** - backend microservice that handles the application logic
+- **Backend**: Backend microservice that handles the application logic
 
 ### Getting Started
 

@@ -24,7 +24,7 @@ export default function App() {
     name: "",
     mobileNumber: "",
   });
-  const [isAuthLoading, setIsAuthLoading] = useState(true);
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   function getMappedUser(userInfo: any): User {
     return {
@@ -56,7 +56,7 @@ export default function App() {
         window.location.pathname !== "/auth/login" &&
         window.location.pathname !== "/"
       ) {
-        window.location.pathname = "/auth/login";
+        window.location.href = "/auth/login";
       }
     }
     setIsAuthLoading(false);
@@ -64,7 +64,7 @@ export default function App() {
 
   useEffect(() => {
     if (signedIn && user.id !== "" && window.location.pathname === "/") {
-      window.location.pathname = "/rooms"
+      window.location.href = "rooms";
     }
    }, [signedIn, user]);
 
