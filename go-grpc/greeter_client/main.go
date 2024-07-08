@@ -24,7 +24,7 @@ import (
 	"os"
 
 	"google.golang.org/grpc"
-	greeter "gtihub.com/wso2/choreo-sample-apps/go/grpc-greeter/pkg"
+	greeter "gtihub.com/wso2/choreo-samples/go-grpc/pkg"
 )
 
 func main() {
