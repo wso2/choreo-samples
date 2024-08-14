@@ -16,7 +16,7 @@
 
 
 import { apiUrl } from "./constants";
-import { performRequestWithRetry } from "../retry";
+import { performRequest } from "../retry";
 
 
 export async function deleteBooks(id: string) {
@@ -24,6 +24,6 @@ export async function deleteBooks(id: string) {
     method: 'DELETE',
   };
 
-  const response = await performRequestWithRetry(`${apiUrl}/books?id=${id}`, options);
+  const response = await performRequest(`${apiUrl}/books?id=${id}`, options);
   return response;
 }
