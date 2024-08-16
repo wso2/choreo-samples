@@ -18,7 +18,7 @@
 import { AxiosResponse } from "axios";
 import { apiUrl } from "./constants";
 import { Book } from "./types/book";
-import { performRequest } from "../retry";
+import { performRequest } from "../request-wrapper";
 
 export async function getBooks() {
  const options = {

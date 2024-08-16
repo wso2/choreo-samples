@@ -16,7 +16,7 @@
 
 
 import { apiUrl } from "./constants";
-import { performRequest } from "../retry";
+import { performRequest } from "../request-wrapper";
 
 
 export async function deleteBooks(id: string) {

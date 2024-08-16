@@ -17,7 +17,7 @@
 
 import { apiUrl } from "./constants";
 import { Book } from "./types/book";
-import { performRequest } from "../retry";
+import { performRequest } from "../request-wrapper";
 
 export async function postBooks(payload?: Book) {
 
