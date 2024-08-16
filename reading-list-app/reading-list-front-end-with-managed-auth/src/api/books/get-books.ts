@@ -18,13 +18,13 @@
 import { AxiosResponse } from "axios";
 import { apiUrl } from "./constants";
 import { Book } from "./types/book";
-import { performRequestWithRetry } from "../retry";
+import { performRequest } from "../retry";
 
 export async function getBooks() {
  const options = {
     method: 'GET',
   };
 
-  const response = await performRequestWithRetry(`${apiUrl}/books`, options);
+  const response = await performRequest(`${apiUrl}/books`, options);
   return response as AxiosResponse<Book[]>;
 }

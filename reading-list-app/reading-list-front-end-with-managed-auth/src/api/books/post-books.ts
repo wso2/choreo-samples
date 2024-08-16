@@ -17,7 +17,7 @@
 
 import { apiUrl } from "./constants";
 import { Book } from "./types/book";
-import { performRequestWithRetry } from "../retry";
+import { performRequest } from "../retry";
 
 export async function postBooks(payload?: Book) {
 
@@ -26,6 +26,6 @@ export async function postBooks(payload?: Book) {
     data: payload,
   };
 
-  const response = await performRequestWithRetry(`${apiUrl}/books`, options);
+  const response = await performRequest(`${apiUrl}/books`, options);
   return response;
 }
