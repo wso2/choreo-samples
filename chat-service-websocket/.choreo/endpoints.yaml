@@ -33,3 +33,4 @@ endpoints:
   # This is mandatory if the endpoint type is set to REST or GraphQL.
   context: /chat
   schemaFilePath: asyncapi.yaml
+  
