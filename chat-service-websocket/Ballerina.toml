@@ -1,0 +1,8 @@
+[package]
+org = "choreosamples"
+name = "chatService"
+version = "0.1.0"
+distribution = "2201.9.2"
+
+[build-options]
+observabilityIncluded = true

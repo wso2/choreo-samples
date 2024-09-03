@@ -1,0 +1,10 @@
+displayName: Chat Service WebSocket
+description: Provides simultaneous two-way communication over a single TCP connection.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /chat-service-websocket
+thumbnailPath: /icons/chat-service-websocket.svg
+documentationPath: /chat-service-websocket/readme.md
+tags:
+  - WS
