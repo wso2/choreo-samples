@@ -24,7 +24,7 @@ Please refer to the Choreo documentation under the [Develop a Ballerina WebSocke
 ### Use the following configuration when creating this component in Choreo:
 
 - Build Pack: **Ballerina**
-- Project Path: `/chat-service-websocket`
+- Project Directory: `chat-service-websocket`
 
 The [endpoints.yaml](.choreo/endpoints.yaml) file contains the endpoint configurations that are used by the Choreo to expose the service.
 
