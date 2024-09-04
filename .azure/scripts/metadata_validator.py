@@ -10,12 +10,13 @@ CHOREO_ACR_BASE_URL = 'choreoanonymouspullable.azurecr.io'
 VALID_COMPONENT_TYPES = [
     "service", "webhook", "manual-task", "scheduled-task", 
     "event-triggered", "event-handler", "test-runner", "many",
-    "web-application"
+    "web-application", "git-proxy"
 ]
 
 VALID_BUILD_PACKS = [
     "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby",
-    "vue", "many", "postman", "react", "docker", "angular", "dotnet", "prism-mock"
+    "vue", "many", "postman", "react", "docker", "angular", "dotnet", "prism-mock",
+    "none" 
 ]
 
 def validate_component_path(component_path, repository_url):
