@@ -62,12 +62,17 @@ def validate_metadata_and_thumbnails():
                     
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == 'service':
-                        openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
-                        if not os.path.exists(openapi_path):
-                            raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
                         if not os.path.exists(endpoints_path):
                             raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
+                        # openapi.yaml is required if service type is REST
+                        #Read endpoints.yaml to check if the service type is REST
+                        with open(endpoints_path, 'r') as f:
+                            endpoints_data = yaml.safe_load(f)
+                            if endpoints_data.get('type') == 'REST':
+                                openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
+                                if not os.path.exists(openapi_path):
+                                    raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")                        
            
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
