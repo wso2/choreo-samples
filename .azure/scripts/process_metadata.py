@@ -41,6 +41,16 @@ def collect_metadata_and_thumbnails():
                     print(f"Warning: '{build_pack}' is not a valid buildPreset for directory: {meta_file}. Excluding from index.json.")
                     continue
 
+                # check if a quick deployable sample has a valid image URL
+                if 'Quick Deployable' in data.get('tags', []):
+                    image_url = data.get('imageUrl')
+                    if not image_url:
+                        print(f"Warning: 'imageUrl' is not set for the sample: {meta_file}. Excluding from index.json.")
+                        continue
+                    if not metadata_validator.validate_image_url(image_url):
+                        print(f"Warning: 'imageUrl' is not a valid image URL for the sample: {meta_file}. Excluding from index.json.")
+                        continue
+
                 # Check if tags key exists and if it's either not set or None, assign an empty list
                 if not data.get('tags'):
                     data['tags'] = []
