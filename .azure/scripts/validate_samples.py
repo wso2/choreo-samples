@@ -45,6 +45,10 @@ def validate_metadata_and_thumbnails():
                 if not repository_url:
                     raise ValueError(f"Error: 'repositoryUrl' is not set for the sample: {meta_file}.")
                 
+                component_type = data.get('componentType', '')
+                if not metadata_validator.validate_component_type(component_type):
+                    raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
+                
                 tags = data.get('tags')
                 if tags and not isinstance(tags, list):
                     raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
