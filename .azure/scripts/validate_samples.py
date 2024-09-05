@@ -49,6 +49,13 @@ def validate_metadata_and_thumbnails():
                 if tags and not isinstance(tags, list):
                     raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
                 
+                if 'Quick Deployable' in tags:
+                    image_url = data.get('imageUrl')
+                    if not image_url:
+                        raise ValueError(f"Error: 'imageUrl' is not set for the sample: {meta_file}.")
+                    if not metadata_validator.validate_image_url(image_url):
+                        raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
+                
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
