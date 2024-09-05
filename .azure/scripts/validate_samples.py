@@ -55,7 +55,16 @@ def validate_metadata_and_thumbnails():
                         raise ValueError(f"Error: 'imageUrl' is not set for the sample: {meta_file}.")
                     if not metadata_validator.validate_image_url(image_url):
                         raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
-                
+                    
+                    # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
+                    if component_type == 'service':
+                        openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
+                        if not os.path.exists(openapi_path):
+                            raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")
+                        endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
+                        if not os.path.exists(endpoints_path):
+                            raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
+           
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
@@ -63,16 +72,7 @@ def validate_metadata_and_thumbnails():
                 component_type = data.get('componentType', '')
                 if not metadata_validator.validate_component_type(component_type):
                     raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
-                
-                # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
-                if component_type == 'service':
-                    openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
-                    if not os.path.exists(openapi_path):
-                        raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")
-                    endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
-                    if not os.path.exists(endpoints_path):
-                        raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
-                    
+                     
                 build_pack = data.get('buildPack', '')
                 if not metadata_validator.validate_build_pack(build_pack):
                     raise ValueError(f"Error: '{build_pack}' is not a valid build pack for the sample: {meta_file}.")
