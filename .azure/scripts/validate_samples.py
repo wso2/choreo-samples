@@ -53,7 +53,7 @@ def validate_metadata_and_thumbnails():
                 if tags and not isinstance(tags, list):
                     raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
                 
-                if 'Quick Deployable' in tags:
+                if tags and 'Quick Deployable' in tags:
                     image_url = data.get('imageUrl')
                     if not image_url:
                         raise ValueError(f"Error: 'imageUrl' is not set for the sample: {meta_file}.")
