@@ -64,6 +64,15 @@ def validate_metadata_and_thumbnails():
                 if not metadata_validator.validate_component_type(component_type):
                     raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
                 
+                # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
+                if component_type == 'service':
+                    openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
+                    if not os.path.exists(openapi_path):
+                        raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")
+                    endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
+                    if not os.path.exists(endpoints_path):
+                        raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
+                    
                 build_pack = data.get('buildPack', '')
                 if not metadata_validator.validate_build_pack(build_pack):
                     raise ValueError(f"Error: '{build_pack}' is not a valid build pack for the sample: {meta_file}.")
