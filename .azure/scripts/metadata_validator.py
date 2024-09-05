@@ -49,7 +49,5 @@ def validate_thumbnail(thumbnail_src):
     return True
 
 def validate_image_url(image_url):
-    if not image_url.startswith('choreoanonymouspullable.azurecr.io'):
-        return False
-    return True
+return image_url.startswith('choreoanonymouspullable.azurecr.io')
 
