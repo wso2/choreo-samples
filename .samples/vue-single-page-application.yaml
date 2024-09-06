@@ -7,4 +7,7 @@ componentPath: /vue-single-page-application
 thumbnailPath: /icons/vue-single-page-application.svg
 documentationPath: /vue-single-page-application/readme.md
 tags:
+  - Quick Deployable
+  - Vue
   - Single Page Application
+imageUrl: choreoanonymouspullable.azurecr.io/vue-spa:v0.9
