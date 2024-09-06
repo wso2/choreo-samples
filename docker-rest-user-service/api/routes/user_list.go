@@ -23,9 +23,9 @@ import (
 	"net/http"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/models"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/models"
 
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/utils"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/utils"
 )
 
 func registerUserStoreRoutes(router fiber.Router) {

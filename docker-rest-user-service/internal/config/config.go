@@ -19,7 +19,7 @@
 package config
 
 import (
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/models"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/models"
 )
 
 type Config struct {

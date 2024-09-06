@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/models"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/models"
 )
 
 func TestUserRepository(t *testing.T) {
