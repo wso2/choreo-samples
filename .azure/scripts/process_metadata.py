@@ -91,6 +91,34 @@ def collect_metadata_and_thumbnails():
 
     return collected_data
 
+def sort_samples(samples):
+    # Define the priority order for types, used for strict alternation
+    type_order = ["service", "web-application", "scheduled-task", "manual-task"]
+    
+    # Separate the samples into QD samples and others
+    qd_samples = [sample for sample in samples if "Quick Deployable" in sample.get("tags", [])]
+    rest_samples = [sample for sample in samples if "Quick Deployable" not in sample.get("tags", [])]
+
+    # Organize QD samples into a dictionary by type
+    qd_samples_by_type = {type_name: [] for type_name in type_order}
+    for sample in qd_samples:
+        sample_type = sample.get("type", "")
+        if sample_type in qd_samples_by_type:
+            qd_samples_by_type[sample_type].append(sample)
+
+    # Interleave the QD samples based on type order
+    interleaved_qd_samples = []
+    more_samples = True
+    while more_samples:
+        more_samples = False
+        for type_name in type_order:
+            if qd_samples_by_type[type_name]:
+                interleaved_qd_samples.append(qd_samples_by_type[type_name].pop(0))
+                more_samples = True
+
+    # Return the interleaved QD samples followed by the rest
+    return interleaved_qd_samples + rest_samples
+
 def generate_index_json(data):
     # Create index.json structure
     index_data = {
@@ -121,7 +149,8 @@ def main():
         print(f"Collected data for {len(metadata_data)} samples.")
     else:
         print("No metadata collected!")
-    generate_index_json(metadata_data)
+    sorted_metadata_data = sort_samples(metadata_data)
+    generate_index_json(sorted_metadata_data)
 
 if __name__ == '__main__':
     main()
