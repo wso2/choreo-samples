@@ -7,6 +7,8 @@ componentPath: /docker-time-logger-schedule
 thumbnailPath: /icons/docker-time-logger-schedule.svg
 documentationPath: /docker-time-logger-schedule/readme.md
 tags:
+  - Quick Deployable
   - Scheduled Task
   - BYOC
   - Go
+imageUrl: choreoanonymouspullable.azurecr.io/time-logger:v0.9
