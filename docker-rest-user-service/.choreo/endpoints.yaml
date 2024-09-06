@@ -37,4 +37,4 @@ endpoints:
   # The path should be relative to the docker context.
   # schemaFilePath: swagger.yaml
   # The path provided for image based components
-  schemaFilePath: openapi.yaml
+  schemaFilePath: docs/openapi.yaml
