@@ -4,6 +4,8 @@ import json
 import shutil
 import metadata_validator
 import version_manager
+from collections import defaultdict
+from itertools import cycle
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
@@ -95,26 +97,25 @@ def sort_samples(samples):
     # Define the priority order for types, used for strict alternation
     type_order = ["service", "web-application", "scheduled-task", "manual-task"]
     
-    # Separate the samples into QD samples and others
-    qd_samples = [sample for sample in samples if "Quick Deployable" in sample.get("tags", [])]
-    rest_samples = [sample for sample in samples if "Quick Deployable" not in sample.get("tags", [])]
+    # Separate and Organize QD samples and the rest
+    qd_samples_by_type = defaultdict(list)
+    rest_samples = []
 
-    # Organize QD samples into a dictionary by type
-    qd_samples_by_type = {type_name: [] for type_name in type_order}
-    for sample in qd_samples:
-        sample_type = sample.get("type", "")
-        if sample_type in qd_samples_by_type:
-            qd_samples_by_type[sample_type].append(sample)
+    for sample in samples:
+        if "Quick Deployable" in sample.get("tags", []):
+            sample_type = sample.get("type", "")
+            if sample_type in type_order:
+                qd_samples_by_type[sample_type].append(sample)
+        else:
+            rest_samples.append(sample)
 
     # Interleave the QD samples based on type order
     interleaved_qd_samples = []
-    more_samples = True
-    while more_samples:
-        more_samples = False
-        for type_name in type_order:
-            if qd_samples_by_type[type_name]:
-                interleaved_qd_samples.append(qd_samples_by_type[type_name].pop(0))
-                more_samples = True
+    type_cycle = cycle(type_order)
+    while any(qd_samples_by_type.values()):
+      current_type = next(type_cycle)
+      if qd_samples_by_type[current_type]:
+          interleaved_qd_samples.append(qd_samples_by_type[current_type].pop(0))
 
     # Return the interleaved QD samples followed by the rest
     return interleaved_qd_samples + rest_samples
