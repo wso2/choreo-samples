@@ -83,7 +83,7 @@ def validate_metadata_and_thumbnails():
                 component_type = data.get('componentType', '')
                 if not metadata_validator.validate_component_type(component_type):
                     raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
-     
+                
                 build_pack = data.get('buildPack', '')
                 if not metadata_validator.validate_build_pack(build_pack):
                     raise ValueError(f"Error: '{build_pack}' is not a valid build pack for the sample: {meta_file}.")
