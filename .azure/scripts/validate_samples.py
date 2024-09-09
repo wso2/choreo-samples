@@ -70,7 +70,8 @@ def validate_metadata_and_thumbnails():
                         with open(endpoints_path, 'r') as f:
                             endpoints_data = yaml.safe_load(f)
                             if endpoints_data.get('type') == 'REST':
-                                openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'openapi.yaml')
+                                schema_path = endpoints_data.get('schemaFilePath')
+                                openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), schema_path.lstrip('/'))
                                 if not os.path.exists(openapi_path):
                                     raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")                        
            
