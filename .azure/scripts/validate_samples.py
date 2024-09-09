@@ -5,6 +5,7 @@ import shutil
 import metadata_validator
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
+SAMPLE_COMPONENT_TYPE_SERVICE = 'service'
 
 def validate_metadata_and_thumbnails():
     """
@@ -61,7 +62,7 @@ def validate_metadata_and_thumbnails():
                         raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
                     
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
-                    if component_type == 'service':
+                    if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
                         if not os.path.exists(endpoints_path):
                             raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")

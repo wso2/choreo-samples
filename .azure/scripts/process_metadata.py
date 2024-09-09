@@ -10,6 +10,7 @@ from itertools import cycle
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
+SAMPLE_COMPONENT_TYPE_SERVICE = 'service'   
 
 
 def collect_metadata_and_thumbnails():
@@ -54,7 +55,7 @@ def collect_metadata_and_thumbnails():
                         continue
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
-                    if component_type == 'service':
+                    if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
                         if not os.path.exists(endpoints_path):
                             print(f"Warning: endpoints.yaml not found in {component_path.lstrip('/')}. Excluding from index.json.")
