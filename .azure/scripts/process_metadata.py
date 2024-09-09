@@ -57,7 +57,8 @@ def collect_metadata_and_thumbnails():
                     if component_type == 'service':
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
                         if not os.path.exists(endpoints_path):
-                            raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
+                            print(f"Warning: endpoints.yaml not found in {component_path.lstrip('/')}. Excluding from index.json.")
+                            continue
                         # openapi.yaml is required if service type is REST
                         # Read endpoints.yaml to check if the service type is REST
                         with open(endpoints_path, 'r') as f:
@@ -66,7 +67,8 @@ def collect_metadata_and_thumbnails():
                                 schema_path = endpoints_data.get('schemaFilePath')
                                 openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), schema_path.lstrip('/'))
                                 if not os.path.exists(openapi_path):
-                                    raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}") 
+                                    print(f"Warning: openapi.yaml not found in {component_path.lstrip('/')}. Excluding from index.json.")
+                                    continue 
 
                 # Check if tags key exists and if it's either not set or None, assign an empty list
                 if not data.get('tags'):
