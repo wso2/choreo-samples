@@ -46,13 +46,14 @@ def collect_metadata_and_thumbnails():
                     continue
 
                 # check if a quick deployable sample has a valid image URL
-                if 'Quick Deployable' in data.get('tags', []):
-                    image_url = data.get('imageUrl')
-                    if not image_url:
-                        print(f"Warning: 'imageUrl' is not set for the sample: {meta_file}. Excluding from index.json.")
-                        continue
+                image_url = data.get('imageUrl')
+                if image_url:
                     if not metadata_validator.validate_image_url(image_url):
                         print(f"Warning: 'imageUrl' is not a valid image URL for the sample: {meta_file}. Excluding from index.json.")
+                        continue
+
+                    if not SAMPLE_TAG_QUICK_DEPLOYABLE in data.get('tags', []):
+                        print(f"Warning: 'Quick Deployable' tag is not set for the sample: {meta_file}. Excluding from index.json.")
                         continue
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service

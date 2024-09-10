@@ -6,6 +6,7 @@ import metadata_validator
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 SAMPLE_COMPONENT_TYPE_SERVICE = 'service'
+SAMPLE_TAG_QUICK_DEPLOYABLE = 'Quick Deployable'
 
 def validate_metadata_and_thumbnails():
     """
@@ -54,13 +55,13 @@ def validate_metadata_and_thumbnails():
                 if tags and not isinstance(tags, list):
                     raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
                 
-                if tags and 'Quick Deployable' in tags:
-                    image_url = data.get('imageUrl')
-                    if not image_url:
-                        raise ValueError(f"Error: 'imageUrl' is not set for the sample: {meta_file}.")
+                
+                image_url = data.get('imageUrl')
+                if image_url:
                     if not metadata_validator.validate_image_url(image_url):
                         raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
-                    
+                    if not tags or SAMPLE_TAG_QUICK_DEPLOYABLE not in tags:
+                        raise ValueError(f"Error: 'Quick Deployable' tag is not set for the sample: {meta_file}.")
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
@@ -75,7 +76,7 @@ def validate_metadata_and_thumbnails():
                                 openapi_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), schema_path.lstrip('/'))
                                 if not os.path.exists(openapi_path):
                                     raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")                        
-           
+            
                 # Check if the componentPath exists
                 if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
