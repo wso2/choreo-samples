@@ -1,0 +1,11 @@
+displayName: Prism Mock Service
+description: Simplified petstore API based mock service
+componentType: service
+buildPack: prism-mock
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /prism-mock-service
+thumbnailPath: /icons/prism-mock-service.svg
+documentationPath: /prism-mock-service/readme.md
+tags:
+  - prism-mock
+  - mock
