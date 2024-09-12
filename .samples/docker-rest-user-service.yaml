@@ -7,7 +7,6 @@ componentPath: /docker-rest-user-service
 thumbnailPath: /icons/docker-rest-user-service.svg
 documentationPath: /docker-rest-user-service/readme.md
 tags:
-  - Quick Deployable
   - REST
   - Go
   - HTTP

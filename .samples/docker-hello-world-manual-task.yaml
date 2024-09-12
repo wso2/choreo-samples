@@ -7,7 +7,6 @@ componentPath: /docker-hello-world-manual-task
 thumbnailPath: /icons/docker-hello-world-manual-task.png
 documentationPath: /docker-hello-world-manual-task/readme.md
 tags:
-  - Quick Deployable
   - BYOC
   - Go
 imageUrl: choreoanonymouspullable.azurecr.io/hello-world:v0.9
