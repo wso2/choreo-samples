@@ -108,7 +108,7 @@ def sort_samples(samples):
     rest_samples = []
 
     for sample in samples:
-        if "Quick Deployable" in sample.get("tags", []):
+        if sample.get('imageUrl'):
             sample_type = sample.get("componentType", "")
             if sample_type in type_order:
                 qd_samples_by_type[sample_type].append(sample)
