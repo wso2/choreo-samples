@@ -10,3 +10,4 @@ tags:
   - Scheduled Task
   - BYOC
   - Go
+imageUrl: choreoanonymouspullable.azurecr.io/time-logger:v0.9

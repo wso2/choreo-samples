@@ -9,3 +9,4 @@ documentationPath: /docker-hello-world-manual-task/readme.md
 tags:
   - BYOC
   - Go
+imageUrl: choreoanonymouspullable.azurecr.io/hello-world:v0.9

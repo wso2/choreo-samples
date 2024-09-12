@@ -9,3 +9,4 @@ documentationPath: /angular-single-page-app/readme.md
 tags:
   - Angular
   - Single Page Application
+imageUrl: choreoanonymouspullable.azurecr.io/angular-spa:v0.9

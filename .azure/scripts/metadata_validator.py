@@ -5,6 +5,7 @@ import shutil
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 WSO2_SAMPLES_REPO_URL = 'https://github.com/wso2/choreo-samples/'
+CHOREO_ACR_BASE_URL = 'choreoanonymouspullable.azurecr.io'
 
 VALID_COMPONENT_TYPES = [
     "service", "webhook", "manual-task", "scheduled-task", 
@@ -48,4 +49,5 @@ def validate_thumbnail(thumbnail_src):
         return False
     return True
 
-
+def validate_image_url(image_url):
+    return image_url.startswith(CHOREO_ACR_BASE_URL)

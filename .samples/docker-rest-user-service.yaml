@@ -10,3 +10,4 @@ tags:
   - REST
   - Go
   - HTTP
+imageUrl: choreoanonymouspullable.azurecr.io/user-service:v0.9
