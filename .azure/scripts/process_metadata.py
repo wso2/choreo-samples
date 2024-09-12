@@ -146,7 +146,7 @@ def generate_index_json(data):
         f.write(index_version)
         print(f"Generated version.txt with value: {index_version}")
 
-    with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-1001.json"), 'w', encoding='utf-8') as f:
+    with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{index_version}.json"), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
     print("Generated index.json")
 
