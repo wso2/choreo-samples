@@ -25,8 +25,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/stretchr/testify/assert"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/models"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/repositories"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/models"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/repositories"
 )
 
 // MockUserRepository is a mock implementation of the models.UserRepository interface for testing purposes.

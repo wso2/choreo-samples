@@ -23,7 +23,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/config"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/config"
 )
 
 func HandleHealthCheckRequest(ctx *fiber.Ctx) error {

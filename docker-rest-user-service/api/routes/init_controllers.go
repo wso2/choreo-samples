@@ -19,9 +19,9 @@
 package routes
 
 import (
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/config"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/controllers"
-	"github.com/wso2/choreo-sample-apps/byoi-components/services/rest-user-service/internal/repositories"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/config"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/controllers"
+	"github.com/wso2/choreo-samples/docker-rest-user-service/internal/repositories"
 )
 
 var userController *controllers.UserController
