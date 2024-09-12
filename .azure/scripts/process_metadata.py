@@ -11,7 +11,6 @@ REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
 SAMPLE_COMPONENT_TYPE_SERVICE = 'service'   
-SAMPLE_TAG_QUICK_DEPLOYABLE = 'Quick Deployable'
 
 
 def collect_metadata_and_thumbnails():
@@ -50,10 +49,6 @@ def collect_metadata_and_thumbnails():
                 if image_url:
                     if not metadata_validator.validate_image_url(image_url):
                         print(f"Warning: 'imageUrl' is not a valid image URL for the sample: {meta_file}. Excluding from index.json.")
-                        continue
-
-                    if not SAMPLE_TAG_QUICK_DEPLOYABLE in data.get('tags', []):
-                        print(f"Warning: 'Quick Deployable' tag is not set for the sample: {meta_file}. Excluding from index.json.")
                         continue
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service

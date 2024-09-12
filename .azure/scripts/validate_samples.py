@@ -6,7 +6,6 @@ import metadata_validator
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 SAMPLE_COMPONENT_TYPE_SERVICE = 'service'
-SAMPLE_TAG_QUICK_DEPLOYABLE = 'Quick Deployable'
 
 def validate_metadata_and_thumbnails():
     """
@@ -60,8 +59,6 @@ def validate_metadata_and_thumbnails():
                 if image_url:
                     if not metadata_validator.validate_image_url(image_url):
                         raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
-                    if not tags or SAMPLE_TAG_QUICK_DEPLOYABLE not in tags:
-                        raise ValueError(f"Error: 'Quick Deployable' tag is not set for the sample: {meta_file}.")
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
