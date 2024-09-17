@@ -42,7 +42,13 @@ Run the service
 bal run
 ```
 
-Execute the following sample cURL command to add a book item to the reading list:
+Install wscat client.
+
+```shell
+npm install -g wscat
+```
+
+Invoke the API by executing the following command:
 
 ```shell
 wscat -c http://localhost:9090/chat'
