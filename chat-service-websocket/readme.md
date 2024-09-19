@@ -42,13 +42,13 @@ Run the service
 bal run
 ```
 
-Install wscat client.
+Install the wscat client.
 
 ```shell
 npm install -g wscat
 ```
 
-Invoke the API by executing the following command:
+To invoke the API, by execute the following command:
 
 ```shell
 wscat -c http://localhost:9090/chat'
