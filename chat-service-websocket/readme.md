@@ -48,7 +48,7 @@ Install the wscat client.
 npm install -g wscat
 ```
 
-To invoke the API, by execute the following command:
+To invoke the API, execute the following command:
 
 ```shell
 wscat -c http://localhost:9090/chat'
