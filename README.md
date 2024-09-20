@@ -49,13 +49,41 @@ If you'd like to add a new sample to this repository, please follow the below st
     - `thumbnailPath`: The path to the thumbnail image of the sample. This should be the path to the thumbnail image relative to the `repositoryUrl` directory. It is recommended to add the thumbnail to the `.samples/icons` directory and refer it here.
     - `documentationPath`: The path to the documentation/README.md of the sample. This should be the path to the documentation relative to the `repositoryUrl` directory.
     - `tags`: Tags for the sample. This should be a list of strings.
-4. **For Quick Deployable Samples:**
-    - In the `<sample-name>.yaml` file, you must include the following:
-        - Add the tag `Quick Deployable`
-        - `imageUrl`: The Docker image URL is **mandatory** for quick deployable samples, and the image must be hosted in the `choreoanonymouspullable.azurecr.io` registry.
-    - Ensure the following additional files are included, depending on the component type
-        - For **services**, include a `endpoints.yaml` file in the `/.choreo` directory of the component.
-        - If the service is a **REST** service, include an `openapi.yaml` file in the component’s root directory. 
+
+4. For Quick Deployable Samples:
+- In the `<sample-name>.yaml` file, ensure the `imageUrl` is provided, as it is mandatory for quick deployable samples, and the image must be hosted in the `choreoanonymouspullable.azurecr.io` registry.
+- Ensure the following additional files are included, depending on the component type:
+    - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component.
+    - If the service is a **REST** service, include an OpenAPI specification YAML file in your component's directory, and specify its relative path from the sample root in the `schemaFilePath` field in `endpoints.yaml`.
+
+### `endpoints.yaml` Template
+
+
+```yaml
+version: <Version Number>
+
+# +required List of endpoints to create
+endpoints:
+  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+  - name: <Your Endpoint Name>
+    # +required Numeric port value that gets exposed via this endpoint
+    # Note: If you change the service port via environment variables, make sure to update this value accordingly.
+    port: <Your Port Number>
+    # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
+    # Allowed values: REST, GraphQL, GRPC
+    type: <Endpoint Type>
+    # +optional Network level visibility of this endpoint. Defaults to Project
+    # Accepted values: Project|Organization|Public.
+    networkVisibility: <Network Visibility>
+    # +optional Context (base path) of the API that is exposed via this endpoint.
+    # This is mandatory if the endpoint type is set to REST or GraphQL.
+    context: <Your API Context>
+    # +optional Path to the schema definition file. Defaults to wildcard route if not provided
+    # This is only applicable to REST endpoint types.
+    # The path should be relative to the sample root directory.
+    schemaFilePath: <Relative Path to Your OpenAPI Spec>
+
+```
 
 5. Submit a pull request to this repository.
 
