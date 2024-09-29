@@ -1,0 +1,25 @@
+# +required The configuration file schema version
+schemaVersion: 1.0
+
+# +optional Incoming connection details for the component
+endpoints:
+  # +required Unique name for the endpoint.
+  # This name will be used when generating the managed API
+  - name: graphql_reading_list
+    # +optional Display name for the endpoint.
+    displayName: GraphQL Reading List
+    # +required Service section has the user service endpoint details
+    service:
+      # +optional Base path of the API that gets exposed via the endpoint.
+      # This is mandatory if the endpoint type is set to REST or GraphQL.
+      basePath: /
+      # +required Numeric port value that gets exposed via the endpoint
+      port: 8090
+    # +required Type of traffic that the endpoint is accepting.
+    # Allowed values: REST, GraphQL, GRPC, TCP, UDP.
+    type: GraphQL
+    # +optional Network level visibilities of the endpoint.
+    # Takes priority over networkVisibility if defined.
+    # Accepted values: Project|Organization|Public(Default).
+    networkVisibilities:
+      - Public
