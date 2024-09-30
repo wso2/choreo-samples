@@ -19,4 +19,11 @@ service / on new graphql:Listener(8090) {
         }
         return "Hello, " + name;
     }
+
+    remote function createUser(string name) returns string|error {
+        if name is "" {
+            return error("name should not be empty!");
+        }
+        return "User created with name: " + name;
+    }
 }
