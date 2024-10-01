@@ -4,4 +4,3 @@ proxy:
   schemaFilePath: swagger.yaml
   thumbnailPath: /inv-api/assets/thumbnail.png
   docPath: /inv-api/assets/documents
-  
