@@ -143,7 +143,7 @@ def generate_index_json(data):
 
     with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{index_version}.json"), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
-    print("Generated index.json")
+    print("Generated index-{index_version}.json")
 
 def main():
     metadata_data = collect_metadata_and_thumbnails()
