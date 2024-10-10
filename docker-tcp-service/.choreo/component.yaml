@@ -1,0 +1,22 @@
+# +required The configuration file schema version
+schemaVersion: 1.0
+
+# +optional Incoming connection details for the component
+endpoints:
+  # +required Unique name for the endpoint.
+  # This name will be used when generating the managed API
+  - name: go_tcp_greeter
+    # +optional Display name for the endpoint.
+    displayName: Go TCP Greeter
+    # +required Service section has the user service endpoint details
+    service:
+      # +required Numeric port value that gets exposed via the endpoint
+      port: 8080
+    # +required Type of traffic that the endpoint is accepting.
+    # Allowed values: REST, GraphQL, GRPC, TCP, UDP.
+    type: TCP
+    # +optional Network level visibilities of the endpoint.
+    # Takes priority over networkVisibility if defined.
+    # Accepted values: Project|Organization|Public(Default).
+    networkVisibilities:
+      - Project
