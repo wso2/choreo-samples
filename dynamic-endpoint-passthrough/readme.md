@@ -41,7 +41,7 @@ To run the program locally, you need to follow these steps:
 
 1. Open your terminal or command prompt and navigate to the `greeting-service` project directory.
 2. Follow the instructions in the `readme.md` file in that directory to run the service
-3. In a separate terminal or command prompt and navigate to the `dynamic-endpoint-passthrough` project directory.
+3. In a separate terminal or command prompt navigate to the `dynamic-endpoint-passthrough` project directory.
 3. Execute the following command to run the service:
 
 ```bash

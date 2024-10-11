@@ -1,7 +1,7 @@
 displayName: Dynamic Endpoint Passthrough Service
 description: >-
-  Sends an HTTP GET to a Dynamic Endpoint(Endpoint URL is not known before hand) and responds with
-  the reponse received from the endpoint
+  Sends an HTTP GET to a Dynamic Endpoint and responds with
+  the response received from the endpoint
 componentType: service
 buildPack: ballerina
 repositoryUrl: https://github.com/wso2/choreo-samples/
