@@ -1,0 +1,10 @@
+displayName: WebSocket Chat Application
+description: Provides simultaneous two-way communication over a single TCP connection.
+componentType: service
+buildPack: nodejs
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /websocket-chat-app/websocket-chat-service-nodejs
+thumbnailPath: /icons/chat-service-websocket.svg
+documentationPath: /websocket-chat-app/websocket-chat-service-nodejs/readme.md
+tags:
+  - WS
