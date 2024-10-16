@@ -1,146 +1,162 @@
-basePath: /api/v1
-definitions:
-  models.User:
-    properties:
-      age:
-        type: integer
-      id:
-        example: fe2594d0-ccea-42a2-97ac-0487458b5642
-        type: string
-      location:
-        type: string
-      name:
-        type: string
-    type: object
-  utils.ErrorResponse:
-    properties:
-      message:
-        example: error message
-        type: string
-    type: object
-host: localhost:8080
+openapi: 3.0.1
 info:
-  contact: {}
-  description: This is a sample service that manages a list of users
   title: Choreo User Store
+  description: This is a sample service that manages a list of users
+  contact: {}
   version: "1.0"
+servers:
+- url: http://localhost:8080/api/v1
 paths:
   /users:
     get:
-      produces:
-      - application/json
+      tags:
+      - users
+      summary: List all the user store users
       responses:
         "200":
           description: successful operation
-          schema:
-            items:
-              $ref: '#/definitions/models.User'
-            type: array
-      summary: List all the user store users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/models.User'
+    post:
       tags:
       - users
-    post:
-      consumes:
-      - application/json
-      parameters:
-      - description: New user details
-        in: body
-        name: request
+      summary: Add a new user to the user store
+      requestBody:
+        description: New user details
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/models.User'
         required: true
-        schema:
-          $ref: '#/definitions/models.User'
-      produces:
-      - application/json
       responses:
         "201":
           description: successful operation
-          schema:
-            $ref: '#/definitions/models.User'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/models.User'
         "400":
           description: invalid user details
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
         "409":
           description: user already exists
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
-      summary: Add a new user to the user store
-      tags:
-      - users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
+      x-codegen-request-body-name: request
   /users/{id}:
-    delete:
-      parameters:
-      - description: User ID
-        in: path
-        name: id
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: successful operation
-          schema:
-            $ref: '#/definitions/models.User'
-        "404":
-          description: user not found
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
-      summary: Delete a user store user by id
-      tags:
-      - users
     get:
-      parameters:
-      - description: User ID
-        in: path
-        name: id
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: successful operation
-          schema:
-            $ref: '#/definitions/models.User'
-        "404":
-          description: user not found
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
-      summary: Get user store user by id
       tags:
       - users
-    put:
-      consumes:
-      - application/json
+      summary: Get user store user by id
       parameters:
-      - description: User ID
+      - name: id
         in: path
-        name: id
-        required: true
-        type: string
-      - description: Updated user details
-        in: body
-        name: request
+        description: User ID
         required: true
         schema:
-          $ref: '#/definitions/models.User'
-      produces:
-      - application/json
+          type: string
       responses:
         "200":
           description: successful operation
-          schema:
-            $ref: '#/definitions/models.User'
-        "400":
-          description: invalid user details
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/models.User'
         "404":
           description: user not found
-          schema:
-            $ref: '#/definitions/utils.ErrorResponse'
-      summary: Update a user store user by id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
+    put:
       tags:
       - users
-swagger: "2.0"
+      summary: Update a user store user by id
+      parameters:
+      - name: id
+        in: path
+        description: User ID
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Updated user details
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/models.User'
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/models.User'
+        "400":
+          description: invalid user details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
+        "404":
+          description: user not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
+      x-codegen-request-body-name: request
+    delete:
+      tags:
+      - users
+      summary: Delete a user store user by id
+      parameters:
+      - name: id
+        in: path
+        description: User ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/models.User'
+        "404":
+          description: user not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/utils.ErrorResponse'
+components:
+  schemas:
+    models.User:
+      type: object
+      properties:
+        age:
+          type: integer
+        id:
+          type: string
+          example: fe2594d0-ccea-42a2-97ac-0487458b5642
+        location:
+          type: string
+        name:
+          type: string
+    utils.ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: error message
+x-original-swagger-version: "2.0"
