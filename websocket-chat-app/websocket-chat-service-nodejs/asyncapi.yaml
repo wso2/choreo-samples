@@ -1,0 +1,25 @@
+asyncapi: '2.0.0'
+info:
+  title: 'Chat API'
+  version: 1.0.0
+servers:
+  localhost:
+    url: localhost
+    protocol: ws
+channels:
+  /:
+   publish:
+     operationId: ReceiveMessage
+     message:
+       $ref: '#/components/messages/message'
+   subscribe:
+     operationId: SendMessage
+     message:
+       $ref: '#/components/messages/message'
+components:
+  messages:
+    message:
+      name: message
+      title: message
+      payload:
+        type: object
