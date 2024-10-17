@@ -50,10 +50,10 @@ npm install -g wscat
 To invoke the API, execute the following command:
 
 ```shell
-wscat -c ws://localhost:8080/'
+wscat -c ws://localhost:8080/
 ```
 Connect and pass messages as below,
 ```shell
-{"type": "connect", "nickname": "user1"}
-{"type":"chat", "content":"Hello from user1"}
+{"type": "Connect", "username": "user1"}
+{"type":"Data", "message":"Hello from user1"}
 ```
