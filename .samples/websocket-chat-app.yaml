@@ -3,8 +3,8 @@ description: Provides simultaneous two-way communication over a single TCP conne
 componentType: service
 buildPack: nodejs
 repositoryUrl: https://github.com/wso2/choreo-samples/
-componentPath: /websocket-chat-app/websocket-chat-service-nodejs
-thumbnailPath: /icons/chat-service-websocket.svg
-documentationPath: /websocket-chat-app/websocket-chat-service-nodejs/readme.md
+componentPath: /websocket-chat-app
+thumbnailPath: /icons/websocket-chat-app.svg
+documentationPath: /websocket-chat-app/readme.md
 tags:
   - WS
