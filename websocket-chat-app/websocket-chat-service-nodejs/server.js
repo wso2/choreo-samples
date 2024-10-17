@@ -1,103 +1,112 @@
 const PORT = 8080;
 
 const express = require("express");
-const http = require("http");
-const WebSocket = require("ws");
-const path = require("path");
-const bodyParser = require("body-parser");
-
 const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+
+const server = require("http").createServer(app);
+const bodyParser = require("body-parser");
+const path = require("path");
+const { WebSocket } = require("ws");
+
+const User = require("./User");
+const ChatRoom = require("./ChatRoom");
+const { parseSocketData } = require("./utils");
+
+var clientIDs = Array();
+var roomIDs = Array();
+var wsClients = Array();
+var rooms = Array();
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-let clients = [];
-let rooms = [];
-
-class ChatClient {
-  constructor(socket, nickname) {
-    this.socket = socket;
-    this.nickname = nickname;
-    this.room = null;
-  }
-}
-
-class ChatRoom {
-  constructor() {
-    this.clients = [];
-  }
-
-  addClient(client) {
-    this.clients.push(client);
-    client.room = this;
-    this.broadcast(`${client.nickname} has joined the room.`);
-  }
-
-  removeClient(client) {
-    this.clients = this.clients.filter(c => c !== client);
-    this.broadcast(`${client.nickname} has left the room.`);
-  }
-
-  broadcast(message) {
-    this.clients.forEach(client => {
-      client.socket.send(message);
-    });
-  }
-}
-
-// Start the server
 server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`listening on port ${PORT}`);
 });
 
-// Handle WebSocket connections
-wss.on("connection", (socket) => {
-  let currentClient;
+const wss = new WebSocket.Server({ server: server });
 
-  socket.on("message", (data) => {
-    const message = JSON.parse(data);
+wss.on("connection", (socket, req) => {
+  console.log(`Client websocket connected (${req.socket.remoteAddress})`);
 
-    switch (message.type) {
-      case "connect":
-        currentClient = new ChatClient(socket, message.nickname);
-        clients.push(currentClient);
-        let room = rooms.find(r => r.clients.length < 5);
-        if (!room) {
-          room = new ChatRoom();
-          rooms.push(room);
+  socket.on("message", (message) => {
+    let strMessage = parseSocketData(message);
+    let jsonMessage = JSON.parse(strMessage);
+
+    switch (jsonMessage.type) {
+      case "Connect":
+        let newUser = new User(socket, jsonMessage.username, clientIDs);
+        wsClients.push(newUser);
+
+        // Find an available chat room to enter or create a new one
+        let availableChatRoom =
+          rooms.find(
+            (room) =>
+              room.users.length < room.maxUsers && room.status === "Online"
+          ) || new ChatRoom(newUser, 5, "Online", roomIDs);
+
+        if (!rooms.includes(availableChatRoom)) {
+          rooms.push(availableChatRoom);
+        } else {
+          availableChatRoom.addUser(newUser);
         }
-        room.addClient(currentClient);
+
+        newUser.currentRoom = availableChatRoom;
+
+        const { id, users, maxUsers, status } = availableChatRoom;
+        let json = {
+          type: "Connect",
+          room: id,
+          userCount: users.length,
+          maxUsers,
+          status,
+          username: newUser.username,
+          totalUsers: wsClients.length,
+        };
+
+        availableChatRoom.broadcast(JSON.stringify(json));
         break;
 
-      case "chat":
-        if (currentClient && currentClient.room) {
-          currentClient.room.broadcast(`${currentClient.nickname}: ${message.content}`);
-        }
+      case "Disconnect":
         break;
 
-      case "disconnect":
-        if (currentClient && currentClient.room) {
-          currentClient.room.removeClient(currentClient);
-          clients = clients.filter(c => c !== currentClient);
+      case "Data":
+        const sender = wsClients.find((client) => client.socket === socket);
+        if (sender) {
+          const { username } = sender;
+          const json = {
+            type: "Data",
+            from: username,
+            message: jsonMessage.message,
+            totalUsers: wsClients.length,
+          };
+          sender.currentRoom.broadcast(JSON.stringify(json), sender);
         }
         break;
-
       default:
         break;
     }
   });
 
-  socket.on("close", () => {
-    if (currentClient && currentClient.room) {
-      currentClient.room.removeClient(currentClient);
-      clients = clients.filter(c => c !== currentClient);
-    }
-  });
-
   socket.on("error", (error) => {
     console.error("WebSocket error:", error);
+  });
+
+  socket.on("close", () => {
+    console.log(`Client websocket disconnected (${req.socket.remoteAddress})`);
+    const userIndex = wsClients.findIndex((client) => client.socket === socket);
+
+    if (userIndex !== -1) {
+      const user = wsClients[userIndex];
+      clientIDs.splice(clientIDs.indexOf(user.id), 1);
+      user.currentRoom.removeUser(user);
+
+      if (user.currentRoom.users.length < 1) {
+        user.currentRoom.removeEmptyRoom(rooms, roomIDs);
+      }
+
+      wsClients.splice(userIndex, 1);
+    }
   });
 });
