@@ -11,7 +11,7 @@ This application serves as a multi-user chat platform, allowing users to connect
 The repository is organized into distinct sections:
 
 - **Backend**: Contains the backend microservice that handles application logic, user management, and WebSocket connections.
-- **Frontend**: (Coming Soon) A React web frontend that will provide a user-friendly interface for interacting with the chat application.
+- **Frontend**: A React web frontend that will provide a user-friendly interface for interacting with the chat application.
 
 > **Note**: The frontend will be developed to showcase how users can connect to the backend, manage chat rooms, and send messages seamlessly.
 
