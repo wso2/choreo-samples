@@ -2,7 +2,7 @@ import "./styles.css";
 import { Button, TextField, Box, Grid, Typography, AppBar, Toolbar, createTheme, ThemeProvider, Avatar } from "@mui/material";
 import { useState } from "react";
 
-const SERVER = import.meta.env.VITE_APP_SERVER_URL;
+const SERVER = window.__RUNTIME_CONFIG__.VITE_APP_SERVER_URL;
 
 const MESSAGE_TYPE_CONNECTION = "Connect";
 const MESSAGE_TYPE_DISCONNECTION = "Disconnect";
