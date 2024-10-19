@@ -1,0 +1,43 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+  
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+  
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: rebeccapurple;
+  border: 1px solid rebeccapurple;
+  border-radius: 5px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+  background-color: #ddd8d8;
+}
+
+.active {
+  background-color: rebeccapurple;
+  color: white;
+}

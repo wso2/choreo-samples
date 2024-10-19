@@ -6,11 +6,13 @@ class ChatRoom {
    * @param {number} maxUsers - The maximum number of users allowed in the room.
    * @param {string} status - The current status of the room (default is "Online").
    * @param {Array} roomIDs - An array to keep track of existing room IDs.
+   * @param {Array} wsClients - An array of connected WebSocket clients.
    */
-  constructor(user = null, maxUsers = 5, status = "Online", roomIDs) {
+  constructor(user = null, maxUsers = 5, status = "Online", roomIDs, wsClients) {
     this.users = Array();
     this.maxUsers = maxUsers;
     this.status = status;
+    this.wsClients = wsClients;
     if (user != null) {
       this.users.push(user);
     }
@@ -46,7 +48,7 @@ class ChatRoom {
       maxUsers: this.maxUsers,
       status: this.status,
       username: user.username,
-      totalUsers: wsClients.length,
+      totalUsers: this.wsClients.length,
     };
     this.broadcast(JSON.stringify(json));
   }

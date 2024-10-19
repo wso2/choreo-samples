@@ -44,7 +44,7 @@ wss.on("connection", (socket, req) => {
           rooms.find(
             (room) =>
               room.users.length < room.maxUsers && room.status === "Online"
-          ) || new ChatRoom(newUser, 5, "Online", roomIDs);
+          ) || new ChatRoom(newUser, 5, "Online", roomIDs, wsClients);
 
         if (!rooms.includes(availableChatRoom)) {
           rooms.push(availableChatRoom);
