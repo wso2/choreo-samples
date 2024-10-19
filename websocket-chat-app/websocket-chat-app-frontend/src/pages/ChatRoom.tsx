@@ -172,13 +172,13 @@ const ChatRoom = ({
               }}
             >
               {msg.sender !== username && (
-                <Avatar alt={msg.sender} sx={{ marginRight: 1 }}> {msg.sender[0].toUpperCase()} </Avatar>
+                <Avatar alt={msg.sender} sx={{ marginRight: 1 }}> {msg.sender[0]?.toUpperCase() || "U"} </Avatar>
               )}
               <Typography variant="body1" sx={{ color: msg.color, maxWidth: '70%', wordWrap: 'break-word' }}>
                 <strong>{msg.sender}:</strong> {msg.message}
               </Typography>
               {msg.sender === username && (
-                <Avatar alt="You" sx={{ marginLeft: 1 }}> {msg.sender[0].toUpperCase()} </Avatar>
+                <Avatar alt="You" sx={{ marginLeft: 1 }}> {msg.sender[0]?.toUpperCase() || "U"} </Avatar>
               )}
             </Box>
           ))}
