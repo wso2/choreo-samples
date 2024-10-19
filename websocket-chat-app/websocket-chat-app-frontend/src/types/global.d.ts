@@ -8,4 +8,4 @@ interface Window {
       VITE_APP_AUTH_URL: string;
       VITE_APP_SERVER_URL: string;
     };
-  }
+}
