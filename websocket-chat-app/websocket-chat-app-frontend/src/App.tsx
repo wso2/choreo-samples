@@ -8,10 +8,10 @@ import { ReactNode, useEffect, useState } from "react";
 import ChatRoom from "./pages/ChatRoom";
 
 const authConfig = {
-  signInRedirectURL: import.meta.env.VITE_APP_SIGN_IN_REDIRECT_URL || "",
-  signOutRedirectURL: import.meta.env.VITE_APP_SIGN_OUT_REDIRECT_URL || "",
-  clientID: import.meta.env.VITE_APP_CLIENT_ID || "",
-  baseUrl: import.meta.env.VITE_APP_AUTH_URL || "",
+  signInRedirectURL: window.__RUNTIME_CONFIG__.VITE_APP_SIGN_IN_REDIRECT_URL || "",
+  signOutRedirectURL: window.__RUNTIME_CONFIG__.VITE_APP_SIGN_OUT_REDIRECT_URL || "",
+  clientID: window.__RUNTIME_CONFIG__.VITE_APP_CLIENT_ID || "",
+  baseUrl: window.__RUNTIME_CONFIG__.VITE_APP_AUTH_URL || "",
   scope: ["openid", "profile", "email"],
 };
 
