@@ -15,6 +15,8 @@ const authConfig = {
   scope: ["openid", "profile", "email"],
 };
 
+console.log("authconfig", authConfig);
+
 const AppContent = () => {
   const ProtectedRoute = ({ children }: { children: ReactNode }) => {
     const { state } = useAuthContext();
