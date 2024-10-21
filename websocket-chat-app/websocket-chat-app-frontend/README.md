@@ -28,8 +28,6 @@ To host the front-end application in Choreo, you must create a web application c
 
 9. Click **Create**. This initializes the service with the implementation from your GitHub repository and takes you to the **Overview** page of the component.
 
-Let's consume the service through the web app. Choreo services are by default secured. To consume a service in Choreo you need an access token. Let's configure the web application to connect to an IdP (For this guide, let's use Asgardeo) to generate an access token for a user.
-
 #### Deploy the web application component
 
 Once you create the web application component, you can deploy it to the Choreo runtime. To deploy the web application component, follow the steps below:
@@ -45,7 +43,7 @@ Although you hosted the web application, you have not configured the web applica
 
 !!! Note
 
-You should publish your WebSocket API and subscribe to the API from a new Application and generate Credentials.
+Before proceeding to the next step, ensure that you have published your WebSocket API. Additionally, subscribe to the API through a new application and generate the necessary credentials.
 
 #### Configure Asgardeo (IdP) to integrate with your application
 
