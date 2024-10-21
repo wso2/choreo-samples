@@ -7,12 +7,12 @@ Let's deploy a React front-end application to consume the Published WebSocket AP
 To host the front-end application in Choreo, you must create a web application component. To create a web application component, follow the steps given below.
 
 1. Click **Create** under the **Component Listing** section to create a new component.
-2. On the **Web Application** card, click **Create**.
+2. Click on the **Web Application** card to create a Web Application.
 3. Enter a unique name and a description for the web application. You can enter the name and description given below:
 
-    | **Field**       | **Value**               |
-    |-----------------|-------------------------|
-    | **Name**        | `Chat Client`  |
+    | **Field**       | **Value**                                        |
+    |-----------------|--------------------------------------------------|
+    | **Name**        | `Chat Client`                                    |
     | **Description** | `Frontend application for the websocket service` |
 
 5. Click **Next**.
@@ -111,7 +111,3 @@ To test the front-end application and connect to the WebSocket Servixe via it, f
 1. Access the front-end application via its web URL mentioned in the web application overview page.
 2. Click **Login**, and sign in with the credentials of a user that you created in Asgardeo.
 **Allow**.
-
-
-
-
