@@ -33,7 +33,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight web server as the final parent image
-FROM FROM nginxinc/nginx-unprivileged:stable-alpine
+FROM nginxinc/nginx-unprivileged:stable-alpine
 
 # Create a new user with UID 10014
 RUN addgroup -g 10014 choreo && \
