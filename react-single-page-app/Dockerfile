@@ -29,7 +29,7 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
-# Build the Vue.js app for production
+# Build the React app for production
 RUN npm run build
 
 # Use a lightweight web server as the final parent image
@@ -39,8 +39,8 @@ FROM nginx:alpine
 RUN addgroup -g 10014 choreo && \
     adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
 
-# Copy the built app from the previous stage to the nginx web server directory
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy the built React app from the previous stage to the nginx web server directory
+COPY --from=build /app/build /usr/share/nginx/html
 
 USER 10014
 
