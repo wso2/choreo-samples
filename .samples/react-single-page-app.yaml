@@ -9,4 +9,4 @@ documentationPath: /react-single-page-app/readme.md
 tags:
   - React
   - Single Page Application
-imageUrl: choreoanonymouspullable.azurecr.io/react-spa:v0.9
+imageVersion: 1.0.0
