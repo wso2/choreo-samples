@@ -1,4 +1,4 @@
-module github.com/wso2/choreo-sample-apps/go/grpc-greeter
+module github.com/wso2/choreo-samples/go-grpc
 
 go 1.19
 
