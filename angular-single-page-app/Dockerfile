@@ -35,9 +35,15 @@ RUN npm run build
 # Use a lightweight Nginx image as the final image
 FROM nginx:alpine
 
+# Create a new user with UID 10014
+RUN addgroup -g 10014 choreo && \
+    adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
+
 # Copy the built Angular app from the previous stage to the Nginx web server directory
 COPY --from=build /app/dist/angular-spa /usr/share/nginx/html
-COPY nginx/default.conf /etc/nginx/conf.d/
+#COPY nginx/default.conf /etc/nginx/conf.d/
+
+USER 10014
 
 # Expose port 80 for serving the web application
 EXPOSE 80
