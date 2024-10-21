@@ -32,21 +32,28 @@ COPY . .
 # Build the Angular application for production
 RUN npm run build 
 
-# Use a lightweight Nginx image as the final image
-FROM nginx:alpine
+# Use a lightweight web server (nginx unprivileged) as the final parent image
+FROM choreoanonymouspullable.azurecr.io/nginxinc/nginx-unprivileged:stable-alpine-slim
 
-# Create a new user with UID 10014
-RUN addgroup -g 10014 choreo && \
-    adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
+# Environment variables to configure user permissions
+ENV ENABLE_PERMISSIONS=TRUE
+ENV DEBUG_PERMISSIONS=TRUE
+ENV USER_NGINX=10015
+ENV GROUP_NGINX=10015
 
-# Copy the built Angular app from the previous stage to the Nginx web server directory
-COPY --from=build /app/dist/angular-spa /usr/share/nginx/html
-#COPY nginx/default.conf /etc/nginx/conf.d/
+# Set the working directory for NGINX
+WORKDIR /usr/share/nginx/html
 
-USER 10014
+# Copy the built app from the previous stage to the nginx web server directory
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Expose port 80 for serving the web application
-EXPOSE 80
+# Ensure proper permissions for NGINX to serve the files
+USER root
+RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
+USER nginx
 
-# Start the Nginx web server when the container runs
+# Expose port 8080 for the application
+EXPOSE 8080
+
+# Start the nginx web server
 CMD ["nginx", "-g", "daemon off;"]

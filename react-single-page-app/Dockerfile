@@ -1,5 +1,6 @@
-# Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com/) All Rights Reserved.
-#
+# Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com/) 
+# All Rights Reserved.
+
 # WSO2 LLC. licenses this file to you under the Apache License,
 # Version 2.0 (the "License"); you may not use this file except
 # in compliance with the License.
@@ -14,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-# Use an official Node.js runtime as a parent image
+# Use an official Node.js runtime as a parent image for building the React app
 FROM node:18 AS build
 
 # Set the working directory in the container
@@ -32,20 +33,27 @@ COPY . .
 # Build the React app for production
 RUN npm run build
 
-# Use a lightweight web server as the final parent image
-FROM nginx:alpine
+# Use a lightweight web server (nginx unprivileged) as the final parent image
+FROM choreoanonymouspullable.azurecr.io/nginxinc/nginx-unprivileged:stable-alpine-slim
 
-#USER root
-# # Create a new user with UID 10014
-RUN addgroup -g 10014 choreo && \
- adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
+# Environment variables to configure user permissions
+ENV ENABLE_PERMISSIONS=TRUE
+ENV DEBUG_PERMISSIONS=TRUE
+ENV USER_NGINX=10015
+ENV GROUP_NGINX=10015
+
+# Set the working directory for NGINX
+WORKDIR /usr/share/nginx/html
 
 # Copy the built React app from the previous stage to the nginx web server directory
 COPY --from=build /app/build /usr/share/nginx/html
 
-USER 10014
+# Ensure proper permissions for NGINX to serve the files
+USER root
+RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
+USER nginx
 
-# Expose port 8080 to the outside world
+# Expose port 8080 for the application
 EXPOSE 8080
 
 # Start the nginx web server
