@@ -1,16 +1,17 @@
+"""This module contains the script for metadata validation."""
 import os
-import yaml
-import json
 import shutil
-import metadata_validator
-import version_manager
 from collections import defaultdict
 from itertools import cycle
+import json
+import yaml
+import metadata_validator
+import version_manager
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
-SAMPLE_COMPONENT_TYPE_SERVICE = 'service'   
+SAMPLE_COMPONENT_TYPE_SERVICE = 'service'  
 
 
 def collect_metadata_and_thumbnails():
@@ -24,7 +25,7 @@ def collect_metadata_and_thumbnails():
         meta_path = os.path.join(samples_dir, meta_file)
         
         if os.path.isfile(meta_path):
-            with open(meta_path, 'r') as f:
+            with open(meta_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
 
                 component_path = data.get('componentPath')
@@ -59,7 +60,7 @@ def collect_metadata_and_thumbnails():
                             continue
                         # openapi.yaml is required if service type is REST
                         # Read endpoints.yaml to check if the service type is REST
-                        with open(endpoints_path, 'r') as f:
+                        with open(endpoints_path, 'r', encoding='utf-8') as f:
                             endpoints_data = yaml.safe_load(f)
                             if endpoints_data.get('type') == 'REST':                                
                                 schema_path = endpoints_data.get('schemaFilePath')
@@ -143,7 +144,7 @@ def generate_index_json(data):
 
     with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{index_version}.json"), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
-    print("Generated index.json")
+    print(f"Generated index-{index_version}.json")
 
 def main():
     metadata_data = collect_metadata_and_thumbnails()
