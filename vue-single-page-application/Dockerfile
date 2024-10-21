@@ -35,8 +35,14 @@ RUN npm run build
 # Use a lightweight web server as the final parent image
 FROM nginx:alpine
 
+# Create a new user with UID 10014
+RUN addgroup -g 10014 choreo && \
+    adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
+
 # Copy the built app from the previous stage to the nginx web server directory
 COPY --from=build /app/dist /usr/share/nginx/html
+
+USER 10014
 
 # Expose port 80 to the outside world
 EXPOSE 80
