@@ -11,10 +11,11 @@ VALID_COMPONENT_TYPES = [
     "event-triggered", "event-handler", "test-runner", "many",
     "web-application", "git-proxy"
 ]
+
 QUICK_DEPLOYABLE_COMPONENT_TYPES = [
     "service", "manual-task", "scheduled-task", 
     "web-application"
-],
+]
 
 VALID_BUILD_PACKS = [
     "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby",
