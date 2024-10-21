@@ -37,13 +37,13 @@ FROM nginx:alpine
 
 #USER root
 # # Create a new user with UID 10014
-#RUN addgroup -g 10014 choreo && \
- # adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
+RUN addgroup -g 10014 choreo && \
+ adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
 
 # Copy the built React app from the previous stage to the nginx web server directory
 COPY --from=build /app/build /usr/share/nginx/html
 
-#USER 10014
+USER 10014
 
 # Expose port 8080 to the outside world
 EXPOSE 8080
