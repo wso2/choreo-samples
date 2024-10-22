@@ -62,6 +62,8 @@ RUN adduser \
 
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
 
+RUN mkdir -p /var/cache/nginx/client_temp && chown -R ${USER_NGINX}:${GROUP_NGINX} /var/cache/nginx
+
 USER 10014
 
 # Expose port 8080 for the application
