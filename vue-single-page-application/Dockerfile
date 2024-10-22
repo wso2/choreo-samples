@@ -33,7 +33,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight web server (nginx unprivileged) as the final parent image
-FROM choreoanonymouspullable.azurecr.io/nginxinc/nginx-unprivileged:stable-alpine-slim
+FROM nginx:alpine
 
 # Environment variables to configure user permissions
 ENV ENABLE_PERMISSIONS=TRUE
