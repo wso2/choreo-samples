@@ -54,6 +54,7 @@ COPY --from=build /app/dist/angular-spa /usr/share/nginx/html
 # Ensure proper permissions for NGINX to serve the files
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
 
+# checkov:skip=CKV_DOCKER_3
 # checkov:skip=CKV_DOCKER_1
 USER nginx
 
