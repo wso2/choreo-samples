@@ -46,9 +46,19 @@ WORKDIR /usr/share/nginx/html
 
 # checkov:skip=CKV_DOCKER_1
 USER root
-RUN addgroup -g 10014 usergroup && \
-    adduser -D -u 10014 -G usergroup userapp
+# Create a user with a known UID/GID within range 10000-20000.
+# This is required by Choreo to run the container as a non-root user.
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid 10014 \
+    "choreo"
+# Use the above created unprivileged user
 USER 10014
+
 USER root
 RUN rm -rf /usr/share/nginx/html/*
 
