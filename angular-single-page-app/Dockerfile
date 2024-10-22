@@ -48,6 +48,8 @@ WORKDIR /usr/share/nginx/html
 USER root
 RUN addgroup -g 10014 usergroup && \
     adduser -D -u 10014 -G usergroup userapp
+USER 100014
+USER root
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the built app from the previous stage to the nginx web server directory
