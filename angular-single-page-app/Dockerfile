@@ -28,7 +28,7 @@ ENV GROUP_NGINX=10014
 # Set the working directory for NGINX
 WORKDIR /usr/share/nginx/html
 
-# checkov:skip=CKV_DOCKER_1 "Root user used intentionally to clean files"
+# checkov:skip=CKV_DOCKER_1 
 USER root
 RUN rm -rf /usr/share/nginx/html/*
 

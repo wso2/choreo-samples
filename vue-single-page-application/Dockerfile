@@ -38,8 +38,8 @@ FROM choreoanonymouspullable.azurecr.io/nginxinc/nginx-unprivileged:stable-alpin
 # Environment variables to configure user permissions
 ENV ENABLE_PERMISSIONS=TRUE
 ENV DEBUG_PERMISSIONS=TRUE
-ENV USER_NGINX=10015
-ENV GROUP_NGINX=10015
+ENV USER_NGINX=10014
+ENV GROUP_NGINX=10014
 
 # Set the working directory for NGINX
 WORKDIR /usr/share/nginx/html
@@ -50,8 +50,19 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Ensure proper permissions for NGINX to serve the files
 USER root
 
+# Create a user with a known UID/GID (10014) within the range 10000-20000 for Choreo
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid 10014 \
+    "choreo"
+
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
-USER nginx
+
+USER 10014
 
 # Expose port 8080 for the application
 EXPOSE 8080
