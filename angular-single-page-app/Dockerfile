@@ -46,6 +46,8 @@ WORKDIR /usr/share/nginx/html
 
 # checkov:skip=CKV_DOCKER_1
 USER root
+RUN addgroup -g 10014 usergroup && \
+    adduser -D -u 10014 -G usergroup userapp
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the built app from the previous stage to the nginx web server directory
