@@ -50,9 +50,6 @@ def collect_metadata_and_thumbnails():
                 # check if a quick deployable sample has a valid image URL
                 image_version = data.get('imageVersion')
                 if image_version:
-                    if not metadata_validator.validate_image_version(image_version):
-                        print(f"Warning: 'imageVersion' is not a valid image version for the sample: {meta_file}. Excluding from index.json.")
-                        continue
 
                     if not metadata_validator.is_component_type_quick_deployable(component_type):
                         print(f"Warning: '{component_type}' is not a quick deployable component type for directory: {meta_file}. Excluding from index.json.")

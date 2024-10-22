@@ -54,8 +54,5 @@ def validate_thumbnail(thumbnail_src):
         return False
     return True
 
-def validate_image_version(image_version):
-    return len(image_version.split('.')) == 3 and all(map(str.isdigit, image_version.split('.')))
-
 def is_component_type_quick_deployable(component_type):
     return component_type in QUICK_DEPLOYABLE_COMPONENT_TYPES

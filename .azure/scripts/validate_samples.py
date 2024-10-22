@@ -59,8 +59,7 @@ def validate_metadata_and_thumbnails():
                 
                 image_version = data.get('imageVersion')
                 if image_version:
-                    if not metadata_validator.validate_image_version(image_version):
-                        raise ValueError(f"Error: 'imageVersion' is not a valid image Version for the sample: {meta_file}.")
+                    
                     if not metadata_validator.is_component_type_quick_deployable(component_type):
                         raise ValueError(f"Error: '{component_type}' is not a quick deployable component type for the sample: {meta_file}.")
                     
