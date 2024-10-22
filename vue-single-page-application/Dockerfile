@@ -33,7 +33,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight web server (nginx unprivileged) as the final parent image
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged:alpine
 
 # Environment variables to configure user permissions
 ENV ENABLE_PERMISSIONS=TRUE
@@ -61,8 +61,6 @@ RUN adduser \
     "choreo"
 
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
-
-RUN mkdir -p /var/cache/nginx/client_temp && chown -R ${USER_NGINX}:${GROUP_NGINX} /var/cache/nginx
 
 USER 10014
 
