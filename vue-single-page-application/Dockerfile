@@ -49,6 +49,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 # Ensure proper permissions for NGINX to serve the files
 USER root
+
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
 USER nginx
 

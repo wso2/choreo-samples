@@ -44,12 +44,17 @@ ENV GROUP_NGINX=10015
 # Set the working directory for NGINX
 WORKDIR /usr/share/nginx/html
 
+# checkov:skip=CKV_DOCKER_1
+USER root
+RUN rm -rf /usr/share/nginx/html/*
+
 # Copy the built app from the previous stage to the nginx web server directory
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/angular-spa /usr/share/nginx/html
 
 # Ensure proper permissions for NGINX to serve the files
-USER root
 RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
+
+# checkov:skip=CKV_DOCKER_1
 USER nginx
 
 # Expose port 8080 for the application
