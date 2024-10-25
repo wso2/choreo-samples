@@ -59,39 +59,9 @@ If you'd like to add a new sample to this repository, please follow the below st
     - Ensure the presence of a `Dockerfile` in the sample's root directory. (Make sure you manually build it first)
     - In the `<sample-name>.yaml` file, ensure the `imageVersion` is provided.
     - Ensure the following additional files are included, depending on the component type:
-        - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component.
+        - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component. ([Template](https://wso2.com/choreo/docs/develop-components/manage-component-source-configurations/#overview-of-the-endpointsyaml-file))
         - If the **service** is a **REST** service, include an OpenAPI specification YAML file in your sample's directory, and specify its relative path from the **sample root** in the `schemaFilePath` field in `endpoints.yaml`.
     - **When making a change that affect the image of the sample**: Bump the `imageVersion`
-
-
-### `endpoints.yaml` Template
-
-
-```yaml
-version: <Version Number>
-
-# +required List of endpoints to create
-endpoints:
-  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
-  - name: <Your Endpoint Name>
-    # +required Numeric port value that gets exposed via this endpoint
-    # Note: If you change the service port via environment variables, make sure to update this value accordingly.
-    port: <Your Port Number>
-    # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
-    # Allowed values: REST, GraphQL, GRPC
-    type: <Endpoint Type>
-    # +optional Network level visibility of this endpoint. Defaults to Project
-    # Accepted values: Project|Organization|Public.
-    networkVisibility: <Network Visibility>
-    # +optional Context (base path) of the API that is exposed via this endpoint.
-    # This is mandatory if the endpoint type is set to REST or GraphQL.
-    context: <Your API Context>
-    # +optional Path to the schema definition file. Defaults to wildcard route if not provided
-    # This is only applicable to REST endpoint types.
-    # The path should be relative to the sample root directory.
-    schemaFilePath: <Relative Path to Your OpenAPI Spec>
-
-```
 
 5. Submit a pull request to this repository.
 
