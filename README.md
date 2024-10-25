@@ -50,7 +50,7 @@ If you'd like to add a new sample to this repository, please follow the below st
     - `documentationPath`: The path to the documentation/README.md of the sample. This should be the path to the documentation relative to the `repositoryUrl` directory.
     - `tags`: Tags for the sample. This should be a list of strings.
 
-> If you're adding a Quick Deployable Sample, follow these additional steps:
+> If you're adding a Quick Deployable sample, follow these additional steps:
 >   - Ensure the `componentType` is one of the following:
 >       - `service`
 >       - `web-application`
@@ -63,7 +63,7 @@ If you'd like to add a new sample to this repository, please follow the below st
 >        - If the **service** is a **REST** service, include an OpenAPI specification YAML file in your sample's directory, and specify its relative path from the **sample root** in the `schemaFilePath` field in `endpoints.yaml`.
 >    - **When making a change that affect the image of the sample**: Bump the `imageVersion`
 
-5. Submit a pull request to this repository.
+4. Submit a pull request to this repository.
 
 ## License
 This project is licensed under the Apache License. 
