@@ -56,7 +56,7 @@ If you'd like to add a new sample to this repository, please follow the below st
         - `web-application`
         - `manual-task`
         - `scheduled-task`
-    - Ensure the presence of a `Dockerfile` in the sample's root directory. (Make sure you manually build it first)
+    - Ensure the presence of a `Dockerfile` in the root directory of the sample you are going to add. (Make sure you manually build it first)
     - In the `<sample-name>.yaml` file, ensure the `imageVersion` is provided.
     - Ensure the following additional files are included, depending on the component type:
         - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component. ([Template](https://wso2.com/choreo/docs/develop-components/manage-component-source-configurations/#overview-of-the-endpointsyaml-file))
