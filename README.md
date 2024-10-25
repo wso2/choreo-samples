@@ -50,7 +50,7 @@ If you'd like to add a new sample to this repository, please follow the below st
     - `documentationPath`: The path to the documentation/README.md of the sample. This should be the path to the documentation relative to the `repositoryUrl` directory.
     - `tags`: Tags for the sample. This should be a list of strings.
 
-4. For Quick Deployable Samples:
+4. If you're adding a Quick Deployable Sample, follow these additional steps:
     - Ensure the `componentType` is one of the following:
         - `service`
         - `web-application`
