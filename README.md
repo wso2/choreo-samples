@@ -51,17 +51,17 @@ If you'd like to add a new sample to this repository, please follow the below st
     - `tags`: Tags for the sample. This should be a list of strings.
 
 4. For Quick Deployable Samples:
-- Ensure the `componentType` is one of the following:
-    - `service`
-    - `web-application`
-    - `manual-task`
-    - `scheduled-task`
-- Ensure the presence of a `Dockerfile` in the sample's root directory. (Make sure you manually build it first)
-- In the `<sample-name>.yaml` file, ensure the `imageVersion` is provided.
-- Ensure the following additional files are included, depending on the component type:
-    - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component.
-    - If the **service** is a **REST** service, include an OpenAPI specification YAML file in your sample's directory, and specify its relative path from the **sample root** in the `schemaFilePath` field in `endpoints.yaml`.
-- **When making a change that affect the image of the sample**: Bump the `imageVersion`
+    - Ensure the `componentType` is one of the following:
+        - `service`
+        - `web-application`
+        - `manual-task`
+        - `scheduled-task`
+    - Ensure the presence of a `Dockerfile` in the sample's root directory. (Make sure you manually build it first)
+    - In the `<sample-name>.yaml` file, ensure the `imageVersion` is provided.
+    - Ensure the following additional files are included, depending on the component type:
+        - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component.
+        - If the **service** is a **REST** service, include an OpenAPI specification YAML file in your sample's directory, and specify its relative path from the **sample root** in the `schemaFilePath` field in `endpoints.yaml`.
+    - **When making a change that affect the image of the sample**: Bump the `imageVersion`
 
 
 ### `endpoints.yaml` Template
