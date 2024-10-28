@@ -18,6 +18,8 @@ def validate_metadata_and_thumbnails():
     corresponding metadata files.
     """
 
+    image_urls = []
+
     # Iterate through directories and collect metadata from metadata files
     samples_dirnames_set = set()
     samples_dir = os.path.join(REPO_BASE_DIR, '.samples')
@@ -84,7 +86,8 @@ def validate_metadata_and_thumbnails():
                         build_result = subprocess.run(build_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                         if build_result.returncode != 0:
                             raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
-                    
+                        image_urls.append(image_url)
+
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
@@ -122,6 +125,11 @@ def validate_metadata_and_thumbnails():
     is_valid, dir_name = metadata_validator.validate_directories_for_metafiles(samples_dirnames_set)
     if not is_valid:
         raise ValueError(f"Error: Directory '{dir_name}' does not have a corresponding metadata file.")
+    
+    # Write image URLs to a file for Trivy scan
+    with open(os.path.join(REPO_BASE_DIR, 'image_urls.txt'), 'w') as f:
+        for url in image_urls:
+            f.write(url + '\n')
 
 def main():
     try:
