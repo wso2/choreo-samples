@@ -14,7 +14,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM golang:1.19.0-alpine as build-env
+FROM golang:1.22.4-alpine as build-env
 
 RUN mkdir /app
 WORKDIR /app

@@ -6,7 +6,7 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /react-single-page-app
 thumbnailPath: /icons/react-single-page-app.svg
 documentationPath: /react-single-page-app/readme.md
+imageVersion: 1.0.0
 tags:
   - React
   - Single Page Application
-imageUrl: choreoanonymouspullable.azurecr.io/react-spa:v0.9

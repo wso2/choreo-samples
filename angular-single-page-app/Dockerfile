@@ -32,15 +32,42 @@ COPY . .
 # Build the Angular application for production
 RUN npm run build 
 
-# Use a lightweight Nginx image as the final image
-FROM nginx:alpine
+# Use a lightweight web server (nginx unprivileged) as the final parent image
+FROM nginxinc/nginx-unprivileged:alpine
 
-# Copy the built Angular app from the previous stage to the Nginx web server directory
+# Environment variables to configure user permissions
+ENV ENABLE_PERMISSIONS=TRUE
+ENV DEBUG_PERMISSIONS=TRUE
+ENV USER_NGINX=10014 
+ENV GROUP_NGINX=10014
+
+# Set the working directory for NGINX
+WORKDIR /usr/share/nginx/html
+
+USER root
+RUN rm -rf /usr/share/nginx/html/*
+
+# Create a user with a known UID/GID (10014) within the range 10000-20000 for Choreo
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid 10014 \
+    "choreo"
+
+# Copy the built app from the previous stage to the nginx web server directory
 COPY --from=build /app/dist/angular-spa /usr/share/nginx/html
-COPY nginx/default.conf /etc/nginx/conf.d/
 
-# Expose port 80 for serving the web application
-EXPOSE 80
+# Ensure proper permissions for the custom user (10014) to serve the files
+RUN chown -R ${USER_NGINX}:${GROUP_NGINX} /usr/share/nginx/html
 
-# Start the Nginx web server when the container runs
+# Use the custom unprivileged user 10014 instead of nginx
+USER 10014
+
+# Expose port 8080 for the application
+EXPOSE 8080
+
+# Start the nginx web server
 CMD ["nginx", "-g", "daemon off;"]

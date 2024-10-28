@@ -6,8 +6,8 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-rest-user-service
 thumbnailPath: /icons/docker-rest-user-service.svg
 documentationPath: /docker-rest-user-service/readme.md
+imageVersion: 1.0.0
 tags:
   - REST
   - Go
   - HTTP
-imageUrl: choreoanonymouspullable.azurecr.io/user-service:v0.9
