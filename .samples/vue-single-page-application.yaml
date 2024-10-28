@@ -6,7 +6,7 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /vue-single-page-application
 thumbnailPath: /icons/vue-single-page-application.svg
 documentationPath: /vue-single-page-application/readme.md
+imageVersion: 1.0.0
 tags:
   - Vue
   - Single Page Application
-imageUrl: choreoanonymouspullable.azurecr.io/vue-spa:v0.9

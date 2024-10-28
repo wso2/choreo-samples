@@ -1,3 +1,3 @@
-module github.com/wso2/choreo-sample-apps/go/hello-world
+module github.com/wso2/choreo-samples/docker-hello-world-manual-task
 
-go 1.20
+go 1.22.4

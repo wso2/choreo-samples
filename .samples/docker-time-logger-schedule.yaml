@@ -6,8 +6,8 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-time-logger-schedule
 thumbnailPath: /icons/docker-time-logger-schedule.svg
 documentationPath: /docker-time-logger-schedule/readme.md
+imageVersion: 1.0.0
 tags:
   - Scheduled Task
   - BYOC
   - Go
-imageUrl: choreoanonymouspullable.azurecr.io/time-logger:v0.9

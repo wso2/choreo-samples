@@ -1,5 +1,6 @@
-# Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com/) All Rights Reserved.
-#
+# Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com/) 
+# All Rights Reserved.
+
 # WSO2 LLC. licenses this file to you under the Apache License,
 # Version 2.0 (the "License"); you may not use this file except
 # in compliance with the License.
@@ -14,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-# Use an official Node.js runtime as a parent image for building the app
+# Use an official Node.js runtime as a parent image for building the React app
 FROM node:18 AS build
 
 # Set the working directory in the container
@@ -29,7 +30,7 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
-# Build the Vue.js app for production
+# Build the React app for production
 RUN npm run build
 
 # Use a lightweight web server (nginx unprivileged) as the final parent image
@@ -44,12 +45,11 @@ ENV GROUP_NGINX=10014
 # Set the working directory for NGINX
 WORKDIR /usr/share/nginx/html
 
-# Copy the built app from the previous stage to the nginx web server directory
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy the built React app from the previous stage to the nginx web server directory
+COPY --from=build /app/build /usr/share/nginx/html
 
 # Ensure proper permissions for NGINX to serve the files
 USER root
-
 # Create a user with a known UID/GID (10014) within the range 10000-20000 for Choreo
 RUN adduser \
     --disabled-password \

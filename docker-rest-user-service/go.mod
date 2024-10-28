@@ -1,6 +1,6 @@
 module github.com/wso2/choreo-samples/docker-rest-user-service
 
-go 1.20
+go 1.22.4
 
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect

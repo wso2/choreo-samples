@@ -6,7 +6,7 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /docker-hello-world-manual-task
 thumbnailPath: /icons/docker-hello-world-manual-task.png
 documentationPath: /docker-hello-world-manual-task/readme.md
+imageVersion: 1.0.0
 tags:
   - BYOC
   - Go
-imageUrl: choreoanonymouspullable.azurecr.io/hello-world:v0.9

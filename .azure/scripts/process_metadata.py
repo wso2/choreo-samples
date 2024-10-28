@@ -1,16 +1,19 @@
+"""This module contains the script for metadata validation."""
 import os
-import yaml
-import json
 import shutil
-import metadata_validator
-import version_manager
 from collections import defaultdict
 from itertools import cycle
+import json
+import yaml
+import metadata_validator
+import version_manager
+import subprocess
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
+CHOREO_ACR_BASE_URL = 'choreoanonymouspullable.azurecr.io'
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
-SAMPLE_COMPONENT_TYPE_SERVICE = 'service'   
+SAMPLE_COMPONENT_TYPE_SERVICE = 'service'  
 
 
 def collect_metadata_and_thumbnails():
@@ -24,7 +27,7 @@ def collect_metadata_and_thumbnails():
         meta_path = os.path.join(samples_dir, meta_file)
         
         if os.path.isfile(meta_path):
-            with open(meta_path, 'r') as f:
+            with open(meta_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
 
                 component_path = data.get('componentPath')
@@ -45,11 +48,38 @@ def collect_metadata_and_thumbnails():
                     continue
 
                 # check if a quick deployable sample has a valid image URL
-                image_url = data.get('imageUrl')
-                if image_url:
-                    if not metadata_validator.validate_image_url(image_url):
-                        print(f"Warning: 'imageUrl' is not a valid image URL for the sample: {meta_file}. Excluding from index.json.")
+                image_version = data.get('imageVersion')
+                if image_version:
+
+                    if not metadata_validator.is_component_type_quick_deployable(component_type):
+                        print(f"Warning: '{component_type}' is not a quick deployable component type for directory: {meta_file}. Excluding from index.json.")
                         continue
+
+                    display_name = data.get('displayName')
+                    image_name = display_name.strip().lower().replace(' ', '-')
+                    image_url = f"{CHOREO_ACR_BASE_URL}/samples/{image_name}:{image_version}"
+                    data['imageUrl'] = image_url
+
+                    # Attempt to pull the image from ACR
+                    pull_command = ['docker', 'pull', image_url]
+                    pull_result = subprocess.run(pull_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    if pull_result.returncode == 0:
+                        print(f"Image {image_url} exists in ACR.")
+                    else:
+                        print(f"Image {image_url} not found in ACR. Building and pushing the image.")
+
+                        # Build the Docker image
+                        component_full_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'))
+                        build_command = ['docker', 'build', '-t', image_url, component_full_path]
+                        build_result = subprocess.run(build_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        if build_result.returncode != 0:
+                            raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
+
+                        # Push the image to ACR
+                        push_command = ['docker', 'push', image_url]
+                        push_result = subprocess.run(push_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        if push_result.returncode != 0:
+                            raise RuntimeError(f"Error pushing image {image_url}: {push_result.stderr.decode('utf-8')}")
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
@@ -59,7 +89,7 @@ def collect_metadata_and_thumbnails():
                             continue
                         # openapi.yaml is required if service type is REST
                         # Read endpoints.yaml to check if the service type is REST
-                        with open(endpoints_path, 'r') as f:
+                        with open(endpoints_path, 'r', encoding='utf-8') as f:
                             endpoints_data = yaml.safe_load(f)
                             if endpoints_data.get('type') == 'REST':                                
                                 schema_path = endpoints_data.get('schemaFilePath')
@@ -103,7 +133,7 @@ def sort_samples(samples):
     rest_samples = []
 
     for sample in samples:
-        if sample.get('imageUrl'):
+        if sample.get('imageVersion'):
             sample_type = sample.get("componentType", "")
             if sample_type in type_order:
                 qd_samples_by_type[sample_type].append(sample)
@@ -143,7 +173,7 @@ def generate_index_json(data):
 
     with open(os.path.join(BUILD_STAGING_DIRECTORY, f"index-{index_version}.json"), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, separators=(',', ':'))  # Remove whitespace to minimize file size
-    print("Generated index.json")
+    print(f"Generated index-{index_version}.json")
 
 def main():
     metadata_data = collect_metadata_and_thumbnails()

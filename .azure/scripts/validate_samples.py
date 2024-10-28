@@ -3,9 +3,11 @@ import yaml
 import json
 import shutil
 import metadata_validator
+import subprocess
 
 REPO_BASE_DIR = os.environ['BUILD_SOURCESDIRECTORY']
 SAMPLE_COMPONENT_TYPE_SERVICE = 'service'
+CHOREO_ACR_BASE_URL = 'choreoanonymouspullable.azurecr.io'
 
 def validate_metadata_and_thumbnails():
     """
@@ -26,8 +28,8 @@ def validate_metadata_and_thumbnails():
             with open(meta_path, 'r') as f:
                 data = yaml.safe_load(f)
 
-                dispaly_name = data.get('displayName')
-                if not dispaly_name:
+                display_name = data.get('displayName')
+                if not display_name:
                     raise ValueError(f"Error: 'displayName' is not set for the sample: {meta_file}.")
                 
                 description = data.get('description')
@@ -55,10 +57,34 @@ def validate_metadata_and_thumbnails():
                     raise ValueError(f"Error: 'tags' is not a list for the sample: {meta_file}.")
                 
                 
-                image_url = data.get('imageUrl')
-                if image_url:
-                    if not metadata_validator.validate_image_url(image_url):
-                        raise ValueError(f"Error: 'imageUrl' is not a valid image URL for the sample: {meta_file}.")
+                image_version = data.get('imageVersion')
+                if image_version:
+                    
+                    if not metadata_validator.is_component_type_quick_deployable(component_type):
+                        raise ValueError(f"Error: '{component_type}' is not a quick deployable component type for the sample: {meta_file}.")
+                    
+                    #Check if a Dockerfile exists in the sample directory
+                    dockerfile_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), 'Dockerfile')
+                    if not os.path.exists(dockerfile_path):
+                        raise FileNotFoundError(f"Error: Dockerfile not found in {component_path.lstrip('/')}")
+                    
+                    #Check if build succeed with the Dockerfile
+                    image_name = display_name.strip().lower().replace(' ', '-')
+                    image_url = f"{CHOREO_ACR_BASE_URL}/samples/{image_name}:{image_version}"
+                    data['imageUrl'] = image_url
+
+                    # Attempt to pull the image from ACR
+                    pull_command = ['docker', 'pull', image_url]
+                    pull_result = subprocess.run(pull_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    
+                    if not pull_result.returncode == 0:
+                        # Build the Docker image
+                        component_full_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'))
+                        build_command = ['docker', 'build', '-t', image_url, component_full_path]
+                        build_result = subprocess.run(build_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        if build_result.returncode != 0:
+                            raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
+                    
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
                         endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')

@@ -10,27 +10,29 @@ the response.
 ### Deploy the service
 1. Select a project in Choreo or create a new one
 2. Create a new service and give it a name
-3. Select following for the server component
-    - Repository name: Your forked samples reposiotory
+3. Input following for the server component
+    - Public Repository URL: https://github.com/wso2/choreo-samples
     - Branch: main
-    - Build Pack: Dockerfile
-    - Dockerfile path: go-grpc/Dockerfile.server
-    - Build Context: go-grpc
+    - Buildpack: Dockerfile
+    - Docker Context: go-grpc
+    - Dockerfile: go-grpc/Dockerfile.server
 
 
 ### Deploy the client
 1. Create a manual trigger component on the same project
-2 Select following for the client component
-    - Repository name: Your forked samples reposiotory
+2 Input following for the client component
+    - Public Repository URL: https://github.com/wso2/choreo-samples
     - Branch: main
-    - Build Pack: Dockerfile
-    - Dockerfile path: go-grpc/Dockerfile.client
-    - Build Context: go-grpc
+    - Buildpack: Dockerfile
+    - Docker Context: go-grpc
+    - Dockerfile: go-grpc/Dockerfile.client
+
 3. Once created, navigate to the deploy view and add the following environment variable
     - GREETER_SERVICE: < gRPC service url without the http:// part >
 4. Deploy the client component
-5. Once deployed, click Run Once on the environment card to run the client
-6. Navigate to observe view to see the logs
+5. Once deployed, navigate to the Execute page
+6. Click Run Now
+6. Click on the execution once completed and click **View Logs** to see the logs
 
 
 ### Local Development
