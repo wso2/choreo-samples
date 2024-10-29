@@ -130,6 +130,9 @@ def validate_metadata_and_thumbnails():
     with open(os.path.join(REPO_BASE_DIR, 'image_urls.txt'), 'w') as f:
         for url in image_urls:
             f.write(url + '\n')
+    
+    print("Saved")
+    
 
 def main():
     try:
