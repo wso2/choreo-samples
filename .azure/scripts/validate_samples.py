@@ -74,6 +74,7 @@ def validate_metadata_and_thumbnails():
                     image_name = display_name.strip().lower().replace(' ', '-')
                     image_url = f"{CHOREO_ACR_BASE_URL}/samples/{image_name}:{image_version}"
                     data['imageUrl'] = image_url
+                    image_urls.append(image_url)
 
                     # Attempt to pull the image from ACR
                     pull_command = ['docker', 'pull', image_url]
@@ -86,7 +87,6 @@ def validate_metadata_and_thumbnails():
                         build_result = subprocess.run(build_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                         if build_result.returncode != 0:
                             raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
-                        image_urls.append(image_url)
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
