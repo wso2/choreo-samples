@@ -126,17 +126,9 @@ def validate_metadata_and_thumbnails():
     if not is_valid:
         raise ValueError(f"Error: Directory '{dir_name}' does not have a corresponding metadata file.")
     
-    # Write image URLs to a file for Trivy scan
-    print(len(image_urls))
     with open(os.path.join(REPO_BASE_DIR, 'image_urls.txt'), 'w') as f:
         for url in image_urls:
             f.write(url + '\n')
-        print("Image URLs written to image_urls.txt")
-    
-    # Check file size of image_urls.txt
-    image_urls_file_size = os.path.getsize(os.path.join(REPO_BASE_DIR, 'image_urls.txt'))
-    print(f"Size of image_urls.txt: {image_urls_file_size} bytes")
-
 
 def main():
     try:
