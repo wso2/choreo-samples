@@ -18,6 +18,7 @@ SAMPLE_COMPONENT_TYPE_SERVICE = 'service'
 
 def collect_metadata_and_thumbnails():
     collected_data = []
+    image_urls = []
     print("Starting to collect metadata and thumbnails...")
 
     # Iterate through directories and collect metadata from metadata files
@@ -59,6 +60,7 @@ def collect_metadata_and_thumbnails():
                     image_name = display_name.strip().lower().replace(' ', '-')
                     image_url = f"{CHOREO_ACR_BASE_URL}/samples/{image_name}:{image_version}"
                     data['imageUrl'] = image_url
+                    image_urls.append(image_url)
 
                     # Attempt to pull the image from ACR
                     pull_command = ['docker', 'pull', image_url]
@@ -74,12 +76,6 @@ def collect_metadata_and_thumbnails():
                         build_result = subprocess.run(build_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                         if build_result.returncode != 0:
                             raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
-
-                        # Push the image to ACR
-                        push_command = ['docker', 'push', image_url]
-                        push_result = subprocess.run(push_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                        if push_result.returncode != 0:
-                            raise RuntimeError(f"Error pushing image {image_url}: {push_result.stderr.decode('utf-8')}")
 
                     # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
@@ -122,6 +118,10 @@ def collect_metadata_and_thumbnails():
     if not is_valid:
         print(f"Warning: Directory '{dir_name}' does not have a corresponding metadata file. This will be excluded form index.json.")
 
+    with open(os.path.join(REPO_BASE_DIR, 'image_urls.txt'), 'w', encoding='utf-8') as f:
+        for url in image_urls:
+            f.write(url + '\n')
+            
     return collected_data
 
 def sort_samples(samples):
