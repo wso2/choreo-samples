@@ -49,6 +49,20 @@ If you'd like to add a new sample to this repository, please follow the below st
     - `thumbnailPath`: The path to the thumbnail image of the sample. This should be the path to the thumbnail image relative to the `repositoryUrl` directory. It is recommended to add the thumbnail to the `.samples/icons` directory and refer it here.
     - `documentationPath`: The path to the documentation/README.md of the sample. This should be the path to the documentation relative to the `repositoryUrl` directory.
     - `tags`: Tags for the sample. This should be a list of strings.
+
+> If you're adding a Quick Deployable sample, follow these additional steps:
+>   - Ensure the `componentType` is one of the following:
+>       - `service`
+>       - `web-application`
+>       - `manual-task`
+>       - `scheduled-task`
+>   - Ensure the presence of a `Dockerfile` in the root directory of the sample you are going to add. (Make sure you manually build it first)
+>    - In the metadata file (`<sample-name>.yaml`) file, ensure the `imageVersion` is provided.
+>    - Ensure the following additional files are included, depending on the component type:
+>       - For **services**, include an `endpoints.yaml` file in the `/.choreo` directory of the component. ([Template](https://wso2.com/choreo/docs/develop-components/manage-component-source-configurations/#overview-of-the-endpointsyaml-file))
+>        - If the **service** is a **REST** service, include an OpenAPI specification YAML file in your sample's directory, and specify its relative path from the **sample root** in the `schemaFilePath` field in `endpoints.yaml`.
+>    - **When making a change that affect the image of the sample**: Bump the `imageVersion`
+
 4. Submit a pull request to this repository.
 
 ## License
