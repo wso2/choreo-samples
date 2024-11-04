@@ -64,6 +64,8 @@ class ChatRoom {
       let user = this.users[i];
       if (user !== sender) {
         user.socket.send(message);
+      } else {
+        user.socket.send("Message sent")
       }
     }
   }
