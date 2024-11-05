@@ -7,4 +7,4 @@ componentPath: /websocket-chat-service-ballerina
 thumbnailPath: /icons/websocket-chat-service-ballerina.svg
 documentationPath: /websocket-chat-service-ballerina/readme.md
 tags:
-  - WS
+  - WebSocket
