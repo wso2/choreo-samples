@@ -1,0 +1,170 @@
+openapi: 3.0.0
+info:
+  title: Appointment Booking API
+  description: API for booking and managing appointments.
+  version: "1.0"
+paths:
+  /appointments:
+    get:
+      summary: List all appointments or filter by upcoming and/or email
+      parameters:
+        - in: query
+          name: upcoming
+          schema:
+            type: string
+          description: Filter by upcoming appointments
+        - in: query
+          name: email
+          schema:
+            type: string
+          description: Filter by email address
+      responses:
+        '200':
+          description: A list of appointments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+    post:
+      summary: Create a new appointment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                service:
+                  type: string
+                phoneNumber:
+                  type: string
+                  format: phone
+                email:
+                  type: string
+                  format: email
+                appointmentDate:
+                  type: string
+                  format: date-time
+              required:
+                - name
+                - service
+                - phoneNumber
+                - email
+                - appointmentDate
+            examples:
+              example1:
+                value:
+                  name: "John Doe"
+                  service: "General Consultation"
+                  phoneNumber: "0123456789"
+                  email: "johndoe@example.com"
+                  appointmentDate: "2024-05-01T09:00:00Z"
+      responses:
+        '201':
+          description: The appointment was successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+  /appointments/{id}:
+    get:
+      summary: Get a single appointment by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: Unique identifier of the appointment
+      responses:
+        '200':
+          description: Details of an appointment
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+    put:
+      summary: Update an appointment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: Unique identifier of the appointment to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Appointment'
+      responses:
+        '200':
+          description: The appointment was successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+    delete:
+      summary: Delete an appointment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: Unique identifier of the appointment to delete
+      responses:
+        '200':
+          description: The appointment was successfully deleted
+  /appointment-types:
+    get:
+      summary: List all appointment types
+      responses:
+        '200':
+          description: A list of available appointment types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value:
+                      type: string
+                    label:
+                      type: string
+components:
+  schemas:
+    Appointment:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        service:
+          type: string
+        phoneNumber:
+          type: string
+          format: phone
+        appointmentDate:
+          type: string
+          format: date-time
+        email:
+          type: string
+          format: email
+      required:
+        - name
+        - service
+        - phoneNumber
+        - email
+        - appointmentDate
