@@ -40,14 +40,14 @@ To deploy this demo use case in Choreo, follow these steps:
 ### Step 01: Create the service component
 
 1. Fork the repository
-2. Create a Service component using `NodeJS` buildpack and link the `appointment-management/appointment-service` directory
+2. Create a Service component using `NodeJS` buildpack with language version `20.x.x` and link the `appointment-management/appointment-service` directory
 
 ### Step 02: Create a database connection
 
 1. In the left navigation menu, click `Dependencies` and then click `Connections`.
 2. Click `Database` Card to create a database connection
 3. Click on the database you want to connect to.
-4. Enter a `database_connection` as the name and description for connection.
+4. Enter `database_connection` as the name and description for connection.
 5. Under Environment Configuration, select credentials for each database and databases for each environment.
 
 ### Step 03: Consume the created database connection
