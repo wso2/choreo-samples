@@ -1,0 +1,12 @@
+schemaVersion: 1.1
+endpoints:
+  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+  - name: appointments
+    service:
+      basePath: /
+      port: 8090
+    type: REST
+    # +optional Network level visibility of the endpoint. Defaults to Public
+    # Accepted values: Project|Organization|Public.
+    networkVisibility: Public
+    schemaFilePath: openapi.yaml

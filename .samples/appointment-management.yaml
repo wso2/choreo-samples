@@ -1,0 +1,10 @@
+displayName: Appointment Management System
+description: Appointment Management System built using choreo connections.
+componentType: many
+buildPack: many
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /appointment-management
+thumbnailPath: /icons/data-mapping.png
+documentationPath: /appointment-management/readme.md
+tags:
+  - Connections
