@@ -15,14 +15,6 @@ Note: All paths are relative to `/go/user-store`.
 | `Dockerfile`           | Docker configuration used by Choreo to build and containerize the application.                                                        |
 | `.choreo/endpoints.yaml` | Choreo-specific configuration that defines how Choreo exposes the service to the internet.                                           |
 
-
-## Prerequisites
-
-1. **Fork the Repository**: Start by forking this repository to your GitHub account.
-2. **Install Go**: Make sure you have Go installed on your system ([Install Go](https://golang.org/doc/install)).
-3. **Install Dependencies**: Install the `graphql-go` library using:
-   ```bash
-   go get github.com/graphql-go/graphql
 ## Deploying the Application on Choreo
 
 ### Deployment Steps
@@ -37,7 +29,7 @@ Note: All paths are relative to `/go/user-store`.
     |-----------------------|-----------------------------------------------|
     | **Name**              | `GraphQL User Store Service`                          |
     | **Description**       | `A simple GraphQL service for managing users` |
-    | **GitHub Account**    | Your GitHub account                           |
+    | **GitHub Account**    | `wso2`                       |
     | **GitHub Repository** | `choreo-samples`                              |
     | **Branch**            | `main`                                        |
     | **Buildpack**         | `Go`                                          |
@@ -45,11 +37,20 @@ Note: All paths are relative to `/go/user-store`.
     | **Language Version**  | `1.x`                                         |
 
 3. **Create and Deploy**:
-   - Click **Create** to set up the component. After the component is created, navigate to the overview page and select **Deploy** to deploy the service.
+   - Click **Create** to set up the component. After the component is created and built, navigate to the deploy page and select **Deploy** to deploy the service.
 
 ## Running the Service Locally
 
-To run the service locally, navigate to the Go application directory and start the server.
+### Prerequisites
+
+1. **Install Go**: Make sure you have Go installed on your system ([Install Go](https://golang.org/doc/install)).
+2. **Install Dependencies**: Install the `graphql-go` library using:
+   ```bash
+   go get github.com/graphql-go/graphql
+3. Clone [choreo-samples](https://github.com/wso2/choreo-samples) repository.
+
+### To run the service locally, 
+navigate to the Go application directory and start the server.
 
 1. **Navigate to the Directory**:
    ```bash
