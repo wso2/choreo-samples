@@ -6,5 +6,6 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /reading-list-graphql
 thumbnailPath: /icons/reading-list-graphql.svg
 documentationPath: /reading-list-graphql/readme.md
+imageVersion: 1.0.0
 tags:
   - GraphQL
