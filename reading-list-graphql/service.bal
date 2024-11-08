@@ -17,7 +17,7 @@
 import ballerina/graphql;
 
 # A service representing a network-accessible GraphQL API
-service graphql:Service / on new graphql:Listener(8090) {
+service graphql:Service / on new graphql:Listener(8080) {
 
     # Returns all reading list items with optionally filtered from the reading status.
     # + status - Optional filter to list the reading list items by reading status.
