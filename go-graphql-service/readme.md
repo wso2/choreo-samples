@@ -1,7 +1,5 @@
 # Choreo Sample GraphQL Service - User Store
 
-# Go GraphQL User Store
-
 ## Overview
 
 The Go GraphQL User Store is a sample GraphQL API built using Go that provides basic user management functionality. It allows clients to query user information, create new users, and list all users. This README provides instructions for setting up, deploying, and running the service locally or on Choreo.
@@ -25,7 +23,6 @@ Note: All paths are relative to `/go/user-store`.
 3. **Install Dependencies**: Install the `graphql-go` library using:
    ```bash
    go get github.com/graphql-go/graphql
-
 ## Deploying the Application on Choreo
 
 ### Deployment Steps
