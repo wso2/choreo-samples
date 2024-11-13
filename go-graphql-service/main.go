@@ -130,6 +130,7 @@ func graphqlHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/graphql", graphqlHandler)
+	http.HandleFunc("/graphql/", graphqlHandler)
 	fmt.Println("Server started at http://localhost:8080/graphql")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
