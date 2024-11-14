@@ -1,8 +1,0 @@
-version: 1.0
-endpoints:
-  - name: RDBMSDataService
-    port: 8290
-    type: REST
-    networkVisibility: Public
-    context: /
-    schemaFilePath: openapi.yaml

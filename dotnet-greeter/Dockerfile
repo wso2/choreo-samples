@@ -1,4 +1,4 @@
-# Copyright (c) 2023, WSO2 LLC. (https://www.wso2.com/) All Rights Reserved.
+# Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com/) All Rights Reserved.
 #
 # WSO2 LLC. licenses this file to you under the Apache License,
 # Version 2.0 (the "License"); you may not use this file except
@@ -19,7 +19,7 @@
 # The image is based on a small Alpine Linux image.
 # The image uses a non-root user with a known UID/GID to run the container.
 # The image has a single entrypoint, the go-greeter executable.
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS builder
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
 
 # Set the working directory to /app
 WORKDIR /app
@@ -32,7 +32,7 @@ RUN dotnet restore && \
     dotnet publish -c PublishRelease -o out
 
 # Use a small Alpine Linux image as the base image for the final container
-FROM mcr.microsoft.com/dotnet/runtime:7.0
+FROM mcr.microsoft.com/dotnet/runtime:8.0
 
 # Set the working directory to /app
 WORKDIR /app

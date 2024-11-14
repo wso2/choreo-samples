@@ -15,7 +15,7 @@ This sample shows how you can deploy server-client services utilizing UDP for co
 
 ### Deploy the client
 
-1. Create a new Manual Trigger component with following parameters
+1. Create a new Manual Task component with following parameters
    - Build Pack: `Dockerfile`
    - Dockerfile path: `docker-udp-service/Dockerfile.client`
    - Build Context: `docker-udp-service`
