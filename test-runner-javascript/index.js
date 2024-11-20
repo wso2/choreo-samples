@@ -27,5 +27,9 @@ describe("API Tests", function () {
     performAPICallAndAssert(1, done);
   });
 
+  it("Test 2: Ensure the API response for post ID 2 matches the expected values", function (done) {
+    performAPICallAndAssert(2, done);
+  });
+
   // Add more test cases as needed.
 });
