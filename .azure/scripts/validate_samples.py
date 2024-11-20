@@ -88,9 +88,9 @@ def validate_metadata_and_thumbnails():
                         if build_result.returncode != 0:
                             raise RuntimeError(f"Error building image {image_url}: {build_result.stderr.decode('utf-8')}")
 
-                    # Check if openapi.yaml and endpoints.yaml exist if the component type is a service
+                    # Check if openapi.yaml and component.yaml exist if the component type is a service
                     if component_type == SAMPLE_COMPONENT_TYPE_SERVICE:
-                        endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/endpoints.yaml')
+                        endpoints_path = os.path.join(REPO_BASE_DIR, component_path.lstrip('/'), '.choreo/component.yaml')
                         if not os.path.exists(endpoints_path):
                             raise FileNotFoundError(f"Error: endpoints.yaml not found in {component_path.lstrip('/')}")
                         # openapi.yaml is required if service type is REST

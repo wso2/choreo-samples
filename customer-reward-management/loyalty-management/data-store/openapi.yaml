@@ -1,0 +1,258 @@
+openapi: 3.0.1
+info:
+  title: /
+  version: 0.1.0
+servers:
+- url: "{server}:{port}/"
+  variables:
+    server:
+      default: http://localhost
+    port:
+      default: "9090"
+paths:
+  /reward-confirmation:
+    get:
+      operationId: getRewardConfirmation
+      parameters:
+      - name: userId
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: rewardId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RewardConfirmation'
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+    post:
+      operationId: postRewardConfirmation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RewardConfirmation'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            text/plain:
+              schema:
+                type: string
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /reward-confirmations:
+    get:
+      operationId: getRewardConfirmations
+      parameters:
+      - name: userId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RewardConfirmation'
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /users:
+    get:
+      operationId: getUsers
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /reward-offers:
+    get:
+      operationId: getRewardOffers
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RewardOffer'
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+  /user-rewards:
+    get:
+      operationId: getUserRewards
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserReward'
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorPayload'
+components:
+  schemas:
+    ErrorPayload:
+      required:
+      - message
+      - method
+      - path
+      - reason
+      - status
+      - timestamp
+      type: object
+      properties:
+        timestamp:
+          type: string
+        status:
+          type: integer
+          format: int64
+        reason:
+          type: string
+        message:
+          type: string
+        path:
+          type: string
+        method:
+          type: string
+    RewardConfirmation:
+      required:
+      - rewardConfirmationNumber
+      - rewardId
+      - userId
+      type: object
+      properties:
+        userId:
+          type: string
+        rewardId:
+          type: string
+        rewardConfirmationNumber:
+          type: string
+      additionalProperties: false
+      description: Represents a reward confirmation.
+    RewardOffer:
+      required:
+      - description
+      - id
+      - logoUrl
+      - name
+      - totalPoints
+      - value
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        value:
+          type: number
+          format: float
+        totalPoints:
+          type: integer
+          format: int64
+        description:
+          type: string
+        logoUrl:
+          type: string
+      additionalProperties: false
+      description: Represents a reward offer.
+    User:
+      required:
+      - email
+      - firstName
+      - lastName
+      - userId
+      type: object
+      properties:
+        userId:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+      additionalProperties: false
+      description: Represents a user.
+    UserReward:
+      required:
+      - acceptedTnC
+      - selectedRewardDealId
+      - timestamp
+      - userId
+      type: object
+      properties:
+        userId:
+          type: string
+        selectedRewardDealId:
+          type: string
+        timestamp:
+          type: string
+        acceptedTnC:
+          type: boolean
+      additionalProperties: false
+      description: Represents a user reward.
