@@ -40,4 +40,3 @@ endpoints:
   # schemaFilePath: swagger.yaml
   # The path provided for image based components
   schemaFilePath: docs/openapi.yaml
-  
