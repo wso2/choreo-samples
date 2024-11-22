@@ -19,8 +19,8 @@ the response.
 
 
 ### Deploy the client
-1. Create a manual trigger component on the same project
-2 Input following for the client component
+1. Create a manual task component on the same project
+2. Input following for the client component
     - Public Repository URL: https://github.com/wso2/choreo-samples
     - Branch: main
     - Buildpack: Dockerfile

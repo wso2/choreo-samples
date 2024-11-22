@@ -6,6 +6,7 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /go-reading-list-rest-api
 thumbnailPath: /icons/go-reading-list-rest-api.svg
 documentationPath: /go-reading-list-rest-api/readme.md
+imageVersion: 1.0.0
 tags:
   - HTTP
   - REST
