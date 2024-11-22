@@ -6,6 +6,7 @@ const authenticate = require('./src/authenticate');
 
 const app = express();
 const port = process.env.PORT || 8080;
+const appointmentServiceUrl = process.env.CHOREO_APPOINTMENT_CONNECTION_SERVICEURL;
 
 app.use(bodyParser.json());
 
@@ -33,7 +34,6 @@ app.get('/appointments', async (req, res) => {
 
         const accessToken = await getAccessToken(); // Use the new function
 
-        const appointmentServiceUrl = process.env.CHOREO_APPOINTMENT_CONNECTION_SERVICEURL;
         const response = await axios.get(`${appointmentServiceUrl}/appointments?email=${email}`, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`,
@@ -52,7 +52,6 @@ app.post('/create-appointment', async (req, res) => {
         // Retrieve authentication details from environment variables
         const accessToken = await getAccessToken(); // Use the new function here too
 
-        const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
         if (!appointmentServiceUrl) {
             throw new Error('Appointment service URL is not defined in the environment variables');
         }
@@ -74,8 +73,6 @@ app.post('/create-appointment', async (req, res) => {
 app.get('/appointment-types', async (req, res) => {
     try {
         const accessToken = await getAccessToken(); // Obtain the access token
-
-        const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
         if (!appointmentServiceUrl) {
             throw new Error('Appointment service URL is not defined in the environment variables');
         }
