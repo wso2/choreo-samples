@@ -10,9 +10,9 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 async function getAccessToken() {
-    const tokenUrl = process.env.APPOINTMENTS_OAUTH_TOKEN_URL;
-    const clientId = process.env.APPOINTMENTS_OAUTH_CLIENT_ID;
-    const clientSecret = process.env.APPOINTMENTS_OAUTH_CLIENT_SECRET;
+    const tokenUrl = process.env.CHOREO_APPOINTMENT_CONNECTION_TOKENURL;
+    const clientId = process.env.CHOREO_APPOINTMENT_CONNECTION_CONSUMERKEY;
+    const clientSecret = process.env.CHOREO_APPOINTMENT_CONNECTION_CONSUMERSECRET;
 
     try {
         const accessToken = await authenticate(tokenUrl, clientId, clientSecret);
@@ -33,7 +33,7 @@ app.get('/appointments', async (req, res) => {
 
         const accessToken = await getAccessToken(); // Use the new function
 
-        const appointmentServiceUrl = process.env.APPOINTMENT_SERVICE_URL;
+        const appointmentServiceUrl = process.env.CHOREO_APPOINTMENT_CONNECTION_SERVICEURL;
         const response = await axios.get(`${appointmentServiceUrl}/appointments?email=${email}`, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`,
