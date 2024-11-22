@@ -1,6 +1,6 @@
 schemaVersion: 1.1
 endpoints:
-  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+  # +required Unique name for the endpoint.(This name will be used when generating the managed API)
   - name: appointments
     service:
       basePath: /
@@ -10,3 +10,7 @@ endpoints:
     # Accepted values: Project|Organization|Public.
     networkVisibility: Public
     schemaFilePath: openapi.yaml
+dependencies:
+    connectionReferences:
+    - name: appointment_connection
+      resourceRef: service:/testprojecthanis/appointmentservice/v1/8b1c3/PUBLIC
