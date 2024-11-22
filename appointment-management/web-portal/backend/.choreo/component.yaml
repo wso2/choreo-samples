@@ -10,3 +10,7 @@ endpoints:
     # Accepted values: Project|Organization|Public.
     networkVisibility: Public
     schemaFilePath: openapi.yaml
+dependencies:
+    connectionReferences:
+    - name: appointment_connection
+      resourceRef: service:/testprojecthanis/appointmentservice/v1/8b1c3/PUBLIC
