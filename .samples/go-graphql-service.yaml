@@ -1,0 +1,11 @@
+displayName: Go GraphQL Service
+description: GraphQL User Store Service implemented in Go.
+componentType: service
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /go-graphql-service
+thumbnailPath: /icons/graphql-service.png
+documentationPath: /go-graphql-service/readme.md
+tags:
+  - Go
+  - GraphQL

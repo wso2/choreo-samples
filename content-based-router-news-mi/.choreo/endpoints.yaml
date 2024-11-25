@@ -1,8 +1,0 @@
-version: 1.0
-endpoints:
-  - name: NewsAPI
-    port: 8290
-    type: REST
-    networkVisibility: Public
-    context: /newsapi
-    schemaFilePath: news_openapi.yaml
