@@ -10,7 +10,3 @@ endpoints:
     # Accepted values: Project|Organization|Public.
     networkVisibility: Public
     schemaFilePath: openapi.yaml
-dependencies:
-    connectionReferences:
-    - name: database_connection
-      resourceRef: database:appointmentsdb/appointmentsdb-dev

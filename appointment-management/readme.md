@@ -129,4 +129,4 @@ For more information, see our [documentation](https://wso2.com/choreo/docs/admin
 
 
 ##### Note
-If you use a different names for the connections, update the environment variable names in `appointment-management/appointment-service/database.js` and `appointment-management/web-portal/backend/server.js`
+If you use different names for the connections, update the environment variable names in `appointment-management/appointment-service/database.js` and `appointment-management/web-portal/backend/server.js` by following the instructions provided in the inline guide of the created connections.
