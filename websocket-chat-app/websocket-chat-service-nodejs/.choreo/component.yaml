@@ -20,7 +20,7 @@ schemaVersion: 1.0
 endpoints:
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
-  - name: Chat API
+  - name: chat_api
     # +optional Display name for the endpoint.
     displayName: Chat API
     # +required Service section has the user service endpoint details
