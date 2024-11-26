@@ -1,10 +1,10 @@
 schemaVersion: 1.1
 endpoints:
-  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+  # +required Unique name for the endpoint.(This name will be used when generating the managed API)
   - name: appointments
     service:
       basePath: /
-      port: 8090
+      port: 8080
     type: REST
     # +optional Network level visibility of the endpoint. Defaults to Public
     # Accepted values: Project|Organization|Public.
@@ -12,5 +12,5 @@ endpoints:
     schemaFilePath: openapi.yaml
 dependencies:
     connectionReferences:
-    - name: database_connection
-      resourceRef: database:appointmentsdb/appointmentsdb-dev
+    - name: appointment_connection
+      resourceRef: service:/testprojecthanis/appointmentservice/v1/8b1c3/PUBLIC
