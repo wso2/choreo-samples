@@ -155,6 +155,9 @@ export default function App() {
       <div className="py-3 md:py-6">
         <div className="container px-4 mx-auto flex justify-center">
           <div className="w-full max-w-lg px-2 py-16 sm:px-0 mb-20">
+            <div className='flex'>
+              <p className="text-4xl text-white mb-3 font-bold" data-cyid="welcome-msg-box">Welcome {user?.email}</p>
+            </div>
             <div className="flex justify-between">
               <p className="text-4xl text-white mb-3 font-bold">Reading List</p>
               <div className="container w-auto">
