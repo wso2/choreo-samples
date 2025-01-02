@@ -3,7 +3,7 @@ description: A sample Kafka producer that publishes temperature data to a Kafka 
 componentType: service
 buildPack: go
 repositoryUrl: https://github.com/wso2/choreo-samples/
-thumbnail: /icons/kafka-sample-icon.svg
+thumbnailPath: /icons/kafka-sample-icon.svg
 documentationPath: /kafka-sample-temperature-producer/readme.md
 componentPath: /kafka-sample-temperature-producer
 tags:
