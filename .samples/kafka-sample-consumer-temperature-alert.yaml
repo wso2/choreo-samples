@@ -3,6 +3,7 @@ description: A sample Kafka consumer that listens to a Kafka topic and logs when
 componentType: event-handler
 buildPack: go
 repositoryUrl: https://github.com/wso2/choreo-samples/
+thumbnail: /icons/kafka-sample-icon.svg
 documentationPath: /kafka-sample-consumer-temperature-alert/readme.md
 componentPath: /kafka-sample-consumer-temperature-alert
 tags:
