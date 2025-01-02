@@ -1,7 +1,7 @@
 displayName: Kafka Sample Consumer Temperature Alert
 description: A sample Kafka consumer that listens to a Kafka topic and logs when the temperature exceeds a certain threshold.
-componentType: Event Handler
-buildPack: Go
+componentType: event-handler
+buildPack: go
 repositoryUrl: https://github.com/wso2/choreo-samples/
 documentationPath: /kafka-sample-consumer-temperature-alert/readme.md
 componentPath: /kafka-sample-consumer-temperature-alert
