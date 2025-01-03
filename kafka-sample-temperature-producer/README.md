@@ -2,7 +2,7 @@
 
 This is a sample producer program that sends temperature data to a Kafka topic.
 
-This programme has an endpoint where we can call with the temperature value and it will send the temperature value to the Kafka topic.
+This program has an endpoint where we can call with the temperature value and it will send the temperature value to the Kafka topic.
 
 The sample http endpoint is `http://localhost:9090/publish-temperature` and it accepts a POST request with the following JSON payload:
 
