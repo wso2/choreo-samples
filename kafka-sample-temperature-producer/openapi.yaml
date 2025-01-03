@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Sample Kafka Producer API
+  description: A simple API to produce messages to a Kafka topic.
+  version: 1.0.0
+servers:
+  - url: http://localhost:9090
+    description: Development server
+paths:
+  /publish-temperature:
+    post:
+      summary: Publish temperature data to Kafka
+      description: Accepts temperature data from weather stations and publishes it to a Kafka topic named `Temperature`.
+      requestBody:
+        description: Weather data to be published to Kafka.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stationId:
+                  type: integer
+                  example: 123
+                stationName:
+                  type: string
+                  example: "Station A"
+                temperatureInCelsius:
+                  type: integer
+                  example: 23
+      responses:
+        "200":
+          description: Message successfully sent to Kafka topic.
+        "400":
+          description: Invalid request payload.
+        "405":
+          description: Invalid request method.
+        "500":
+          description: Internal server error indicating that the message could not be sent to Kafka.
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
