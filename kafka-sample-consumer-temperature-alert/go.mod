@@ -1,6 +1,6 @@
-module github.com/sumudul
+module github.com/wso2/choreo-sample-apps/kafka/consumer
 
-go 1.22.3
+go 1.23.3
 
 require github.com/segmentio/kafka-go v0.4.47
 

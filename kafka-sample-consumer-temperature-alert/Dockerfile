@@ -1,6 +1,6 @@
 # Use the official Golang image from Docker Hub.
 # It includes the Go runtime and tools at the specified version (1.22.3).
-FROM golang:1.22.3 as builder
+FROM golang:1.23.3 as builder
 
 # Set the working directory inside the container.
 WORKDIR /app
