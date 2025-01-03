@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -20,25 +19,17 @@ type WeatherData struct {
 	TemperatureInCelsius int    `json:"temperatureInCelsius"`
 }
 
-func loadPEMFromFile(filePath string) ([]byte, error) {
-	data, err := os.ReadFile(filePath)
-	if err != nil {
-		return nil, fmt.Errorf("failed to read file %s: %w", filePath, err)
-	}
-	return data, nil
-}
-
 func main() {
 
-	serviceCert, err := loadPEMFromFile("/service.cert")
+	serviceCert, err := os.ReadFile("/service.cert")
 	if err != nil {
 		log.Fatalf("Failed to load SERVICE_CERT: %s", err)
 	}
-	serviceKey, err := loadPEMFromFile("/service.key")
+	serviceKey, err := os.ReadFile("/service.key")
 	if err != nil {
 		log.Fatalf("Failed to load SERVICE_KEY: %s", err)
 	}
-	caCert, err := loadPEMFromFile("/ca.pem")
+	caCert, err := os.ReadFile("/ca.pem")
 	if err != nil {
 		log.Fatalf("Failed to load CA_CERT: %s", err)
 	}
@@ -65,11 +56,11 @@ func main() {
 
 	serviceURI := os.Getenv("SERVICE_URI")
 	if serviceURI == "" {
-		fmt.Println("Environment variable 'SERVICE_URI' not set")
+		log.Fatalf("Environment variable 'SERVICE_URI' not set")
 	}
 	topicName := os.Getenv("TOPIC_NAME")
 	if topicName == "" {
-		fmt.Println("Environment variable 'TOPIC_NAME' not set")
+		log.Fatalf("Environment variable 'TOPIC_NAME' not set")
 	}
 	producer := kafka.NewWriter(kafka.WriterConfig{
 		Brokers: []string{serviceURI},
@@ -96,9 +87,9 @@ func main() {
 			http.Error(w, "Failed to marshal JSON data", http.StatusInternalServerError)
 			return
 		}
-		error := producer.WriteMessages(context.Background(), kafka.Message{Value: jsonData})
-		if error != nil {
-			log.Printf("Failed to send message: %s", error)
+		err = producer.WriteMessages(context.Background(), kafka.Message{Value: jsonData})
+		if err != nil {
+			log.Printf("Failed to send message: %s", err)
 			http.Error(w, "Failed to send message", http.StatusInternalServerError)
 			return
 		}
