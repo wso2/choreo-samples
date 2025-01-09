@@ -14,7 +14,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-schemaVersion: 1.0
+schemaVersion: 1.1
 
 # +optional Incoming connection details for the component
 endpoints:
