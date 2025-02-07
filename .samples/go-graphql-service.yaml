@@ -6,6 +6,7 @@ repositoryUrl: https://github.com/wso2/choreo-samples/
 componentPath: /go-graphql-service
 thumbnailPath: /icons/graphql-service.png
 documentationPath: /go-graphql-service/readme.md
+imageVersion: 1.0.1
 tags:
   - Go
   - GraphQL
