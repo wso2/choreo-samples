@@ -37,4 +37,4 @@ endpoints:
   # +optional Path to the schema definition file. Defaults to wild card route if not provided
   # This is only applicable to REST endpoint types.
   # The path should be relative to the docker context.
-  schemaFilePath: docs/openapi-3.yaml
+  schemaFilePath: docs/openapi.yaml
