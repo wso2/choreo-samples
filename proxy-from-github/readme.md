@@ -19,11 +19,11 @@
 
 | Field       | Value                                            |
 | ----------- | ------------------------------------------------ |
-| Name        | Pet service                                      |
-| Description | Pet service proxy component                      |
+| Name        | Department Service                                      |
+| Description | Department service proxy component                      |
 | Repository  | https://github.com/choreo-samples                |
 | Branch      | main                                             |
-| Project Path| /pet-service                                     |
+| Project Path| /department-service                                     |
 
 4. Click **Create**. Once the component creation is complete, you will see the component overview page.
 
