@@ -22,7 +22,7 @@ A slack channel named **orders** should be created.
 1. **Create Event Handler Component in Choreo:** 
 - Log into Choreo, navigate to **Create a New Component** page in your Choreo Project and select **Event Handler**.
 - Fill out general details, name and description.
-- Provide `https://github.com/wso2/choreo-sample` as the `Public Repository URL`
+- Provide `https://github.com/wso2/choreo-samples` as the `Public Repository URL`
 - Select **Ballerina** as the build pack.
 - Provide `shopify-slack-order-notfication-service` as the `Ballerina Project Directory`.
 - Click on "Create" to create the component
