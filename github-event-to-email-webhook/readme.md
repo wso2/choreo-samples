@@ -7,7 +7,7 @@ Webhook to send GitHub events to an email address.
     - Login to [Choreo](https://console.choreo.dev/)
     - Navigate to create a `Webhook` component
     - Provide a name and description for the component
-    - Provide `https://github.com/wso2/choreo-sample` as the `Public Repository URL`
+    - Provide `https://github.com/wso2/choreo-samples` as the `Public Repository URL`
     - Select the `Branch` as `main`
     - Select `Ballerina` as `Buildpack`
     - Select `github-event-to-email-webhook` as the `Ballerina Project Directory`
