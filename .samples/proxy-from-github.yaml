@@ -2,10 +2,10 @@ name: Github proxy.
 displayName: Github proxy
 description: A sample repository to create simple proxy.
 componentType: git-proxy
-repositoryUrl:  https://github.com/wso2/choreo-samples/proxy-from-gh
-componentPath : /proxy-from-gh
+repositoryUrl:  https://github.com/wso2/choreo-samples/proxy-from-github
+componentPath : /proxy-from-github
 thumbnailPath: /icons/github-proxy.svg
-documentationPath: /proxy-from-gh/readme.md
+documentationPath: /proxy-from-github/readme.md
 buildPack: 'none'
 tags:
   - proxy
