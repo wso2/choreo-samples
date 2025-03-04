@@ -21,7 +21,7 @@ schemaVersion: 1.1
 endpoints:
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
-  - name: Mediflow
+  - name: mediflow
     # +optional Display name for the endpoint.
     displayName: Mediflow Patient Management Service
     # +required Service section has the user service endpoint details

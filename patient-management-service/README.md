@@ -1,76 +1,62 @@
-# 🏥 MediFlow Service - Patient Management
+# Patient Management Service (Mediflow) - Ballerina
 
-## 📌 Overview
+Sample for Patient Management Service service.
+
+### Prerequisites
+1. Fork the repositoy
+
+## Getting started
+
+Please refer to the Choreo documentation under the [Develop an Application with Buildpacks](https://wso2.com/choreo/develop-components/deploy-an-application-with-buildpacks) to learn how to deploy the application.
+
+1. Click `Create` button in the Project Overview Page.
+2. Select `Service` Card from Component Creation Wizard.
+3. Select `Ballerina` as the buildpack. Fill as follow according to selected Buildpack.
+
+    | **Field**             | **Description**                               |
+    |-----------------------|-----------------------------------------------|
+    |Name           | Patient Management Ballerina Service |
+    |Description    | Patient Management (Mediflow) Ballerina Service  |
+    | **GitHub Repository** | choreo-samples (Click **`Try with Sample URL`**) |
+    | **Branch**            | **`main`**                               |
+    | **Buildpack**      | Ballerina|
+    | **Select Ballerina Project Directory**       | patient-management-service |
+
+4. Click Create. Once the component creation is complete, you will see the component overview page.
+5. Deploy the created component.
+
+## Testing
 The **MediFlow** service provides functionalities to manage patient data, including:
 - Adding a new patient
 - Retrieving patient details by name
 - Listing all patients
 
-The service exposes several REST endpoints for performing these operations.
-
----
-
-## ⚡ Use Cases
-### ✅ Health Check  
-🔹 **Endpoint:** `/health`  
-🔹 **Functionality:** Ensures the service is running.
-
-### ➕ Add a New Patient  
-🔹 **Endpoint:** `/patients`  
-🔹 **Method:** `POST`  
-🔹 **Functionality:** Adds a new patient by sending a JSON payload.
-
-### 🔍 Retrieve a Patient by Name  
-🔹 **Endpoint:** `/patients/{name}`  
-🔹 **Method:** `GET`  
-🔹 **Functionality:** Retrieves patient details by their name.
-
-### 📋 List All Patients  
-🔹 **Endpoint:** `/patients`  
-🔹 **Method:** `GET`  
-🔹 **Functionality:** Retrieves all patients.
-
----
-
-## 🚀 Run the Sample
-
-### 1️⃣ Set Up Your Environment
-Ensure you have **Ballerina** installed. Download it from the [official Ballerina website](https://ballerina.io/download/).
-
-### 2️⃣ Run the Service
-Start the MediFlow service by running the following command:
-
-```bash
-bal run
-```
-
-## Invoke the Service
-
-Once the service is running, it will start listening on **port 9090**. You can interact with the service using the following `curl` commands.
+You can test the service in the `Test Console` Page. You can find it in the side drawer.
 
 ### 1. Health Check
 Verify if the service is operational:
 
-```bash
-curl http://localhost:9090/mediflow/health
-```
+**Endpoint:** `/health`
+**Method:** `GET`
 
 📌 Response:
 ```bash
 {
   "status": "MediFlow is operational"
 }
-
 ```
+
 ### 2. Add a New Patient
+
+**Endpoint:** `/patients`  
+**Method:** `POST` 
+
 ```bash
-curl -X POST http://localhost:9090/mediflow/patients \
-     -H "Content-Type: application/json" \
-     -d '{
-          "name": "Alice",
-          "age": 30,
-          "condition": "Healthy"
-         }'
+{
+  "name": "Alice",
+  "age": 30,
+  "condition": "Healthy"
+}
 ```
 📌 Response:
 ```bash
@@ -84,9 +70,10 @@ curl -X POST http://localhost:9090/mediflow/patients \
 }
 ```
 ### 3. Retrieve a Patient by Name
-```bash
-curl http://localhost:9090/mediflow/patients/Alice
-```
+
+**Endpoint:** `/patients/{name}`  
+**Method:** `GET`  
+
 📌 Response:
 ```bash
 {
@@ -95,10 +82,11 @@ curl http://localhost:9090/mediflow/patients/Alice
   "condition": "Healthy"
 }
 ```
+
 ### 4. List All Patients
-```bash
-curl http://localhost:9090/mediflow/patients
-```
+
+**Endpoint:** `/patients`  
+**Method:** `GET`  
 
 📌 Response:
 ```bash
