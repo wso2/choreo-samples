@@ -1,39 +1,27 @@
 # Patient Management Service (Mediflow) - Ballerina
 
-Sample for Patient Management Service service.
+This is a simple patient management REST service developed using Ballerina. This service provides functionalities to manage patient data, including adding a new patient, retrieving patient details by name, and listing all patients.
 
-### Prerequisites
-1. Fork the repositoy
+## Deploy in Choreo
 
-## Getting started
+Follow these steps to deploy the application in Choreo.
 
-Please refer to the Choreo documentation under the [Develop an Application with Buildpacks](https://wso2.com/choreo/develop-components/deploy-an-application-with-buildpacks) to learn how to deploy the application.
+1. Create a component
+     - Sign in to [Choreo](https://wso2.com/choreo/)
+     - If you already have one or more components in your project, click **+ Create**. Otherwise, click the **Service** card. 
+     - Provide a name and description for the component.
+     - Click **`Try with Sample URL`**.
+     - Select `Ballerina` as the `Buildpack`.
+     - Select `patient-management-service` as the `Ballerina Project Directory`.
+     - Click **Create**. Once the component is created, the initial build will trigger automatically, generating a container image.
+2. Build and deploy the component
+     - After the build completes, go to the left navigation menu and click **Deploy**. 
+     - Deploy the service.
 
-1. Click `Create` button in the Project Overview Page.
-2. Select `Service` Card from Component Creation Wizard.
-3. Select `Ballerina` as the buildpack. Fill as follow according to selected Buildpack.
+## Test the service
+You can go to the left navigation menu, click **Test**, and use the OpenAPI Console to test the service endpoints.
 
-    | **Field**             | **Description**                               |
-    |-----------------------|-----------------------------------------------|
-    |Name           | Patient Management Ballerina Service |
-    |Description    | Patient Management (Mediflow) Ballerina Service  |
-    | **GitHub Repository** | choreo-samples (Click **`Try with Sample URL`**) |
-    | **Branch**            | **`main`**                               |
-    | **Buildpack**      | Ballerina|
-    | **Select Ballerina Project Directory**       | patient-management-service |
-
-4. Click Create. Once the component creation is complete, you will see the component overview page.
-5. Deploy the created component.
-
-## Testing
-The **MediFlow** service provides functionalities to manage patient data, including:
-- Adding a new patient
-- Retrieving patient details by name
-- Listing all patients
-
-You can test the service in the `Test Console` Page. You can find it in the side drawer.
-
-### 1. Health Check
+### 1. Health check
 Verify if the service is operational:
 
 **Endpoint:** `/health`
@@ -46,7 +34,7 @@ Verify if the service is operational:
 }
 ```
 
-### 2. Add a New Patient
+### 2. Add a new patient
 
 **Endpoint:** `/patients`  
 **Method:** `POST` 
@@ -69,7 +57,7 @@ Verify if the service is operational:
   }"
 }
 ```
-### 3. Retrieve a Patient by Name
+### 3. Retrieve a patient by name
 
 **Endpoint:** `/patients/{name}`  
 **Method:** `GET`  
@@ -83,7 +71,7 @@ Verify if the service is operational:
 }
 ```
 
-### 4. List All Patients
+### 4. List all patients
 
 **Endpoint:** `/patients`  
 **Method:** `GET`  
