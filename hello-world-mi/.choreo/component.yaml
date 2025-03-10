@@ -1,6 +1,6 @@
 schemaVersion: "1.1"
 endpoints:
-    - name: helloworld-db2
+    - name: helloworld
       displayName: HelloWorld
       service:
         basePath: /HelloWorld
