@@ -1,0 +1,12 @@
+schemaVersion: "1.1"
+endpoints:
+    - name: helloworld
+      displayName: HelloWorld
+      service:
+        basePath: /HelloWorld
+        port: 8290
+      type: REST
+      networkVisibilities:
+        - Project
+        - Public
+      schemaFilePath: helloworld-openapi.yaml
