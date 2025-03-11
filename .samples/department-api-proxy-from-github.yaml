@@ -1,0 +1,11 @@
+displayName: Department API Proxy from GitHub
+description: A sample for creating a simple Department API Proxy
+componentType: git-proxy
+repositoryUrl:  https://github.com/wso2/choreo-samples/
+componentPath : /department-api-proxy-from-github
+thumbnailPath: /icons/github-proxy.svg
+documentationPath: /department-api-proxy-from-github/readme.md
+buildPack: 'none'
+tags:
+  - API Proxy
+  - GitHub

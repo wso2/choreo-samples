@@ -1,5 +1,5 @@
 [package]
 org = "choreo"
-name = "hello_world"
+name = "mediflow"
 distribution = "2201.10.4"
-version = "3.1.1"
+version = "1.0.0"

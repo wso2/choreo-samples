@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: Department API Proxy
+  description: API for retrieving department information by ID.
+  version: 1.0.0
+servers:
+  - url: /company/hr
+paths:
+  /department/{departmentId}:
+    get:
+      summary: Get Department by ID
+      operationId: getDepartmentById
+      parameters:
+        - name: departmentId
+          in: path
+          required: true
+          description: ID of the department to retrieve
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with department information
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '404':
+          description: Department not found
+        '500':
+          description: Internal server error

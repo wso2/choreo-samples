@@ -203,6 +203,9 @@ dependencies = [
 	{org = "ballerina", name = "lang.value"},
 	{org = "ballerina", name = "observe"}
 ]
+modules = [
+	{org = "ballerina", packageName = "log", moduleName = "log"}
+]
 
 [[package]]
 org = "ballerina"
@@ -272,12 +275,13 @@ dependencies = [
 
 [[package]]
 org = "choreo"
-name = "hello_world"
-version = "3.1.1"
+name = "mediflow"
+version = "1.0.0"
 dependencies = [
-	{org = "ballerina", name = "http"}
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "log"}
 ]
 modules = [
-	{org = "choreo", packageName = "hello_world", moduleName = "hello_world"}
+	{org = "choreo", packageName = "mediflow", moduleName = "mediflow"}
 ]
 

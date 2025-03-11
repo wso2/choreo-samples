@@ -1,0 +1,10 @@
+displayName: Patient Management Service (Mediflow)
+description: Service to manage patient records.
+componentType: service
+buildPack: ballerina
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /patient-management-service
+thumbnailPath: /icons/patient-management-service.png
+documentationPath: /patient-management-service/README.md
+tags:
+  - HTTP
