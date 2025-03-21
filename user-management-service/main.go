@@ -65,7 +65,7 @@ func main() {
 
 func getUserDetails(w http.ResponseWriter, r *http.Request) {
 	// Read the user info from mounted file in the resources directory
-	dirPath := "/Users/janakas/Downloads/application.yaml"
+	dirPath := "/src/resources/application.yaml"
 	userInfo, err := os.ReadFile(dirPath)
 	if err != nil {
 		log.Fatalf("Failed to read the mounted file: %v", err)
