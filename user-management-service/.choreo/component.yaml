@@ -4,7 +4,7 @@ schemaVersion: 1.2
 endpoints:
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
-  - name: component-user-90
+  - name: user-management-service-endpoint
     # +optional Display name for the endpoint.
     displayName: 9090 Component Yaml
     # +required Service section has the user service endpoint details
