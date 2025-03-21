@@ -1,0 +1,20 @@
+openapi: "3.0.0"
+info:
+  title: User Management Service
+  version: 1.0.0
+paths:
+  /user:
+    get:
+      summary: Get user information
+      description: Get user information
+      tags:
+        - user
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []

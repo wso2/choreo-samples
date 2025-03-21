@@ -1,0 +1,10 @@
+displayName: User Management Service
+description: Responds with a user record details from mounted file via an HTTP GET
+componentType: service
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /user-management-service
+thumbnailPath: /icons/user-management-service.png
+documentationPath: /user-management-service/readme.md
+tags:
+  - Configuration Form
