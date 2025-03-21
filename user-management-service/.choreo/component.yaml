@@ -6,7 +6,7 @@ endpoints:
   # This name will be used when generating the managed API
   - name: user-management-service-endpoint
     # +optional Display name for the endpoint.
-    displayName: 9090 Component Yaml
+    displayName: User Management Service Endpoint
     # +required Service section has the user service endpoint details
     service:
       # +optional Base path of the API that gets exposed via the endpoint.
@@ -33,7 +33,7 @@ configurations:
     - name: IDENTIFICATION_NUMBER
       valueFrom:
         configForm:
-          displayName: Identifiacation Number
+          displayName: Identification Number
           required: true
   file:
     - name: application.yaml
