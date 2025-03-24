@@ -49,7 +49,7 @@ configurations:
               properties:
                 - name: name
                   displayName: Name
-                - age: age
+                - name: age
                   displayName: Age
                   type: number
                 - name: sex
@@ -61,7 +61,7 @@ configurations:
                 - name: is_registered
                   displayName: Is Registered
                   type: boolean
-        - occupation: occupation
+        - name: occupation
           valueFrom:
             configForm:
               displayName: Occupation
