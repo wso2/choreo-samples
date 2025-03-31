@@ -1,5 +1,5 @@
 # +required The configuration file schema version
-schemaVersion: 1.1
+schemaVersion: 1.2
 
 # +optional Incoming connection details for the component
 endpoints:
