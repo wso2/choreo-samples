@@ -1,6 +1,6 @@
 # Responds with the Hello World message 123123
 ## Use case
-When the service is invoked, it returns `Hello World` string. This sample can be used to respond with `Hello World` once service invoked.
+When the service is invoked, it returns `Hello World` string. This sample can be used to respond with `Hello World` once service invoked. New one
 
 ## Run the sample
 Run the Ballerina project created by the service sample by executing `bal run` from the root.
