@@ -1,6 +1,6 @@
 # Go Greeter Service
 
-## Repository File Structure
+## Repository File Structures
 
 The below table gives a brief overview of the important files in the greeter service.\
 Note: The following file paths are relative to the path /go/greeter
