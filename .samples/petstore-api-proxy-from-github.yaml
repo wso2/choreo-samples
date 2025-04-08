@@ -1,0 +1,11 @@
+displayName: Petstore API Proxy from GitHub
+description: A sample for creating a simple Petstore API Proxy
+componentType: git-proxy
+repositoryUrl:  https://github.com/wso2/choreo-samples/
+componentPath : /petstore-api-proxy-from-github
+thumbnailPath: /icons/github-proxy.svg
+documentationPath: /petstore-api-proxy-from-github/readme.md
+buildPack: 'none'
+tags:
+  - API Proxy
+  - GitHub
