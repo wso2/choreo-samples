@@ -1,4 +1,4 @@
-# Go Greeter Service
+# Go Greeter Service Stage test
 
 ## Repository File Structures
 
