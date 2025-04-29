@@ -111,7 +111,8 @@ def collect_metadata_and_thumbnails():
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
 
-            samples_dirnames_set.add(component_path.lstrip('/'))
+            if component_path:
+                samples_dirnames_set.add(component_path.lstrip('/'))
             collected_data.append(data)
 
     # Check if there are any directories without corresponding metadata files
