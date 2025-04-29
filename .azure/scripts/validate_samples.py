@@ -118,7 +118,7 @@ def validate_metadata_and_thumbnails():
                     raise ValueError(f"Error: '{build_pack}' is not a valid build pack for the sample: {meta_file}.")
 
             thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
-            if not metadata_validator.validate_thumbnail(thumbnail_src) and component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
+            if not metadata_validator.validate_thumbnail(thumbnail_src):
                 raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
 
             samples_dirnames_set.add(component_path.lstrip('/'))
