@@ -9,17 +9,17 @@ WSO2_SAMPLES_REPO_URL = 'https://github.com/wso2/choreo-samples/'
 VALID_COMPONENT_TYPES = [
     "service", "webhook", "manual-task", "scheduled-task", 
     "event-triggered", "event-handler", "test-runner", "many",
-    "web-application", "git-proxy"
+    "web-application", "git-proxy", "mcp-service"
 ]
 
 QUICK_DEPLOYABLE_COMPONENT_TYPES = [
     "service", "manual-task", "scheduled-task", 
-    "web-application"
+    "web-application", "mcpService"
 ]
 
 VALID_BUILD_PACKS = [
     "ballerina", "wso2-mi", "go", "java", "php", "python", "nodejs", "ruby",
-    "vue", "many", "postman", "react", "docker", "angular", "dotnet", "prism-mock",
+    "vue", "many", "postman", "react", "docker", "angular", "dotnet", "prism-mock", "npm", "pypi", 
     "none" 
 ]
 

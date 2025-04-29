@@ -1,0 +1,9 @@
+displayName: GitHub MCP Server
+description: Repository management, file operations, and GitHub API integration
+componentType: mcp-service
+buildPack: pypi
+thumbnailPath: /icons/github.svg
+repositoryUrl: https://github.com/modelcontextprotocol
+documentationPath: /servers/blob/main/src/github/README.md
+imageUrl: mcp/github-mcp-server
+tags: null
