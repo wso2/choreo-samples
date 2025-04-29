@@ -34,7 +34,7 @@ def collect_metadata_and_thumbnails():
 
                 component_path = data.get('componentPath')
                 # Check if the componentPath exists
-                if not metadata_validator.validate_component_path(component_path, data.get('repositoryUrl')) and component_path != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
+                if component_path != SAMPLE_COMPONENT_TYPE_MCP_SERVICE and not metadata_validator.validate_component_path(component_path, data.get('repositoryUrl')):
                     print(f"Warning: Component path '{component_path}' does not exist. This will be excluded from index.json.")
                     continue
 

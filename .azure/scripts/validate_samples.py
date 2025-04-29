@@ -106,7 +106,7 @@ def validate_metadata_and_thumbnails():
                                     raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")                        
             
                 # Check if the componentPath exists
-                if not metadata_validator.validate_component_path(component_path, repository_url) and component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
+                if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE and not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
 
                 component_type = data.get('componentType', '')
