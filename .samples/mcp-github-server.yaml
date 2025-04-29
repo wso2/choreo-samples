@@ -1,0 +1,8 @@
+displayName: GitHub MCP Server
+description: Repository management, file operations, and GitHub API integration
+componentType: mcp-service
+buildPack: pypi
+thumbnailPath: /icons/mi-data-service.svg
+imageUrl: mcp/github-mcp-server
+tags:
+  - MCP
