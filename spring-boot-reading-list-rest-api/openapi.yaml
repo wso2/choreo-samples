@@ -67,18 +67,4 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /books/id:
-    get:
-      summary: Get book by ID
-      parameters:
-        - name: id
-          in: query
-          description: ID of the book to find
-          required: true
-          schema:
-            type: integer
-      responses:
-        "200":
-          description: Successful response
-          content:
-            application/json: {}
+
