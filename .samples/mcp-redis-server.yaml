@@ -2,7 +2,7 @@ displayName: Redis MCP Server
 description: Interact with Redis key-value stores
 componentType: mcp-service
 buildPack: npm
-thumbnailPath: /icons/github.svg
+thumbnailPath: /icons/redis.svg
 repositoryUrl: https://github.com/modelcontextprotocol
 documentationPath: /servers/blob/main/src/github/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/mcp-server-github:1.0.0
