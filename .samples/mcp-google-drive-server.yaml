@@ -1,0 +1,10 @@
+displayName: Google Drive MCP Server
+description: File access and search capabilities for Google Drive.
+componentType: mcp-service
+buildPack: npm
+thumbnailPath: /icons/google-drive.svg
+repositoryUrl: https://github.com/modelcontextprotocol
+documentationPath: /servers/blob/main/src/gdrive/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/google-drive-server:1.0.0
+tags: null
+

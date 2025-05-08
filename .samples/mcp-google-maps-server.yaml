@@ -1,0 +1,9 @@
+displayName: Google Maps MCP Server
+description: Location services, directions, and place details.
+componentType: mcp-service
+buildPack: npm
+thumbnailPath: /icons/google-map.svg
+repositoryUrl: https://github.com/modelcontextprotocol
+documentationPath: /servers/blob/main/src/google-maps/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/google-maps-server:1.0.0
+tags: null
