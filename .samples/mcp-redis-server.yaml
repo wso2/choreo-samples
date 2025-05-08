@@ -1,5 +1,5 @@
-displayName: Google Drive MCP Server
-description: File access and search capabilities for Google Drive
+displayName: Redis MCP Server
+description: Interact with Redis key-value stores
 componentType: mcp-service
 buildPack: npm
 thumbnailPath: /icons/github.svg

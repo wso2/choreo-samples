@@ -1,0 +1,9 @@
+displayName: GitLab MCP Server
+description: GitLab API, enabling project management.
+componentType: mcp-service
+buildPack: npm
+thumbnailPath: /icons/gitlab.svg
+repositoryUrl: https://github.com/modelcontextprotocol
+documentationPath: /servers/blob/main/src/gitlab/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/gitlab-server:1.0.0
+tags: null
