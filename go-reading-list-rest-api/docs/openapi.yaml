@@ -57,6 +57,9 @@ paths:
       tags:
       - books
       summary: Get reading list book by id
+      security:
+        - default:
+            - read:books 
       parameters:
       - name: id
         in: path
@@ -140,6 +143,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/utils.ErrorResponse'
 components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: 
+            read:books: Grants read access
   schemas:
     models.Book:
       type: object

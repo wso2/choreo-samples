@@ -14,6 +14,7 @@ BUILD_STAGING_DIRECTORY = os.environ['BUILD_STAGINGDIRECTORY']
 CHOREO_ACR_BASE_URL = 'choreoanonymouspullable.azurecr.io'
 BASE_URL_FOR_THUMBNAILS = 'https://choreo-shared-choreo-samples-cdne.azureedge.net'
 SAMPLE_COMPONENT_TYPE_SERVICE = 'service'  
+SAMPLE_COMPONENT_TYPE_MCP_SERVICE = 'mcp-service'
 
 
 def collect_metadata_and_thumbnails():
@@ -31,13 +32,13 @@ def collect_metadata_and_thumbnails():
             with open(meta_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
 
+                component_type = data.get('componentType', '')
                 component_path = data.get('componentPath')
                 # Check if the componentPath exists
-                if not metadata_validator.validate_component_path(component_path, data.get('repositoryUrl')):
+                if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE and not metadata_validator.validate_component_path(component_path, data.get('repositoryUrl')):
                     print(f"Warning: Component path '{component_path}' does not exist. This will be excluded from index.json.")
                     continue
 
-                component_type = data.get('componentType', '')
                 build_pack = data.get('buildPack', '')
 
                 if not metadata_validator.validate_component_type(component_type):
@@ -110,7 +111,8 @@ def collect_metadata_and_thumbnails():
             # Adjust the thumbnailPath
             data['thumbnailPath'] = BASE_URL_FOR_THUMBNAILS + data['thumbnailPath']
 
-            samples_dirnames_set.add(component_path.lstrip('/'))
+            if component_path:
+                samples_dirnames_set.add(component_path.lstrip('/'))
             collected_data.append(data)
 
     # Check if there are any directories without corresponding metadata files

@@ -1,0 +1,9 @@
+displayName: EverArt MCP Server
+description: AI image generation using various models.
+componentType: mcp-service
+buildPack: npm
+thumbnailPath: /icons/everart.svg
+repositoryUrl: https://github.com/modelcontextprotocol
+documentationPath: /servers/blob/main/src/everart/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/everart-server:1.0.0
+tags: null
