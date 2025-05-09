@@ -7,4 +7,4 @@ repositoryUrl: https://github.com/modelcontextprotocol
 documentationPath: /servers/blob/main/src/sentry/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/sentry_server:1.0.0
 tags:
-  - npm
+  - pypi
