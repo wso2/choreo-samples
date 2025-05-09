@@ -1,5 +1,5 @@
-displayName: Google Drive MCP Server
-description: File access and search capabilities for Google Drive
+displayName: GitHub MCP Server
+description: Repository management, file operations, and GitHub API integration
 componentType: mcp-service
 buildPack: npm
 thumbnailPath: /icons/github.svg
