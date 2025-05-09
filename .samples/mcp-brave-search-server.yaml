@@ -1,9 +1,10 @@
-displayName: EverArt MCP Server
-description: AI image generation using various models.
+displayName: Brave Search Server
+description: Web and local search using Brave's Search API.
 componentType: mcp-service
 buildPack: npm
-thumbnailPath: /icons/everart.svg
+thumbnailPath: /icons/brave-search.svg
 repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers/blob/main/src/everart/README.md
-imageUrl: choreoanonymouspullable.azurecr.io/mcp/everart-server:1.0.0
-tags: null
+documentationPath: /servers/blob/main/src/brave-search/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/brave-search-server:1.0.0
+tags:
+  - npm
