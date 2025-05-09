@@ -1,4 +1,4 @@
-displayName: Slack MCP Server
+displayName: Slack Server
 description: Channel management and messaging capabilities
 componentType: mcp-service
 buildPack: npm
@@ -6,4 +6,5 @@ thumbnailPath: /icons/slack.svg
 repositoryUrl: https://github.com/modelcontextprotocol
 documentationPath: /servers/blob/main/src/slack/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/slack-server:1.0.0
-tags: null
+tags:
+  - npm

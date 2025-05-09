@@ -1,4 +1,4 @@
-displayName: EverArt MCP Server
+displayName: EverArt Server
 description: Provides AI-driven art generation and manipulation capabilities through the EverArt platform.
 componentType: mcp-service
 buildPack: npm
@@ -6,4 +6,5 @@ thumbnailPath: /icons/everart.svg
 repositoryUrl: https://github.com/modelcontextprotocol
 documentationPath: /servers/blob/main/src/everart/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/everart-server:1.0.0
-tags: null
+tags:
+ - npm
