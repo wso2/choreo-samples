@@ -121,7 +121,8 @@ def validate_metadata_and_thumbnails():
             if not metadata_validator.validate_thumbnail(thumbnail_src):
                 raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
 
-            samples_dirnames_set.add(component_path.lstrip('/'))
+            if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
+                samples_dirnames_set.add(component_path.lstrip('/'))
 
     # Check if there are any directories without corresponding metadata files
     is_valid, dir_name = metadata_validator.validate_directories_for_metafiles(samples_dirnames_set)
