@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List | Dashboard</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+      }
+	  </style>
+</head>
+<body>
+    <div class="header-2 w-screen h-screen overflow-hidden">
+      <nav class="bg-white py-2 md:py-2">
+        <div class="container px-4 mx-auto md:flex md:items-center">
+          <div class="flex justify-between items-center">
+              <a href="#" class="font-bold text-xl text-[#36d1dc]">
+                {{ .username }}
+              </a>
+            <button
+              class="border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden"
+              id="navbar-toggle"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <div
+            class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0"
+            id="navbar-collapse"
+          >
+            <form action="/logout" method="POST">
+                <button type="submit" class="float-right bg-[#5b86e5] p-2 rounded-md text-sm my-3 font-medium text-white cursor-pointer hover:bg-[#4a77d4]">
+                    Logout
+                  </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="py-3 md:py-6">
+        <div class="container px-4 mx-auto flex justify-center">
+          <div class="w-full max-w-lg px-2 py-16 sm:px-0 mb-20">
+            <div class='flex'>
+              <p class="text-4xl text-white mb-3 font-bold" data-cyid="welcome-msg-box">
+                Welcome, {{ .email }}
+              </p>
+            </div>
+            <div class="flex justify-between items-center mb-2 px-2">
+              <p class="text-4xl text-white mb-3 font-bold">Reading List</p>
+              <div class="container w-auto">
+                <a href="/addNewBook" class="cursor-pointer float-right bg-black py-2 px-3 rounded-md text-sm my-3 font-medium text-white h-10 hover:bg-gray-800">
+                  + Add New
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 rounded-xl bg-white px-4 py-2">
+              {{ if .books }}
+                {{ range .books }}
+                  <div class="w-full flex justify-between">
+                    <div class="relative rounded-md p-3">
+                      <h3 class="text-lg font-medium leading-5"> {{ .Title }} </h3>
+                      <div class="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
+                        <p> {{ .Author }} </p>
+                        <p>&middot;</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-2">
+                      <div class="text-white bg-black/40 rounded-md self-center text-xs text-center w-18 p-2">
+                        {{ .Status }}
+                      </div>
+                      <form action="deleteBook" method="POST" class="flex items-center float-right">
+                        <input type="hidden" name="id" value="{{ .Id }}" />
+                        <button type="submit" class="cursor-pointer text-white bg-red-500 hover:bg-red-700 rounded-md self-center text-xs text-center w-18 p-2 mr-2">Delete</button>
+                      </form>
+                    </div>
+                  </div>
+                {{ end }}
+              {{ else }}
+                <p class="text-lg text-gray-500">No books found.</p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

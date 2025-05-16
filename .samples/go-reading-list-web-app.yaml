@@ -1,0 +1,11 @@
+displayName: Reading List Web App in Go
+description: Go web application with managed authentication
+componentType: web-application
+buildPack: go
+repositoryUrl: https://github.com/wso2/choreo-samples/
+componentPath: /go-reading-list-web-app
+thumbnailPath: /icons/go-reading-list-web-app.svg
+documentationPath: /go-reading-list-web-app/README.md
+tags:
+  - Web Application
+  - Go
