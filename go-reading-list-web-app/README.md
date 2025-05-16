@@ -35,7 +35,7 @@ You can refer Choreo Documentation: [Deploy Your First Static Web Application](h
     | `API_URL`    | The URL of the Reading List Service deployed in Choreo.                   |
     | `PORT`       | The port on which the app will run. Default is 8080. (Optional)           |
 
-7. Go back to Component **Overview** page. Once the build is comConfigure and Deployplete, Go to **Deploy** page and click on "**Configure and Deploy**" button.
+7. Go back to Component **Overview** page. Once the build is complete, Go to **Deploy** page and click on "**Configure and Deploy**" button.
 8. In the Authentication section, make sure "**Managed Authentication**" is enabled and set the following configurations.
 
     | **Field**           | **Description**                               |
