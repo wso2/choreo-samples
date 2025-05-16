@@ -43,18 +43,23 @@ def validate_metadata_and_thumbnails():
                 if not metadata_validator.validate_component_type(component_type):
                     raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
 
-                if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
-                    documentation_path = data.get('documentationPath')
-                    if not documentation_path:
-                        raise ValueError(f"Error: 'documentationPath' is not set for the sample: {meta_file}.")
+                if component_type == SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
+                    thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
+                    if not metadata_validator.validate_thumbnail(thumbnail_src):
+                        raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
+                    continue
                     
-                    component_path = data.get('componentPath')
-                    if not component_path:
-                        raise ValueError(f"Error: 'componentPath' is not set for the sample: {meta_file}.")
-                    
-                    repository_url = data.get('repositoryUrl')
-                    if not repository_url:
-                        raise ValueError(f"Error: 'repositoryUrl' is not set for the sample: {meta_file}.")
+                documentation_path = data.get('documentationPath')
+                if not documentation_path:
+                    raise ValueError(f"Error: 'documentationPath' is not set for the sample: {meta_file}.")
+                
+                component_path = data.get('componentPath')
+                if not component_path:
+                    raise ValueError(f"Error: 'componentPath' is not set for the sample: {meta_file}.")
+                
+                repository_url = data.get('repositoryUrl')
+                if not repository_url:
+                    raise ValueError(f"Error: 'repositoryUrl' is not set for the sample: {meta_file}.")
                 
                 tags = data.get('tags')
                 if tags and not isinstance(tags, list):
@@ -106,7 +111,7 @@ def validate_metadata_and_thumbnails():
                                     raise FileNotFoundError(f"Error: openapi.yaml not found in {component_path.lstrip('/')}")                        
             
                 # Check if the componentPath exists
-                if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE and not metadata_validator.validate_component_path(component_path, repository_url):
+                if not metadata_validator.validate_component_path(component_path, repository_url):
                     raise ValueError(f"Error: Component path '{component_path}' does not exist. This will be excluded from index.json.")
 
                 component_type = data.get('componentType', '')
@@ -121,8 +126,7 @@ def validate_metadata_and_thumbnails():
             if not metadata_validator.validate_thumbnail(thumbnail_src):
                 raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
 
-            if component_type != SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
-                samples_dirnames_set.add(component_path.lstrip('/'))
+            samples_dirnames_set.add(component_path.lstrip('/'))
 
     # Check if there are any directories without corresponding metadata files
     is_valid, dir_name = metadata_validator.validate_directories_for_metafiles(samples_dirnames_set)
