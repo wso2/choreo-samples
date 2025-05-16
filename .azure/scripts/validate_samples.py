@@ -43,10 +43,12 @@ def validate_metadata_and_thumbnails():
                 if not metadata_validator.validate_component_type(component_type):
                     raise ValueError(f"Error: '{component_type}' is not a valid component type for the sample: {meta_file}.")
 
+                thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
+                if not metadata_validator.validate_thumbnail(thumbnail_src):
+                    raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
+
+                # Validations after this point are not required for mcp-service
                 if component_type == SAMPLE_COMPONENT_TYPE_MCP_SERVICE:
-                    thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
-                    if not metadata_validator.validate_thumbnail(thumbnail_src):
-                        raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
                     continue
                     
                 documentation_path = data.get('documentationPath')
@@ -121,10 +123,6 @@ def validate_metadata_and_thumbnails():
                 build_pack = data.get('buildPack', '')
                 if not metadata_validator.validate_build_pack(build_pack):
                     raise ValueError(f"Error: '{build_pack}' is not a valid build pack for the sample: {meta_file}.")
-
-            thumbnail_src = os.path.join(samples_dir, data.get('thumbnailPath').lstrip('/'))
-            if not metadata_validator.validate_thumbnail(thumbnail_src):
-                raise FileNotFoundError(f"Thumbnail not found in {data.get('thumbnailPath')}")
 
             samples_dirnames_set.add(component_path.lstrip('/'))
 
