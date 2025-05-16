@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List | Add New Book</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+      }
+    </style>
+</head>
+<body>
+    <div class="bg-white rounded-lg p-4 shadow-lg w-full m-2 xl:max-w-1/3">
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">Add New Book</h1>
+        <form class="bg-white rounded pt-2 pb-1 w-full" method="post" action="addNewBook">
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Title
+              </label>
+              <input
+                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name"
+                name="title"
+                type="text"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Author
+              </label>
+              <input
+                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="author"
+                name="author"
+                type="text"
+                placeholder="Author"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Status
+              </label>
+                <select
+                    class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="status"
+                    name="status"
+                >
+                    <option value="to_read">To Read</option>
+                    <option value="reading">Reading</option>
+                    <option value="read">Read</option>
+                </select>
+            </div>
+            <div class="mb-4">
+              <button
+                class="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 cursor-pointer rounded focus:outline-none focus:shadow-outline"
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
