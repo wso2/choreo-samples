@@ -40,10 +40,12 @@ func NewService(apiUrl string) *Service {
 // FetchBooks fetches the list of books from the API using the provided access token
 func (s *Service) FetchBooks(accessToken string) ([]config.Book, error) {
 	client := &http.Client{}
+
 	req, err := http.NewRequest("GET", s.ApiUrl+"/books", nil)
 	if err != nil {
 		return nil, err
 	}
+
 	req.Header.Set("Authorization", "Bearer "+accessToken)
 	resp, err := client.Do(req)
 	if err != nil {
@@ -75,10 +77,12 @@ func (s Service) AddNewBook(accessToken string, book config.Book) error {
 	if err != nil {
 		return err
 	}
+
 	req, err := http.NewRequest("POST", s.ApiUrl+"/books", bytes.NewBuffer(bookJson))
 	if err != nil {
 		return err
 	}
+
 	req.Header.Set("Authorization", "Bearer "+accessToken)
 	req.Header.Set("Content-Type", "application/json")
 	resp, err := client.Do(req)
@@ -96,16 +100,19 @@ func (s Service) AddNewBook(accessToken string, book config.Book) error {
 // DeleteBook deletes a book from the list using the provided access token
 func (s Service) DeleteBook(accessToken string, bookId string) error {
 	client := &http.Client{}
+
 	req, err := http.NewRequest("DELETE", s.ApiUrl+"/books/"+bookId, nil)
 	if err != nil {
 		return err
 	}
+
 	req.Header.Set("Authorization", "Bearer "+accessToken)
 	resp, err := client.Do(req)
 	if err != nil {
 		return err
 	}
 	defer resp.Body.Close()
+	
 	if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("failed to delete book: %s", resp.Status)
 	}

@@ -15,7 +15,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- 
+
 package routes
 
 import (
@@ -52,7 +52,7 @@ func handleDashboard(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "401",
 				Message: "Unauthorized",
-				Path:   "/dashboard",
+				Path:    "/dashboard",
 				Debug:   err,
 			})
 			return
@@ -64,7 +64,7 @@ func handleDashboard(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "500",
 				Message: "Internal Server Error: Failed to fetch books",
-				Path:   "/dashboard",
+				Path:    "/dashboard",
 				Debug:   err,
 			})
 			return
@@ -88,7 +88,7 @@ func handleAddNewBookPostRequest(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "400",
 				Message: "Bad Request: All fields are required",
-				Path: "/AddNewBook",
+				Path:    "/AddNewBook",
 				Debug:   nil,
 			})
 			return
@@ -105,7 +105,7 @@ func handleAddNewBookPostRequest(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "500",
 				Message: "Internal Server Error: Failed to add new book",
-				Path: "/AddNewBook",
+				Path:    "/AddNewBook",
 				Debug:   err,
 			})
 			return
@@ -122,7 +122,7 @@ func handleDeleteBook(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "400",
 				Message: "Bad Request: Book ID is required",
-				Path: "/deleteBook",
+				Path:    "/deleteBook",
 				Debug:   nil,
 			})
 			return
@@ -133,7 +133,7 @@ func handleDeleteBook(s *service.Service) gin.HandlerFunc {
 			SendErrorResponse(c, config.ErrorResponse{
 				Code:    "500",
 				Message: "Internal Server Error: Failed to delete book",
-				Path: "/deleteBook",
+				Path:    "/deleteBook",
 				Debug:   err,
 			})
 			return

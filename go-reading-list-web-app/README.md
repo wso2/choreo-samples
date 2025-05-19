@@ -17,7 +17,7 @@ You can refer Choreo Documentation: [Deploy Your First Static Web Application](h
 
     | **Field**           | **Description**                               |
     |---------------------|-----------------------------------------------|
-    | GitHub Repository   | `choreo-samples`                                |
+    | GitHub Repository   | `choreo-samples`                              |
     | Branch              | `main`                                        |
     | Component Directory | `go-reading-list-web-app`                     |
     | Name                | Reading List Web App                          |

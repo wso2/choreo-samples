@@ -36,6 +36,16 @@ type Book struct {
 type User struct {
 	Username string `json:"username"`
 	Email    string `json:"email"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Groups    []string `json:"groups"`
+	Organization Organization `json:"organization"`
+	Issuer    string `json:"iss"`
+	Subject   string `json:"sub"`
+}
+
+type Organization struct {
+	Uuid string `json:"uuid"`
 }
 
 type ErrorResponse struct {
