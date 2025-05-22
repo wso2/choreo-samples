@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List | Error</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<style>
+		body {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+		}
+	</style>
+</head>
+<body>
+    <div class="flex flex-col justify-between items-center p-5">
+        <h1 class="text-6xl font-bold block text-white">Oops!</h1>
+        <h2 class="text-3xl font-bold block text-white">Something went wrong</h2>
+        <div class="w-full bg-white shadow-md text-sm p-2 mt-4">
+            {{ if .errorCode }}
+                <code>Error: {{.errorCode}}</code></br>
+            {{ end }}
+            {{ if .errorMsg }}
+                <code>Message: {{.errorMsg}}</code></br>
+            {{ end }}
+            {{ if .errorPath }}
+                <code>Path: {{.errorPath}}</code>
+            {{ end }}
+        </div>
+        <a href="/" class="cursor-pointer bg-black py-2 px-3 rounded-md text-sm my-3 font-medium text-white h-10 hover:bg-gray-800">
+            Go to Home
+        </a>
+    </div>
+</body>
+</html>
