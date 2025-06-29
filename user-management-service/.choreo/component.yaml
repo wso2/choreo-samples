@@ -58,9 +58,6 @@ configurations:
                     - male
                     - female
                     - other
-                - name: is_registered
-                  displayName: Is Registered
-                  type: boolean
                 - name: address
                   displayName: Address
                   type: object
@@ -77,8 +74,6 @@ configurations:
                       displayName: City
                     - name: state
                       displayName: State
-                    - name: zip_code
-                      displayName: Zip Code
                 - name: guardian_info
                   displayName: Guardian Info
                   type: object
