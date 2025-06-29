@@ -61,6 +61,41 @@ configurations:
                 - name: is_registered
                   displayName: Is Registered
                   type: boolean
+                - name: address
+                  displayName: Address
+                  type: object
+                  properties: 
+                    - name: street
+                      displayName: Street
+                      type: object
+                      properties:
+                        - name: name
+                          displayName: Name
+                        - name: number
+                          displayName: Number
+                    - name: city
+                      displayName: City
+                    - name: state
+                      displayName: State
+                    - name: zip_code
+                      displayName: Zip Code
+                - name: guardian_info
+                  displayName: Guardian Info
+                  type: object
+                  properties:
+                    - name: name
+                      displayName: Name
+                    - name: age
+                      displayName: Age
+                      type: number
+                    - name: occupation
+                      displayName: Occupation
+                      type: object
+                      properties:
+                        - name: title
+                          displayName: Title
+                        - name: company
+                          displayName: Company 
         - name: occupation
           valueFrom:
             configForm:
