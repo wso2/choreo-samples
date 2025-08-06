@@ -4,7 +4,7 @@ componentType: mcp-service
 buildPack: npm
 thumbnailPath: /icons/puppeteer.svg
 repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers/blob/main/src/puppeteer/README.md
+documentationPath: /servers-archived/blob/main/src/puppeteer/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/mcp-server-puppeteer:1.0.0
 tags:
   - npm

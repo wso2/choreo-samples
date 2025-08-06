@@ -4,7 +4,7 @@ componentType: mcp-service
 buildPack: npm
 thumbnailPath: /icons/brave-search.svg
 repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers/blob/main/src/brave-search/README.md
+documentationPath: /servers-archived/blob/main/src/brave-search/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/brave-search-server:1.0.0
 tags:
   - npm
