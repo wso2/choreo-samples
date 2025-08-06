@@ -4,7 +4,7 @@ componentType: mcp-service
 buildPack: npm
 thumbnailPath: /icons/redis.svg
 repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers/blob/main/src/github/README.md
+documentationPath: /servers-archived/blob/main/src/github/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/redis-server:1.0.0
 tags:
   - npm
