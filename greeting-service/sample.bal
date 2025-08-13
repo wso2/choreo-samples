@@ -1,5 +1,9 @@
 import ballerina/http;
 
+configurable string greeting = "Hello, World!";
+configurable int repeatCount = 1;
+configurable string isEnabled = ?;
+
 type Greeting record {
     string 'from;
     string to;
