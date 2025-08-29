@@ -8,3 +8,4 @@ documentationPath: /servers-archived/blob/main/src/google-maps/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/google-maps-server:1.0.0
 tags:
   - npm
+deprecated: true
