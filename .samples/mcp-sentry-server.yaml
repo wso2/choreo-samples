@@ -1,10 +1,11 @@
 displayName: Sentry Server
 description: Retrieving and analyzing issues from Sentry.io.
 componentType: mcp-service
-buildPack: pypi
+buildPack: npm
 thumbnailPath: /icons/sentry.svg
-repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers-archived/blob/main/src/sentry/README.md
-imageUrl: choreoanonymouspullable.azurecr.io/mcp/sentry_server:1.0.0
+repositoryUrl: https://github.com/getsentry/sentry-mcp
+documentationPath: /blob/main/sentry/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/sentry-server:2.0.0
 tags:
-  - pypi
+  - npm
+deprecated: false

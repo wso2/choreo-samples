@@ -8,3 +8,4 @@ documentationPath: /blob/main/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/mcp-server-github:1.0.0
 tags:
   - npm
+deprecated: false
