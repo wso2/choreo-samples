@@ -8,3 +8,4 @@ documentationPath: /servers-archived/blob/main/src/gitlab/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/gitlab-server:1.0.0
 tags:
   - npm
+deprecated: true

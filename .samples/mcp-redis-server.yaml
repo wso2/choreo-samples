@@ -1,10 +1,11 @@
 displayName: Redis Server
 description: Interact with Redis key-value stores
 componentType: mcp-service
-buildPack: npm
+buildPack: pypi
 thumbnailPath: /icons/redis.svg
-repositoryUrl: https://github.com/modelcontextprotocol
-documentationPath: /servers-archived/blob/main/src/github/README.md
-imageUrl: choreoanonymouspullable.azurecr.io/mcp/redis-server:1.0.0
+repositoryUrl: https://github.com/redis/mcp-redis
+documentationPath: /blob/main/README.md
+imageUrl: choreoanonymouspullable.azurecr.io/mcp/redis-server:2.0.0
 tags:
-  - npm
+  - pypi
+deprecated: false

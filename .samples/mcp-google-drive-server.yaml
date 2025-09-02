@@ -8,3 +8,4 @@ documentationPath: /servers-archived/blob/main/src/gdrive/README.md
 imageUrl: choreoanonymouspullable.azurecr.io/mcp/google-drive-server:1.0.0
 tags:
   - npm
+deprecated: true
