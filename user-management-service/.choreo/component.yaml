@@ -58,9 +58,17 @@ configurations:
                     - male
                     - female
                     - other
-                - name: is_registered
-                  displayName: Is Registered
-                  type: boolean
+                - name: address
+                  displayName: Address
+                  type: object
+                  properties:
+                    - name: Number
+                    - name: city
+                      type: object
+                      properties:
+                        - name: street
+                        - name: province
+                      
         - name: occupation
           valueFrom:
             configForm:
