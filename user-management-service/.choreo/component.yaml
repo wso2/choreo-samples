@@ -35,6 +35,10 @@ configurations:
         configForm:
           displayName: Identification Number
           required: true
+    - name: NAME
+      valueFrom:
+        configForm:
+          displayName: User Name
   file:
     - name: application.yaml
       mountPath: /src/resources
