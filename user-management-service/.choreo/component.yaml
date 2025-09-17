@@ -39,6 +39,7 @@ configurations:
       valueFrom:
         configForm:
           displayName: User Name
+          required: false
   file:
     - name: application.yaml
       mountPath: /src/resources
