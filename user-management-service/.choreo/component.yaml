@@ -54,6 +54,7 @@ configurations:
               properties:
                 - name: name
                   displayName: Name
+                  required: false
                 - name: age
                   displayName: Age
                   type: number
